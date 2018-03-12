@@ -19,207 +19,305 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "RDS" :: String
-
 
 addSourceIdentifierToSubscription :: forall eff. AddSourceIdentifierToSubscriptionMessage -> Aff (exception :: EXCEPTION | eff) AddSourceIdentifierToSubscriptionResult
-addSourceIdentifierToSubscription = Request.request serviceName "addSourceIdentifierToSubscription" 
+addSourceIdentifierToSubscription = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "addSourceIdentifierToSubscription"
 
 
 addTagsToResource :: forall eff. AddTagsToResourceMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-addTagsToResource = Request.request serviceName "addTagsToResource" 
+addTagsToResource = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "addTagsToResource"
 
 
 authorizeDBSecurityGroupIngress :: forall eff. AuthorizeDBSecurityGroupIngressMessage -> Aff (exception :: EXCEPTION | eff) AuthorizeDBSecurityGroupIngressResult
-authorizeDBSecurityGroupIngress = Request.request serviceName "authorizeDBSecurityGroupIngress" 
+authorizeDBSecurityGroupIngress = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "authorizeDBSecurityGroupIngress"
 
 
 copyDBSnapshot :: forall eff. CopyDBSnapshotMessage -> Aff (exception :: EXCEPTION | eff) CopyDBSnapshotResult
-copyDBSnapshot = Request.request serviceName "copyDBSnapshot" 
+copyDBSnapshot = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "copyDBSnapshot"
 
 
 createDBInstance :: forall eff. CreateDBInstanceMessage -> Aff (exception :: EXCEPTION | eff) CreateDBInstanceResult
-createDBInstance = Request.request serviceName "createDBInstance" 
+createDBInstance = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBInstance"
 
 
 createDBInstanceReadReplica :: forall eff. CreateDBInstanceReadReplicaMessage -> Aff (exception :: EXCEPTION | eff) CreateDBInstanceReadReplicaResult
-createDBInstanceReadReplica = Request.request serviceName "createDBInstanceReadReplica" 
+createDBInstanceReadReplica = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBInstanceReadReplica"
 
 
 createDBParameterGroup :: forall eff. CreateDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) CreateDBParameterGroupResult
-createDBParameterGroup = Request.request serviceName "createDBParameterGroup" 
+createDBParameterGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBParameterGroup"
 
 
 createDBSecurityGroup :: forall eff. CreateDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) CreateDBSecurityGroupResult
-createDBSecurityGroup = Request.request serviceName "createDBSecurityGroup" 
+createDBSecurityGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBSecurityGroup"
 
 
 createDBSnapshot :: forall eff. CreateDBSnapshotMessage -> Aff (exception :: EXCEPTION | eff) CreateDBSnapshotResult
-createDBSnapshot = Request.request serviceName "createDBSnapshot" 
+createDBSnapshot = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBSnapshot"
 
 
 createDBSubnetGroup :: forall eff. CreateDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) CreateDBSubnetGroupResult
-createDBSubnetGroup = Request.request serviceName "createDBSubnetGroup" 
+createDBSubnetGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createDBSubnetGroup"
 
 
 createEventSubscription :: forall eff. CreateEventSubscriptionMessage -> Aff (exception :: EXCEPTION | eff) CreateEventSubscriptionResult
-createEventSubscription = Request.request serviceName "createEventSubscription" 
+createEventSubscription = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createEventSubscription"
 
 
 createOptionGroup :: forall eff. CreateOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) CreateOptionGroupResult
-createOptionGroup = Request.request serviceName "createOptionGroup" 
+createOptionGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "createOptionGroup"
 
 
 deleteDBInstance :: forall eff. DeleteDBInstanceMessage -> Aff (exception :: EXCEPTION | eff) DeleteDBInstanceResult
-deleteDBInstance = Request.request serviceName "deleteDBInstance" 
+deleteDBInstance = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteDBInstance"
 
 
 deleteDBParameterGroup :: forall eff. DeleteDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteDBParameterGroup = Request.request serviceName "deleteDBParameterGroup" 
+deleteDBParameterGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteDBParameterGroup"
 
 
 deleteDBSecurityGroup :: forall eff. DeleteDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteDBSecurityGroup = Request.request serviceName "deleteDBSecurityGroup" 
+deleteDBSecurityGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteDBSecurityGroup"
 
 
 deleteDBSnapshot :: forall eff. DeleteDBSnapshotMessage -> Aff (exception :: EXCEPTION | eff) DeleteDBSnapshotResult
-deleteDBSnapshot = Request.request serviceName "deleteDBSnapshot" 
+deleteDBSnapshot = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteDBSnapshot"
 
 
 deleteDBSubnetGroup :: forall eff. DeleteDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteDBSubnetGroup = Request.request serviceName "deleteDBSubnetGroup" 
+deleteDBSubnetGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteDBSubnetGroup"
 
 
 deleteEventSubscription :: forall eff. DeleteEventSubscriptionMessage -> Aff (exception :: EXCEPTION | eff) DeleteEventSubscriptionResult
-deleteEventSubscription = Request.request serviceName "deleteEventSubscription" 
+deleteEventSubscription = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteEventSubscription"
 
 
 deleteOptionGroup :: forall eff. DeleteOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteOptionGroup = Request.request serviceName "deleteOptionGroup" 
+deleteOptionGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "deleteOptionGroup"
 
 
 describeDBEngineVersions :: forall eff. DescribeDBEngineVersionsMessage -> Aff (exception :: EXCEPTION | eff) DBEngineVersionMessage
-describeDBEngineVersions = Request.request serviceName "describeDBEngineVersions" 
+describeDBEngineVersions = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBEngineVersions"
 
 
 describeDBInstances :: forall eff. DescribeDBInstancesMessage -> Aff (exception :: EXCEPTION | eff) DBInstanceMessage
-describeDBInstances = Request.request serviceName "describeDBInstances" 
+describeDBInstances = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBInstances"
 
 
 describeDBParameterGroups :: forall eff. DescribeDBParameterGroupsMessage -> Aff (exception :: EXCEPTION | eff) DBParameterGroupsMessage
-describeDBParameterGroups = Request.request serviceName "describeDBParameterGroups" 
+describeDBParameterGroups = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBParameterGroups"
 
 
 describeDBParameters :: forall eff. DescribeDBParametersMessage -> Aff (exception :: EXCEPTION | eff) DBParameterGroupDetails
-describeDBParameters = Request.request serviceName "describeDBParameters" 
+describeDBParameters = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBParameters"
 
 
 describeDBSecurityGroups :: forall eff. DescribeDBSecurityGroupsMessage -> Aff (exception :: EXCEPTION | eff) DBSecurityGroupMessage
-describeDBSecurityGroups = Request.request serviceName "describeDBSecurityGroups" 
+describeDBSecurityGroups = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBSecurityGroups"
 
 
 describeDBSnapshots :: forall eff. DescribeDBSnapshotsMessage -> Aff (exception :: EXCEPTION | eff) DBSnapshotMessage
-describeDBSnapshots = Request.request serviceName "describeDBSnapshots" 
+describeDBSnapshots = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBSnapshots"
 
 
 describeDBSubnetGroups :: forall eff. DescribeDBSubnetGroupsMessage -> Aff (exception :: EXCEPTION | eff) DBSubnetGroupMessage
-describeDBSubnetGroups = Request.request serviceName "describeDBSubnetGroups" 
+describeDBSubnetGroups = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeDBSubnetGroups"
 
 
 describeEngineDefaultParameters :: forall eff. DescribeEngineDefaultParametersMessage -> Aff (exception :: EXCEPTION | eff) DescribeEngineDefaultParametersResult
-describeEngineDefaultParameters = Request.request serviceName "describeEngineDefaultParameters" 
+describeEngineDefaultParameters = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeEngineDefaultParameters"
 
 
 describeEventCategories :: forall eff. DescribeEventCategoriesMessage -> Aff (exception :: EXCEPTION | eff) EventCategoriesMessage
-describeEventCategories = Request.request serviceName "describeEventCategories" 
+describeEventCategories = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeEventCategories"
 
 
 describeEventSubscriptions :: forall eff. DescribeEventSubscriptionsMessage -> Aff (exception :: EXCEPTION | eff) EventSubscriptionsMessage
-describeEventSubscriptions = Request.request serviceName "describeEventSubscriptions" 
+describeEventSubscriptions = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeEventSubscriptions"
 
 
 describeEvents :: forall eff. DescribeEventsMessage -> Aff (exception :: EXCEPTION | eff) EventsMessage
-describeEvents = Request.request serviceName "describeEvents" 
+describeEvents = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeEvents"
 
 
 describeOptionGroupOptions :: forall eff. DescribeOptionGroupOptionsMessage -> Aff (exception :: EXCEPTION | eff) OptionGroupOptionsMessage
-describeOptionGroupOptions = Request.request serviceName "describeOptionGroupOptions" 
+describeOptionGroupOptions = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeOptionGroupOptions"
 
 
 describeOptionGroups :: forall eff. DescribeOptionGroupsMessage -> Aff (exception :: EXCEPTION | eff) OptionGroups
-describeOptionGroups = Request.request serviceName "describeOptionGroups" 
+describeOptionGroups = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeOptionGroups"
 
 
 describeOrderableDBInstanceOptions :: forall eff. DescribeOrderableDBInstanceOptionsMessage -> Aff (exception :: EXCEPTION | eff) OrderableDBInstanceOptionsMessage
-describeOrderableDBInstanceOptions = Request.request serviceName "describeOrderableDBInstanceOptions" 
+describeOrderableDBInstanceOptions = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeOrderableDBInstanceOptions"
 
 
 describeReservedDBInstances :: forall eff. DescribeReservedDBInstancesMessage -> Aff (exception :: EXCEPTION | eff) ReservedDBInstanceMessage
-describeReservedDBInstances = Request.request serviceName "describeReservedDBInstances" 
+describeReservedDBInstances = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeReservedDBInstances"
 
 
 describeReservedDBInstancesOfferings :: forall eff. DescribeReservedDBInstancesOfferingsMessage -> Aff (exception :: EXCEPTION | eff) ReservedDBInstancesOfferingMessage
-describeReservedDBInstancesOfferings = Request.request serviceName "describeReservedDBInstancesOfferings" 
+describeReservedDBInstancesOfferings = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "describeReservedDBInstancesOfferings"
 
 
 listTagsForResource :: forall eff. ListTagsForResourceMessage -> Aff (exception :: EXCEPTION | eff) TagListMessage
-listTagsForResource = Request.request serviceName "listTagsForResource" 
+listTagsForResource = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "listTagsForResource"
 
 
 modifyDBInstance :: forall eff. ModifyDBInstanceMessage -> Aff (exception :: EXCEPTION | eff) ModifyDBInstanceResult
-modifyDBInstance = Request.request serviceName "modifyDBInstance" 
+modifyDBInstance = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "modifyDBInstance"
 
 
 modifyDBParameterGroup :: forall eff. ModifyDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) DBParameterGroupNameMessage
-modifyDBParameterGroup = Request.request serviceName "modifyDBParameterGroup" 
+modifyDBParameterGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "modifyDBParameterGroup"
 
 
 modifyDBSubnetGroup :: forall eff. ModifyDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) ModifyDBSubnetGroupResult
-modifyDBSubnetGroup = Request.request serviceName "modifyDBSubnetGroup" 
+modifyDBSubnetGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "modifyDBSubnetGroup"
 
 
 modifyEventSubscription :: forall eff. ModifyEventSubscriptionMessage -> Aff (exception :: EXCEPTION | eff) ModifyEventSubscriptionResult
-modifyEventSubscription = Request.request serviceName "modifyEventSubscription" 
+modifyEventSubscription = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "modifyEventSubscription"
 
 
 modifyOptionGroup :: forall eff. ModifyOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) ModifyOptionGroupResult
-modifyOptionGroup = Request.request serviceName "modifyOptionGroup" 
+modifyOptionGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "modifyOptionGroup"
 
 
 promoteReadReplica :: forall eff. PromoteReadReplicaMessage -> Aff (exception :: EXCEPTION | eff) PromoteReadReplicaResult
-promoteReadReplica = Request.request serviceName "promoteReadReplica" 
+promoteReadReplica = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "promoteReadReplica"
 
 
 purchaseReservedDBInstancesOffering :: forall eff. PurchaseReservedDBInstancesOfferingMessage -> Aff (exception :: EXCEPTION | eff) PurchaseReservedDBInstancesOfferingResult
-purchaseReservedDBInstancesOffering = Request.request serviceName "purchaseReservedDBInstancesOffering" 
+purchaseReservedDBInstancesOffering = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "purchaseReservedDBInstancesOffering"
 
 
 rebootDBInstance :: forall eff. RebootDBInstanceMessage -> Aff (exception :: EXCEPTION | eff) RebootDBInstanceResult
-rebootDBInstance = Request.request serviceName "rebootDBInstance" 
+rebootDBInstance = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "rebootDBInstance"
 
 
 removeSourceIdentifierFromSubscription :: forall eff. RemoveSourceIdentifierFromSubscriptionMessage -> Aff (exception :: EXCEPTION | eff) RemoveSourceIdentifierFromSubscriptionResult
-removeSourceIdentifierFromSubscription = Request.request serviceName "removeSourceIdentifierFromSubscription" 
+removeSourceIdentifierFromSubscription = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "removeSourceIdentifierFromSubscription"
 
 
 removeTagsFromResource :: forall eff. RemoveTagsFromResourceMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-removeTagsFromResource = Request.request serviceName "removeTagsFromResource" 
+removeTagsFromResource = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "removeTagsFromResource"
 
 
 resetDBParameterGroup :: forall eff. ResetDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) DBParameterGroupNameMessage
-resetDBParameterGroup = Request.request serviceName "resetDBParameterGroup" 
+resetDBParameterGroup = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "resetDBParameterGroup"
 
 
 restoreDBInstanceFromDBSnapshot :: forall eff. RestoreDBInstanceFromDBSnapshotMessage -> Aff (exception :: EXCEPTION | eff) RestoreDBInstanceFromDBSnapshotResult
-restoreDBInstanceFromDBSnapshot = Request.request serviceName "restoreDBInstanceFromDBSnapshot" 
+restoreDBInstanceFromDBSnapshot = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "restoreDBInstanceFromDBSnapshot"
 
 
 restoreDBInstanceToPointInTime :: forall eff. RestoreDBInstanceToPointInTimeMessage -> Aff (exception :: EXCEPTION | eff) RestoreDBInstanceToPointInTimeResult
-restoreDBInstanceToPointInTime = Request.request serviceName "restoreDBInstanceToPointInTime" 
+restoreDBInstanceToPointInTime = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "restoreDBInstanceToPointInTime"
 
 
 revokeDBSecurityGroupIngress :: forall eff. RevokeDBSecurityGroupIngressMessage -> Aff (exception :: EXCEPTION | eff) RevokeDBSecurityGroupIngressResult
-revokeDBSecurityGroupIngress = Request.request serviceName "revokeDBSecurityGroupIngress" 
+revokeDBSecurityGroupIngress = Request.request service method  where
+    service = Request.ServiceName "RDS"
+    method = Request.MethodName "revokeDBSecurityGroupIngress"
 
 
 newtype AddSourceIdentifierToSubscriptionMessage = AddSourceIdentifierToSubscriptionMessage 
