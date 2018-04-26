@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -40,7 +39,7 @@ newAddSourceIdentifierToSubscriptionMessage' _SourceIdentifier _SubscriptionName
 
 
 newtype AddSourceIdentifierToSubscriptionResult = AddSourceIdentifierToSubscriptionResult 
-  { "EventSubscription" :: NullOrUndefined (EventSubscription)
+  { "EventSubscription" :: Maybe (EventSubscription)
   }
 derive instance newtypeAddSourceIdentifierToSubscriptionResult :: Newtype AddSourceIdentifierToSubscriptionResult _
 derive instance repGenericAddSourceIdentifierToSubscriptionResult :: Generic AddSourceIdentifierToSubscriptionResult _
@@ -50,12 +49,12 @@ instance encodeAddSourceIdentifierToSubscriptionResult :: Encode AddSourceIdenti
 
 -- | Constructs AddSourceIdentifierToSubscriptionResult from required parameters
 newAddSourceIdentifierToSubscriptionResult :: AddSourceIdentifierToSubscriptionResult
-newAddSourceIdentifierToSubscriptionResult  = AddSourceIdentifierToSubscriptionResult { "EventSubscription": (NullOrUndefined Nothing) }
+newAddSourceIdentifierToSubscriptionResult  = AddSourceIdentifierToSubscriptionResult { "EventSubscription": Nothing }
 
 -- | Constructs AddSourceIdentifierToSubscriptionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAddSourceIdentifierToSubscriptionResult' :: ( { "EventSubscription" :: NullOrUndefined (EventSubscription) } -> {"EventSubscription" :: NullOrUndefined (EventSubscription) } ) -> AddSourceIdentifierToSubscriptionResult
-newAddSourceIdentifierToSubscriptionResult'  customize = (AddSourceIdentifierToSubscriptionResult <<< customize) { "EventSubscription": (NullOrUndefined Nothing) }
+newAddSourceIdentifierToSubscriptionResult' :: ( { "EventSubscription" :: Maybe (EventSubscription) } -> {"EventSubscription" :: Maybe (EventSubscription) } ) -> AddSourceIdentifierToSubscriptionResult
+newAddSourceIdentifierToSubscriptionResult'  customize = (AddSourceIdentifierToSubscriptionResult <<< customize) { "EventSubscription": Nothing }
 
 
 
@@ -121,10 +120,10 @@ instance encodeAuthorizationQuotaExceededFault :: Encode AuthorizationQuotaExcee
 
 newtype AuthorizeDBSecurityGroupIngressMessage = AuthorizeDBSecurityGroupIngressMessage 
   { "DBSecurityGroupName" :: (String)
-  , "CIDRIP" :: NullOrUndefined (String)
-  , "EC2SecurityGroupName" :: NullOrUndefined (String)
-  , "EC2SecurityGroupId" :: NullOrUndefined (String)
-  , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String)
+  , "CIDRIP" :: Maybe (String)
+  , "EC2SecurityGroupName" :: Maybe (String)
+  , "EC2SecurityGroupId" :: Maybe (String)
+  , "EC2SecurityGroupOwnerId" :: Maybe (String)
   }
 derive instance newtypeAuthorizeDBSecurityGroupIngressMessage :: Newtype AuthorizeDBSecurityGroupIngressMessage _
 derive instance repGenericAuthorizeDBSecurityGroupIngressMessage :: Generic AuthorizeDBSecurityGroupIngressMessage _
@@ -134,17 +133,17 @@ instance encodeAuthorizeDBSecurityGroupIngressMessage :: Encode AuthorizeDBSecur
 
 -- | Constructs AuthorizeDBSecurityGroupIngressMessage from required parameters
 newAuthorizeDBSecurityGroupIngressMessage :: String -> AuthorizeDBSecurityGroupIngressMessage
-newAuthorizeDBSecurityGroupIngressMessage _DBSecurityGroupName = AuthorizeDBSecurityGroupIngressMessage { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": (NullOrUndefined Nothing), "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing) }
+newAuthorizeDBSecurityGroupIngressMessage _DBSecurityGroupName = AuthorizeDBSecurityGroupIngressMessage { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": Nothing, "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing }
 
 -- | Constructs AuthorizeDBSecurityGroupIngressMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAuthorizeDBSecurityGroupIngressMessage' :: String -> ( { "DBSecurityGroupName" :: (String) , "CIDRIP" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> {"DBSecurityGroupName" :: (String) , "CIDRIP" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } ) -> AuthorizeDBSecurityGroupIngressMessage
-newAuthorizeDBSecurityGroupIngressMessage' _DBSecurityGroupName customize = (AuthorizeDBSecurityGroupIngressMessage <<< customize) { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": (NullOrUndefined Nothing), "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing) }
+newAuthorizeDBSecurityGroupIngressMessage' :: String -> ( { "DBSecurityGroupName" :: (String) , "CIDRIP" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } -> {"DBSecurityGroupName" :: (String) , "CIDRIP" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } ) -> AuthorizeDBSecurityGroupIngressMessage
+newAuthorizeDBSecurityGroupIngressMessage' _DBSecurityGroupName customize = (AuthorizeDBSecurityGroupIngressMessage <<< customize) { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": Nothing, "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing }
 
 
 
 newtype AuthorizeDBSecurityGroupIngressResult = AuthorizeDBSecurityGroupIngressResult 
-  { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup)
+  { "DBSecurityGroup" :: Maybe (DBSecurityGroup)
   }
 derive instance newtypeAuthorizeDBSecurityGroupIngressResult :: Newtype AuthorizeDBSecurityGroupIngressResult _
 derive instance repGenericAuthorizeDBSecurityGroupIngressResult :: Generic AuthorizeDBSecurityGroupIngressResult _
@@ -154,18 +153,18 @@ instance encodeAuthorizeDBSecurityGroupIngressResult :: Encode AuthorizeDBSecuri
 
 -- | Constructs AuthorizeDBSecurityGroupIngressResult from required parameters
 newAuthorizeDBSecurityGroupIngressResult :: AuthorizeDBSecurityGroupIngressResult
-newAuthorizeDBSecurityGroupIngressResult  = AuthorizeDBSecurityGroupIngressResult { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newAuthorizeDBSecurityGroupIngressResult  = AuthorizeDBSecurityGroupIngressResult { "DBSecurityGroup": Nothing }
 
 -- | Constructs AuthorizeDBSecurityGroupIngressResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAuthorizeDBSecurityGroupIngressResult' :: ( { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> {"DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } ) -> AuthorizeDBSecurityGroupIngressResult
-newAuthorizeDBSecurityGroupIngressResult'  customize = (AuthorizeDBSecurityGroupIngressResult <<< customize) { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newAuthorizeDBSecurityGroupIngressResult' :: ( { "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> {"DBSecurityGroup" :: Maybe (DBSecurityGroup) } ) -> AuthorizeDBSecurityGroupIngressResult
+newAuthorizeDBSecurityGroupIngressResult'  customize = (AuthorizeDBSecurityGroupIngressResult <<< customize) { "DBSecurityGroup": Nothing }
 
 
 
 newtype AvailabilityZone = AvailabilityZone 
-  { "Name" :: NullOrUndefined (String)
-  , "ProvisionedIopsCapable" :: NullOrUndefined (Boolean)
+  { "Name" :: Maybe (String)
+  , "ProvisionedIopsCapable" :: Maybe (Boolean)
   }
 derive instance newtypeAvailabilityZone :: Newtype AvailabilityZone _
 derive instance repGenericAvailabilityZone :: Generic AvailabilityZone _
@@ -175,12 +174,12 @@ instance encodeAvailabilityZone :: Encode AvailabilityZone where encode = generi
 
 -- | Constructs AvailabilityZone from required parameters
 newAvailabilityZone :: AvailabilityZone
-newAvailabilityZone  = AvailabilityZone { "Name": (NullOrUndefined Nothing), "ProvisionedIopsCapable": (NullOrUndefined Nothing) }
+newAvailabilityZone  = AvailabilityZone { "Name": Nothing, "ProvisionedIopsCapable": Nothing }
 
 -- | Constructs AvailabilityZone's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAvailabilityZone' :: ( { "Name" :: NullOrUndefined (String) , "ProvisionedIopsCapable" :: NullOrUndefined (Boolean) } -> {"Name" :: NullOrUndefined (String) , "ProvisionedIopsCapable" :: NullOrUndefined (Boolean) } ) -> AvailabilityZone
-newAvailabilityZone'  customize = (AvailabilityZone <<< customize) { "Name": (NullOrUndefined Nothing), "ProvisionedIopsCapable": (NullOrUndefined Nothing) }
+newAvailabilityZone' :: ( { "Name" :: Maybe (String) , "ProvisionedIopsCapable" :: Maybe (Boolean) } -> {"Name" :: Maybe (String) , "ProvisionedIopsCapable" :: Maybe (Boolean) } ) -> AvailabilityZone
+newAvailabilityZone'  customize = (AvailabilityZone <<< customize) { "Name": Nothing, "ProvisionedIopsCapable": Nothing }
 
 
 
@@ -203,8 +202,8 @@ instance encodeBooleanOptional :: Encode BooleanOptional where encode = genericE
 
 
 newtype CharacterSet = CharacterSet 
-  { "CharacterSetName" :: NullOrUndefined (String)
-  , "CharacterSetDescription" :: NullOrUndefined (String)
+  { "CharacterSetName" :: Maybe (String)
+  , "CharacterSetDescription" :: Maybe (String)
   }
 derive instance newtypeCharacterSet :: Newtype CharacterSet _
 derive instance repGenericCharacterSet :: Generic CharacterSet _
@@ -214,12 +213,12 @@ instance encodeCharacterSet :: Encode CharacterSet where encode = genericEncode 
 
 -- | Constructs CharacterSet from required parameters
 newCharacterSet :: CharacterSet
-newCharacterSet  = CharacterSet { "CharacterSetDescription": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing) }
+newCharacterSet  = CharacterSet { "CharacterSetDescription": Nothing, "CharacterSetName": Nothing }
 
 -- | Constructs CharacterSet's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCharacterSet' :: ( { "CharacterSetName" :: NullOrUndefined (String) , "CharacterSetDescription" :: NullOrUndefined (String) } -> {"CharacterSetName" :: NullOrUndefined (String) , "CharacterSetDescription" :: NullOrUndefined (String) } ) -> CharacterSet
-newCharacterSet'  customize = (CharacterSet <<< customize) { "CharacterSetDescription": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing) }
+newCharacterSet' :: ( { "CharacterSetName" :: Maybe (String) , "CharacterSetDescription" :: Maybe (String) } -> {"CharacterSetName" :: Maybe (String) , "CharacterSetDescription" :: Maybe (String) } ) -> CharacterSet
+newCharacterSet'  customize = (CharacterSet <<< customize) { "CharacterSetDescription": Nothing, "CharacterSetName": Nothing }
 
 
 
@@ -245,7 +244,7 @@ newCopyDBSnapshotMessage' _SourceDBSnapshotIdentifier _TargetDBSnapshotIdentifie
 
 
 newtype CopyDBSnapshotResult = CopyDBSnapshotResult 
-  { "DBSnapshot" :: NullOrUndefined (DBSnapshot)
+  { "DBSnapshot" :: Maybe (DBSnapshot)
   }
 derive instance newtypeCopyDBSnapshotResult :: Newtype CopyDBSnapshotResult _
 derive instance repGenericCopyDBSnapshotResult :: Generic CopyDBSnapshotResult _
@@ -255,40 +254,40 @@ instance encodeCopyDBSnapshotResult :: Encode CopyDBSnapshotResult where encode 
 
 -- | Constructs CopyDBSnapshotResult from required parameters
 newCopyDBSnapshotResult :: CopyDBSnapshotResult
-newCopyDBSnapshotResult  = CopyDBSnapshotResult { "DBSnapshot": (NullOrUndefined Nothing) }
+newCopyDBSnapshotResult  = CopyDBSnapshotResult { "DBSnapshot": Nothing }
 
 -- | Constructs CopyDBSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCopyDBSnapshotResult' :: ( { "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> {"DBSnapshot" :: NullOrUndefined (DBSnapshot) } ) -> CopyDBSnapshotResult
-newCopyDBSnapshotResult'  customize = (CopyDBSnapshotResult <<< customize) { "DBSnapshot": (NullOrUndefined Nothing) }
+newCopyDBSnapshotResult' :: ( { "DBSnapshot" :: Maybe (DBSnapshot) } -> {"DBSnapshot" :: Maybe (DBSnapshot) } ) -> CopyDBSnapshotResult
+newCopyDBSnapshotResult'  customize = (CopyDBSnapshotResult <<< customize) { "DBSnapshot": Nothing }
 
 
 
 newtype CreateDBInstanceMessage = CreateDBInstanceMessage 
-  { "DBName" :: NullOrUndefined (String)
+  { "DBName" :: Maybe (String)
   , "DBInstanceIdentifier" :: (String)
   , "AllocatedStorage" :: (IntegerOptional)
   , "DBInstanceClass" :: (String)
   , "Engine" :: (String)
   , "MasterUsername" :: (String)
   , "MasterUserPassword" :: (String)
-  , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList)
-  , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "DBSubnetGroupName" :: NullOrUndefined (String)
-  , "PreferredMaintenanceWindow" :: NullOrUndefined (String)
-  , "DBParameterGroupName" :: NullOrUndefined (String)
-  , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional)
-  , "PreferredBackupWindow" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupName" :: NullOrUndefined (String)
-  , "CharacterSetName" :: NullOrUndefined (String)
-  , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional)
+  , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList)
+  , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList)
+  , "AvailabilityZone" :: Maybe (String)
+  , "DBSubnetGroupName" :: Maybe (String)
+  , "PreferredMaintenanceWindow" :: Maybe (String)
+  , "DBParameterGroupName" :: Maybe (String)
+  , "BackupRetentionPeriod" :: Maybe (IntegerOptional)
+  , "PreferredBackupWindow" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "EngineVersion" :: Maybe (String)
+  , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional)
+  , "LicenseModel" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupName" :: Maybe (String)
+  , "CharacterSetName" :: Maybe (String)
+  , "PubliclyAccessible" :: Maybe (BooleanOptional)
   }
 derive instance newtypeCreateDBInstanceMessage :: Newtype CreateDBInstanceMessage _
 derive instance repGenericCreateDBInstanceMessage :: Generic CreateDBInstanceMessage _
@@ -298,25 +297,25 @@ instance encodeCreateDBInstanceMessage :: Encode CreateDBInstanceMessage where e
 
 -- | Constructs CreateDBInstanceMessage from required parameters
 newCreateDBInstanceMessage :: IntegerOptional -> String -> String -> String -> String -> String -> CreateDBInstanceMessage
-newCreateDBInstanceMessage _AllocatedStorage _DBInstanceClass _DBInstanceIdentifier _Engine _MasterUserPassword _MasterUsername = CreateDBInstanceMessage { "AllocatedStorage": _AllocatedStorage, "DBInstanceClass": _DBInstanceClass, "DBInstanceIdentifier": _DBInstanceIdentifier, "Engine": _Engine, "MasterUserPassword": _MasterUserPassword, "MasterUsername": _MasterUsername, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "VpcSecurityGroupIds": (NullOrUndefined Nothing) }
+newCreateDBInstanceMessage _AllocatedStorage _DBInstanceClass _DBInstanceIdentifier _Engine _MasterUserPassword _MasterUsername = CreateDBInstanceMessage { "AllocatedStorage": _AllocatedStorage, "DBInstanceClass": _DBInstanceClass, "DBInstanceIdentifier": _DBInstanceIdentifier, "Engine": _Engine, "MasterUserPassword": _MasterUserPassword, "MasterUsername": _MasterUsername, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "BackupRetentionPeriod": Nothing, "CharacterSetName": Nothing, "DBName": Nothing, "DBParameterGroupName": Nothing, "DBSecurityGroups": Nothing, "DBSubnetGroupName": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "PubliclyAccessible": Nothing, "VpcSecurityGroupIds": Nothing }
 
 -- | Constructs CreateDBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBInstanceMessage' :: IntegerOptional -> String -> String -> String -> String -> String -> ( { "DBName" :: NullOrUndefined (String) , "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: (IntegerOptional) , "DBInstanceClass" :: (String) , "Engine" :: (String) , "MasterUsername" :: (String) , "MasterUserPassword" :: (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "DBParameterGroupName" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "CharacterSetName" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } -> {"DBName" :: NullOrUndefined (String) , "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: (IntegerOptional) , "DBInstanceClass" :: (String) , "Engine" :: (String) , "MasterUsername" :: (String) , "MasterUserPassword" :: (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "DBParameterGroupName" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "CharacterSetName" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } ) -> CreateDBInstanceMessage
-newCreateDBInstanceMessage' _AllocatedStorage _DBInstanceClass _DBInstanceIdentifier _Engine _MasterUserPassword _MasterUsername customize = (CreateDBInstanceMessage <<< customize) { "AllocatedStorage": _AllocatedStorage, "DBInstanceClass": _DBInstanceClass, "DBInstanceIdentifier": _DBInstanceIdentifier, "Engine": _Engine, "MasterUserPassword": _MasterUserPassword, "MasterUsername": _MasterUsername, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "VpcSecurityGroupIds": (NullOrUndefined Nothing) }
+newCreateDBInstanceMessage' :: IntegerOptional -> String -> String -> String -> String -> String -> ( { "DBName" :: Maybe (String) , "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: (IntegerOptional) , "DBInstanceClass" :: (String) , "Engine" :: (String) , "MasterUsername" :: (String) , "MasterUserPassword" :: (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "PreferredMaintenanceWindow" :: Maybe (String) , "DBParameterGroupName" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "CharacterSetName" :: Maybe (String) , "PubliclyAccessible" :: Maybe (BooleanOptional) } -> {"DBName" :: Maybe (String) , "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: (IntegerOptional) , "DBInstanceClass" :: (String) , "Engine" :: (String) , "MasterUsername" :: (String) , "MasterUserPassword" :: (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "PreferredMaintenanceWindow" :: Maybe (String) , "DBParameterGroupName" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "CharacterSetName" :: Maybe (String) , "PubliclyAccessible" :: Maybe (BooleanOptional) } ) -> CreateDBInstanceMessage
+newCreateDBInstanceMessage' _AllocatedStorage _DBInstanceClass _DBInstanceIdentifier _Engine _MasterUserPassword _MasterUsername customize = (CreateDBInstanceMessage <<< customize) { "AllocatedStorage": _AllocatedStorage, "DBInstanceClass": _DBInstanceClass, "DBInstanceIdentifier": _DBInstanceIdentifier, "Engine": _Engine, "MasterUserPassword": _MasterUserPassword, "MasterUsername": _MasterUsername, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "BackupRetentionPeriod": Nothing, "CharacterSetName": Nothing, "DBName": Nothing, "DBParameterGroupName": Nothing, "DBSecurityGroups": Nothing, "DBSubnetGroupName": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "PubliclyAccessible": Nothing, "VpcSecurityGroupIds": Nothing }
 
 
 
 newtype CreateDBInstanceReadReplicaMessage = CreateDBInstanceReadReplicaMessage 
   { "DBInstanceIdentifier" :: (String)
   , "SourceDBInstanceIdentifier" :: (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupName" :: NullOrUndefined (String)
-  , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional)
+  , "DBInstanceClass" :: Maybe (String)
+  , "AvailabilityZone" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupName" :: Maybe (String)
+  , "PubliclyAccessible" :: Maybe (BooleanOptional)
   }
 derive instance newtypeCreateDBInstanceReadReplicaMessage :: Newtype CreateDBInstanceReadReplicaMessage _
 derive instance repGenericCreateDBInstanceReadReplicaMessage :: Generic CreateDBInstanceReadReplicaMessage _
@@ -326,17 +325,17 @@ instance encodeCreateDBInstanceReadReplicaMessage :: Encode CreateDBInstanceRead
 
 -- | Constructs CreateDBInstanceReadReplicaMessage from required parameters
 newCreateDBInstanceReadReplicaMessage :: String -> String -> CreateDBInstanceReadReplicaMessage
-newCreateDBInstanceReadReplicaMessage _DBInstanceIdentifier _SourceDBInstanceIdentifier = CreateDBInstanceReadReplicaMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing) }
+newCreateDBInstanceReadReplicaMessage _DBInstanceIdentifier _SourceDBInstanceIdentifier = CreateDBInstanceReadReplicaMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "Iops": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing }
 
 -- | Constructs CreateDBInstanceReadReplicaMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBInstanceReadReplicaMessage' :: String -> String -> ( { "DBInstanceIdentifier" :: (String) , "SourceDBInstanceIdentifier" :: (String) , "DBInstanceClass" :: NullOrUndefined (String) , "AvailabilityZone" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } -> {"DBInstanceIdentifier" :: (String) , "SourceDBInstanceIdentifier" :: (String) , "DBInstanceClass" :: NullOrUndefined (String) , "AvailabilityZone" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } ) -> CreateDBInstanceReadReplicaMessage
-newCreateDBInstanceReadReplicaMessage' _DBInstanceIdentifier _SourceDBInstanceIdentifier customize = (CreateDBInstanceReadReplicaMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing) }
+newCreateDBInstanceReadReplicaMessage' :: String -> String -> ( { "DBInstanceIdentifier" :: (String) , "SourceDBInstanceIdentifier" :: (String) , "DBInstanceClass" :: Maybe (String) , "AvailabilityZone" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "PubliclyAccessible" :: Maybe (BooleanOptional) } -> {"DBInstanceIdentifier" :: (String) , "SourceDBInstanceIdentifier" :: (String) , "DBInstanceClass" :: Maybe (String) , "AvailabilityZone" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "PubliclyAccessible" :: Maybe (BooleanOptional) } ) -> CreateDBInstanceReadReplicaMessage
+newCreateDBInstanceReadReplicaMessage' _DBInstanceIdentifier _SourceDBInstanceIdentifier customize = (CreateDBInstanceReadReplicaMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "Iops": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing }
 
 
 
 newtype CreateDBInstanceReadReplicaResult = CreateDBInstanceReadReplicaResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeCreateDBInstanceReadReplicaResult :: Newtype CreateDBInstanceReadReplicaResult _
 derive instance repGenericCreateDBInstanceReadReplicaResult :: Generic CreateDBInstanceReadReplicaResult _
@@ -346,17 +345,17 @@ instance encodeCreateDBInstanceReadReplicaResult :: Encode CreateDBInstanceReadR
 
 -- | Constructs CreateDBInstanceReadReplicaResult from required parameters
 newCreateDBInstanceReadReplicaResult :: CreateDBInstanceReadReplicaResult
-newCreateDBInstanceReadReplicaResult  = CreateDBInstanceReadReplicaResult { "DBInstance": (NullOrUndefined Nothing) }
+newCreateDBInstanceReadReplicaResult  = CreateDBInstanceReadReplicaResult { "DBInstance": Nothing }
 
 -- | Constructs CreateDBInstanceReadReplicaResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBInstanceReadReplicaResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> CreateDBInstanceReadReplicaResult
-newCreateDBInstanceReadReplicaResult'  customize = (CreateDBInstanceReadReplicaResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newCreateDBInstanceReadReplicaResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> CreateDBInstanceReadReplicaResult
+newCreateDBInstanceReadReplicaResult'  customize = (CreateDBInstanceReadReplicaResult <<< customize) { "DBInstance": Nothing }
 
 
 
 newtype CreateDBInstanceResult = CreateDBInstanceResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeCreateDBInstanceResult :: Newtype CreateDBInstanceResult _
 derive instance repGenericCreateDBInstanceResult :: Generic CreateDBInstanceResult _
@@ -366,12 +365,12 @@ instance encodeCreateDBInstanceResult :: Encode CreateDBInstanceResult where enc
 
 -- | Constructs CreateDBInstanceResult from required parameters
 newCreateDBInstanceResult :: CreateDBInstanceResult
-newCreateDBInstanceResult  = CreateDBInstanceResult { "DBInstance": (NullOrUndefined Nothing) }
+newCreateDBInstanceResult  = CreateDBInstanceResult { "DBInstance": Nothing }
 
 -- | Constructs CreateDBInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBInstanceResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> CreateDBInstanceResult
-newCreateDBInstanceResult'  customize = (CreateDBInstanceResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newCreateDBInstanceResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> CreateDBInstanceResult
+newCreateDBInstanceResult'  customize = (CreateDBInstanceResult <<< customize) { "DBInstance": Nothing }
 
 
 
@@ -398,7 +397,7 @@ newCreateDBParameterGroupMessage' _DBParameterGroupFamily _DBParameterGroupName 
 
 
 newtype CreateDBParameterGroupResult = CreateDBParameterGroupResult 
-  { "DBParameterGroup" :: NullOrUndefined (DBParameterGroup)
+  { "DBParameterGroup" :: Maybe (DBParameterGroup)
   }
 derive instance newtypeCreateDBParameterGroupResult :: Newtype CreateDBParameterGroupResult _
 derive instance repGenericCreateDBParameterGroupResult :: Generic CreateDBParameterGroupResult _
@@ -408,12 +407,12 @@ instance encodeCreateDBParameterGroupResult :: Encode CreateDBParameterGroupResu
 
 -- | Constructs CreateDBParameterGroupResult from required parameters
 newCreateDBParameterGroupResult :: CreateDBParameterGroupResult
-newCreateDBParameterGroupResult  = CreateDBParameterGroupResult { "DBParameterGroup": (NullOrUndefined Nothing) }
+newCreateDBParameterGroupResult  = CreateDBParameterGroupResult { "DBParameterGroup": Nothing }
 
 -- | Constructs CreateDBParameterGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBParameterGroupResult' :: ( { "DBParameterGroup" :: NullOrUndefined (DBParameterGroup) } -> {"DBParameterGroup" :: NullOrUndefined (DBParameterGroup) } ) -> CreateDBParameterGroupResult
-newCreateDBParameterGroupResult'  customize = (CreateDBParameterGroupResult <<< customize) { "DBParameterGroup": (NullOrUndefined Nothing) }
+newCreateDBParameterGroupResult' :: ( { "DBParameterGroup" :: Maybe (DBParameterGroup) } -> {"DBParameterGroup" :: Maybe (DBParameterGroup) } ) -> CreateDBParameterGroupResult
+newCreateDBParameterGroupResult'  customize = (CreateDBParameterGroupResult <<< customize) { "DBParameterGroup": Nothing }
 
 
 
@@ -439,7 +438,7 @@ newCreateDBSecurityGroupMessage' _DBSecurityGroupDescription _DBSecurityGroupNam
 
 
 newtype CreateDBSecurityGroupResult = CreateDBSecurityGroupResult 
-  { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup)
+  { "DBSecurityGroup" :: Maybe (DBSecurityGroup)
   }
 derive instance newtypeCreateDBSecurityGroupResult :: Newtype CreateDBSecurityGroupResult _
 derive instance repGenericCreateDBSecurityGroupResult :: Generic CreateDBSecurityGroupResult _
@@ -449,12 +448,12 @@ instance encodeCreateDBSecurityGroupResult :: Encode CreateDBSecurityGroupResult
 
 -- | Constructs CreateDBSecurityGroupResult from required parameters
 newCreateDBSecurityGroupResult :: CreateDBSecurityGroupResult
-newCreateDBSecurityGroupResult  = CreateDBSecurityGroupResult { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newCreateDBSecurityGroupResult  = CreateDBSecurityGroupResult { "DBSecurityGroup": Nothing }
 
 -- | Constructs CreateDBSecurityGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBSecurityGroupResult' :: ( { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> {"DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } ) -> CreateDBSecurityGroupResult
-newCreateDBSecurityGroupResult'  customize = (CreateDBSecurityGroupResult <<< customize) { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newCreateDBSecurityGroupResult' :: ( { "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> {"DBSecurityGroup" :: Maybe (DBSecurityGroup) } ) -> CreateDBSecurityGroupResult
+newCreateDBSecurityGroupResult'  customize = (CreateDBSecurityGroupResult <<< customize) { "DBSecurityGroup": Nothing }
 
 
 
@@ -480,7 +479,7 @@ newCreateDBSnapshotMessage' _DBInstanceIdentifier _DBSnapshotIdentifier customiz
 
 
 newtype CreateDBSnapshotResult = CreateDBSnapshotResult 
-  { "DBSnapshot" :: NullOrUndefined (DBSnapshot)
+  { "DBSnapshot" :: Maybe (DBSnapshot)
   }
 derive instance newtypeCreateDBSnapshotResult :: Newtype CreateDBSnapshotResult _
 derive instance repGenericCreateDBSnapshotResult :: Generic CreateDBSnapshotResult _
@@ -490,12 +489,12 @@ instance encodeCreateDBSnapshotResult :: Encode CreateDBSnapshotResult where enc
 
 -- | Constructs CreateDBSnapshotResult from required parameters
 newCreateDBSnapshotResult :: CreateDBSnapshotResult
-newCreateDBSnapshotResult  = CreateDBSnapshotResult { "DBSnapshot": (NullOrUndefined Nothing) }
+newCreateDBSnapshotResult  = CreateDBSnapshotResult { "DBSnapshot": Nothing }
 
 -- | Constructs CreateDBSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBSnapshotResult' :: ( { "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> {"DBSnapshot" :: NullOrUndefined (DBSnapshot) } ) -> CreateDBSnapshotResult
-newCreateDBSnapshotResult'  customize = (CreateDBSnapshotResult <<< customize) { "DBSnapshot": (NullOrUndefined Nothing) }
+newCreateDBSnapshotResult' :: ( { "DBSnapshot" :: Maybe (DBSnapshot) } -> {"DBSnapshot" :: Maybe (DBSnapshot) } ) -> CreateDBSnapshotResult
+newCreateDBSnapshotResult'  customize = (CreateDBSnapshotResult <<< customize) { "DBSnapshot": Nothing }
 
 
 
@@ -522,7 +521,7 @@ newCreateDBSubnetGroupMessage' _DBSubnetGroupDescription _DBSubnetGroupName _Sub
 
 
 newtype CreateDBSubnetGroupResult = CreateDBSubnetGroupResult 
-  { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup)
+  { "DBSubnetGroup" :: Maybe (DBSubnetGroup)
   }
 derive instance newtypeCreateDBSubnetGroupResult :: Newtype CreateDBSubnetGroupResult _
 derive instance repGenericCreateDBSubnetGroupResult :: Generic CreateDBSubnetGroupResult _
@@ -532,22 +531,22 @@ instance encodeCreateDBSubnetGroupResult :: Encode CreateDBSubnetGroupResult whe
 
 -- | Constructs CreateDBSubnetGroupResult from required parameters
 newCreateDBSubnetGroupResult :: CreateDBSubnetGroupResult
-newCreateDBSubnetGroupResult  = CreateDBSubnetGroupResult { "DBSubnetGroup": (NullOrUndefined Nothing) }
+newCreateDBSubnetGroupResult  = CreateDBSubnetGroupResult { "DBSubnetGroup": Nothing }
 
 -- | Constructs CreateDBSubnetGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDBSubnetGroupResult' :: ( { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } -> {"DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } ) -> CreateDBSubnetGroupResult
-newCreateDBSubnetGroupResult'  customize = (CreateDBSubnetGroupResult <<< customize) { "DBSubnetGroup": (NullOrUndefined Nothing) }
+newCreateDBSubnetGroupResult' :: ( { "DBSubnetGroup" :: Maybe (DBSubnetGroup) } -> {"DBSubnetGroup" :: Maybe (DBSubnetGroup) } ) -> CreateDBSubnetGroupResult
+newCreateDBSubnetGroupResult'  customize = (CreateDBSubnetGroupResult <<< customize) { "DBSubnetGroup": Nothing }
 
 
 
 newtype CreateEventSubscriptionMessage = CreateEventSubscriptionMessage 
   { "SubscriptionName" :: (String)
   , "SnsTopicArn" :: (String)
-  , "SourceType" :: NullOrUndefined (String)
-  , "EventCategories" :: NullOrUndefined (EventCategoriesList)
-  , "SourceIds" :: NullOrUndefined (SourceIdsList)
-  , "Enabled" :: NullOrUndefined (BooleanOptional)
+  , "SourceType" :: Maybe (String)
+  , "EventCategories" :: Maybe (EventCategoriesList)
+  , "SourceIds" :: Maybe (SourceIdsList)
+  , "Enabled" :: Maybe (BooleanOptional)
   }
 derive instance newtypeCreateEventSubscriptionMessage :: Newtype CreateEventSubscriptionMessage _
 derive instance repGenericCreateEventSubscriptionMessage :: Generic CreateEventSubscriptionMessage _
@@ -557,17 +556,17 @@ instance encodeCreateEventSubscriptionMessage :: Encode CreateEventSubscriptionM
 
 -- | Constructs CreateEventSubscriptionMessage from required parameters
 newCreateEventSubscriptionMessage :: String -> String -> CreateEventSubscriptionMessage
-newCreateEventSubscriptionMessage _SnsTopicArn _SubscriptionName = CreateEventSubscriptionMessage { "SnsTopicArn": _SnsTopicArn, "SubscriptionName": _SubscriptionName, "Enabled": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "SourceIds": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newCreateEventSubscriptionMessage _SnsTopicArn _SubscriptionName = CreateEventSubscriptionMessage { "SnsTopicArn": _SnsTopicArn, "SubscriptionName": _SubscriptionName, "Enabled": Nothing, "EventCategories": Nothing, "SourceIds": Nothing, "SourceType": Nothing }
 
 -- | Constructs CreateEventSubscriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateEventSubscriptionMessage' :: String -> String -> ( { "SubscriptionName" :: (String) , "SnsTopicArn" :: (String) , "SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "SourceIds" :: NullOrUndefined (SourceIdsList) , "Enabled" :: NullOrUndefined (BooleanOptional) } -> {"SubscriptionName" :: (String) , "SnsTopicArn" :: (String) , "SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "SourceIds" :: NullOrUndefined (SourceIdsList) , "Enabled" :: NullOrUndefined (BooleanOptional) } ) -> CreateEventSubscriptionMessage
-newCreateEventSubscriptionMessage' _SnsTopicArn _SubscriptionName customize = (CreateEventSubscriptionMessage <<< customize) { "SnsTopicArn": _SnsTopicArn, "SubscriptionName": _SubscriptionName, "Enabled": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "SourceIds": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newCreateEventSubscriptionMessage' :: String -> String -> ( { "SubscriptionName" :: (String) , "SnsTopicArn" :: (String) , "SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "SourceIds" :: Maybe (SourceIdsList) , "Enabled" :: Maybe (BooleanOptional) } -> {"SubscriptionName" :: (String) , "SnsTopicArn" :: (String) , "SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "SourceIds" :: Maybe (SourceIdsList) , "Enabled" :: Maybe (BooleanOptional) } ) -> CreateEventSubscriptionMessage
+newCreateEventSubscriptionMessage' _SnsTopicArn _SubscriptionName customize = (CreateEventSubscriptionMessage <<< customize) { "SnsTopicArn": _SnsTopicArn, "SubscriptionName": _SubscriptionName, "Enabled": Nothing, "EventCategories": Nothing, "SourceIds": Nothing, "SourceType": Nothing }
 
 
 
 newtype CreateEventSubscriptionResult = CreateEventSubscriptionResult 
-  { "EventSubscription" :: NullOrUndefined (EventSubscription)
+  { "EventSubscription" :: Maybe (EventSubscription)
   }
 derive instance newtypeCreateEventSubscriptionResult :: Newtype CreateEventSubscriptionResult _
 derive instance repGenericCreateEventSubscriptionResult :: Generic CreateEventSubscriptionResult _
@@ -577,12 +576,12 @@ instance encodeCreateEventSubscriptionResult :: Encode CreateEventSubscriptionRe
 
 -- | Constructs CreateEventSubscriptionResult from required parameters
 newCreateEventSubscriptionResult :: CreateEventSubscriptionResult
-newCreateEventSubscriptionResult  = CreateEventSubscriptionResult { "EventSubscription": (NullOrUndefined Nothing) }
+newCreateEventSubscriptionResult  = CreateEventSubscriptionResult { "EventSubscription": Nothing }
 
 -- | Constructs CreateEventSubscriptionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateEventSubscriptionResult' :: ( { "EventSubscription" :: NullOrUndefined (EventSubscription) } -> {"EventSubscription" :: NullOrUndefined (EventSubscription) } ) -> CreateEventSubscriptionResult
-newCreateEventSubscriptionResult'  customize = (CreateEventSubscriptionResult <<< customize) { "EventSubscription": (NullOrUndefined Nothing) }
+newCreateEventSubscriptionResult' :: ( { "EventSubscription" :: Maybe (EventSubscription) } -> {"EventSubscription" :: Maybe (EventSubscription) } ) -> CreateEventSubscriptionResult
+newCreateEventSubscriptionResult'  customize = (CreateEventSubscriptionResult <<< customize) { "EventSubscription": Nothing }
 
 
 
@@ -610,7 +609,7 @@ newCreateOptionGroupMessage' _EngineName _MajorEngineVersion _OptionGroupDescrip
 
 
 newtype CreateOptionGroupResult = CreateOptionGroupResult 
-  { "OptionGroup" :: NullOrUndefined (OptionGroup)
+  { "OptionGroup" :: Maybe (OptionGroup)
   }
 derive instance newtypeCreateOptionGroupResult :: Newtype CreateOptionGroupResult _
 derive instance repGenericCreateOptionGroupResult :: Generic CreateOptionGroupResult _
@@ -620,23 +619,23 @@ instance encodeCreateOptionGroupResult :: Encode CreateOptionGroupResult where e
 
 -- | Constructs CreateOptionGroupResult from required parameters
 newCreateOptionGroupResult :: CreateOptionGroupResult
-newCreateOptionGroupResult  = CreateOptionGroupResult { "OptionGroup": (NullOrUndefined Nothing) }
+newCreateOptionGroupResult  = CreateOptionGroupResult { "OptionGroup": Nothing }
 
 -- | Constructs CreateOptionGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateOptionGroupResult' :: ( { "OptionGroup" :: NullOrUndefined (OptionGroup) } -> {"OptionGroup" :: NullOrUndefined (OptionGroup) } ) -> CreateOptionGroupResult
-newCreateOptionGroupResult'  customize = (CreateOptionGroupResult <<< customize) { "OptionGroup": (NullOrUndefined Nothing) }
+newCreateOptionGroupResult' :: ( { "OptionGroup" :: Maybe (OptionGroup) } -> {"OptionGroup" :: Maybe (OptionGroup) } ) -> CreateOptionGroupResult
+newCreateOptionGroupResult'  customize = (CreateOptionGroupResult <<< customize) { "OptionGroup": Nothing }
 
 
 
 newtype DBEngineVersion = DBEngineVersion 
-  { "Engine" :: NullOrUndefined (String)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "DBParameterGroupFamily" :: NullOrUndefined (String)
-  , "DBEngineDescription" :: NullOrUndefined (String)
-  , "DBEngineVersionDescription" :: NullOrUndefined (String)
-  , "DefaultCharacterSet" :: NullOrUndefined (CharacterSet)
-  , "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList)
+  { "Engine" :: Maybe (String)
+  , "EngineVersion" :: Maybe (String)
+  , "DBParameterGroupFamily" :: Maybe (String)
+  , "DBEngineDescription" :: Maybe (String)
+  , "DBEngineVersionDescription" :: Maybe (String)
+  , "DefaultCharacterSet" :: Maybe (CharacterSet)
+  , "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList)
   }
 derive instance newtypeDBEngineVersion :: Newtype DBEngineVersion _
 derive instance repGenericDBEngineVersion :: Generic DBEngineVersion _
@@ -646,12 +645,12 @@ instance encodeDBEngineVersion :: Encode DBEngineVersion where encode = genericE
 
 -- | Constructs DBEngineVersion from required parameters
 newDBEngineVersion :: DBEngineVersion
-newDBEngineVersion  = DBEngineVersion { "DBEngineDescription": (NullOrUndefined Nothing), "DBEngineVersionDescription": (NullOrUndefined Nothing), "DBParameterGroupFamily": (NullOrUndefined Nothing), "DefaultCharacterSet": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "SupportedCharacterSets": (NullOrUndefined Nothing) }
+newDBEngineVersion  = DBEngineVersion { "DBEngineDescription": Nothing, "DBEngineVersionDescription": Nothing, "DBParameterGroupFamily": Nothing, "DefaultCharacterSet": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "SupportedCharacterSets": Nothing }
 
 -- | Constructs DBEngineVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBEngineVersion' :: ( { "Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "DBEngineDescription" :: NullOrUndefined (String) , "DBEngineVersionDescription" :: NullOrUndefined (String) , "DefaultCharacterSet" :: NullOrUndefined (CharacterSet) , "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList) } -> {"Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "DBEngineDescription" :: NullOrUndefined (String) , "DBEngineVersionDescription" :: NullOrUndefined (String) , "DefaultCharacterSet" :: NullOrUndefined (CharacterSet) , "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList) } ) -> DBEngineVersion
-newDBEngineVersion'  customize = (DBEngineVersion <<< customize) { "DBEngineDescription": (NullOrUndefined Nothing), "DBEngineVersionDescription": (NullOrUndefined Nothing), "DBParameterGroupFamily": (NullOrUndefined Nothing), "DefaultCharacterSet": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "SupportedCharacterSets": (NullOrUndefined Nothing) }
+newDBEngineVersion' :: ( { "Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "DBEngineDescription" :: Maybe (String) , "DBEngineVersionDescription" :: Maybe (String) , "DefaultCharacterSet" :: Maybe (CharacterSet) , "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList) } -> {"Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "DBEngineDescription" :: Maybe (String) , "DBEngineVersionDescription" :: Maybe (String) , "DefaultCharacterSet" :: Maybe (CharacterSet) , "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList) } ) -> DBEngineVersion
+newDBEngineVersion'  customize = (DBEngineVersion <<< customize) { "DBEngineDescription": Nothing, "DBEngineVersionDescription": Nothing, "DBParameterGroupFamily": Nothing, "DefaultCharacterSet": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "SupportedCharacterSets": Nothing }
 
 
 
@@ -665,8 +664,8 @@ instance encodeDBEngineVersionList :: Encode DBEngineVersionList where encode = 
 
 
 newtype DBEngineVersionMessage = DBEngineVersionMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList)
+  { "Marker" :: Maybe (String)
+  , "DBEngineVersions" :: Maybe (DBEngineVersionList)
   }
 derive instance newtypeDBEngineVersionMessage :: Newtype DBEngineVersionMessage _
 derive instance repGenericDBEngineVersionMessage :: Generic DBEngineVersionMessage _
@@ -676,46 +675,46 @@ instance encodeDBEngineVersionMessage :: Encode DBEngineVersionMessage where enc
 
 -- | Constructs DBEngineVersionMessage from required parameters
 newDBEngineVersionMessage :: DBEngineVersionMessage
-newDBEngineVersionMessage  = DBEngineVersionMessage { "DBEngineVersions": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBEngineVersionMessage  = DBEngineVersionMessage { "DBEngineVersions": Nothing, "Marker": Nothing }
 
 -- | Constructs DBEngineVersionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBEngineVersionMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList) } -> {"Marker" :: NullOrUndefined (String) , "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList) } ) -> DBEngineVersionMessage
-newDBEngineVersionMessage'  customize = (DBEngineVersionMessage <<< customize) { "DBEngineVersions": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBEngineVersionMessage' :: ( { "Marker" :: Maybe (String) , "DBEngineVersions" :: Maybe (DBEngineVersionList) } -> {"Marker" :: Maybe (String) , "DBEngineVersions" :: Maybe (DBEngineVersionList) } ) -> DBEngineVersionMessage
+newDBEngineVersionMessage'  customize = (DBEngineVersionMessage <<< customize) { "DBEngineVersions": Nothing, "Marker": Nothing }
 
 
 
 newtype DBInstance = DBInstance 
-  { "DBInstanceIdentifier" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Engine" :: NullOrUndefined (String)
-  , "DBInstanceStatus" :: NullOrUndefined (String)
-  , "MasterUsername" :: NullOrUndefined (String)
-  , "DBName" :: NullOrUndefined (String)
-  , "Endpoint" :: NullOrUndefined (Endpoint)
-  , "AllocatedStorage" :: NullOrUndefined (Int)
-  , "InstanceCreateTime" :: NullOrUndefined (TStamp)
-  , "PreferredBackupWindow" :: NullOrUndefined (String)
-  , "BackupRetentionPeriod" :: NullOrUndefined (Int)
-  , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList)
-  , "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList)
-  , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup)
-  , "PreferredMaintenanceWindow" :: NullOrUndefined (String)
-  , "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues)
-  , "LatestRestorableTime" :: NullOrUndefined (TStamp)
-  , "MultiAZ" :: NullOrUndefined (Boolean)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean)
-  , "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String)
-  , "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership)
-  , "CharacterSetName" :: NullOrUndefined (String)
-  , "SecondaryAvailabilityZone" :: NullOrUndefined (String)
-  , "PubliclyAccessible" :: NullOrUndefined (Boolean)
+  { "DBInstanceIdentifier" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Engine" :: Maybe (String)
+  , "DBInstanceStatus" :: Maybe (String)
+  , "MasterUsername" :: Maybe (String)
+  , "DBName" :: Maybe (String)
+  , "Endpoint" :: Maybe (Endpoint)
+  , "AllocatedStorage" :: Maybe (Int)
+  , "InstanceCreateTime" :: Maybe (TStamp)
+  , "PreferredBackupWindow" :: Maybe (String)
+  , "BackupRetentionPeriod" :: Maybe (Int)
+  , "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList)
+  , "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList)
+  , "DBParameterGroups" :: Maybe (DBParameterGroupStatusList)
+  , "AvailabilityZone" :: Maybe (String)
+  , "DBSubnetGroup" :: Maybe (DBSubnetGroup)
+  , "PreferredMaintenanceWindow" :: Maybe (String)
+  , "PendingModifiedValues" :: Maybe (PendingModifiedValues)
+  , "LatestRestorableTime" :: Maybe (TStamp)
+  , "MultiAZ" :: Maybe (Boolean)
+  , "EngineVersion" :: Maybe (String)
+  , "AutoMinorVersionUpgrade" :: Maybe (Boolean)
+  , "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String)
+  , "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList)
+  , "LicenseModel" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupMembership" :: Maybe (OptionGroupMembership)
+  , "CharacterSetName" :: Maybe (String)
+  , "SecondaryAvailabilityZone" :: Maybe (String)
+  , "PubliclyAccessible" :: Maybe (Boolean)
   }
 derive instance newtypeDBInstance :: Newtype DBInstance _
 derive instance repGenericDBInstance :: Generic DBInstance _
@@ -725,12 +724,12 @@ instance encodeDBInstance :: Encode DBInstance where encode = genericEncode opti
 
 -- | Constructs DBInstance from required parameters
 newDBInstance :: DBInstance
-newDBInstance  = DBInstance { "AllocatedStorage": (NullOrUndefined Nothing), "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBInstanceStatus": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBParameterGroups": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "DBSubnetGroup": (NullOrUndefined Nothing), "Endpoint": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "InstanceCreateTime": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LatestRestorableTime": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MasterUsername": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupMembership": (NullOrUndefined Nothing), "PendingModifiedValues": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "ReadReplicaDBInstanceIdentifiers": (NullOrUndefined Nothing), "ReadReplicaSourceDBInstanceIdentifier": (NullOrUndefined Nothing), "SecondaryAvailabilityZone": (NullOrUndefined Nothing), "VpcSecurityGroups": (NullOrUndefined Nothing) }
+newDBInstance  = DBInstance { "AllocatedStorage": Nothing, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "BackupRetentionPeriod": Nothing, "CharacterSetName": Nothing, "DBInstanceClass": Nothing, "DBInstanceIdentifier": Nothing, "DBInstanceStatus": Nothing, "DBName": Nothing, "DBParameterGroups": Nothing, "DBSecurityGroups": Nothing, "DBSubnetGroup": Nothing, "Endpoint": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "InstanceCreateTime": Nothing, "Iops": Nothing, "LatestRestorableTime": Nothing, "LicenseModel": Nothing, "MasterUsername": Nothing, "MultiAZ": Nothing, "OptionGroupMembership": Nothing, "PendingModifiedValues": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "PubliclyAccessible": Nothing, "ReadReplicaDBInstanceIdentifiers": Nothing, "ReadReplicaSourceDBInstanceIdentifier": Nothing, "SecondaryAvailabilityZone": Nothing, "VpcSecurityGroups": Nothing }
 
 -- | Constructs DBInstance's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBInstance' :: ( { "DBInstanceIdentifier" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "DBInstanceStatus" :: NullOrUndefined (String) , "MasterUsername" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Endpoint" :: NullOrUndefined (Endpoint) , "AllocatedStorage" :: NullOrUndefined (Int) , "InstanceCreateTime" :: NullOrUndefined (TStamp) , "PreferredBackupWindow" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (Int) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList) , "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList) , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues) , "LatestRestorableTime" :: NullOrUndefined (TStamp) , "MultiAZ" :: NullOrUndefined (Boolean) , "EngineVersion" :: NullOrUndefined (String) , "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean) , "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String) , "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList) , "LicenseModel" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership) , "CharacterSetName" :: NullOrUndefined (String) , "SecondaryAvailabilityZone" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (Boolean) } -> {"DBInstanceIdentifier" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "DBInstanceStatus" :: NullOrUndefined (String) , "MasterUsername" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Endpoint" :: NullOrUndefined (Endpoint) , "AllocatedStorage" :: NullOrUndefined (Int) , "InstanceCreateTime" :: NullOrUndefined (TStamp) , "PreferredBackupWindow" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (Int) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList) , "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList) , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues) , "LatestRestorableTime" :: NullOrUndefined (TStamp) , "MultiAZ" :: NullOrUndefined (Boolean) , "EngineVersion" :: NullOrUndefined (String) , "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean) , "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String) , "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList) , "LicenseModel" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership) , "CharacterSetName" :: NullOrUndefined (String) , "SecondaryAvailabilityZone" :: NullOrUndefined (String) , "PubliclyAccessible" :: NullOrUndefined (Boolean) } ) -> DBInstance
-newDBInstance'  customize = (DBInstance <<< customize) { "AllocatedStorage": (NullOrUndefined Nothing), "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "CharacterSetName": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBInstanceStatus": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBParameterGroups": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "DBSubnetGroup": (NullOrUndefined Nothing), "Endpoint": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "InstanceCreateTime": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LatestRestorableTime": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MasterUsername": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupMembership": (NullOrUndefined Nothing), "PendingModifiedValues": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "ReadReplicaDBInstanceIdentifiers": (NullOrUndefined Nothing), "ReadReplicaSourceDBInstanceIdentifier": (NullOrUndefined Nothing), "SecondaryAvailabilityZone": (NullOrUndefined Nothing), "VpcSecurityGroups": (NullOrUndefined Nothing) }
+newDBInstance' :: ( { "DBInstanceIdentifier" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Engine" :: Maybe (String) , "DBInstanceStatus" :: Maybe (String) , "MasterUsername" :: Maybe (String) , "DBName" :: Maybe (String) , "Endpoint" :: Maybe (Endpoint) , "AllocatedStorage" :: Maybe (Int) , "InstanceCreateTime" :: Maybe (TStamp) , "PreferredBackupWindow" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (Int) , "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList) , "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList) , "DBParameterGroups" :: Maybe (DBParameterGroupStatusList) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroup" :: Maybe (DBSubnetGroup) , "PreferredMaintenanceWindow" :: Maybe (String) , "PendingModifiedValues" :: Maybe (PendingModifiedValues) , "LatestRestorableTime" :: Maybe (TStamp) , "MultiAZ" :: Maybe (Boolean) , "EngineVersion" :: Maybe (String) , "AutoMinorVersionUpgrade" :: Maybe (Boolean) , "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String) , "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList) , "LicenseModel" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupMembership" :: Maybe (OptionGroupMembership) , "CharacterSetName" :: Maybe (String) , "SecondaryAvailabilityZone" :: Maybe (String) , "PubliclyAccessible" :: Maybe (Boolean) } -> {"DBInstanceIdentifier" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Engine" :: Maybe (String) , "DBInstanceStatus" :: Maybe (String) , "MasterUsername" :: Maybe (String) , "DBName" :: Maybe (String) , "Endpoint" :: Maybe (Endpoint) , "AllocatedStorage" :: Maybe (Int) , "InstanceCreateTime" :: Maybe (TStamp) , "PreferredBackupWindow" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (Int) , "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList) , "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList) , "DBParameterGroups" :: Maybe (DBParameterGroupStatusList) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroup" :: Maybe (DBSubnetGroup) , "PreferredMaintenanceWindow" :: Maybe (String) , "PendingModifiedValues" :: Maybe (PendingModifiedValues) , "LatestRestorableTime" :: Maybe (TStamp) , "MultiAZ" :: Maybe (Boolean) , "EngineVersion" :: Maybe (String) , "AutoMinorVersionUpgrade" :: Maybe (Boolean) , "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String) , "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList) , "LicenseModel" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupMembership" :: Maybe (OptionGroupMembership) , "CharacterSetName" :: Maybe (String) , "SecondaryAvailabilityZone" :: Maybe (String) , "PubliclyAccessible" :: Maybe (Boolean) } ) -> DBInstance
+newDBInstance'  customize = (DBInstance <<< customize) { "AllocatedStorage": Nothing, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "BackupRetentionPeriod": Nothing, "CharacterSetName": Nothing, "DBInstanceClass": Nothing, "DBInstanceIdentifier": Nothing, "DBInstanceStatus": Nothing, "DBName": Nothing, "DBParameterGroups": Nothing, "DBSecurityGroups": Nothing, "DBSubnetGroup": Nothing, "Endpoint": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "InstanceCreateTime": Nothing, "Iops": Nothing, "LatestRestorableTime": Nothing, "LicenseModel": Nothing, "MasterUsername": Nothing, "MultiAZ": Nothing, "OptionGroupMembership": Nothing, "PendingModifiedValues": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "PubliclyAccessible": Nothing, "ReadReplicaDBInstanceIdentifiers": Nothing, "ReadReplicaSourceDBInstanceIdentifier": Nothing, "SecondaryAvailabilityZone": Nothing, "VpcSecurityGroups": Nothing }
 
 
 
@@ -754,8 +753,8 @@ instance encodeDBInstanceList :: Encode DBInstanceList where encode = genericEnc
 
 
 newtype DBInstanceMessage = DBInstanceMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBInstances" :: NullOrUndefined (DBInstanceList)
+  { "Marker" :: Maybe (String)
+  , "DBInstances" :: Maybe (DBInstanceList)
   }
 derive instance newtypeDBInstanceMessage :: Newtype DBInstanceMessage _
 derive instance repGenericDBInstanceMessage :: Generic DBInstanceMessage _
@@ -765,12 +764,12 @@ instance encodeDBInstanceMessage :: Encode DBInstanceMessage where encode = gene
 
 -- | Constructs DBInstanceMessage from required parameters
 newDBInstanceMessage :: DBInstanceMessage
-newDBInstanceMessage  = DBInstanceMessage { "DBInstances": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBInstanceMessage  = DBInstanceMessage { "DBInstances": Nothing, "Marker": Nothing }
 
 -- | Constructs DBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBInstanceMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBInstances" :: NullOrUndefined (DBInstanceList) } -> {"Marker" :: NullOrUndefined (String) , "DBInstances" :: NullOrUndefined (DBInstanceList) } ) -> DBInstanceMessage
-newDBInstanceMessage'  customize = (DBInstanceMessage <<< customize) { "DBInstances": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBInstanceMessage' :: ( { "Marker" :: Maybe (String) , "DBInstances" :: Maybe (DBInstanceList) } -> {"Marker" :: Maybe (String) , "DBInstances" :: Maybe (DBInstanceList) } ) -> DBInstanceMessage
+newDBInstanceMessage'  customize = (DBInstanceMessage <<< customize) { "DBInstances": Nothing, "Marker": Nothing }
 
 
 
@@ -785,9 +784,9 @@ instance encodeDBInstanceNotFoundFault :: Encode DBInstanceNotFoundFault where e
 
 
 newtype DBParameterGroup = DBParameterGroup 
-  { "DBParameterGroupName" :: NullOrUndefined (String)
-  , "DBParameterGroupFamily" :: NullOrUndefined (String)
-  , "Description" :: NullOrUndefined (String)
+  { "DBParameterGroupName" :: Maybe (String)
+  , "DBParameterGroupFamily" :: Maybe (String)
+  , "Description" :: Maybe (String)
   }
 derive instance newtypeDBParameterGroup :: Newtype DBParameterGroup _
 derive instance repGenericDBParameterGroup :: Generic DBParameterGroup _
@@ -797,12 +796,12 @@ instance encodeDBParameterGroup :: Encode DBParameterGroup where encode = generi
 
 -- | Constructs DBParameterGroup from required parameters
 newDBParameterGroup :: DBParameterGroup
-newDBParameterGroup  = DBParameterGroup { "DBParameterGroupFamily": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newDBParameterGroup  = DBParameterGroup { "DBParameterGroupFamily": Nothing, "DBParameterGroupName": Nothing, "Description": Nothing }
 
 -- | Constructs DBParameterGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBParameterGroup' :: ( { "DBParameterGroupName" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) } -> {"DBParameterGroupName" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) } ) -> DBParameterGroup
-newDBParameterGroup'  customize = (DBParameterGroup <<< customize) { "DBParameterGroupFamily": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newDBParameterGroup' :: ( { "DBParameterGroupName" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "Description" :: Maybe (String) } -> {"DBParameterGroupName" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "Description" :: Maybe (String) } ) -> DBParameterGroup
+newDBParameterGroup'  customize = (DBParameterGroup <<< customize) { "DBParameterGroupFamily": Nothing, "DBParameterGroupName": Nothing, "Description": Nothing }
 
 
 
@@ -817,8 +816,8 @@ instance encodeDBParameterGroupAlreadyExistsFault :: Encode DBParameterGroupAlre
 
 
 newtype DBParameterGroupDetails = DBParameterGroupDetails 
-  { "Parameters" :: NullOrUndefined (ParametersList)
-  , "Marker" :: NullOrUndefined (String)
+  { "Parameters" :: Maybe (ParametersList)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDBParameterGroupDetails :: Newtype DBParameterGroupDetails _
 derive instance repGenericDBParameterGroupDetails :: Generic DBParameterGroupDetails _
@@ -828,12 +827,12 @@ instance encodeDBParameterGroupDetails :: Encode DBParameterGroupDetails where e
 
 -- | Constructs DBParameterGroupDetails from required parameters
 newDBParameterGroupDetails :: DBParameterGroupDetails
-newDBParameterGroupDetails  = DBParameterGroupDetails { "Marker": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing) }
+newDBParameterGroupDetails  = DBParameterGroupDetails { "Marker": Nothing, "Parameters": Nothing }
 
 -- | Constructs DBParameterGroupDetails's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBParameterGroupDetails' :: ( { "Parameters" :: NullOrUndefined (ParametersList) , "Marker" :: NullOrUndefined (String) } -> {"Parameters" :: NullOrUndefined (ParametersList) , "Marker" :: NullOrUndefined (String) } ) -> DBParameterGroupDetails
-newDBParameterGroupDetails'  customize = (DBParameterGroupDetails <<< customize) { "Marker": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing) }
+newDBParameterGroupDetails' :: ( { "Parameters" :: Maybe (ParametersList) , "Marker" :: Maybe (String) } -> {"Parameters" :: Maybe (ParametersList) , "Marker" :: Maybe (String) } ) -> DBParameterGroupDetails
+newDBParameterGroupDetails'  customize = (DBParameterGroupDetails <<< customize) { "Marker": Nothing, "Parameters": Nothing }
 
 
 
@@ -847,7 +846,7 @@ instance encodeDBParameterGroupList :: Encode DBParameterGroupList where encode 
 
 
 newtype DBParameterGroupNameMessage = DBParameterGroupNameMessage 
-  { "DBParameterGroupName" :: NullOrUndefined (String)
+  { "DBParameterGroupName" :: Maybe (String)
   }
 derive instance newtypeDBParameterGroupNameMessage :: Newtype DBParameterGroupNameMessage _
 derive instance repGenericDBParameterGroupNameMessage :: Generic DBParameterGroupNameMessage _
@@ -857,12 +856,12 @@ instance encodeDBParameterGroupNameMessage :: Encode DBParameterGroupNameMessage
 
 -- | Constructs DBParameterGroupNameMessage from required parameters
 newDBParameterGroupNameMessage :: DBParameterGroupNameMessage
-newDBParameterGroupNameMessage  = DBParameterGroupNameMessage { "DBParameterGroupName": (NullOrUndefined Nothing) }
+newDBParameterGroupNameMessage  = DBParameterGroupNameMessage { "DBParameterGroupName": Nothing }
 
 -- | Constructs DBParameterGroupNameMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBParameterGroupNameMessage' :: ( { "DBParameterGroupName" :: NullOrUndefined (String) } -> {"DBParameterGroupName" :: NullOrUndefined (String) } ) -> DBParameterGroupNameMessage
-newDBParameterGroupNameMessage'  customize = (DBParameterGroupNameMessage <<< customize) { "DBParameterGroupName": (NullOrUndefined Nothing) }
+newDBParameterGroupNameMessage' :: ( { "DBParameterGroupName" :: Maybe (String) } -> {"DBParameterGroupName" :: Maybe (String) } ) -> DBParameterGroupNameMessage
+newDBParameterGroupNameMessage'  customize = (DBParameterGroupNameMessage <<< customize) { "DBParameterGroupName": Nothing }
 
 
 
@@ -887,8 +886,8 @@ instance encodeDBParameterGroupQuotaExceededFault :: Encode DBParameterGroupQuot
 
 
 newtype DBParameterGroupStatus = DBParameterGroupStatus 
-  { "DBParameterGroupName" :: NullOrUndefined (String)
-  , "ParameterApplyStatus" :: NullOrUndefined (String)
+  { "DBParameterGroupName" :: Maybe (String)
+  , "ParameterApplyStatus" :: Maybe (String)
   }
 derive instance newtypeDBParameterGroupStatus :: Newtype DBParameterGroupStatus _
 derive instance repGenericDBParameterGroupStatus :: Generic DBParameterGroupStatus _
@@ -898,12 +897,12 @@ instance encodeDBParameterGroupStatus :: Encode DBParameterGroupStatus where enc
 
 -- | Constructs DBParameterGroupStatus from required parameters
 newDBParameterGroupStatus :: DBParameterGroupStatus
-newDBParameterGroupStatus  = DBParameterGroupStatus { "DBParameterGroupName": (NullOrUndefined Nothing), "ParameterApplyStatus": (NullOrUndefined Nothing) }
+newDBParameterGroupStatus  = DBParameterGroupStatus { "DBParameterGroupName": Nothing, "ParameterApplyStatus": Nothing }
 
 -- | Constructs DBParameterGroupStatus's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBParameterGroupStatus' :: ( { "DBParameterGroupName" :: NullOrUndefined (String) , "ParameterApplyStatus" :: NullOrUndefined (String) } -> {"DBParameterGroupName" :: NullOrUndefined (String) , "ParameterApplyStatus" :: NullOrUndefined (String) } ) -> DBParameterGroupStatus
-newDBParameterGroupStatus'  customize = (DBParameterGroupStatus <<< customize) { "DBParameterGroupName": (NullOrUndefined Nothing), "ParameterApplyStatus": (NullOrUndefined Nothing) }
+newDBParameterGroupStatus' :: ( { "DBParameterGroupName" :: Maybe (String) , "ParameterApplyStatus" :: Maybe (String) } -> {"DBParameterGroupName" :: Maybe (String) , "ParameterApplyStatus" :: Maybe (String) } ) -> DBParameterGroupStatus
+newDBParameterGroupStatus'  customize = (DBParameterGroupStatus <<< customize) { "DBParameterGroupName": Nothing, "ParameterApplyStatus": Nothing }
 
 
 
@@ -917,8 +916,8 @@ instance encodeDBParameterGroupStatusList :: Encode DBParameterGroupStatusList w
 
 
 newtype DBParameterGroupsMessage = DBParameterGroupsMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList)
+  { "Marker" :: Maybe (String)
+  , "DBParameterGroups" :: Maybe (DBParameterGroupList)
   }
 derive instance newtypeDBParameterGroupsMessage :: Newtype DBParameterGroupsMessage _
 derive instance repGenericDBParameterGroupsMessage :: Generic DBParameterGroupsMessage _
@@ -928,22 +927,22 @@ instance encodeDBParameterGroupsMessage :: Encode DBParameterGroupsMessage where
 
 -- | Constructs DBParameterGroupsMessage from required parameters
 newDBParameterGroupsMessage :: DBParameterGroupsMessage
-newDBParameterGroupsMessage  = DBParameterGroupsMessage { "DBParameterGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBParameterGroupsMessage  = DBParameterGroupsMessage { "DBParameterGroups": Nothing, "Marker": Nothing }
 
 -- | Constructs DBParameterGroupsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBParameterGroupsMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList) } -> {"Marker" :: NullOrUndefined (String) , "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList) } ) -> DBParameterGroupsMessage
-newDBParameterGroupsMessage'  customize = (DBParameterGroupsMessage <<< customize) { "DBParameterGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBParameterGroupsMessage' :: ( { "Marker" :: Maybe (String) , "DBParameterGroups" :: Maybe (DBParameterGroupList) } -> {"Marker" :: Maybe (String) , "DBParameterGroups" :: Maybe (DBParameterGroupList) } ) -> DBParameterGroupsMessage
+newDBParameterGroupsMessage'  customize = (DBParameterGroupsMessage <<< customize) { "DBParameterGroups": Nothing, "Marker": Nothing }
 
 
 
 newtype DBSecurityGroup = DBSecurityGroup 
-  { "OwnerId" :: NullOrUndefined (String)
-  , "DBSecurityGroupName" :: NullOrUndefined (String)
-  , "DBSecurityGroupDescription" :: NullOrUndefined (String)
-  , "VpcId" :: NullOrUndefined (String)
-  , "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList)
-  , "IPRanges" :: NullOrUndefined (IPRangeList)
+  { "OwnerId" :: Maybe (String)
+  , "DBSecurityGroupName" :: Maybe (String)
+  , "DBSecurityGroupDescription" :: Maybe (String)
+  , "VpcId" :: Maybe (String)
+  , "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList)
+  , "IPRanges" :: Maybe (IPRangeList)
   }
 derive instance newtypeDBSecurityGroup :: Newtype DBSecurityGroup _
 derive instance repGenericDBSecurityGroup :: Generic DBSecurityGroup _
@@ -953,12 +952,12 @@ instance encodeDBSecurityGroup :: Encode DBSecurityGroup where encode = genericE
 
 -- | Constructs DBSecurityGroup from required parameters
 newDBSecurityGroup :: DBSecurityGroup
-newDBSecurityGroup  = DBSecurityGroup { "DBSecurityGroupDescription": (NullOrUndefined Nothing), "DBSecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroups": (NullOrUndefined Nothing), "IPRanges": (NullOrUndefined Nothing), "OwnerId": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSecurityGroup  = DBSecurityGroup { "DBSecurityGroupDescription": Nothing, "DBSecurityGroupName": Nothing, "EC2SecurityGroups": Nothing, "IPRanges": Nothing, "OwnerId": Nothing, "VpcId": Nothing }
 
 -- | Constructs DBSecurityGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSecurityGroup' :: ( { "OwnerId" :: NullOrUndefined (String) , "DBSecurityGroupName" :: NullOrUndefined (String) , "DBSecurityGroupDescription" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList) , "IPRanges" :: NullOrUndefined (IPRangeList) } -> {"OwnerId" :: NullOrUndefined (String) , "DBSecurityGroupName" :: NullOrUndefined (String) , "DBSecurityGroupDescription" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList) , "IPRanges" :: NullOrUndefined (IPRangeList) } ) -> DBSecurityGroup
-newDBSecurityGroup'  customize = (DBSecurityGroup <<< customize) { "DBSecurityGroupDescription": (NullOrUndefined Nothing), "DBSecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroups": (NullOrUndefined Nothing), "IPRanges": (NullOrUndefined Nothing), "OwnerId": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSecurityGroup' :: ( { "OwnerId" :: Maybe (String) , "DBSecurityGroupName" :: Maybe (String) , "DBSecurityGroupDescription" :: Maybe (String) , "VpcId" :: Maybe (String) , "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList) , "IPRanges" :: Maybe (IPRangeList) } -> {"OwnerId" :: Maybe (String) , "DBSecurityGroupName" :: Maybe (String) , "DBSecurityGroupDescription" :: Maybe (String) , "VpcId" :: Maybe (String) , "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList) , "IPRanges" :: Maybe (IPRangeList) } ) -> DBSecurityGroup
+newDBSecurityGroup'  customize = (DBSecurityGroup <<< customize) { "DBSecurityGroupDescription": Nothing, "DBSecurityGroupName": Nothing, "EC2SecurityGroups": Nothing, "IPRanges": Nothing, "OwnerId": Nothing, "VpcId": Nothing }
 
 
 
@@ -973,8 +972,8 @@ instance encodeDBSecurityGroupAlreadyExistsFault :: Encode DBSecurityGroupAlread
 
 
 newtype DBSecurityGroupMembership = DBSecurityGroupMembership 
-  { "DBSecurityGroupName" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (String)
+  { "DBSecurityGroupName" :: Maybe (String)
+  , "Status" :: Maybe (String)
   }
 derive instance newtypeDBSecurityGroupMembership :: Newtype DBSecurityGroupMembership _
 derive instance repGenericDBSecurityGroupMembership :: Generic DBSecurityGroupMembership _
@@ -984,12 +983,12 @@ instance encodeDBSecurityGroupMembership :: Encode DBSecurityGroupMembership whe
 
 -- | Constructs DBSecurityGroupMembership from required parameters
 newDBSecurityGroupMembership :: DBSecurityGroupMembership
-newDBSecurityGroupMembership  = DBSecurityGroupMembership { "DBSecurityGroupName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDBSecurityGroupMembership  = DBSecurityGroupMembership { "DBSecurityGroupName": Nothing, "Status": Nothing }
 
 -- | Constructs DBSecurityGroupMembership's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSecurityGroupMembership' :: ( { "DBSecurityGroupName" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } -> {"DBSecurityGroupName" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } ) -> DBSecurityGroupMembership
-newDBSecurityGroupMembership'  customize = (DBSecurityGroupMembership <<< customize) { "DBSecurityGroupName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDBSecurityGroupMembership' :: ( { "DBSecurityGroupName" :: Maybe (String) , "Status" :: Maybe (String) } -> {"DBSecurityGroupName" :: Maybe (String) , "Status" :: Maybe (String) } ) -> DBSecurityGroupMembership
+newDBSecurityGroupMembership'  customize = (DBSecurityGroupMembership <<< customize) { "DBSecurityGroupName": Nothing, "Status": Nothing }
 
 
 
@@ -1003,8 +1002,8 @@ instance encodeDBSecurityGroupMembershipList :: Encode DBSecurityGroupMembership
 
 
 newtype DBSecurityGroupMessage = DBSecurityGroupMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups)
+  { "Marker" :: Maybe (String)
+  , "DBSecurityGroups" :: Maybe (DBSecurityGroups)
   }
 derive instance newtypeDBSecurityGroupMessage :: Newtype DBSecurityGroupMessage _
 derive instance repGenericDBSecurityGroupMessage :: Generic DBSecurityGroupMessage _
@@ -1014,12 +1013,12 @@ instance encodeDBSecurityGroupMessage :: Encode DBSecurityGroupMessage where enc
 
 -- | Constructs DBSecurityGroupMessage from required parameters
 newDBSecurityGroupMessage :: DBSecurityGroupMessage
-newDBSecurityGroupMessage  = DBSecurityGroupMessage { "DBSecurityGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSecurityGroupMessage  = DBSecurityGroupMessage { "DBSecurityGroups": Nothing, "Marker": Nothing }
 
 -- | Constructs DBSecurityGroupMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSecurityGroupMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups) } -> {"Marker" :: NullOrUndefined (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups) } ) -> DBSecurityGroupMessage
-newDBSecurityGroupMessage'  customize = (DBSecurityGroupMessage <<< customize) { "DBSecurityGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSecurityGroupMessage' :: ( { "Marker" :: Maybe (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroups) } -> {"Marker" :: Maybe (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroups) } ) -> DBSecurityGroupMessage
+newDBSecurityGroupMessage'  customize = (DBSecurityGroupMessage <<< customize) { "DBSecurityGroups": Nothing, "Marker": Nothing }
 
 
 
@@ -1072,21 +1071,21 @@ instance encodeDBSecurityGroups :: Encode DBSecurityGroups where encode = generi
 
 
 newtype DBSnapshot = DBSnapshot 
-  { "DBSnapshotIdentifier" :: NullOrUndefined (String)
-  , "DBInstanceIdentifier" :: NullOrUndefined (String)
-  , "SnapshotCreateTime" :: NullOrUndefined (TStamp)
-  , "Engine" :: NullOrUndefined (String)
-  , "AllocatedStorage" :: NullOrUndefined (Int)
-  , "Status" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (Int)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "VpcId" :: NullOrUndefined (String)
-  , "InstanceCreateTime" :: NullOrUndefined (TStamp)
-  , "MasterUsername" :: NullOrUndefined (String)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "SnapshotType" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
+  { "DBSnapshotIdentifier" :: Maybe (String)
+  , "DBInstanceIdentifier" :: Maybe (String)
+  , "SnapshotCreateTime" :: Maybe (TStamp)
+  , "Engine" :: Maybe (String)
+  , "AllocatedStorage" :: Maybe (Int)
+  , "Status" :: Maybe (String)
+  , "Port" :: Maybe (Int)
+  , "AvailabilityZone" :: Maybe (String)
+  , "VpcId" :: Maybe (String)
+  , "InstanceCreateTime" :: Maybe (TStamp)
+  , "MasterUsername" :: Maybe (String)
+  , "EngineVersion" :: Maybe (String)
+  , "LicenseModel" :: Maybe (String)
+  , "SnapshotType" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
   }
 derive instance newtypeDBSnapshot :: Newtype DBSnapshot _
 derive instance repGenericDBSnapshot :: Generic DBSnapshot _
@@ -1096,12 +1095,12 @@ instance encodeDBSnapshot :: Encode DBSnapshot where encode = genericEncode opti
 
 -- | Constructs DBSnapshot from required parameters
 newDBSnapshot :: DBSnapshot
-newDBSnapshot  = DBSnapshot { "AllocatedStorage": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBSnapshotIdentifier": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "InstanceCreateTime": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MasterUsername": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "SnapshotCreateTime": (NullOrUndefined Nothing), "SnapshotType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSnapshot  = DBSnapshot { "AllocatedStorage": Nothing, "AvailabilityZone": Nothing, "DBInstanceIdentifier": Nothing, "DBSnapshotIdentifier": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "InstanceCreateTime": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MasterUsername": Nothing, "Port": Nothing, "SnapshotCreateTime": Nothing, "SnapshotType": Nothing, "Status": Nothing, "VpcId": Nothing }
 
 -- | Constructs DBSnapshot's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSnapshot' :: ( { "DBSnapshotIdentifier" :: NullOrUndefined (String) , "DBInstanceIdentifier" :: NullOrUndefined (String) , "SnapshotCreateTime" :: NullOrUndefined (TStamp) , "Engine" :: NullOrUndefined (String) , "AllocatedStorage" :: NullOrUndefined (Int) , "Status" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) , "AvailabilityZone" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "InstanceCreateTime" :: NullOrUndefined (TStamp) , "MasterUsername" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "SnapshotType" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) } -> {"DBSnapshotIdentifier" :: NullOrUndefined (String) , "DBInstanceIdentifier" :: NullOrUndefined (String) , "SnapshotCreateTime" :: NullOrUndefined (TStamp) , "Engine" :: NullOrUndefined (String) , "AllocatedStorage" :: NullOrUndefined (Int) , "Status" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) , "AvailabilityZone" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "InstanceCreateTime" :: NullOrUndefined (TStamp) , "MasterUsername" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "SnapshotType" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) } ) -> DBSnapshot
-newDBSnapshot'  customize = (DBSnapshot <<< customize) { "AllocatedStorage": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBSnapshotIdentifier": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "InstanceCreateTime": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MasterUsername": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "SnapshotCreateTime": (NullOrUndefined Nothing), "SnapshotType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSnapshot' :: ( { "DBSnapshotIdentifier" :: Maybe (String) , "DBInstanceIdentifier" :: Maybe (String) , "SnapshotCreateTime" :: Maybe (TStamp) , "Engine" :: Maybe (String) , "AllocatedStorage" :: Maybe (Int) , "Status" :: Maybe (String) , "Port" :: Maybe (Int) , "AvailabilityZone" :: Maybe (String) , "VpcId" :: Maybe (String) , "InstanceCreateTime" :: Maybe (TStamp) , "MasterUsername" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "SnapshotType" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) } -> {"DBSnapshotIdentifier" :: Maybe (String) , "DBInstanceIdentifier" :: Maybe (String) , "SnapshotCreateTime" :: Maybe (TStamp) , "Engine" :: Maybe (String) , "AllocatedStorage" :: Maybe (Int) , "Status" :: Maybe (String) , "Port" :: Maybe (Int) , "AvailabilityZone" :: Maybe (String) , "VpcId" :: Maybe (String) , "InstanceCreateTime" :: Maybe (TStamp) , "MasterUsername" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "SnapshotType" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) } ) -> DBSnapshot
+newDBSnapshot'  customize = (DBSnapshot <<< customize) { "AllocatedStorage": Nothing, "AvailabilityZone": Nothing, "DBInstanceIdentifier": Nothing, "DBSnapshotIdentifier": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "InstanceCreateTime": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MasterUsername": Nothing, "Port": Nothing, "SnapshotCreateTime": Nothing, "SnapshotType": Nothing, "Status": Nothing, "VpcId": Nothing }
 
 
 
@@ -1125,8 +1124,8 @@ instance encodeDBSnapshotList :: Encode DBSnapshotList where encode = genericEnc
 
 
 newtype DBSnapshotMessage = DBSnapshotMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBSnapshots" :: NullOrUndefined (DBSnapshotList)
+  { "Marker" :: Maybe (String)
+  , "DBSnapshots" :: Maybe (DBSnapshotList)
   }
 derive instance newtypeDBSnapshotMessage :: Newtype DBSnapshotMessage _
 derive instance repGenericDBSnapshotMessage :: Generic DBSnapshotMessage _
@@ -1136,12 +1135,12 @@ instance encodeDBSnapshotMessage :: Encode DBSnapshotMessage where encode = gene
 
 -- | Constructs DBSnapshotMessage from required parameters
 newDBSnapshotMessage :: DBSnapshotMessage
-newDBSnapshotMessage  = DBSnapshotMessage { "DBSnapshots": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSnapshotMessage  = DBSnapshotMessage { "DBSnapshots": Nothing, "Marker": Nothing }
 
 -- | Constructs DBSnapshotMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSnapshotMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBSnapshots" :: NullOrUndefined (DBSnapshotList) } -> {"Marker" :: NullOrUndefined (String) , "DBSnapshots" :: NullOrUndefined (DBSnapshotList) } ) -> DBSnapshotMessage
-newDBSnapshotMessage'  customize = (DBSnapshotMessage <<< customize) { "DBSnapshots": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSnapshotMessage' :: ( { "Marker" :: Maybe (String) , "DBSnapshots" :: Maybe (DBSnapshotList) } -> {"Marker" :: Maybe (String) , "DBSnapshots" :: Maybe (DBSnapshotList) } ) -> DBSnapshotMessage
+newDBSnapshotMessage'  customize = (DBSnapshotMessage <<< customize) { "DBSnapshots": Nothing, "Marker": Nothing }
 
 
 
@@ -1156,11 +1155,11 @@ instance encodeDBSnapshotNotFoundFault :: Encode DBSnapshotNotFoundFault where e
 
 
 newtype DBSubnetGroup = DBSubnetGroup 
-  { "DBSubnetGroupName" :: NullOrUndefined (String)
-  , "DBSubnetGroupDescription" :: NullOrUndefined (String)
-  , "VpcId" :: NullOrUndefined (String)
-  , "SubnetGroupStatus" :: NullOrUndefined (String)
-  , "Subnets" :: NullOrUndefined (SubnetList)
+  { "DBSubnetGroupName" :: Maybe (String)
+  , "DBSubnetGroupDescription" :: Maybe (String)
+  , "VpcId" :: Maybe (String)
+  , "SubnetGroupStatus" :: Maybe (String)
+  , "Subnets" :: Maybe (SubnetList)
   }
 derive instance newtypeDBSubnetGroup :: Newtype DBSubnetGroup _
 derive instance repGenericDBSubnetGroup :: Generic DBSubnetGroup _
@@ -1170,12 +1169,12 @@ instance encodeDBSubnetGroup :: Encode DBSubnetGroup where encode = genericEncod
 
 -- | Constructs DBSubnetGroup from required parameters
 newDBSubnetGroup :: DBSubnetGroup
-newDBSubnetGroup  = DBSubnetGroup { "DBSubnetGroupDescription": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "SubnetGroupStatus": (NullOrUndefined Nothing), "Subnets": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSubnetGroup  = DBSubnetGroup { "DBSubnetGroupDescription": Nothing, "DBSubnetGroupName": Nothing, "SubnetGroupStatus": Nothing, "Subnets": Nothing, "VpcId": Nothing }
 
 -- | Constructs DBSubnetGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSubnetGroup' :: ( { "DBSubnetGroupName" :: NullOrUndefined (String) , "DBSubnetGroupDescription" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "SubnetGroupStatus" :: NullOrUndefined (String) , "Subnets" :: NullOrUndefined (SubnetList) } -> {"DBSubnetGroupName" :: NullOrUndefined (String) , "DBSubnetGroupDescription" :: NullOrUndefined (String) , "VpcId" :: NullOrUndefined (String) , "SubnetGroupStatus" :: NullOrUndefined (String) , "Subnets" :: NullOrUndefined (SubnetList) } ) -> DBSubnetGroup
-newDBSubnetGroup'  customize = (DBSubnetGroup <<< customize) { "DBSubnetGroupDescription": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "SubnetGroupStatus": (NullOrUndefined Nothing), "Subnets": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newDBSubnetGroup' :: ( { "DBSubnetGroupName" :: Maybe (String) , "DBSubnetGroupDescription" :: Maybe (String) , "VpcId" :: Maybe (String) , "SubnetGroupStatus" :: Maybe (String) , "Subnets" :: Maybe (SubnetList) } -> {"DBSubnetGroupName" :: Maybe (String) , "DBSubnetGroupDescription" :: Maybe (String) , "VpcId" :: Maybe (String) , "SubnetGroupStatus" :: Maybe (String) , "Subnets" :: Maybe (SubnetList) } ) -> DBSubnetGroup
+newDBSubnetGroup'  customize = (DBSubnetGroup <<< customize) { "DBSubnetGroupDescription": Nothing, "DBSubnetGroupName": Nothing, "SubnetGroupStatus": Nothing, "Subnets": Nothing, "VpcId": Nothing }
 
 
 
@@ -1200,8 +1199,8 @@ instance encodeDBSubnetGroupDoesNotCoverEnoughAZs :: Encode DBSubnetGroupDoesNot
 
 
 newtype DBSubnetGroupMessage = DBSubnetGroupMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups)
+  { "Marker" :: Maybe (String)
+  , "DBSubnetGroups" :: Maybe (DBSubnetGroups)
   }
 derive instance newtypeDBSubnetGroupMessage :: Newtype DBSubnetGroupMessage _
 derive instance repGenericDBSubnetGroupMessage :: Generic DBSubnetGroupMessage _
@@ -1211,12 +1210,12 @@ instance encodeDBSubnetGroupMessage :: Encode DBSubnetGroupMessage where encode 
 
 -- | Constructs DBSubnetGroupMessage from required parameters
 newDBSubnetGroupMessage :: DBSubnetGroupMessage
-newDBSubnetGroupMessage  = DBSubnetGroupMessage { "DBSubnetGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSubnetGroupMessage  = DBSubnetGroupMessage { "DBSubnetGroups": Nothing, "Marker": Nothing }
 
 -- | Constructs DBSubnetGroupMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDBSubnetGroupMessage' :: ( { "Marker" :: NullOrUndefined (String) , "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups) } -> {"Marker" :: NullOrUndefined (String) , "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups) } ) -> DBSubnetGroupMessage
-newDBSubnetGroupMessage'  customize = (DBSubnetGroupMessage <<< customize) { "DBSubnetGroups": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newDBSubnetGroupMessage' :: ( { "Marker" :: Maybe (String) , "DBSubnetGroups" :: Maybe (DBSubnetGroups) } -> {"Marker" :: Maybe (String) , "DBSubnetGroups" :: Maybe (DBSubnetGroups) } ) -> DBSubnetGroupMessage
+newDBSubnetGroupMessage'  customize = (DBSubnetGroupMessage <<< customize) { "DBSubnetGroups": Nothing, "Marker": Nothing }
 
 
 
@@ -1271,8 +1270,8 @@ instance encodeDBUpgradeDependencyFailureFault :: Encode DBUpgradeDependencyFail
 
 newtype DeleteDBInstanceMessage = DeleteDBInstanceMessage 
   { "DBInstanceIdentifier" :: (String)
-  , "SkipFinalSnapshot" :: NullOrUndefined (Boolean)
-  , "FinalDBSnapshotIdentifier" :: NullOrUndefined (String)
+  , "SkipFinalSnapshot" :: Maybe (Boolean)
+  , "FinalDBSnapshotIdentifier" :: Maybe (String)
   }
 derive instance newtypeDeleteDBInstanceMessage :: Newtype DeleteDBInstanceMessage _
 derive instance repGenericDeleteDBInstanceMessage :: Generic DeleteDBInstanceMessage _
@@ -1282,17 +1281,17 @@ instance encodeDeleteDBInstanceMessage :: Encode DeleteDBInstanceMessage where e
 
 -- | Constructs DeleteDBInstanceMessage from required parameters
 newDeleteDBInstanceMessage :: String -> DeleteDBInstanceMessage
-newDeleteDBInstanceMessage _DBInstanceIdentifier = DeleteDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "FinalDBSnapshotIdentifier": (NullOrUndefined Nothing), "SkipFinalSnapshot": (NullOrUndefined Nothing) }
+newDeleteDBInstanceMessage _DBInstanceIdentifier = DeleteDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "FinalDBSnapshotIdentifier": Nothing, "SkipFinalSnapshot": Nothing }
 
 -- | Constructs DeleteDBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "SkipFinalSnapshot" :: NullOrUndefined (Boolean) , "FinalDBSnapshotIdentifier" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: (String) , "SkipFinalSnapshot" :: NullOrUndefined (Boolean) , "FinalDBSnapshotIdentifier" :: NullOrUndefined (String) } ) -> DeleteDBInstanceMessage
-newDeleteDBInstanceMessage' _DBInstanceIdentifier customize = (DeleteDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "FinalDBSnapshotIdentifier": (NullOrUndefined Nothing), "SkipFinalSnapshot": (NullOrUndefined Nothing) }
+newDeleteDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "SkipFinalSnapshot" :: Maybe (Boolean) , "FinalDBSnapshotIdentifier" :: Maybe (String) } -> {"DBInstanceIdentifier" :: (String) , "SkipFinalSnapshot" :: Maybe (Boolean) , "FinalDBSnapshotIdentifier" :: Maybe (String) } ) -> DeleteDBInstanceMessage
+newDeleteDBInstanceMessage' _DBInstanceIdentifier customize = (DeleteDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "FinalDBSnapshotIdentifier": Nothing, "SkipFinalSnapshot": Nothing }
 
 
 
 newtype DeleteDBInstanceResult = DeleteDBInstanceResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeDeleteDBInstanceResult :: Newtype DeleteDBInstanceResult _
 derive instance repGenericDeleteDBInstanceResult :: Generic DeleteDBInstanceResult _
@@ -1302,12 +1301,12 @@ instance encodeDeleteDBInstanceResult :: Encode DeleteDBInstanceResult where enc
 
 -- | Constructs DeleteDBInstanceResult from required parameters
 newDeleteDBInstanceResult :: DeleteDBInstanceResult
-newDeleteDBInstanceResult  = DeleteDBInstanceResult { "DBInstance": (NullOrUndefined Nothing) }
+newDeleteDBInstanceResult  = DeleteDBInstanceResult { "DBInstance": Nothing }
 
 -- | Constructs DeleteDBInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDBInstanceResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> DeleteDBInstanceResult
-newDeleteDBInstanceResult'  customize = (DeleteDBInstanceResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newDeleteDBInstanceResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> DeleteDBInstanceResult
+newDeleteDBInstanceResult'  customize = (DeleteDBInstanceResult <<< customize) { "DBInstance": Nothing }
 
 
 
@@ -1372,7 +1371,7 @@ newDeleteDBSnapshotMessage' _DBSnapshotIdentifier customize = (DeleteDBSnapshotM
 
 
 newtype DeleteDBSnapshotResult = DeleteDBSnapshotResult 
-  { "DBSnapshot" :: NullOrUndefined (DBSnapshot)
+  { "DBSnapshot" :: Maybe (DBSnapshot)
   }
 derive instance newtypeDeleteDBSnapshotResult :: Newtype DeleteDBSnapshotResult _
 derive instance repGenericDeleteDBSnapshotResult :: Generic DeleteDBSnapshotResult _
@@ -1382,12 +1381,12 @@ instance encodeDeleteDBSnapshotResult :: Encode DeleteDBSnapshotResult where enc
 
 -- | Constructs DeleteDBSnapshotResult from required parameters
 newDeleteDBSnapshotResult :: DeleteDBSnapshotResult
-newDeleteDBSnapshotResult  = DeleteDBSnapshotResult { "DBSnapshot": (NullOrUndefined Nothing) }
+newDeleteDBSnapshotResult  = DeleteDBSnapshotResult { "DBSnapshot": Nothing }
 
 -- | Constructs DeleteDBSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteDBSnapshotResult' :: ( { "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> {"DBSnapshot" :: NullOrUndefined (DBSnapshot) } ) -> DeleteDBSnapshotResult
-newDeleteDBSnapshotResult'  customize = (DeleteDBSnapshotResult <<< customize) { "DBSnapshot": (NullOrUndefined Nothing) }
+newDeleteDBSnapshotResult' :: ( { "DBSnapshot" :: Maybe (DBSnapshot) } -> {"DBSnapshot" :: Maybe (DBSnapshot) } ) -> DeleteDBSnapshotResult
+newDeleteDBSnapshotResult'  customize = (DeleteDBSnapshotResult <<< customize) { "DBSnapshot": Nothing }
 
 
 
@@ -1432,7 +1431,7 @@ newDeleteEventSubscriptionMessage' _SubscriptionName customize = (DeleteEventSub
 
 
 newtype DeleteEventSubscriptionResult = DeleteEventSubscriptionResult 
-  { "EventSubscription" :: NullOrUndefined (EventSubscription)
+  { "EventSubscription" :: Maybe (EventSubscription)
   }
 derive instance newtypeDeleteEventSubscriptionResult :: Newtype DeleteEventSubscriptionResult _
 derive instance repGenericDeleteEventSubscriptionResult :: Generic DeleteEventSubscriptionResult _
@@ -1442,12 +1441,12 @@ instance encodeDeleteEventSubscriptionResult :: Encode DeleteEventSubscriptionRe
 
 -- | Constructs DeleteEventSubscriptionResult from required parameters
 newDeleteEventSubscriptionResult :: DeleteEventSubscriptionResult
-newDeleteEventSubscriptionResult  = DeleteEventSubscriptionResult { "EventSubscription": (NullOrUndefined Nothing) }
+newDeleteEventSubscriptionResult  = DeleteEventSubscriptionResult { "EventSubscription": Nothing }
 
 -- | Constructs DeleteEventSubscriptionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteEventSubscriptionResult' :: ( { "EventSubscription" :: NullOrUndefined (EventSubscription) } -> {"EventSubscription" :: NullOrUndefined (EventSubscription) } ) -> DeleteEventSubscriptionResult
-newDeleteEventSubscriptionResult'  customize = (DeleteEventSubscriptionResult <<< customize) { "EventSubscription": (NullOrUndefined Nothing) }
+newDeleteEventSubscriptionResult' :: ( { "EventSubscription" :: Maybe (EventSubscription) } -> {"EventSubscription" :: Maybe (EventSubscription) } ) -> DeleteEventSubscriptionResult
+newDeleteEventSubscriptionResult'  customize = (DeleteEventSubscriptionResult <<< customize) { "EventSubscription": Nothing }
 
 
 
@@ -1472,13 +1471,13 @@ newDeleteOptionGroupMessage' _OptionGroupName customize = (DeleteOptionGroupMess
 
 
 newtype DescribeDBEngineVersionsMessage = DescribeDBEngineVersionsMessage 
-  { "Engine" :: NullOrUndefined (String)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "DBParameterGroupFamily" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
-  , "DefaultOnly" :: NullOrUndefined (Boolean)
-  , "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional)
+  { "Engine" :: Maybe (String)
+  , "EngineVersion" :: Maybe (String)
+  , "DBParameterGroupFamily" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
+  , "DefaultOnly" :: Maybe (Boolean)
+  , "ListSupportedCharacterSets" :: Maybe (BooleanOptional)
   }
 derive instance newtypeDescribeDBEngineVersionsMessage :: Newtype DescribeDBEngineVersionsMessage _
 derive instance repGenericDescribeDBEngineVersionsMessage :: Generic DescribeDBEngineVersionsMessage _
@@ -1488,19 +1487,19 @@ instance encodeDescribeDBEngineVersionsMessage :: Encode DescribeDBEngineVersion
 
 -- | Constructs DescribeDBEngineVersionsMessage from required parameters
 newDescribeDBEngineVersionsMessage :: DescribeDBEngineVersionsMessage
-newDescribeDBEngineVersionsMessage  = DescribeDBEngineVersionsMessage { "DBParameterGroupFamily": (NullOrUndefined Nothing), "DefaultOnly": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "ListSupportedCharacterSets": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBEngineVersionsMessage  = DescribeDBEngineVersionsMessage { "DBParameterGroupFamily": Nothing, "DefaultOnly": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "ListSupportedCharacterSets": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeDBEngineVersionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBEngineVersionsMessage' :: ( { "Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) , "DefaultOnly" :: NullOrUndefined (Boolean) , "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional) } -> {"Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBParameterGroupFamily" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) , "DefaultOnly" :: NullOrUndefined (Boolean) , "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional) } ) -> DescribeDBEngineVersionsMessage
-newDescribeDBEngineVersionsMessage'  customize = (DescribeDBEngineVersionsMessage <<< customize) { "DBParameterGroupFamily": (NullOrUndefined Nothing), "DefaultOnly": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "ListSupportedCharacterSets": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBEngineVersionsMessage' :: ( { "Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) , "DefaultOnly" :: Maybe (Boolean) , "ListSupportedCharacterSets" :: Maybe (BooleanOptional) } -> {"Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBParameterGroupFamily" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) , "DefaultOnly" :: Maybe (Boolean) , "ListSupportedCharacterSets" :: Maybe (BooleanOptional) } ) -> DescribeDBEngineVersionsMessage
+newDescribeDBEngineVersionsMessage'  customize = (DescribeDBEngineVersionsMessage <<< customize) { "DBParameterGroupFamily": Nothing, "DefaultOnly": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "ListSupportedCharacterSets": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeDBInstancesMessage = DescribeDBInstancesMessage 
-  { "DBInstanceIdentifier" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "DBInstanceIdentifier" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBInstancesMessage :: Newtype DescribeDBInstancesMessage _
 derive instance repGenericDescribeDBInstancesMessage :: Generic DescribeDBInstancesMessage _
@@ -1510,19 +1509,19 @@ instance encodeDescribeDBInstancesMessage :: Encode DescribeDBInstancesMessage w
 
 -- | Constructs DescribeDBInstancesMessage from required parameters
 newDescribeDBInstancesMessage :: DescribeDBInstancesMessage
-newDescribeDBInstancesMessage  = DescribeDBInstancesMessage { "DBInstanceIdentifier": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBInstancesMessage  = DescribeDBInstancesMessage { "DBInstanceIdentifier": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeDBInstancesMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBInstancesMessage' :: ( { "DBInstanceIdentifier" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBInstancesMessage
-newDescribeDBInstancesMessage'  customize = (DescribeDBInstancesMessage <<< customize) { "DBInstanceIdentifier": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBInstancesMessage' :: ( { "DBInstanceIdentifier" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBInstanceIdentifier" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBInstancesMessage
+newDescribeDBInstancesMessage'  customize = (DescribeDBInstancesMessage <<< customize) { "DBInstanceIdentifier": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeDBParameterGroupsMessage = DescribeDBParameterGroupsMessage 
-  { "DBParameterGroupName" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "DBParameterGroupName" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBParameterGroupsMessage :: Newtype DescribeDBParameterGroupsMessage _
 derive instance repGenericDescribeDBParameterGroupsMessage :: Generic DescribeDBParameterGroupsMessage _
@@ -1532,20 +1531,20 @@ instance encodeDescribeDBParameterGroupsMessage :: Encode DescribeDBParameterGro
 
 -- | Constructs DescribeDBParameterGroupsMessage from required parameters
 newDescribeDBParameterGroupsMessage :: DescribeDBParameterGroupsMessage
-newDescribeDBParameterGroupsMessage  = DescribeDBParameterGroupsMessage { "DBParameterGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBParameterGroupsMessage  = DescribeDBParameterGroupsMessage { "DBParameterGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeDBParameterGroupsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBParameterGroupsMessage' :: ( { "DBParameterGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBParameterGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBParameterGroupsMessage
-newDescribeDBParameterGroupsMessage'  customize = (DescribeDBParameterGroupsMessage <<< customize) { "DBParameterGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBParameterGroupsMessage' :: ( { "DBParameterGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBParameterGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBParameterGroupsMessage
+newDescribeDBParameterGroupsMessage'  customize = (DescribeDBParameterGroupsMessage <<< customize) { "DBParameterGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeDBParametersMessage = DescribeDBParametersMessage 
   { "DBParameterGroupName" :: (String)
-  , "Source" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  , "Source" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBParametersMessage :: Newtype DescribeDBParametersMessage _
 derive instance repGenericDescribeDBParametersMessage :: Generic DescribeDBParametersMessage _
@@ -1555,19 +1554,19 @@ instance encodeDescribeDBParametersMessage :: Encode DescribeDBParametersMessage
 
 -- | Constructs DescribeDBParametersMessage from required parameters
 newDescribeDBParametersMessage :: String -> DescribeDBParametersMessage
-newDescribeDBParametersMessage _DBParameterGroupName = DescribeDBParametersMessage { "DBParameterGroupName": _DBParameterGroupName, "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing) }
+newDescribeDBParametersMessage _DBParameterGroupName = DescribeDBParametersMessage { "DBParameterGroupName": _DBParameterGroupName, "Marker": Nothing, "MaxRecords": Nothing, "Source": Nothing }
 
 -- | Constructs DescribeDBParametersMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBParametersMessage' :: String -> ( { "DBParameterGroupName" :: (String) , "Source" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBParameterGroupName" :: (String) , "Source" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBParametersMessage
-newDescribeDBParametersMessage' _DBParameterGroupName customize = (DescribeDBParametersMessage <<< customize) { "DBParameterGroupName": _DBParameterGroupName, "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing) }
+newDescribeDBParametersMessage' :: String -> ( { "DBParameterGroupName" :: (String) , "Source" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBParameterGroupName" :: (String) , "Source" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBParametersMessage
+newDescribeDBParametersMessage' _DBParameterGroupName customize = (DescribeDBParametersMessage <<< customize) { "DBParameterGroupName": _DBParameterGroupName, "Marker": Nothing, "MaxRecords": Nothing, "Source": Nothing }
 
 
 
 newtype DescribeDBSecurityGroupsMessage = DescribeDBSecurityGroupsMessage 
-  { "DBSecurityGroupName" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "DBSecurityGroupName" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBSecurityGroupsMessage :: Newtype DescribeDBSecurityGroupsMessage _
 derive instance repGenericDescribeDBSecurityGroupsMessage :: Generic DescribeDBSecurityGroupsMessage _
@@ -1577,21 +1576,21 @@ instance encodeDescribeDBSecurityGroupsMessage :: Encode DescribeDBSecurityGroup
 
 -- | Constructs DescribeDBSecurityGroupsMessage from required parameters
 newDescribeDBSecurityGroupsMessage :: DescribeDBSecurityGroupsMessage
-newDescribeDBSecurityGroupsMessage  = DescribeDBSecurityGroupsMessage { "DBSecurityGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBSecurityGroupsMessage  = DescribeDBSecurityGroupsMessage { "DBSecurityGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeDBSecurityGroupsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBSecurityGroupsMessage' :: ( { "DBSecurityGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBSecurityGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBSecurityGroupsMessage
-newDescribeDBSecurityGroupsMessage'  customize = (DescribeDBSecurityGroupsMessage <<< customize) { "DBSecurityGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBSecurityGroupsMessage' :: ( { "DBSecurityGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBSecurityGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBSecurityGroupsMessage
+newDescribeDBSecurityGroupsMessage'  customize = (DescribeDBSecurityGroupsMessage <<< customize) { "DBSecurityGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeDBSnapshotsMessage = DescribeDBSnapshotsMessage 
-  { "DBInstanceIdentifier" :: NullOrUndefined (String)
-  , "DBSnapshotIdentifier" :: NullOrUndefined (String)
-  , "SnapshotType" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "DBInstanceIdentifier" :: Maybe (String)
+  , "DBSnapshotIdentifier" :: Maybe (String)
+  , "SnapshotType" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBSnapshotsMessage :: Newtype DescribeDBSnapshotsMessage _
 derive instance repGenericDescribeDBSnapshotsMessage :: Generic DescribeDBSnapshotsMessage _
@@ -1601,19 +1600,19 @@ instance encodeDescribeDBSnapshotsMessage :: Encode DescribeDBSnapshotsMessage w
 
 -- | Constructs DescribeDBSnapshotsMessage from required parameters
 newDescribeDBSnapshotsMessage :: DescribeDBSnapshotsMessage
-newDescribeDBSnapshotsMessage  = DescribeDBSnapshotsMessage { "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBSnapshotIdentifier": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SnapshotType": (NullOrUndefined Nothing) }
+newDescribeDBSnapshotsMessage  = DescribeDBSnapshotsMessage { "DBInstanceIdentifier": Nothing, "DBSnapshotIdentifier": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "SnapshotType": Nothing }
 
 -- | Constructs DescribeDBSnapshotsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBSnapshotsMessage' :: ( { "DBInstanceIdentifier" :: NullOrUndefined (String) , "DBSnapshotIdentifier" :: NullOrUndefined (String) , "SnapshotType" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: NullOrUndefined (String) , "DBSnapshotIdentifier" :: NullOrUndefined (String) , "SnapshotType" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBSnapshotsMessage
-newDescribeDBSnapshotsMessage'  customize = (DescribeDBSnapshotsMessage <<< customize) { "DBInstanceIdentifier": (NullOrUndefined Nothing), "DBSnapshotIdentifier": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SnapshotType": (NullOrUndefined Nothing) }
+newDescribeDBSnapshotsMessage' :: ( { "DBInstanceIdentifier" :: Maybe (String) , "DBSnapshotIdentifier" :: Maybe (String) , "SnapshotType" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBInstanceIdentifier" :: Maybe (String) , "DBSnapshotIdentifier" :: Maybe (String) , "SnapshotType" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBSnapshotsMessage
+newDescribeDBSnapshotsMessage'  customize = (DescribeDBSnapshotsMessage <<< customize) { "DBInstanceIdentifier": Nothing, "DBSnapshotIdentifier": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "SnapshotType": Nothing }
 
 
 
 newtype DescribeDBSubnetGroupsMessage = DescribeDBSubnetGroupsMessage 
-  { "DBSubnetGroupName" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "DBSubnetGroupName" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeDBSubnetGroupsMessage :: Newtype DescribeDBSubnetGroupsMessage _
 derive instance repGenericDescribeDBSubnetGroupsMessage :: Generic DescribeDBSubnetGroupsMessage _
@@ -1623,19 +1622,19 @@ instance encodeDescribeDBSubnetGroupsMessage :: Encode DescribeDBSubnetGroupsMes
 
 -- | Constructs DescribeDBSubnetGroupsMessage from required parameters
 newDescribeDBSubnetGroupsMessage :: DescribeDBSubnetGroupsMessage
-newDescribeDBSubnetGroupsMessage  = DescribeDBSubnetGroupsMessage { "DBSubnetGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBSubnetGroupsMessage  = DescribeDBSubnetGroupsMessage { "DBSubnetGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeDBSubnetGroupsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeDBSubnetGroupsMessage' :: ( { "DBSubnetGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBSubnetGroupName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeDBSubnetGroupsMessage
-newDescribeDBSubnetGroupsMessage'  customize = (DescribeDBSubnetGroupsMessage <<< customize) { "DBSubnetGroupName": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeDBSubnetGroupsMessage' :: ( { "DBSubnetGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBSubnetGroupName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeDBSubnetGroupsMessage
+newDescribeDBSubnetGroupsMessage'  customize = (DescribeDBSubnetGroupsMessage <<< customize) { "DBSubnetGroupName": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeEngineDefaultParametersMessage = DescribeEngineDefaultParametersMessage 
   { "DBParameterGroupFamily" :: (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeEngineDefaultParametersMessage :: Newtype DescribeEngineDefaultParametersMessage _
 derive instance repGenericDescribeEngineDefaultParametersMessage :: Generic DescribeEngineDefaultParametersMessage _
@@ -1645,17 +1644,17 @@ instance encodeDescribeEngineDefaultParametersMessage :: Encode DescribeEngineDe
 
 -- | Constructs DescribeEngineDefaultParametersMessage from required parameters
 newDescribeEngineDefaultParametersMessage :: String -> DescribeEngineDefaultParametersMessage
-newDescribeEngineDefaultParametersMessage _DBParameterGroupFamily = DescribeEngineDefaultParametersMessage { "DBParameterGroupFamily": _DBParameterGroupFamily, "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeEngineDefaultParametersMessage _DBParameterGroupFamily = DescribeEngineDefaultParametersMessage { "DBParameterGroupFamily": _DBParameterGroupFamily, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeEngineDefaultParametersMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEngineDefaultParametersMessage' :: String -> ( { "DBParameterGroupFamily" :: (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"DBParameterGroupFamily" :: (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeEngineDefaultParametersMessage
-newDescribeEngineDefaultParametersMessage' _DBParameterGroupFamily customize = (DescribeEngineDefaultParametersMessage <<< customize) { "DBParameterGroupFamily": _DBParameterGroupFamily, "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeEngineDefaultParametersMessage' :: String -> ( { "DBParameterGroupFamily" :: (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"DBParameterGroupFamily" :: (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeEngineDefaultParametersMessage
+newDescribeEngineDefaultParametersMessage' _DBParameterGroupFamily customize = (DescribeEngineDefaultParametersMessage <<< customize) { "DBParameterGroupFamily": _DBParameterGroupFamily, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeEngineDefaultParametersResult = DescribeEngineDefaultParametersResult 
-  { "EngineDefaults" :: NullOrUndefined (EngineDefaults)
+  { "EngineDefaults" :: Maybe (EngineDefaults)
   }
 derive instance newtypeDescribeEngineDefaultParametersResult :: Newtype DescribeEngineDefaultParametersResult _
 derive instance repGenericDescribeEngineDefaultParametersResult :: Generic DescribeEngineDefaultParametersResult _
@@ -1665,17 +1664,17 @@ instance encodeDescribeEngineDefaultParametersResult :: Encode DescribeEngineDef
 
 -- | Constructs DescribeEngineDefaultParametersResult from required parameters
 newDescribeEngineDefaultParametersResult :: DescribeEngineDefaultParametersResult
-newDescribeEngineDefaultParametersResult  = DescribeEngineDefaultParametersResult { "EngineDefaults": (NullOrUndefined Nothing) }
+newDescribeEngineDefaultParametersResult  = DescribeEngineDefaultParametersResult { "EngineDefaults": Nothing }
 
 -- | Constructs DescribeEngineDefaultParametersResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEngineDefaultParametersResult' :: ( { "EngineDefaults" :: NullOrUndefined (EngineDefaults) } -> {"EngineDefaults" :: NullOrUndefined (EngineDefaults) } ) -> DescribeEngineDefaultParametersResult
-newDescribeEngineDefaultParametersResult'  customize = (DescribeEngineDefaultParametersResult <<< customize) { "EngineDefaults": (NullOrUndefined Nothing) }
+newDescribeEngineDefaultParametersResult' :: ( { "EngineDefaults" :: Maybe (EngineDefaults) } -> {"EngineDefaults" :: Maybe (EngineDefaults) } ) -> DescribeEngineDefaultParametersResult
+newDescribeEngineDefaultParametersResult'  customize = (DescribeEngineDefaultParametersResult <<< customize) { "EngineDefaults": Nothing }
 
 
 
 newtype DescribeEventCategoriesMessage = DescribeEventCategoriesMessage 
-  { "SourceType" :: NullOrUndefined (String)
+  { "SourceType" :: Maybe (String)
   }
 derive instance newtypeDescribeEventCategoriesMessage :: Newtype DescribeEventCategoriesMessage _
 derive instance repGenericDescribeEventCategoriesMessage :: Generic DescribeEventCategoriesMessage _
@@ -1685,19 +1684,19 @@ instance encodeDescribeEventCategoriesMessage :: Encode DescribeEventCategoriesM
 
 -- | Constructs DescribeEventCategoriesMessage from required parameters
 newDescribeEventCategoriesMessage :: DescribeEventCategoriesMessage
-newDescribeEventCategoriesMessage  = DescribeEventCategoriesMessage { "SourceType": (NullOrUndefined Nothing) }
+newDescribeEventCategoriesMessage  = DescribeEventCategoriesMessage { "SourceType": Nothing }
 
 -- | Constructs DescribeEventCategoriesMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEventCategoriesMessage' :: ( { "SourceType" :: NullOrUndefined (String) } -> {"SourceType" :: NullOrUndefined (String) } ) -> DescribeEventCategoriesMessage
-newDescribeEventCategoriesMessage'  customize = (DescribeEventCategoriesMessage <<< customize) { "SourceType": (NullOrUndefined Nothing) }
+newDescribeEventCategoriesMessage' :: ( { "SourceType" :: Maybe (String) } -> {"SourceType" :: Maybe (String) } ) -> DescribeEventCategoriesMessage
+newDescribeEventCategoriesMessage'  customize = (DescribeEventCategoriesMessage <<< customize) { "SourceType": Nothing }
 
 
 
 newtype DescribeEventSubscriptionsMessage = DescribeEventSubscriptionsMessage 
-  { "SubscriptionName" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "SubscriptionName" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeEventSubscriptionsMessage :: Newtype DescribeEventSubscriptionsMessage _
 derive instance repGenericDescribeEventSubscriptionsMessage :: Generic DescribeEventSubscriptionsMessage _
@@ -1707,24 +1706,24 @@ instance encodeDescribeEventSubscriptionsMessage :: Encode DescribeEventSubscrip
 
 -- | Constructs DescribeEventSubscriptionsMessage from required parameters
 newDescribeEventSubscriptionsMessage :: DescribeEventSubscriptionsMessage
-newDescribeEventSubscriptionsMessage  = DescribeEventSubscriptionsMessage { "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SubscriptionName": (NullOrUndefined Nothing) }
+newDescribeEventSubscriptionsMessage  = DescribeEventSubscriptionsMessage { "Marker": Nothing, "MaxRecords": Nothing, "SubscriptionName": Nothing }
 
 -- | Constructs DescribeEventSubscriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEventSubscriptionsMessage' :: ( { "SubscriptionName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"SubscriptionName" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeEventSubscriptionsMessage
-newDescribeEventSubscriptionsMessage'  customize = (DescribeEventSubscriptionsMessage <<< customize) { "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SubscriptionName": (NullOrUndefined Nothing) }
+newDescribeEventSubscriptionsMessage' :: ( { "SubscriptionName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"SubscriptionName" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeEventSubscriptionsMessage
+newDescribeEventSubscriptionsMessage'  customize = (DescribeEventSubscriptionsMessage <<< customize) { "Marker": Nothing, "MaxRecords": Nothing, "SubscriptionName": Nothing }
 
 
 
 newtype DescribeEventsMessage = DescribeEventsMessage 
-  { "SourceIdentifier" :: NullOrUndefined (String)
-  , "SourceType" :: NullOrUndefined (SourceType)
-  , "StartTime" :: NullOrUndefined (TStamp)
-  , "EndTime" :: NullOrUndefined (TStamp)
-  , "Duration" :: NullOrUndefined (IntegerOptional)
-  , "EventCategories" :: NullOrUndefined (EventCategoriesList)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "SourceIdentifier" :: Maybe (String)
+  , "SourceType" :: Maybe (SourceType)
+  , "StartTime" :: Maybe (TStamp)
+  , "EndTime" :: Maybe (TStamp)
+  , "Duration" :: Maybe (IntegerOptional)
+  , "EventCategories" :: Maybe (EventCategoriesList)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeEventsMessage :: Newtype DescribeEventsMessage _
 derive instance repGenericDescribeEventsMessage :: Generic DescribeEventsMessage _
@@ -1734,20 +1733,20 @@ instance encodeDescribeEventsMessage :: Encode DescribeEventsMessage where encod
 
 -- | Constructs DescribeEventsMessage from required parameters
 newDescribeEventsMessage :: DescribeEventsMessage
-newDescribeEventsMessage  = DescribeEventsMessage { "Duration": (NullOrUndefined Nothing), "EndTime": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SourceIdentifier": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing) }
+newDescribeEventsMessage  = DescribeEventsMessage { "Duration": Nothing, "EndTime": Nothing, "EventCategories": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "SourceIdentifier": Nothing, "SourceType": Nothing, "StartTime": Nothing }
 
 -- | Constructs DescribeEventsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeEventsMessage' :: ( { "SourceIdentifier" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (SourceType) , "StartTime" :: NullOrUndefined (TStamp) , "EndTime" :: NullOrUndefined (TStamp) , "Duration" :: NullOrUndefined (IntegerOptional) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"SourceIdentifier" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (SourceType) , "StartTime" :: NullOrUndefined (TStamp) , "EndTime" :: NullOrUndefined (TStamp) , "Duration" :: NullOrUndefined (IntegerOptional) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeEventsMessage
-newDescribeEventsMessage'  customize = (DescribeEventsMessage <<< customize) { "Duration": (NullOrUndefined Nothing), "EndTime": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "SourceIdentifier": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing) }
+newDescribeEventsMessage' :: ( { "SourceIdentifier" :: Maybe (String) , "SourceType" :: Maybe (SourceType) , "StartTime" :: Maybe (TStamp) , "EndTime" :: Maybe (TStamp) , "Duration" :: Maybe (IntegerOptional) , "EventCategories" :: Maybe (EventCategoriesList) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"SourceIdentifier" :: Maybe (String) , "SourceType" :: Maybe (SourceType) , "StartTime" :: Maybe (TStamp) , "EndTime" :: Maybe (TStamp) , "Duration" :: Maybe (IntegerOptional) , "EventCategories" :: Maybe (EventCategoriesList) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeEventsMessage
+newDescribeEventsMessage'  customize = (DescribeEventsMessage <<< customize) { "Duration": Nothing, "EndTime": Nothing, "EventCategories": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "SourceIdentifier": Nothing, "SourceType": Nothing, "StartTime": Nothing }
 
 
 
 newtype DescribeOptionGroupOptionsMessage = DescribeOptionGroupOptionsMessage 
   { "EngineName" :: (String)
-  , "MajorEngineVersion" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  , "MajorEngineVersion" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeOptionGroupOptionsMessage :: Newtype DescribeOptionGroupOptionsMessage _
 derive instance repGenericDescribeOptionGroupOptionsMessage :: Generic DescribeOptionGroupOptionsMessage _
@@ -1757,21 +1756,21 @@ instance encodeDescribeOptionGroupOptionsMessage :: Encode DescribeOptionGroupOp
 
 -- | Constructs DescribeOptionGroupOptionsMessage from required parameters
 newDescribeOptionGroupOptionsMessage :: String -> DescribeOptionGroupOptionsMessage
-newDescribeOptionGroupOptionsMessage _EngineName = DescribeOptionGroupOptionsMessage { "EngineName": _EngineName, "MajorEngineVersion": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeOptionGroupOptionsMessage _EngineName = DescribeOptionGroupOptionsMessage { "EngineName": _EngineName, "MajorEngineVersion": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 -- | Constructs DescribeOptionGroupOptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeOptionGroupOptionsMessage' :: String -> ( { "EngineName" :: (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"EngineName" :: (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeOptionGroupOptionsMessage
-newDescribeOptionGroupOptionsMessage' _EngineName customize = (DescribeOptionGroupOptionsMessage <<< customize) { "EngineName": _EngineName, "MajorEngineVersion": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing) }
+newDescribeOptionGroupOptionsMessage' :: String -> ( { "EngineName" :: (String) , "MajorEngineVersion" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"EngineName" :: (String) , "MajorEngineVersion" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeOptionGroupOptionsMessage
+newDescribeOptionGroupOptionsMessage' _EngineName customize = (DescribeOptionGroupOptionsMessage <<< customize) { "EngineName": _EngineName, "MajorEngineVersion": Nothing, "Marker": Nothing, "MaxRecords": Nothing }
 
 
 
 newtype DescribeOptionGroupsMessage = DescribeOptionGroupsMessage 
-  { "OptionGroupName" :: NullOrUndefined (String)
-  , "Marker" :: NullOrUndefined (String)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "EngineName" :: NullOrUndefined (String)
-  , "MajorEngineVersion" :: NullOrUndefined (String)
+  { "OptionGroupName" :: Maybe (String)
+  , "Marker" :: Maybe (String)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "EngineName" :: Maybe (String)
+  , "MajorEngineVersion" :: Maybe (String)
   }
 derive instance newtypeDescribeOptionGroupsMessage :: Newtype DescribeOptionGroupsMessage _
 derive instance repGenericDescribeOptionGroupsMessage :: Generic DescribeOptionGroupsMessage _
@@ -1781,23 +1780,23 @@ instance encodeDescribeOptionGroupsMessage :: Encode DescribeOptionGroupsMessage
 
 -- | Constructs DescribeOptionGroupsMessage from required parameters
 newDescribeOptionGroupsMessage :: DescribeOptionGroupsMessage
-newDescribeOptionGroupsMessage  = DescribeOptionGroupsMessage { "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing) }
+newDescribeOptionGroupsMessage  = DescribeOptionGroupsMessage { "EngineName": Nothing, "MajorEngineVersion": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "OptionGroupName": Nothing }
 
 -- | Constructs DescribeOptionGroupsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeOptionGroupsMessage' :: ( { "OptionGroupName" :: NullOrUndefined (String) , "Marker" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) } -> {"OptionGroupName" :: NullOrUndefined (String) , "Marker" :: NullOrUndefined (String) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) } ) -> DescribeOptionGroupsMessage
-newDescribeOptionGroupsMessage'  customize = (DescribeOptionGroupsMessage <<< customize) { "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing) }
+newDescribeOptionGroupsMessage' :: ( { "OptionGroupName" :: Maybe (String) , "Marker" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) } -> {"OptionGroupName" :: Maybe (String) , "Marker" :: Maybe (String) , "MaxRecords" :: Maybe (IntegerOptional) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) } ) -> DescribeOptionGroupsMessage
+newDescribeOptionGroupsMessage'  customize = (DescribeOptionGroupsMessage <<< customize) { "EngineName": Nothing, "MajorEngineVersion": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "OptionGroupName": Nothing }
 
 
 
 newtype DescribeOrderableDBInstanceOptionsMessage = DescribeOrderableDBInstanceOptionsMessage 
   { "Engine" :: (String)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "Vpc" :: NullOrUndefined (BooleanOptional)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  , "EngineVersion" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "LicenseModel" :: Maybe (String)
+  , "Vpc" :: Maybe (BooleanOptional)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeOrderableDBInstanceOptionsMessage :: Newtype DescribeOrderableDBInstanceOptionsMessage _
 derive instance repGenericDescribeOrderableDBInstanceOptionsMessage :: Generic DescribeOrderableDBInstanceOptionsMessage _
@@ -1807,25 +1806,25 @@ instance encodeDescribeOrderableDBInstanceOptionsMessage :: Encode DescribeOrder
 
 -- | Constructs DescribeOrderableDBInstanceOptionsMessage from required parameters
 newDescribeOrderableDBInstanceOptionsMessage :: String -> DescribeOrderableDBInstanceOptionsMessage
-newDescribeOrderableDBInstanceOptionsMessage _Engine = DescribeOrderableDBInstanceOptionsMessage { "Engine": _Engine, "DBInstanceClass": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "Vpc": (NullOrUndefined Nothing) }
+newDescribeOrderableDBInstanceOptionsMessage _Engine = DescribeOrderableDBInstanceOptionsMessage { "Engine": _Engine, "DBInstanceClass": Nothing, "EngineVersion": Nothing, "LicenseModel": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "Vpc": Nothing }
 
 -- | Constructs DescribeOrderableDBInstanceOptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeOrderableDBInstanceOptionsMessage' :: String -> ( { "Engine" :: (String) , "EngineVersion" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "Vpc" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"Engine" :: (String) , "EngineVersion" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "Vpc" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeOrderableDBInstanceOptionsMessage
-newDescribeOrderableDBInstanceOptionsMessage' _Engine customize = (DescribeOrderableDBInstanceOptionsMessage <<< customize) { "Engine": _Engine, "DBInstanceClass": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "Vpc": (NullOrUndefined Nothing) }
+newDescribeOrderableDBInstanceOptionsMessage' :: String -> ( { "Engine" :: (String) , "EngineVersion" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "Vpc" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"Engine" :: (String) , "EngineVersion" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "Vpc" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeOrderableDBInstanceOptionsMessage
+newDescribeOrderableDBInstanceOptionsMessage' _Engine customize = (DescribeOrderableDBInstanceOptionsMessage <<< customize) { "Engine": _Engine, "DBInstanceClass": Nothing, "EngineVersion": Nothing, "LicenseModel": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "Vpc": Nothing }
 
 
 
 newtype DescribeReservedDBInstancesMessage = DescribeReservedDBInstancesMessage 
-  { "ReservedDBInstanceId" :: NullOrUndefined (String)
-  , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Duration" :: NullOrUndefined (String)
-  , "ProductDescription" :: NullOrUndefined (String)
-  , "OfferingType" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "ReservedDBInstanceId" :: Maybe (String)
+  , "ReservedDBInstancesOfferingId" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Duration" :: Maybe (String)
+  , "ProductDescription" :: Maybe (String)
+  , "OfferingType" :: Maybe (String)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeReservedDBInstancesMessage :: Newtype DescribeReservedDBInstancesMessage _
 derive instance repGenericDescribeReservedDBInstancesMessage :: Generic DescribeReservedDBInstancesMessage _
@@ -1835,24 +1834,24 @@ instance encodeDescribeReservedDBInstancesMessage :: Encode DescribeReservedDBIn
 
 -- | Constructs DescribeReservedDBInstancesMessage from required parameters
 newDescribeReservedDBInstancesMessage :: DescribeReservedDBInstancesMessage
-newDescribeReservedDBInstancesMessage  = DescribeReservedDBInstancesMessage { "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing) }
+newDescribeReservedDBInstancesMessage  = DescribeReservedDBInstancesMessage { "DBInstanceClass": Nothing, "Duration": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "ReservedDBInstanceId": Nothing, "ReservedDBInstancesOfferingId": Nothing }
 
 -- | Constructs DescribeReservedDBInstancesMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeReservedDBInstancesMessage' :: ( { "ReservedDBInstanceId" :: NullOrUndefined (String) , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"ReservedDBInstanceId" :: NullOrUndefined (String) , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeReservedDBInstancesMessage
-newDescribeReservedDBInstancesMessage'  customize = (DescribeReservedDBInstancesMessage <<< customize) { "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing) }
+newDescribeReservedDBInstancesMessage' :: ( { "ReservedDBInstanceId" :: Maybe (String) , "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"ReservedDBInstanceId" :: Maybe (String) , "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeReservedDBInstancesMessage
+newDescribeReservedDBInstancesMessage'  customize = (DescribeReservedDBInstancesMessage <<< customize) { "DBInstanceClass": Nothing, "Duration": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "ReservedDBInstanceId": Nothing, "ReservedDBInstancesOfferingId": Nothing }
 
 
 
 newtype DescribeReservedDBInstancesOfferingsMessage = DescribeReservedDBInstancesOfferingsMessage 
-  { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Duration" :: NullOrUndefined (String)
-  , "ProductDescription" :: NullOrUndefined (String)
-  , "OfferingType" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "MaxRecords" :: NullOrUndefined (IntegerOptional)
-  , "Marker" :: NullOrUndefined (String)
+  { "ReservedDBInstancesOfferingId" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Duration" :: Maybe (String)
+  , "ProductDescription" :: Maybe (String)
+  , "OfferingType" :: Maybe (String)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "MaxRecords" :: Maybe (IntegerOptional)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeDescribeReservedDBInstancesOfferingsMessage :: Newtype DescribeReservedDBInstancesOfferingsMessage _
 derive instance repGenericDescribeReservedDBInstancesOfferingsMessage :: Generic DescribeReservedDBInstancesOfferingsMessage _
@@ -1862,20 +1861,20 @@ instance encodeDescribeReservedDBInstancesOfferingsMessage :: Encode DescribeRes
 
 -- | Constructs DescribeReservedDBInstancesOfferingsMessage from required parameters
 newDescribeReservedDBInstancesOfferingsMessage :: DescribeReservedDBInstancesOfferingsMessage
-newDescribeReservedDBInstancesOfferingsMessage  = DescribeReservedDBInstancesOfferingsMessage { "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing) }
+newDescribeReservedDBInstancesOfferingsMessage  = DescribeReservedDBInstancesOfferingsMessage { "DBInstanceClass": Nothing, "Duration": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "ReservedDBInstancesOfferingId": Nothing }
 
 -- | Constructs DescribeReservedDBInstancesOfferingsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeReservedDBInstancesOfferingsMessage' :: ( { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } -> {"ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "MaxRecords" :: NullOrUndefined (IntegerOptional) , "Marker" :: NullOrUndefined (String) } ) -> DescribeReservedDBInstancesOfferingsMessage
-newDescribeReservedDBInstancesOfferingsMessage'  customize = (DescribeReservedDBInstancesOfferingsMessage <<< customize) { "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "MaxRecords": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing) }
+newDescribeReservedDBInstancesOfferingsMessage' :: ( { "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } -> {"ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "MaxRecords" :: Maybe (IntegerOptional) , "Marker" :: Maybe (String) } ) -> DescribeReservedDBInstancesOfferingsMessage
+newDescribeReservedDBInstancesOfferingsMessage'  customize = (DescribeReservedDBInstancesOfferingsMessage <<< customize) { "DBInstanceClass": Nothing, "Duration": Nothing, "Marker": Nothing, "MaxRecords": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "ReservedDBInstancesOfferingId": Nothing }
 
 
 
 newtype EC2SecurityGroup = EC2SecurityGroup 
-  { "Status" :: NullOrUndefined (String)
-  , "EC2SecurityGroupName" :: NullOrUndefined (String)
-  , "EC2SecurityGroupId" :: NullOrUndefined (String)
-  , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String)
+  { "Status" :: Maybe (String)
+  , "EC2SecurityGroupName" :: Maybe (String)
+  , "EC2SecurityGroupId" :: Maybe (String)
+  , "EC2SecurityGroupOwnerId" :: Maybe (String)
   }
 derive instance newtypeEC2SecurityGroup :: Newtype EC2SecurityGroup _
 derive instance repGenericEC2SecurityGroup :: Generic EC2SecurityGroup _
@@ -1885,12 +1884,12 @@ instance encodeEC2SecurityGroup :: Encode EC2SecurityGroup where encode = generi
 
 -- | Constructs EC2SecurityGroup from required parameters
 newEC2SecurityGroup :: EC2SecurityGroup
-newEC2SecurityGroup  = EC2SecurityGroup { "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newEC2SecurityGroup  = EC2SecurityGroup { "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing, "Status": Nothing }
 
 -- | Constructs EC2SecurityGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEC2SecurityGroup' :: ( { "Status" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> {"Status" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } ) -> EC2SecurityGroup
-newEC2SecurityGroup'  customize = (EC2SecurityGroup <<< customize) { "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newEC2SecurityGroup' :: ( { "Status" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } -> {"Status" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } ) -> EC2SecurityGroup
+newEC2SecurityGroup'  customize = (EC2SecurityGroup <<< customize) { "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing, "Status": Nothing }
 
 
 
@@ -1904,8 +1903,8 @@ instance encodeEC2SecurityGroupList :: Encode EC2SecurityGroupList where encode 
 
 
 newtype Endpoint = Endpoint 
-  { "Address" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (Int)
+  { "Address" :: Maybe (String)
+  , "Port" :: Maybe (Int)
   }
 derive instance newtypeEndpoint :: Newtype Endpoint _
 derive instance repGenericEndpoint :: Generic Endpoint _
@@ -1915,19 +1914,19 @@ instance encodeEndpoint :: Encode Endpoint where encode = genericEncode options
 
 -- | Constructs Endpoint from required parameters
 newEndpoint :: Endpoint
-newEndpoint  = Endpoint { "Address": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing) }
+newEndpoint  = Endpoint { "Address": Nothing, "Port": Nothing }
 
 -- | Constructs Endpoint's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpoint' :: ( { "Address" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) } -> {"Address" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (Int) } ) -> Endpoint
-newEndpoint'  customize = (Endpoint <<< customize) { "Address": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing) }
+newEndpoint' :: ( { "Address" :: Maybe (String) , "Port" :: Maybe (Int) } -> {"Address" :: Maybe (String) , "Port" :: Maybe (Int) } ) -> Endpoint
+newEndpoint'  customize = (Endpoint <<< customize) { "Address": Nothing, "Port": Nothing }
 
 
 
 newtype EngineDefaults = EngineDefaults 
-  { "DBParameterGroupFamily" :: NullOrUndefined (String)
-  , "Marker" :: NullOrUndefined (String)
-  , "Parameters" :: NullOrUndefined (ParametersList)
+  { "DBParameterGroupFamily" :: Maybe (String)
+  , "Marker" :: Maybe (String)
+  , "Parameters" :: Maybe (ParametersList)
   }
 derive instance newtypeEngineDefaults :: Newtype EngineDefaults _
 derive instance repGenericEngineDefaults :: Generic EngineDefaults _
@@ -1937,21 +1936,21 @@ instance encodeEngineDefaults :: Encode EngineDefaults where encode = genericEnc
 
 -- | Constructs EngineDefaults from required parameters
 newEngineDefaults :: EngineDefaults
-newEngineDefaults  = EngineDefaults { "DBParameterGroupFamily": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing) }
+newEngineDefaults  = EngineDefaults { "DBParameterGroupFamily": Nothing, "Marker": Nothing, "Parameters": Nothing }
 
 -- | Constructs EngineDefaults's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEngineDefaults' :: ( { "DBParameterGroupFamily" :: NullOrUndefined (String) , "Marker" :: NullOrUndefined (String) , "Parameters" :: NullOrUndefined (ParametersList) } -> {"DBParameterGroupFamily" :: NullOrUndefined (String) , "Marker" :: NullOrUndefined (String) , "Parameters" :: NullOrUndefined (ParametersList) } ) -> EngineDefaults
-newEngineDefaults'  customize = (EngineDefaults <<< customize) { "DBParameterGroupFamily": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing), "Parameters": (NullOrUndefined Nothing) }
+newEngineDefaults' :: ( { "DBParameterGroupFamily" :: Maybe (String) , "Marker" :: Maybe (String) , "Parameters" :: Maybe (ParametersList) } -> {"DBParameterGroupFamily" :: Maybe (String) , "Marker" :: Maybe (String) , "Parameters" :: Maybe (ParametersList) } ) -> EngineDefaults
+newEngineDefaults'  customize = (EngineDefaults <<< customize) { "DBParameterGroupFamily": Nothing, "Marker": Nothing, "Parameters": Nothing }
 
 
 
 newtype Event = Event 
-  { "SourceIdentifier" :: NullOrUndefined (String)
-  , "SourceType" :: NullOrUndefined (SourceType)
-  , "Message" :: NullOrUndefined (String)
-  , "EventCategories" :: NullOrUndefined (EventCategoriesList)
-  , "Date" :: NullOrUndefined (TStamp)
+  { "SourceIdentifier" :: Maybe (String)
+  , "SourceType" :: Maybe (SourceType)
+  , "Message" :: Maybe (String)
+  , "EventCategories" :: Maybe (EventCategoriesList)
+  , "Date" :: Maybe (TStamp)
   }
 derive instance newtypeEvent :: Newtype Event _
 derive instance repGenericEvent :: Generic Event _
@@ -1961,12 +1960,12 @@ instance encodeEvent :: Encode Event where encode = genericEncode options
 
 -- | Constructs Event from required parameters
 newEvent :: Event
-newEvent  = Event { "Date": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "SourceIdentifier": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newEvent  = Event { "Date": Nothing, "EventCategories": Nothing, "Message": Nothing, "SourceIdentifier": Nothing, "SourceType": Nothing }
 
 -- | Constructs Event's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEvent' :: ( { "SourceIdentifier" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (SourceType) , "Message" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "Date" :: NullOrUndefined (TStamp) } -> {"SourceIdentifier" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (SourceType) , "Message" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "Date" :: NullOrUndefined (TStamp) } ) -> Event
-newEvent'  customize = (Event <<< customize) { "Date": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing), "SourceIdentifier": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newEvent' :: ( { "SourceIdentifier" :: Maybe (String) , "SourceType" :: Maybe (SourceType) , "Message" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "Date" :: Maybe (TStamp) } -> {"SourceIdentifier" :: Maybe (String) , "SourceType" :: Maybe (SourceType) , "Message" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "Date" :: Maybe (TStamp) } ) -> Event
+newEvent'  customize = (Event <<< customize) { "Date": Nothing, "EventCategories": Nothing, "Message": Nothing, "SourceIdentifier": Nothing, "SourceType": Nothing }
 
 
 
@@ -1980,8 +1979,8 @@ instance encodeEventCategoriesList :: Encode EventCategoriesList where encode = 
 
 
 newtype EventCategoriesMap = EventCategoriesMap 
-  { "SourceType" :: NullOrUndefined (String)
-  , "EventCategories" :: NullOrUndefined (EventCategoriesList)
+  { "SourceType" :: Maybe (String)
+  , "EventCategories" :: Maybe (EventCategoriesList)
   }
 derive instance newtypeEventCategoriesMap :: Newtype EventCategoriesMap _
 derive instance repGenericEventCategoriesMap :: Generic EventCategoriesMap _
@@ -1991,12 +1990,12 @@ instance encodeEventCategoriesMap :: Encode EventCategoriesMap where encode = ge
 
 -- | Constructs EventCategoriesMap from required parameters
 newEventCategoriesMap :: EventCategoriesMap
-newEventCategoriesMap  = EventCategoriesMap { "EventCategories": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newEventCategoriesMap  = EventCategoriesMap { "EventCategories": Nothing, "SourceType": Nothing }
 
 -- | Constructs EventCategoriesMap's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventCategoriesMap' :: ( { "SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) } -> {"SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) } ) -> EventCategoriesMap
-newEventCategoriesMap'  customize = (EventCategoriesMap <<< customize) { "EventCategories": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newEventCategoriesMap' :: ( { "SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) } -> {"SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) } ) -> EventCategoriesMap
+newEventCategoriesMap'  customize = (EventCategoriesMap <<< customize) { "EventCategories": Nothing, "SourceType": Nothing }
 
 
 
@@ -2010,7 +2009,7 @@ instance encodeEventCategoriesMapList :: Encode EventCategoriesMapList where enc
 
 
 newtype EventCategoriesMessage = EventCategoriesMessage 
-  { "EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList)
+  { "EventCategoriesMapList" :: Maybe (EventCategoriesMapList)
   }
 derive instance newtypeEventCategoriesMessage :: Newtype EventCategoriesMessage _
 derive instance repGenericEventCategoriesMessage :: Generic EventCategoriesMessage _
@@ -2020,12 +2019,12 @@ instance encodeEventCategoriesMessage :: Encode EventCategoriesMessage where enc
 
 -- | Constructs EventCategoriesMessage from required parameters
 newEventCategoriesMessage :: EventCategoriesMessage
-newEventCategoriesMessage  = EventCategoriesMessage { "EventCategoriesMapList": (NullOrUndefined Nothing) }
+newEventCategoriesMessage  = EventCategoriesMessage { "EventCategoriesMapList": Nothing }
 
 -- | Constructs EventCategoriesMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventCategoriesMessage' :: ( { "EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList) } -> {"EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList) } ) -> EventCategoriesMessage
-newEventCategoriesMessage'  customize = (EventCategoriesMessage <<< customize) { "EventCategoriesMapList": (NullOrUndefined Nothing) }
+newEventCategoriesMessage' :: ( { "EventCategoriesMapList" :: Maybe (EventCategoriesMapList) } -> {"EventCategoriesMapList" :: Maybe (EventCategoriesMapList) } ) -> EventCategoriesMessage
+newEventCategoriesMessage'  customize = (EventCategoriesMessage <<< customize) { "EventCategoriesMapList": Nothing }
 
 
 
@@ -2039,16 +2038,16 @@ instance encodeEventList :: Encode EventList where encode = genericEncode option
 
 
 newtype EventSubscription = EventSubscription 
-  { "Id" :: NullOrUndefined (String)
-  , "CustomerAwsId" :: NullOrUndefined (String)
-  , "CustSubscriptionId" :: NullOrUndefined (String)
-  , "SnsTopicArn" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (String)
-  , "SubscriptionCreationTime" :: NullOrUndefined (String)
-  , "SourceType" :: NullOrUndefined (String)
-  , "SourceIdsList" :: NullOrUndefined (SourceIdsList)
-  , "EventCategoriesList" :: NullOrUndefined (EventCategoriesList)
-  , "Enabled" :: NullOrUndefined (Boolean)
+  { "Id" :: Maybe (String)
+  , "CustomerAwsId" :: Maybe (String)
+  , "CustSubscriptionId" :: Maybe (String)
+  , "SnsTopicArn" :: Maybe (String)
+  , "Status" :: Maybe (String)
+  , "SubscriptionCreationTime" :: Maybe (String)
+  , "SourceType" :: Maybe (String)
+  , "SourceIdsList" :: Maybe (SourceIdsList)
+  , "EventCategoriesList" :: Maybe (EventCategoriesList)
+  , "Enabled" :: Maybe (Boolean)
   }
 derive instance newtypeEventSubscription :: Newtype EventSubscription _
 derive instance repGenericEventSubscription :: Generic EventSubscription _
@@ -2058,12 +2057,12 @@ instance encodeEventSubscription :: Encode EventSubscription where encode = gene
 
 -- | Constructs EventSubscription from required parameters
 newEventSubscription :: EventSubscription
-newEventSubscription  = EventSubscription { "CustSubscriptionId": (NullOrUndefined Nothing), "CustomerAwsId": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "EventCategoriesList": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SnsTopicArn": (NullOrUndefined Nothing), "SourceIdsList": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "SubscriptionCreationTime": (NullOrUndefined Nothing) }
+newEventSubscription  = EventSubscription { "CustSubscriptionId": Nothing, "CustomerAwsId": Nothing, "Enabled": Nothing, "EventCategoriesList": Nothing, "Id": Nothing, "SnsTopicArn": Nothing, "SourceIdsList": Nothing, "SourceType": Nothing, "Status": Nothing, "SubscriptionCreationTime": Nothing }
 
 -- | Constructs EventSubscription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventSubscription' :: ( { "Id" :: NullOrUndefined (String) , "CustomerAwsId" :: NullOrUndefined (String) , "CustSubscriptionId" :: NullOrUndefined (String) , "SnsTopicArn" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) , "SubscriptionCreationTime" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (String) , "SourceIdsList" :: NullOrUndefined (SourceIdsList) , "EventCategoriesList" :: NullOrUndefined (EventCategoriesList) , "Enabled" :: NullOrUndefined (Boolean) } -> {"Id" :: NullOrUndefined (String) , "CustomerAwsId" :: NullOrUndefined (String) , "CustSubscriptionId" :: NullOrUndefined (String) , "SnsTopicArn" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) , "SubscriptionCreationTime" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (String) , "SourceIdsList" :: NullOrUndefined (SourceIdsList) , "EventCategoriesList" :: NullOrUndefined (EventCategoriesList) , "Enabled" :: NullOrUndefined (Boolean) } ) -> EventSubscription
-newEventSubscription'  customize = (EventSubscription <<< customize) { "CustSubscriptionId": (NullOrUndefined Nothing), "CustomerAwsId": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "EventCategoriesList": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SnsTopicArn": (NullOrUndefined Nothing), "SourceIdsList": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "SubscriptionCreationTime": (NullOrUndefined Nothing) }
+newEventSubscription' :: ( { "Id" :: Maybe (String) , "CustomerAwsId" :: Maybe (String) , "CustSubscriptionId" :: Maybe (String) , "SnsTopicArn" :: Maybe (String) , "Status" :: Maybe (String) , "SubscriptionCreationTime" :: Maybe (String) , "SourceType" :: Maybe (String) , "SourceIdsList" :: Maybe (SourceIdsList) , "EventCategoriesList" :: Maybe (EventCategoriesList) , "Enabled" :: Maybe (Boolean) } -> {"Id" :: Maybe (String) , "CustomerAwsId" :: Maybe (String) , "CustSubscriptionId" :: Maybe (String) , "SnsTopicArn" :: Maybe (String) , "Status" :: Maybe (String) , "SubscriptionCreationTime" :: Maybe (String) , "SourceType" :: Maybe (String) , "SourceIdsList" :: Maybe (SourceIdsList) , "EventCategoriesList" :: Maybe (EventCategoriesList) , "Enabled" :: Maybe (Boolean) } ) -> EventSubscription
+newEventSubscription'  customize = (EventSubscription <<< customize) { "CustSubscriptionId": Nothing, "CustomerAwsId": Nothing, "Enabled": Nothing, "EventCategoriesList": Nothing, "Id": Nothing, "SnsTopicArn": Nothing, "SourceIdsList": Nothing, "SourceType": Nothing, "Status": Nothing, "SubscriptionCreationTime": Nothing }
 
 
 
@@ -2087,8 +2086,8 @@ instance encodeEventSubscriptionsList :: Encode EventSubscriptionsList where enc
 
 
 newtype EventSubscriptionsMessage = EventSubscriptionsMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList)
+  { "Marker" :: Maybe (String)
+  , "EventSubscriptionsList" :: Maybe (EventSubscriptionsList)
   }
 derive instance newtypeEventSubscriptionsMessage :: Newtype EventSubscriptionsMessage _
 derive instance repGenericEventSubscriptionsMessage :: Generic EventSubscriptionsMessage _
@@ -2098,18 +2097,18 @@ instance encodeEventSubscriptionsMessage :: Encode EventSubscriptionsMessage whe
 
 -- | Constructs EventSubscriptionsMessage from required parameters
 newEventSubscriptionsMessage :: EventSubscriptionsMessage
-newEventSubscriptionsMessage  = EventSubscriptionsMessage { "EventSubscriptionsList": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newEventSubscriptionsMessage  = EventSubscriptionsMessage { "EventSubscriptionsList": Nothing, "Marker": Nothing }
 
 -- | Constructs EventSubscriptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventSubscriptionsMessage' :: ( { "Marker" :: NullOrUndefined (String) , "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList) } -> {"Marker" :: NullOrUndefined (String) , "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList) } ) -> EventSubscriptionsMessage
-newEventSubscriptionsMessage'  customize = (EventSubscriptionsMessage <<< customize) { "EventSubscriptionsList": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newEventSubscriptionsMessage' :: ( { "Marker" :: Maybe (String) , "EventSubscriptionsList" :: Maybe (EventSubscriptionsList) } -> {"Marker" :: Maybe (String) , "EventSubscriptionsList" :: Maybe (EventSubscriptionsList) } ) -> EventSubscriptionsMessage
+newEventSubscriptionsMessage'  customize = (EventSubscriptionsMessage <<< customize) { "EventSubscriptionsList": Nothing, "Marker": Nothing }
 
 
 
 newtype EventsMessage = EventsMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "Events" :: NullOrUndefined (EventList)
+  { "Marker" :: Maybe (String)
+  , "Events" :: Maybe (EventList)
   }
 derive instance newtypeEventsMessage :: Newtype EventsMessage _
 derive instance repGenericEventsMessage :: Generic EventsMessage _
@@ -2119,18 +2118,18 @@ instance encodeEventsMessage :: Encode EventsMessage where encode = genericEncod
 
 -- | Constructs EventsMessage from required parameters
 newEventsMessage :: EventsMessage
-newEventsMessage  = EventsMessage { "Events": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newEventsMessage  = EventsMessage { "Events": Nothing, "Marker": Nothing }
 
 -- | Constructs EventsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventsMessage' :: ( { "Marker" :: NullOrUndefined (String) , "Events" :: NullOrUndefined (EventList) } -> {"Marker" :: NullOrUndefined (String) , "Events" :: NullOrUndefined (EventList) } ) -> EventsMessage
-newEventsMessage'  customize = (EventsMessage <<< customize) { "Events": (NullOrUndefined Nothing), "Marker": (NullOrUndefined Nothing) }
+newEventsMessage' :: ( { "Marker" :: Maybe (String) , "Events" :: Maybe (EventList) } -> {"Marker" :: Maybe (String) , "Events" :: Maybe (EventList) } ) -> EventsMessage
+newEventsMessage'  customize = (EventsMessage <<< customize) { "Events": Nothing, "Marker": Nothing }
 
 
 
 newtype IPRange = IPRange 
-  { "Status" :: NullOrUndefined (String)
-  , "CIDRIP" :: NullOrUndefined (String)
+  { "Status" :: Maybe (String)
+  , "CIDRIP" :: Maybe (String)
   }
 derive instance newtypeIPRange :: Newtype IPRange _
 derive instance repGenericIPRange :: Generic IPRange _
@@ -2140,12 +2139,12 @@ instance encodeIPRange :: Encode IPRange where encode = genericEncode options
 
 -- | Constructs IPRange from required parameters
 newIPRange :: IPRange
-newIPRange  = IPRange { "CIDRIP": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newIPRange  = IPRange { "CIDRIP": Nothing, "Status": Nothing }
 
 -- | Constructs IPRange's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newIPRange' :: ( { "Status" :: NullOrUndefined (String) , "CIDRIP" :: NullOrUndefined (String) } -> {"Status" :: NullOrUndefined (String) , "CIDRIP" :: NullOrUndefined (String) } ) -> IPRange
-newIPRange'  customize = (IPRange <<< customize) { "CIDRIP": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newIPRange' :: ( { "Status" :: Maybe (String) , "CIDRIP" :: Maybe (String) } -> {"Status" :: Maybe (String) , "CIDRIP" :: Maybe (String) } ) -> IPRange
+newIPRange'  customize = (IPRange <<< customize) { "CIDRIP": Nothing, "Status": Nothing }
 
 
 
@@ -2328,23 +2327,23 @@ newListTagsForResourceMessage' _ResourceName customize = (ListTagsForResourceMes
 
 newtype ModifyDBInstanceMessage = ModifyDBInstanceMessage 
   { "DBInstanceIdentifier" :: (String)
-  , "AllocatedStorage" :: NullOrUndefined (IntegerOptional)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList)
-  , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList)
-  , "ApplyImmediately" :: NullOrUndefined (Boolean)
-  , "MasterUserPassword" :: NullOrUndefined (String)
-  , "DBParameterGroupName" :: NullOrUndefined (String)
-  , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional)
-  , "PreferredBackupWindow" :: NullOrUndefined (String)
-  , "PreferredMaintenanceWindow" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupName" :: NullOrUndefined (String)
-  , "NewDBInstanceIdentifier" :: NullOrUndefined (String)
+  , "AllocatedStorage" :: Maybe (IntegerOptional)
+  , "DBInstanceClass" :: Maybe (String)
+  , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList)
+  , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList)
+  , "ApplyImmediately" :: Maybe (Boolean)
+  , "MasterUserPassword" :: Maybe (String)
+  , "DBParameterGroupName" :: Maybe (String)
+  , "BackupRetentionPeriod" :: Maybe (IntegerOptional)
+  , "PreferredBackupWindow" :: Maybe (String)
+  , "PreferredMaintenanceWindow" :: Maybe (String)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "EngineVersion" :: Maybe (String)
+  , "AllowMajorVersionUpgrade" :: Maybe (Boolean)
+  , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupName" :: Maybe (String)
+  , "NewDBInstanceIdentifier" :: Maybe (String)
   }
 derive instance newtypeModifyDBInstanceMessage :: Newtype ModifyDBInstanceMessage _
 derive instance repGenericModifyDBInstanceMessage :: Generic ModifyDBInstanceMessage _
@@ -2354,17 +2353,17 @@ instance encodeModifyDBInstanceMessage :: Encode ModifyDBInstanceMessage where e
 
 -- | Constructs ModifyDBInstanceMessage from required parameters
 newModifyDBInstanceMessage :: String -> ModifyDBInstanceMessage
-newModifyDBInstanceMessage _DBInstanceIdentifier = ModifyDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "AllocatedStorage": (NullOrUndefined Nothing), "AllowMajorVersionUpgrade": (NullOrUndefined Nothing), "ApplyImmediately": (NullOrUndefined Nothing), "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "MasterUserPassword": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "NewDBInstanceIdentifier": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "VpcSecurityGroupIds": (NullOrUndefined Nothing) }
+newModifyDBInstanceMessage _DBInstanceIdentifier = ModifyDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "AllocatedStorage": Nothing, "AllowMajorVersionUpgrade": Nothing, "ApplyImmediately": Nothing, "AutoMinorVersionUpgrade": Nothing, "BackupRetentionPeriod": Nothing, "DBInstanceClass": Nothing, "DBParameterGroupName": Nothing, "DBSecurityGroups": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "MasterUserPassword": Nothing, "MultiAZ": Nothing, "NewDBInstanceIdentifier": Nothing, "OptionGroupName": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "VpcSecurityGroupIds": Nothing }
 
 -- | Constructs ModifyDBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: NullOrUndefined (IntegerOptional) , "DBInstanceClass" :: NullOrUndefined (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList) , "ApplyImmediately" :: NullOrUndefined (Boolean) , "MasterUserPassword" :: NullOrUndefined (String) , "DBParameterGroupName" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "NewDBInstanceIdentifier" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: NullOrUndefined (IntegerOptional) , "DBInstanceClass" :: NullOrUndefined (String) , "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList) , "ApplyImmediately" :: NullOrUndefined (Boolean) , "MasterUserPassword" :: NullOrUndefined (String) , "DBParameterGroupName" :: NullOrUndefined (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) , "PreferredMaintenanceWindow" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) , "NewDBInstanceIdentifier" :: NullOrUndefined (String) } ) -> ModifyDBInstanceMessage
-newModifyDBInstanceMessage' _DBInstanceIdentifier customize = (ModifyDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "AllocatedStorage": (NullOrUndefined Nothing), "AllowMajorVersionUpgrade": (NullOrUndefined Nothing), "ApplyImmediately": (NullOrUndefined Nothing), "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBParameterGroupName": (NullOrUndefined Nothing), "DBSecurityGroups": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "MasterUserPassword": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "NewDBInstanceIdentifier": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing), "PreferredMaintenanceWindow": (NullOrUndefined Nothing), "VpcSecurityGroupIds": (NullOrUndefined Nothing) }
+newModifyDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: Maybe (IntegerOptional) , "DBInstanceClass" :: Maybe (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList) , "ApplyImmediately" :: Maybe (Boolean) , "MasterUserPassword" :: Maybe (String) , "DBParameterGroupName" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) , "PreferredMaintenanceWindow" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "AllowMajorVersionUpgrade" :: Maybe (Boolean) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "NewDBInstanceIdentifier" :: Maybe (String) } -> {"DBInstanceIdentifier" :: (String) , "AllocatedStorage" :: Maybe (IntegerOptional) , "DBInstanceClass" :: Maybe (String) , "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList) , "ApplyImmediately" :: Maybe (Boolean) , "MasterUserPassword" :: Maybe (String) , "DBParameterGroupName" :: Maybe (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) , "PreferredMaintenanceWindow" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "AllowMajorVersionUpgrade" :: Maybe (Boolean) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) , "NewDBInstanceIdentifier" :: Maybe (String) } ) -> ModifyDBInstanceMessage
+newModifyDBInstanceMessage' _DBInstanceIdentifier customize = (ModifyDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "AllocatedStorage": Nothing, "AllowMajorVersionUpgrade": Nothing, "ApplyImmediately": Nothing, "AutoMinorVersionUpgrade": Nothing, "BackupRetentionPeriod": Nothing, "DBInstanceClass": Nothing, "DBParameterGroupName": Nothing, "DBSecurityGroups": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "MasterUserPassword": Nothing, "MultiAZ": Nothing, "NewDBInstanceIdentifier": Nothing, "OptionGroupName": Nothing, "PreferredBackupWindow": Nothing, "PreferredMaintenanceWindow": Nothing, "VpcSecurityGroupIds": Nothing }
 
 
 
 newtype ModifyDBInstanceResult = ModifyDBInstanceResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeModifyDBInstanceResult :: Newtype ModifyDBInstanceResult _
 derive instance repGenericModifyDBInstanceResult :: Generic ModifyDBInstanceResult _
@@ -2374,12 +2373,12 @@ instance encodeModifyDBInstanceResult :: Encode ModifyDBInstanceResult where enc
 
 -- | Constructs ModifyDBInstanceResult from required parameters
 newModifyDBInstanceResult :: ModifyDBInstanceResult
-newModifyDBInstanceResult  = ModifyDBInstanceResult { "DBInstance": (NullOrUndefined Nothing) }
+newModifyDBInstanceResult  = ModifyDBInstanceResult { "DBInstance": Nothing }
 
 -- | Constructs ModifyDBInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyDBInstanceResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> ModifyDBInstanceResult
-newModifyDBInstanceResult'  customize = (ModifyDBInstanceResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newModifyDBInstanceResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> ModifyDBInstanceResult
+newModifyDBInstanceResult'  customize = (ModifyDBInstanceResult <<< customize) { "DBInstance": Nothing }
 
 
 
@@ -2406,7 +2405,7 @@ newModifyDBParameterGroupMessage' _DBParameterGroupName _Parameters customize = 
 
 newtype ModifyDBSubnetGroupMessage = ModifyDBSubnetGroupMessage 
   { "DBSubnetGroupName" :: (String)
-  , "DBSubnetGroupDescription" :: NullOrUndefined (String)
+  , "DBSubnetGroupDescription" :: Maybe (String)
   , "SubnetIds" :: (SubnetIdentifierList)
   }
 derive instance newtypeModifyDBSubnetGroupMessage :: Newtype ModifyDBSubnetGroupMessage _
@@ -2417,17 +2416,17 @@ instance encodeModifyDBSubnetGroupMessage :: Encode ModifyDBSubnetGroupMessage w
 
 -- | Constructs ModifyDBSubnetGroupMessage from required parameters
 newModifyDBSubnetGroupMessage :: String -> SubnetIdentifierList -> ModifyDBSubnetGroupMessage
-newModifyDBSubnetGroupMessage _DBSubnetGroupName _SubnetIds = ModifyDBSubnetGroupMessage { "DBSubnetGroupName": _DBSubnetGroupName, "SubnetIds": _SubnetIds, "DBSubnetGroupDescription": (NullOrUndefined Nothing) }
+newModifyDBSubnetGroupMessage _DBSubnetGroupName _SubnetIds = ModifyDBSubnetGroupMessage { "DBSubnetGroupName": _DBSubnetGroupName, "SubnetIds": _SubnetIds, "DBSubnetGroupDescription": Nothing }
 
 -- | Constructs ModifyDBSubnetGroupMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyDBSubnetGroupMessage' :: String -> SubnetIdentifierList -> ( { "DBSubnetGroupName" :: (String) , "DBSubnetGroupDescription" :: NullOrUndefined (String) , "SubnetIds" :: (SubnetIdentifierList) } -> {"DBSubnetGroupName" :: (String) , "DBSubnetGroupDescription" :: NullOrUndefined (String) , "SubnetIds" :: (SubnetIdentifierList) } ) -> ModifyDBSubnetGroupMessage
-newModifyDBSubnetGroupMessage' _DBSubnetGroupName _SubnetIds customize = (ModifyDBSubnetGroupMessage <<< customize) { "DBSubnetGroupName": _DBSubnetGroupName, "SubnetIds": _SubnetIds, "DBSubnetGroupDescription": (NullOrUndefined Nothing) }
+newModifyDBSubnetGroupMessage' :: String -> SubnetIdentifierList -> ( { "DBSubnetGroupName" :: (String) , "DBSubnetGroupDescription" :: Maybe (String) , "SubnetIds" :: (SubnetIdentifierList) } -> {"DBSubnetGroupName" :: (String) , "DBSubnetGroupDescription" :: Maybe (String) , "SubnetIds" :: (SubnetIdentifierList) } ) -> ModifyDBSubnetGroupMessage
+newModifyDBSubnetGroupMessage' _DBSubnetGroupName _SubnetIds customize = (ModifyDBSubnetGroupMessage <<< customize) { "DBSubnetGroupName": _DBSubnetGroupName, "SubnetIds": _SubnetIds, "DBSubnetGroupDescription": Nothing }
 
 
 
 newtype ModifyDBSubnetGroupResult = ModifyDBSubnetGroupResult 
-  { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup)
+  { "DBSubnetGroup" :: Maybe (DBSubnetGroup)
   }
 derive instance newtypeModifyDBSubnetGroupResult :: Newtype ModifyDBSubnetGroupResult _
 derive instance repGenericModifyDBSubnetGroupResult :: Generic ModifyDBSubnetGroupResult _
@@ -2437,21 +2436,21 @@ instance encodeModifyDBSubnetGroupResult :: Encode ModifyDBSubnetGroupResult whe
 
 -- | Constructs ModifyDBSubnetGroupResult from required parameters
 newModifyDBSubnetGroupResult :: ModifyDBSubnetGroupResult
-newModifyDBSubnetGroupResult  = ModifyDBSubnetGroupResult { "DBSubnetGroup": (NullOrUndefined Nothing) }
+newModifyDBSubnetGroupResult  = ModifyDBSubnetGroupResult { "DBSubnetGroup": Nothing }
 
 -- | Constructs ModifyDBSubnetGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyDBSubnetGroupResult' :: ( { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } -> {"DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } ) -> ModifyDBSubnetGroupResult
-newModifyDBSubnetGroupResult'  customize = (ModifyDBSubnetGroupResult <<< customize) { "DBSubnetGroup": (NullOrUndefined Nothing) }
+newModifyDBSubnetGroupResult' :: ( { "DBSubnetGroup" :: Maybe (DBSubnetGroup) } -> {"DBSubnetGroup" :: Maybe (DBSubnetGroup) } ) -> ModifyDBSubnetGroupResult
+newModifyDBSubnetGroupResult'  customize = (ModifyDBSubnetGroupResult <<< customize) { "DBSubnetGroup": Nothing }
 
 
 
 newtype ModifyEventSubscriptionMessage = ModifyEventSubscriptionMessage 
   { "SubscriptionName" :: (String)
-  , "SnsTopicArn" :: NullOrUndefined (String)
-  , "SourceType" :: NullOrUndefined (String)
-  , "EventCategories" :: NullOrUndefined (EventCategoriesList)
-  , "Enabled" :: NullOrUndefined (BooleanOptional)
+  , "SnsTopicArn" :: Maybe (String)
+  , "SourceType" :: Maybe (String)
+  , "EventCategories" :: Maybe (EventCategoriesList)
+  , "Enabled" :: Maybe (BooleanOptional)
   }
 derive instance newtypeModifyEventSubscriptionMessage :: Newtype ModifyEventSubscriptionMessage _
 derive instance repGenericModifyEventSubscriptionMessage :: Generic ModifyEventSubscriptionMessage _
@@ -2461,17 +2460,17 @@ instance encodeModifyEventSubscriptionMessage :: Encode ModifyEventSubscriptionM
 
 -- | Constructs ModifyEventSubscriptionMessage from required parameters
 newModifyEventSubscriptionMessage :: String -> ModifyEventSubscriptionMessage
-newModifyEventSubscriptionMessage _SubscriptionName = ModifyEventSubscriptionMessage { "SubscriptionName": _SubscriptionName, "Enabled": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "SnsTopicArn": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newModifyEventSubscriptionMessage _SubscriptionName = ModifyEventSubscriptionMessage { "SubscriptionName": _SubscriptionName, "Enabled": Nothing, "EventCategories": Nothing, "SnsTopicArn": Nothing, "SourceType": Nothing }
 
 -- | Constructs ModifyEventSubscriptionMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyEventSubscriptionMessage' :: String -> ( { "SubscriptionName" :: (String) , "SnsTopicArn" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "Enabled" :: NullOrUndefined (BooleanOptional) } -> {"SubscriptionName" :: (String) , "SnsTopicArn" :: NullOrUndefined (String) , "SourceType" :: NullOrUndefined (String) , "EventCategories" :: NullOrUndefined (EventCategoriesList) , "Enabled" :: NullOrUndefined (BooleanOptional) } ) -> ModifyEventSubscriptionMessage
-newModifyEventSubscriptionMessage' _SubscriptionName customize = (ModifyEventSubscriptionMessage <<< customize) { "SubscriptionName": _SubscriptionName, "Enabled": (NullOrUndefined Nothing), "EventCategories": (NullOrUndefined Nothing), "SnsTopicArn": (NullOrUndefined Nothing), "SourceType": (NullOrUndefined Nothing) }
+newModifyEventSubscriptionMessage' :: String -> ( { "SubscriptionName" :: (String) , "SnsTopicArn" :: Maybe (String) , "SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "Enabled" :: Maybe (BooleanOptional) } -> {"SubscriptionName" :: (String) , "SnsTopicArn" :: Maybe (String) , "SourceType" :: Maybe (String) , "EventCategories" :: Maybe (EventCategoriesList) , "Enabled" :: Maybe (BooleanOptional) } ) -> ModifyEventSubscriptionMessage
+newModifyEventSubscriptionMessage' _SubscriptionName customize = (ModifyEventSubscriptionMessage <<< customize) { "SubscriptionName": _SubscriptionName, "Enabled": Nothing, "EventCategories": Nothing, "SnsTopicArn": Nothing, "SourceType": Nothing }
 
 
 
 newtype ModifyEventSubscriptionResult = ModifyEventSubscriptionResult 
-  { "EventSubscription" :: NullOrUndefined (EventSubscription)
+  { "EventSubscription" :: Maybe (EventSubscription)
   }
 derive instance newtypeModifyEventSubscriptionResult :: Newtype ModifyEventSubscriptionResult _
 derive instance repGenericModifyEventSubscriptionResult :: Generic ModifyEventSubscriptionResult _
@@ -2481,20 +2480,20 @@ instance encodeModifyEventSubscriptionResult :: Encode ModifyEventSubscriptionRe
 
 -- | Constructs ModifyEventSubscriptionResult from required parameters
 newModifyEventSubscriptionResult :: ModifyEventSubscriptionResult
-newModifyEventSubscriptionResult  = ModifyEventSubscriptionResult { "EventSubscription": (NullOrUndefined Nothing) }
+newModifyEventSubscriptionResult  = ModifyEventSubscriptionResult { "EventSubscription": Nothing }
 
 -- | Constructs ModifyEventSubscriptionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyEventSubscriptionResult' :: ( { "EventSubscription" :: NullOrUndefined (EventSubscription) } -> {"EventSubscription" :: NullOrUndefined (EventSubscription) } ) -> ModifyEventSubscriptionResult
-newModifyEventSubscriptionResult'  customize = (ModifyEventSubscriptionResult <<< customize) { "EventSubscription": (NullOrUndefined Nothing) }
+newModifyEventSubscriptionResult' :: ( { "EventSubscription" :: Maybe (EventSubscription) } -> {"EventSubscription" :: Maybe (EventSubscription) } ) -> ModifyEventSubscriptionResult
+newModifyEventSubscriptionResult'  customize = (ModifyEventSubscriptionResult <<< customize) { "EventSubscription": Nothing }
 
 
 
 newtype ModifyOptionGroupMessage = ModifyOptionGroupMessage 
   { "OptionGroupName" :: (String)
-  , "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList)
-  , "OptionsToRemove" :: NullOrUndefined (OptionNamesList)
-  , "ApplyImmediately" :: NullOrUndefined (Boolean)
+  , "OptionsToInclude" :: Maybe (OptionConfigurationList)
+  , "OptionsToRemove" :: Maybe (OptionNamesList)
+  , "ApplyImmediately" :: Maybe (Boolean)
   }
 derive instance newtypeModifyOptionGroupMessage :: Newtype ModifyOptionGroupMessage _
 derive instance repGenericModifyOptionGroupMessage :: Generic ModifyOptionGroupMessage _
@@ -2504,17 +2503,17 @@ instance encodeModifyOptionGroupMessage :: Encode ModifyOptionGroupMessage where
 
 -- | Constructs ModifyOptionGroupMessage from required parameters
 newModifyOptionGroupMessage :: String -> ModifyOptionGroupMessage
-newModifyOptionGroupMessage _OptionGroupName = ModifyOptionGroupMessage { "OptionGroupName": _OptionGroupName, "ApplyImmediately": (NullOrUndefined Nothing), "OptionsToInclude": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing) }
+newModifyOptionGroupMessage _OptionGroupName = ModifyOptionGroupMessage { "OptionGroupName": _OptionGroupName, "ApplyImmediately": Nothing, "OptionsToInclude": Nothing, "OptionsToRemove": Nothing }
 
 -- | Constructs ModifyOptionGroupMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyOptionGroupMessage' :: String -> ( { "OptionGroupName" :: (String) , "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList) , "OptionsToRemove" :: NullOrUndefined (OptionNamesList) , "ApplyImmediately" :: NullOrUndefined (Boolean) } -> {"OptionGroupName" :: (String) , "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList) , "OptionsToRemove" :: NullOrUndefined (OptionNamesList) , "ApplyImmediately" :: NullOrUndefined (Boolean) } ) -> ModifyOptionGroupMessage
-newModifyOptionGroupMessage' _OptionGroupName customize = (ModifyOptionGroupMessage <<< customize) { "OptionGroupName": _OptionGroupName, "ApplyImmediately": (NullOrUndefined Nothing), "OptionsToInclude": (NullOrUndefined Nothing), "OptionsToRemove": (NullOrUndefined Nothing) }
+newModifyOptionGroupMessage' :: String -> ( { "OptionGroupName" :: (String) , "OptionsToInclude" :: Maybe (OptionConfigurationList) , "OptionsToRemove" :: Maybe (OptionNamesList) , "ApplyImmediately" :: Maybe (Boolean) } -> {"OptionGroupName" :: (String) , "OptionsToInclude" :: Maybe (OptionConfigurationList) , "OptionsToRemove" :: Maybe (OptionNamesList) , "ApplyImmediately" :: Maybe (Boolean) } ) -> ModifyOptionGroupMessage
+newModifyOptionGroupMessage' _OptionGroupName customize = (ModifyOptionGroupMessage <<< customize) { "OptionGroupName": _OptionGroupName, "ApplyImmediately": Nothing, "OptionsToInclude": Nothing, "OptionsToRemove": Nothing }
 
 
 
 newtype ModifyOptionGroupResult = ModifyOptionGroupResult 
-  { "OptionGroup" :: NullOrUndefined (OptionGroup)
+  { "OptionGroup" :: Maybe (OptionGroup)
   }
 derive instance newtypeModifyOptionGroupResult :: Newtype ModifyOptionGroupResult _
 derive instance repGenericModifyOptionGroupResult :: Generic ModifyOptionGroupResult _
@@ -2524,21 +2523,21 @@ instance encodeModifyOptionGroupResult :: Encode ModifyOptionGroupResult where e
 
 -- | Constructs ModifyOptionGroupResult from required parameters
 newModifyOptionGroupResult :: ModifyOptionGroupResult
-newModifyOptionGroupResult  = ModifyOptionGroupResult { "OptionGroup": (NullOrUndefined Nothing) }
+newModifyOptionGroupResult  = ModifyOptionGroupResult { "OptionGroup": Nothing }
 
 -- | Constructs ModifyOptionGroupResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newModifyOptionGroupResult' :: ( { "OptionGroup" :: NullOrUndefined (OptionGroup) } -> {"OptionGroup" :: NullOrUndefined (OptionGroup) } ) -> ModifyOptionGroupResult
-newModifyOptionGroupResult'  customize = (ModifyOptionGroupResult <<< customize) { "OptionGroup": (NullOrUndefined Nothing) }
+newModifyOptionGroupResult' :: ( { "OptionGroup" :: Maybe (OptionGroup) } -> {"OptionGroup" :: Maybe (OptionGroup) } ) -> ModifyOptionGroupResult
+newModifyOptionGroupResult'  customize = (ModifyOptionGroupResult <<< customize) { "OptionGroup": Nothing }
 
 
 
 newtype Option = Option 
-  { "OptionName" :: NullOrUndefined (String)
-  , "OptionDescription" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList)
-  , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList)
+  { "OptionName" :: Maybe (String)
+  , "OptionDescription" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList)
+  , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList)
   }
 derive instance newtypeOption :: Newtype Option _
 derive instance repGenericOption :: Generic Option _
@@ -2548,20 +2547,20 @@ instance encodeOption :: Encode Option where encode = genericEncode options
 
 -- | Constructs Option from required parameters
 newOption :: Option
-newOption  = Option { "DBSecurityGroupMemberships": (NullOrUndefined Nothing), "OptionDescription": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "VpcSecurityGroupMemberships": (NullOrUndefined Nothing) }
+newOption  = Option { "DBSecurityGroupMemberships": Nothing, "OptionDescription": Nothing, "OptionName": Nothing, "Port": Nothing, "VpcSecurityGroupMemberships": Nothing }
 
 -- | Constructs Option's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOption' :: ( { "OptionName" :: NullOrUndefined (String) , "OptionDescription" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList) , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList) } -> {"OptionName" :: NullOrUndefined (String) , "OptionDescription" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList) , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList) } ) -> Option
-newOption'  customize = (Option <<< customize) { "DBSecurityGroupMemberships": (NullOrUndefined Nothing), "OptionDescription": (NullOrUndefined Nothing), "OptionName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "VpcSecurityGroupMemberships": (NullOrUndefined Nothing) }
+newOption' :: ( { "OptionName" :: Maybe (String) , "OptionDescription" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList) , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList) } -> {"OptionName" :: Maybe (String) , "OptionDescription" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList) , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList) } ) -> Option
+newOption'  customize = (Option <<< customize) { "DBSecurityGroupMemberships": Nothing, "OptionDescription": Nothing, "OptionName": Nothing, "Port": Nothing, "VpcSecurityGroupMemberships": Nothing }
 
 
 
 newtype OptionConfiguration = OptionConfiguration 
   { "OptionName" :: (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList)
-  , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList)
+  , "Port" :: Maybe (IntegerOptional)
+  , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList)
+  , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList)
   }
 derive instance newtypeOptionConfiguration :: Newtype OptionConfiguration _
 derive instance repGenericOptionConfiguration :: Generic OptionConfiguration _
@@ -2571,12 +2570,12 @@ instance encodeOptionConfiguration :: Encode OptionConfiguration where encode = 
 
 -- | Constructs OptionConfiguration from required parameters
 newOptionConfiguration :: String -> OptionConfiguration
-newOptionConfiguration _OptionName = OptionConfiguration { "OptionName": _OptionName, "DBSecurityGroupMemberships": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "VpcSecurityGroupMemberships": (NullOrUndefined Nothing) }
+newOptionConfiguration _OptionName = OptionConfiguration { "OptionName": _OptionName, "DBSecurityGroupMemberships": Nothing, "Port": Nothing, "VpcSecurityGroupMemberships": Nothing }
 
 -- | Constructs OptionConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionConfiguration' :: String -> ( { "OptionName" :: (String) , "Port" :: NullOrUndefined (IntegerOptional) , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList) } -> {"OptionName" :: (String) , "Port" :: NullOrUndefined (IntegerOptional) , "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList) , "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList) } ) -> OptionConfiguration
-newOptionConfiguration' _OptionName customize = (OptionConfiguration <<< customize) { "OptionName": _OptionName, "DBSecurityGroupMemberships": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "VpcSecurityGroupMemberships": (NullOrUndefined Nothing) }
+newOptionConfiguration' :: String -> ( { "OptionName" :: (String) , "Port" :: Maybe (IntegerOptional) , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList) } -> {"OptionName" :: (String) , "Port" :: Maybe (IntegerOptional) , "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList) , "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList) } ) -> OptionConfiguration
+newOptionConfiguration' _OptionName customize = (OptionConfiguration <<< customize) { "OptionName": _OptionName, "DBSecurityGroupMemberships": Nothing, "Port": Nothing, "VpcSecurityGroupMemberships": Nothing }
 
 
 
@@ -2590,13 +2589,13 @@ instance encodeOptionConfigurationList :: Encode OptionConfigurationList where e
 
 
 newtype OptionGroup = OptionGroup 
-  { "OptionGroupName" :: NullOrUndefined (String)
-  , "OptionGroupDescription" :: NullOrUndefined (String)
-  , "EngineName" :: NullOrUndefined (String)
-  , "MajorEngineVersion" :: NullOrUndefined (String)
-  , "Options" :: NullOrUndefined (OptionsList)
-  , "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean)
-  , "VpcId" :: NullOrUndefined (String)
+  { "OptionGroupName" :: Maybe (String)
+  , "OptionGroupDescription" :: Maybe (String)
+  , "EngineName" :: Maybe (String)
+  , "MajorEngineVersion" :: Maybe (String)
+  , "Options" :: Maybe (OptionsList)
+  , "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean)
+  , "VpcId" :: Maybe (String)
   }
 derive instance newtypeOptionGroup :: Newtype OptionGroup _
 derive instance repGenericOptionGroup :: Generic OptionGroup _
@@ -2606,12 +2605,12 @@ instance encodeOptionGroup :: Encode OptionGroup where encode = genericEncode op
 
 -- | Constructs OptionGroup from required parameters
 newOptionGroup :: OptionGroup
-newOptionGroup  = OptionGroup { "AllowsVpcAndNonVpcInstanceMemberships": (NullOrUndefined Nothing), "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "OptionGroupDescription": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Options": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newOptionGroup  = OptionGroup { "AllowsVpcAndNonVpcInstanceMemberships": Nothing, "EngineName": Nothing, "MajorEngineVersion": Nothing, "OptionGroupDescription": Nothing, "OptionGroupName": Nothing, "Options": Nothing, "VpcId": Nothing }
 
 -- | Constructs OptionGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionGroup' :: ( { "OptionGroupName" :: NullOrUndefined (String) , "OptionGroupDescription" :: NullOrUndefined (String) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "Options" :: NullOrUndefined (OptionsList) , "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean) , "VpcId" :: NullOrUndefined (String) } -> {"OptionGroupName" :: NullOrUndefined (String) , "OptionGroupDescription" :: NullOrUndefined (String) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "Options" :: NullOrUndefined (OptionsList) , "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean) , "VpcId" :: NullOrUndefined (String) } ) -> OptionGroup
-newOptionGroup'  customize = (OptionGroup <<< customize) { "AllowsVpcAndNonVpcInstanceMemberships": (NullOrUndefined Nothing), "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "OptionGroupDescription": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Options": (NullOrUndefined Nothing), "VpcId": (NullOrUndefined Nothing) }
+newOptionGroup' :: ( { "OptionGroupName" :: Maybe (String) , "OptionGroupDescription" :: Maybe (String) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) , "Options" :: Maybe (OptionsList) , "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean) , "VpcId" :: Maybe (String) } -> {"OptionGroupName" :: Maybe (String) , "OptionGroupDescription" :: Maybe (String) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) , "Options" :: Maybe (OptionsList) , "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean) , "VpcId" :: Maybe (String) } ) -> OptionGroup
+newOptionGroup'  customize = (OptionGroup <<< customize) { "AllowsVpcAndNonVpcInstanceMemberships": Nothing, "EngineName": Nothing, "MajorEngineVersion": Nothing, "OptionGroupDescription": Nothing, "OptionGroupName": Nothing, "Options": Nothing, "VpcId": Nothing }
 
 
 
@@ -2626,8 +2625,8 @@ instance encodeOptionGroupAlreadyExistsFault :: Encode OptionGroupAlreadyExistsF
 
 
 newtype OptionGroupMembership = OptionGroupMembership 
-  { "OptionGroupName" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (String)
+  { "OptionGroupName" :: Maybe (String)
+  , "Status" :: Maybe (String)
   }
 derive instance newtypeOptionGroupMembership :: Newtype OptionGroupMembership _
 derive instance repGenericOptionGroupMembership :: Generic OptionGroupMembership _
@@ -2637,12 +2636,12 @@ instance encodeOptionGroupMembership :: Encode OptionGroupMembership where encod
 
 -- | Constructs OptionGroupMembership from required parameters
 newOptionGroupMembership :: OptionGroupMembership
-newOptionGroupMembership  = OptionGroupMembership { "OptionGroupName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newOptionGroupMembership  = OptionGroupMembership { "OptionGroupName": Nothing, "Status": Nothing }
 
 -- | Constructs OptionGroupMembership's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionGroupMembership' :: ( { "OptionGroupName" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } -> {"OptionGroupName" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } ) -> OptionGroupMembership
-newOptionGroupMembership'  customize = (OptionGroupMembership <<< customize) { "OptionGroupName": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newOptionGroupMembership' :: ( { "OptionGroupName" :: Maybe (String) , "Status" :: Maybe (String) } -> {"OptionGroupName" :: Maybe (String) , "Status" :: Maybe (String) } ) -> OptionGroupMembership
+newOptionGroupMembership'  customize = (OptionGroupMembership <<< customize) { "OptionGroupName": Nothing, "Status": Nothing }
 
 
 
@@ -2657,14 +2656,14 @@ instance encodeOptionGroupNotFoundFault :: Encode OptionGroupNotFoundFault where
 
 
 newtype OptionGroupOption = OptionGroupOption 
-  { "Name" :: NullOrUndefined (String)
-  , "Description" :: NullOrUndefined (String)
-  , "EngineName" :: NullOrUndefined (String)
-  , "MajorEngineVersion" :: NullOrUndefined (String)
-  , "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String)
-  , "PortRequired" :: NullOrUndefined (Boolean)
-  , "DefaultPort" :: NullOrUndefined (IntegerOptional)
-  , "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn)
+  { "Name" :: Maybe (String)
+  , "Description" :: Maybe (String)
+  , "EngineName" :: Maybe (String)
+  , "MajorEngineVersion" :: Maybe (String)
+  , "MinimumRequiredMinorEngineVersion" :: Maybe (String)
+  , "PortRequired" :: Maybe (Boolean)
+  , "DefaultPort" :: Maybe (IntegerOptional)
+  , "OptionsDependedOn" :: Maybe (OptionsDependedOn)
   }
 derive instance newtypeOptionGroupOption :: Newtype OptionGroupOption _
 derive instance repGenericOptionGroupOption :: Generic OptionGroupOption _
@@ -2674,12 +2673,12 @@ instance encodeOptionGroupOption :: Encode OptionGroupOption where encode = gene
 
 -- | Constructs OptionGroupOption from required parameters
 newOptionGroupOption :: OptionGroupOption
-newOptionGroupOption  = OptionGroupOption { "DefaultPort": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "MinimumRequiredMinorEngineVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OptionsDependedOn": (NullOrUndefined Nothing), "PortRequired": (NullOrUndefined Nothing) }
+newOptionGroupOption  = OptionGroupOption { "DefaultPort": Nothing, "Description": Nothing, "EngineName": Nothing, "MajorEngineVersion": Nothing, "MinimumRequiredMinorEngineVersion": Nothing, "Name": Nothing, "OptionsDependedOn": Nothing, "PortRequired": Nothing }
 
 -- | Constructs OptionGroupOption's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionGroupOption' :: ( { "Name" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String) , "PortRequired" :: NullOrUndefined (Boolean) , "DefaultPort" :: NullOrUndefined (IntegerOptional) , "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn) } -> {"Name" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) , "EngineName" :: NullOrUndefined (String) , "MajorEngineVersion" :: NullOrUndefined (String) , "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String) , "PortRequired" :: NullOrUndefined (Boolean) , "DefaultPort" :: NullOrUndefined (IntegerOptional) , "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn) } ) -> OptionGroupOption
-newOptionGroupOption'  customize = (OptionGroupOption <<< customize) { "DefaultPort": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "EngineName": (NullOrUndefined Nothing), "MajorEngineVersion": (NullOrUndefined Nothing), "MinimumRequiredMinorEngineVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "OptionsDependedOn": (NullOrUndefined Nothing), "PortRequired": (NullOrUndefined Nothing) }
+newOptionGroupOption' :: ( { "Name" :: Maybe (String) , "Description" :: Maybe (String) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) , "MinimumRequiredMinorEngineVersion" :: Maybe (String) , "PortRequired" :: Maybe (Boolean) , "DefaultPort" :: Maybe (IntegerOptional) , "OptionsDependedOn" :: Maybe (OptionsDependedOn) } -> {"Name" :: Maybe (String) , "Description" :: Maybe (String) , "EngineName" :: Maybe (String) , "MajorEngineVersion" :: Maybe (String) , "MinimumRequiredMinorEngineVersion" :: Maybe (String) , "PortRequired" :: Maybe (Boolean) , "DefaultPort" :: Maybe (IntegerOptional) , "OptionsDependedOn" :: Maybe (OptionsDependedOn) } ) -> OptionGroupOption
+newOptionGroupOption'  customize = (OptionGroupOption <<< customize) { "DefaultPort": Nothing, "Description": Nothing, "EngineName": Nothing, "MajorEngineVersion": Nothing, "MinimumRequiredMinorEngineVersion": Nothing, "Name": Nothing, "OptionsDependedOn": Nothing, "PortRequired": Nothing }
 
 
 
@@ -2693,8 +2692,8 @@ instance encodeOptionGroupOptionsList :: Encode OptionGroupOptionsList where enc
 
 
 newtype OptionGroupOptionsMessage = OptionGroupOptionsMessage 
-  { "OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList)
-  , "Marker" :: NullOrUndefined (String)
+  { "OptionGroupOptions" :: Maybe (OptionGroupOptionsList)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeOptionGroupOptionsMessage :: Newtype OptionGroupOptionsMessage _
 derive instance repGenericOptionGroupOptionsMessage :: Generic OptionGroupOptionsMessage _
@@ -2704,12 +2703,12 @@ instance encodeOptionGroupOptionsMessage :: Encode OptionGroupOptionsMessage whe
 
 -- | Constructs OptionGroupOptionsMessage from required parameters
 newOptionGroupOptionsMessage :: OptionGroupOptionsMessage
-newOptionGroupOptionsMessage  = OptionGroupOptionsMessage { "Marker": (NullOrUndefined Nothing), "OptionGroupOptions": (NullOrUndefined Nothing) }
+newOptionGroupOptionsMessage  = OptionGroupOptionsMessage { "Marker": Nothing, "OptionGroupOptions": Nothing }
 
 -- | Constructs OptionGroupOptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionGroupOptionsMessage' :: ( { "OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList) , "Marker" :: NullOrUndefined (String) } -> {"OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList) , "Marker" :: NullOrUndefined (String) } ) -> OptionGroupOptionsMessage
-newOptionGroupOptionsMessage'  customize = (OptionGroupOptionsMessage <<< customize) { "Marker": (NullOrUndefined Nothing), "OptionGroupOptions": (NullOrUndefined Nothing) }
+newOptionGroupOptionsMessage' :: ( { "OptionGroupOptions" :: Maybe (OptionGroupOptionsList) , "Marker" :: Maybe (String) } -> {"OptionGroupOptions" :: Maybe (OptionGroupOptionsList) , "Marker" :: Maybe (String) } ) -> OptionGroupOptionsMessage
+newOptionGroupOptionsMessage'  customize = (OptionGroupOptionsMessage <<< customize) { "Marker": Nothing, "OptionGroupOptions": Nothing }
 
 
 
@@ -2724,8 +2723,8 @@ instance encodeOptionGroupQuotaExceededFault :: Encode OptionGroupQuotaExceededF
 
 
 newtype OptionGroups = OptionGroups 
-  { "OptionGroupsList" :: NullOrUndefined (OptionGroupsList)
-  , "Marker" :: NullOrUndefined (String)
+  { "OptionGroupsList" :: Maybe (OptionGroupsList)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeOptionGroups :: Newtype OptionGroups _
 derive instance repGenericOptionGroups :: Generic OptionGroups _
@@ -2735,12 +2734,12 @@ instance encodeOptionGroups :: Encode OptionGroups where encode = genericEncode 
 
 -- | Constructs OptionGroups from required parameters
 newOptionGroups :: OptionGroups
-newOptionGroups  = OptionGroups { "Marker": (NullOrUndefined Nothing), "OptionGroupsList": (NullOrUndefined Nothing) }
+newOptionGroups  = OptionGroups { "Marker": Nothing, "OptionGroupsList": Nothing }
 
 -- | Constructs OptionGroups's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOptionGroups' :: ( { "OptionGroupsList" :: NullOrUndefined (OptionGroupsList) , "Marker" :: NullOrUndefined (String) } -> {"OptionGroupsList" :: NullOrUndefined (OptionGroupsList) , "Marker" :: NullOrUndefined (String) } ) -> OptionGroups
-newOptionGroups'  customize = (OptionGroups <<< customize) { "Marker": (NullOrUndefined Nothing), "OptionGroupsList": (NullOrUndefined Nothing) }
+newOptionGroups' :: ( { "OptionGroupsList" :: Maybe (OptionGroupsList) , "Marker" :: Maybe (String) } -> {"OptionGroupsList" :: Maybe (OptionGroupsList) , "Marker" :: Maybe (String) } ) -> OptionGroups
+newOptionGroups'  customize = (OptionGroups <<< customize) { "Marker": Nothing, "OptionGroupsList": Nothing }
 
 
 
@@ -2781,14 +2780,14 @@ instance encodeOptionsList :: Encode OptionsList where encode = genericEncode op
 
 
 newtype OrderableDBInstanceOption = OrderableDBInstanceOption 
-  { "Engine" :: NullOrUndefined (String)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList)
-  , "MultiAZCapable" :: NullOrUndefined (Boolean)
-  , "ReadReplicaCapable" :: NullOrUndefined (Boolean)
-  , "Vpc" :: NullOrUndefined (Boolean)
+  { "Engine" :: Maybe (String)
+  , "EngineVersion" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "LicenseModel" :: Maybe (String)
+  , "AvailabilityZones" :: Maybe (AvailabilityZoneList)
+  , "MultiAZCapable" :: Maybe (Boolean)
+  , "ReadReplicaCapable" :: Maybe (Boolean)
+  , "Vpc" :: Maybe (Boolean)
   }
 derive instance newtypeOrderableDBInstanceOption :: Newtype OrderableDBInstanceOption _
 derive instance repGenericOrderableDBInstanceOption :: Generic OrderableDBInstanceOption _
@@ -2798,12 +2797,12 @@ instance encodeOrderableDBInstanceOption :: Encode OrderableDBInstanceOption whe
 
 -- | Constructs OrderableDBInstanceOption from required parameters
 newOrderableDBInstanceOption :: OrderableDBInstanceOption
-newOrderableDBInstanceOption  = OrderableDBInstanceOption { "AvailabilityZones": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZCapable": (NullOrUndefined Nothing), "ReadReplicaCapable": (NullOrUndefined Nothing), "Vpc": (NullOrUndefined Nothing) }
+newOrderableDBInstanceOption  = OrderableDBInstanceOption { "AvailabilityZones": Nothing, "DBInstanceClass": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "LicenseModel": Nothing, "MultiAZCapable": Nothing, "ReadReplicaCapable": Nothing, "Vpc": Nothing }
 
 -- | Constructs OrderableDBInstanceOption's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOrderableDBInstanceOption' :: ( { "Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList) , "MultiAZCapable" :: NullOrUndefined (Boolean) , "ReadReplicaCapable" :: NullOrUndefined (Boolean) , "Vpc" :: NullOrUndefined (Boolean) } -> {"Engine" :: NullOrUndefined (String) , "EngineVersion" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "LicenseModel" :: NullOrUndefined (String) , "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList) , "MultiAZCapable" :: NullOrUndefined (Boolean) , "ReadReplicaCapable" :: NullOrUndefined (Boolean) , "Vpc" :: NullOrUndefined (Boolean) } ) -> OrderableDBInstanceOption
-newOrderableDBInstanceOption'  customize = (OrderableDBInstanceOption <<< customize) { "AvailabilityZones": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZCapable": (NullOrUndefined Nothing), "ReadReplicaCapable": (NullOrUndefined Nothing), "Vpc": (NullOrUndefined Nothing) }
+newOrderableDBInstanceOption' :: ( { "Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "AvailabilityZones" :: Maybe (AvailabilityZoneList) , "MultiAZCapable" :: Maybe (Boolean) , "ReadReplicaCapable" :: Maybe (Boolean) , "Vpc" :: Maybe (Boolean) } -> {"Engine" :: Maybe (String) , "EngineVersion" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "LicenseModel" :: Maybe (String) , "AvailabilityZones" :: Maybe (AvailabilityZoneList) , "MultiAZCapable" :: Maybe (Boolean) , "ReadReplicaCapable" :: Maybe (Boolean) , "Vpc" :: Maybe (Boolean) } ) -> OrderableDBInstanceOption
+newOrderableDBInstanceOption'  customize = (OrderableDBInstanceOption <<< customize) { "AvailabilityZones": Nothing, "DBInstanceClass": Nothing, "Engine": Nothing, "EngineVersion": Nothing, "LicenseModel": Nothing, "MultiAZCapable": Nothing, "ReadReplicaCapable": Nothing, "Vpc": Nothing }
 
 
 
@@ -2817,8 +2816,8 @@ instance encodeOrderableDBInstanceOptionsList :: Encode OrderableDBInstanceOptio
 
 
 newtype OrderableDBInstanceOptionsMessage = OrderableDBInstanceOptionsMessage 
-  { "OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList)
-  , "Marker" :: NullOrUndefined (String)
+  { "OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList)
+  , "Marker" :: Maybe (String)
   }
 derive instance newtypeOrderableDBInstanceOptionsMessage :: Newtype OrderableDBInstanceOptionsMessage _
 derive instance repGenericOrderableDBInstanceOptionsMessage :: Generic OrderableDBInstanceOptionsMessage _
@@ -2828,26 +2827,26 @@ instance encodeOrderableDBInstanceOptionsMessage :: Encode OrderableDBInstanceOp
 
 -- | Constructs OrderableDBInstanceOptionsMessage from required parameters
 newOrderableDBInstanceOptionsMessage :: OrderableDBInstanceOptionsMessage
-newOrderableDBInstanceOptionsMessage  = OrderableDBInstanceOptionsMessage { "Marker": (NullOrUndefined Nothing), "OrderableDBInstanceOptions": (NullOrUndefined Nothing) }
+newOrderableDBInstanceOptionsMessage  = OrderableDBInstanceOptionsMessage { "Marker": Nothing, "OrderableDBInstanceOptions": Nothing }
 
 -- | Constructs OrderableDBInstanceOptionsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newOrderableDBInstanceOptionsMessage' :: ( { "OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList) , "Marker" :: NullOrUndefined (String) } -> {"OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList) , "Marker" :: NullOrUndefined (String) } ) -> OrderableDBInstanceOptionsMessage
-newOrderableDBInstanceOptionsMessage'  customize = (OrderableDBInstanceOptionsMessage <<< customize) { "Marker": (NullOrUndefined Nothing), "OrderableDBInstanceOptions": (NullOrUndefined Nothing) }
+newOrderableDBInstanceOptionsMessage' :: ( { "OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList) , "Marker" :: Maybe (String) } -> {"OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList) , "Marker" :: Maybe (String) } ) -> OrderableDBInstanceOptionsMessage
+newOrderableDBInstanceOptionsMessage'  customize = (OrderableDBInstanceOptionsMessage <<< customize) { "Marker": Nothing, "OrderableDBInstanceOptions": Nothing }
 
 
 
 newtype Parameter = Parameter 
-  { "ParameterName" :: NullOrUndefined (String)
-  , "ParameterValue" :: NullOrUndefined (String)
-  , "Description" :: NullOrUndefined (String)
-  , "Source" :: NullOrUndefined (String)
-  , "ApplyType" :: NullOrUndefined (String)
-  , "DataType" :: NullOrUndefined (String)
-  , "AllowedValues" :: NullOrUndefined (String)
-  , "IsModifiable" :: NullOrUndefined (Boolean)
-  , "MinimumEngineVersion" :: NullOrUndefined (String)
-  , "ApplyMethod" :: NullOrUndefined (ApplyMethod)
+  { "ParameterName" :: Maybe (String)
+  , "ParameterValue" :: Maybe (String)
+  , "Description" :: Maybe (String)
+  , "Source" :: Maybe (String)
+  , "ApplyType" :: Maybe (String)
+  , "DataType" :: Maybe (String)
+  , "AllowedValues" :: Maybe (String)
+  , "IsModifiable" :: Maybe (Boolean)
+  , "MinimumEngineVersion" :: Maybe (String)
+  , "ApplyMethod" :: Maybe (ApplyMethod)
   }
 derive instance newtypeParameter :: Newtype Parameter _
 derive instance repGenericParameter :: Generic Parameter _
@@ -2857,12 +2856,12 @@ instance encodeParameter :: Encode Parameter where encode = genericEncode option
 
 -- | Constructs Parameter from required parameters
 newParameter :: Parameter
-newParameter  = Parameter { "AllowedValues": (NullOrUndefined Nothing), "ApplyMethod": (NullOrUndefined Nothing), "ApplyType": (NullOrUndefined Nothing), "DataType": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "IsModifiable": (NullOrUndefined Nothing), "MinimumEngineVersion": (NullOrUndefined Nothing), "ParameterName": (NullOrUndefined Nothing), "ParameterValue": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing) }
+newParameter  = Parameter { "AllowedValues": Nothing, "ApplyMethod": Nothing, "ApplyType": Nothing, "DataType": Nothing, "Description": Nothing, "IsModifiable": Nothing, "MinimumEngineVersion": Nothing, "ParameterName": Nothing, "ParameterValue": Nothing, "Source": Nothing }
 
 -- | Constructs Parameter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newParameter' :: ( { "ParameterName" :: NullOrUndefined (String) , "ParameterValue" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) , "Source" :: NullOrUndefined (String) , "ApplyType" :: NullOrUndefined (String) , "DataType" :: NullOrUndefined (String) , "AllowedValues" :: NullOrUndefined (String) , "IsModifiable" :: NullOrUndefined (Boolean) , "MinimumEngineVersion" :: NullOrUndefined (String) , "ApplyMethod" :: NullOrUndefined (ApplyMethod) } -> {"ParameterName" :: NullOrUndefined (String) , "ParameterValue" :: NullOrUndefined (String) , "Description" :: NullOrUndefined (String) , "Source" :: NullOrUndefined (String) , "ApplyType" :: NullOrUndefined (String) , "DataType" :: NullOrUndefined (String) , "AllowedValues" :: NullOrUndefined (String) , "IsModifiable" :: NullOrUndefined (Boolean) , "MinimumEngineVersion" :: NullOrUndefined (String) , "ApplyMethod" :: NullOrUndefined (ApplyMethod) } ) -> Parameter
-newParameter'  customize = (Parameter <<< customize) { "AllowedValues": (NullOrUndefined Nothing), "ApplyMethod": (NullOrUndefined Nothing), "ApplyType": (NullOrUndefined Nothing), "DataType": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "IsModifiable": (NullOrUndefined Nothing), "MinimumEngineVersion": (NullOrUndefined Nothing), "ParameterName": (NullOrUndefined Nothing), "ParameterValue": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing) }
+newParameter' :: ( { "ParameterName" :: Maybe (String) , "ParameterValue" :: Maybe (String) , "Description" :: Maybe (String) , "Source" :: Maybe (String) , "ApplyType" :: Maybe (String) , "DataType" :: Maybe (String) , "AllowedValues" :: Maybe (String) , "IsModifiable" :: Maybe (Boolean) , "MinimumEngineVersion" :: Maybe (String) , "ApplyMethod" :: Maybe (ApplyMethod) } -> {"ParameterName" :: Maybe (String) , "ParameterValue" :: Maybe (String) , "Description" :: Maybe (String) , "Source" :: Maybe (String) , "ApplyType" :: Maybe (String) , "DataType" :: Maybe (String) , "AllowedValues" :: Maybe (String) , "IsModifiable" :: Maybe (Boolean) , "MinimumEngineVersion" :: Maybe (String) , "ApplyMethod" :: Maybe (ApplyMethod) } ) -> Parameter
+newParameter'  customize = (Parameter <<< customize) { "AllowedValues": Nothing, "ApplyMethod": Nothing, "ApplyType": Nothing, "DataType": Nothing, "Description": Nothing, "IsModifiable": Nothing, "MinimumEngineVersion": Nothing, "ParameterName": Nothing, "ParameterValue": Nothing, "Source": Nothing }
 
 
 
@@ -2876,15 +2875,15 @@ instance encodeParametersList :: Encode ParametersList where encode = genericEnc
 
 
 newtype PendingModifiedValues = PendingModifiedValues 
-  { "DBInstanceClass" :: NullOrUndefined (String)
-  , "AllocatedStorage" :: NullOrUndefined (IntegerOptional)
-  , "MasterUserPassword" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "EngineVersion" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "DBInstanceIdentifier" :: NullOrUndefined (String)
+  { "DBInstanceClass" :: Maybe (String)
+  , "AllocatedStorage" :: Maybe (IntegerOptional)
+  , "MasterUserPassword" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "BackupRetentionPeriod" :: Maybe (IntegerOptional)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "EngineVersion" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "DBInstanceIdentifier" :: Maybe (String)
   }
 derive instance newtypePendingModifiedValues :: Newtype PendingModifiedValues _
 derive instance repGenericPendingModifiedValues :: Generic PendingModifiedValues _
@@ -2894,12 +2893,12 @@ instance encodePendingModifiedValues :: Encode PendingModifiedValues where encod
 
 -- | Constructs PendingModifiedValues from required parameters
 newPendingModifiedValues :: PendingModifiedValues
-newPendingModifiedValues  = PendingModifiedValues { "AllocatedStorage": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "MasterUserPassword": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing) }
+newPendingModifiedValues  = PendingModifiedValues { "AllocatedStorage": Nothing, "BackupRetentionPeriod": Nothing, "DBInstanceClass": Nothing, "DBInstanceIdentifier": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "MasterUserPassword": Nothing, "MultiAZ": Nothing, "Port": Nothing }
 
 -- | Constructs PendingModifiedValues's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPendingModifiedValues' :: ( { "DBInstanceClass" :: NullOrUndefined (String) , "AllocatedStorage" :: NullOrUndefined (IntegerOptional) , "MasterUserPassword" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "DBInstanceIdentifier" :: NullOrUndefined (String) } -> {"DBInstanceClass" :: NullOrUndefined (String) , "AllocatedStorage" :: NullOrUndefined (IntegerOptional) , "MasterUserPassword" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "EngineVersion" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "DBInstanceIdentifier" :: NullOrUndefined (String) } ) -> PendingModifiedValues
-newPendingModifiedValues'  customize = (PendingModifiedValues <<< customize) { "AllocatedStorage": (NullOrUndefined Nothing), "BackupRetentionPeriod": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceIdentifier": (NullOrUndefined Nothing), "EngineVersion": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "MasterUserPassword": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing) }
+newPendingModifiedValues' :: ( { "DBInstanceClass" :: Maybe (String) , "AllocatedStorage" :: Maybe (IntegerOptional) , "MasterUserPassword" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "DBInstanceIdentifier" :: Maybe (String) } -> {"DBInstanceClass" :: Maybe (String) , "AllocatedStorage" :: Maybe (IntegerOptional) , "MasterUserPassword" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "MultiAZ" :: Maybe (BooleanOptional) , "EngineVersion" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "DBInstanceIdentifier" :: Maybe (String) } ) -> PendingModifiedValues
+newPendingModifiedValues'  customize = (PendingModifiedValues <<< customize) { "AllocatedStorage": Nothing, "BackupRetentionPeriod": Nothing, "DBInstanceClass": Nothing, "DBInstanceIdentifier": Nothing, "EngineVersion": Nothing, "Iops": Nothing, "MasterUserPassword": Nothing, "MultiAZ": Nothing, "Port": Nothing }
 
 
 
@@ -2915,8 +2914,8 @@ instance encodePointInTimeRestoreNotEnabledFault :: Encode PointInTimeRestoreNot
 
 newtype PromoteReadReplicaMessage = PromoteReadReplicaMessage 
   { "DBInstanceIdentifier" :: (String)
-  , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional)
-  , "PreferredBackupWindow" :: NullOrUndefined (String)
+  , "BackupRetentionPeriod" :: Maybe (IntegerOptional)
+  , "PreferredBackupWindow" :: Maybe (String)
   }
 derive instance newtypePromoteReadReplicaMessage :: Newtype PromoteReadReplicaMessage _
 derive instance repGenericPromoteReadReplicaMessage :: Generic PromoteReadReplicaMessage _
@@ -2926,17 +2925,17 @@ instance encodePromoteReadReplicaMessage :: Encode PromoteReadReplicaMessage whe
 
 -- | Constructs PromoteReadReplicaMessage from required parameters
 newPromoteReadReplicaMessage :: String -> PromoteReadReplicaMessage
-newPromoteReadReplicaMessage _DBInstanceIdentifier = PromoteReadReplicaMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "BackupRetentionPeriod": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing) }
+newPromoteReadReplicaMessage _DBInstanceIdentifier = PromoteReadReplicaMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "BackupRetentionPeriod": Nothing, "PreferredBackupWindow": Nothing }
 
 -- | Constructs PromoteReadReplicaMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPromoteReadReplicaMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: (String) , "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional) , "PreferredBackupWindow" :: NullOrUndefined (String) } ) -> PromoteReadReplicaMessage
-newPromoteReadReplicaMessage' _DBInstanceIdentifier customize = (PromoteReadReplicaMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "BackupRetentionPeriod": (NullOrUndefined Nothing), "PreferredBackupWindow": (NullOrUndefined Nothing) }
+newPromoteReadReplicaMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) } -> {"DBInstanceIdentifier" :: (String) , "BackupRetentionPeriod" :: Maybe (IntegerOptional) , "PreferredBackupWindow" :: Maybe (String) } ) -> PromoteReadReplicaMessage
+newPromoteReadReplicaMessage' _DBInstanceIdentifier customize = (PromoteReadReplicaMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "BackupRetentionPeriod": Nothing, "PreferredBackupWindow": Nothing }
 
 
 
 newtype PromoteReadReplicaResult = PromoteReadReplicaResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypePromoteReadReplicaResult :: Newtype PromoteReadReplicaResult _
 derive instance repGenericPromoteReadReplicaResult :: Generic PromoteReadReplicaResult _
@@ -2946,12 +2945,12 @@ instance encodePromoteReadReplicaResult :: Encode PromoteReadReplicaResult where
 
 -- | Constructs PromoteReadReplicaResult from required parameters
 newPromoteReadReplicaResult :: PromoteReadReplicaResult
-newPromoteReadReplicaResult  = PromoteReadReplicaResult { "DBInstance": (NullOrUndefined Nothing) }
+newPromoteReadReplicaResult  = PromoteReadReplicaResult { "DBInstance": Nothing }
 
 -- | Constructs PromoteReadReplicaResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPromoteReadReplicaResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> PromoteReadReplicaResult
-newPromoteReadReplicaResult'  customize = (PromoteReadReplicaResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newPromoteReadReplicaResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> PromoteReadReplicaResult
+newPromoteReadReplicaResult'  customize = (PromoteReadReplicaResult <<< customize) { "DBInstance": Nothing }
 
 
 
@@ -2967,8 +2966,8 @@ instance encodeProvisionedIopsNotAvailableInAZFault :: Encode ProvisionedIopsNot
 
 newtype PurchaseReservedDBInstancesOfferingMessage = PurchaseReservedDBInstancesOfferingMessage 
   { "ReservedDBInstancesOfferingId" :: (String)
-  , "ReservedDBInstanceId" :: NullOrUndefined (String)
-  , "DBInstanceCount" :: NullOrUndefined (IntegerOptional)
+  , "ReservedDBInstanceId" :: Maybe (String)
+  , "DBInstanceCount" :: Maybe (IntegerOptional)
   }
 derive instance newtypePurchaseReservedDBInstancesOfferingMessage :: Newtype PurchaseReservedDBInstancesOfferingMessage _
 derive instance repGenericPurchaseReservedDBInstancesOfferingMessage :: Generic PurchaseReservedDBInstancesOfferingMessage _
@@ -2978,17 +2977,17 @@ instance encodePurchaseReservedDBInstancesOfferingMessage :: Encode PurchaseRese
 
 -- | Constructs PurchaseReservedDBInstancesOfferingMessage from required parameters
 newPurchaseReservedDBInstancesOfferingMessage :: String -> PurchaseReservedDBInstancesOfferingMessage
-newPurchaseReservedDBInstancesOfferingMessage _ReservedDBInstancesOfferingId = PurchaseReservedDBInstancesOfferingMessage { "ReservedDBInstancesOfferingId": _ReservedDBInstancesOfferingId, "DBInstanceCount": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing) }
+newPurchaseReservedDBInstancesOfferingMessage _ReservedDBInstancesOfferingId = PurchaseReservedDBInstancesOfferingMessage { "ReservedDBInstancesOfferingId": _ReservedDBInstancesOfferingId, "DBInstanceCount": Nothing, "ReservedDBInstanceId": Nothing }
 
 -- | Constructs PurchaseReservedDBInstancesOfferingMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPurchaseReservedDBInstancesOfferingMessage' :: String -> ( { "ReservedDBInstancesOfferingId" :: (String) , "ReservedDBInstanceId" :: NullOrUndefined (String) , "DBInstanceCount" :: NullOrUndefined (IntegerOptional) } -> {"ReservedDBInstancesOfferingId" :: (String) , "ReservedDBInstanceId" :: NullOrUndefined (String) , "DBInstanceCount" :: NullOrUndefined (IntegerOptional) } ) -> PurchaseReservedDBInstancesOfferingMessage
-newPurchaseReservedDBInstancesOfferingMessage' _ReservedDBInstancesOfferingId customize = (PurchaseReservedDBInstancesOfferingMessage <<< customize) { "ReservedDBInstancesOfferingId": _ReservedDBInstancesOfferingId, "DBInstanceCount": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing) }
+newPurchaseReservedDBInstancesOfferingMessage' :: String -> ( { "ReservedDBInstancesOfferingId" :: (String) , "ReservedDBInstanceId" :: Maybe (String) , "DBInstanceCount" :: Maybe (IntegerOptional) } -> {"ReservedDBInstancesOfferingId" :: (String) , "ReservedDBInstanceId" :: Maybe (String) , "DBInstanceCount" :: Maybe (IntegerOptional) } ) -> PurchaseReservedDBInstancesOfferingMessage
+newPurchaseReservedDBInstancesOfferingMessage' _ReservedDBInstancesOfferingId customize = (PurchaseReservedDBInstancesOfferingMessage <<< customize) { "ReservedDBInstancesOfferingId": _ReservedDBInstancesOfferingId, "DBInstanceCount": Nothing, "ReservedDBInstanceId": Nothing }
 
 
 
 newtype PurchaseReservedDBInstancesOfferingResult = PurchaseReservedDBInstancesOfferingResult 
-  { "ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance)
+  { "ReservedDBInstance" :: Maybe (ReservedDBInstance)
   }
 derive instance newtypePurchaseReservedDBInstancesOfferingResult :: Newtype PurchaseReservedDBInstancesOfferingResult _
 derive instance repGenericPurchaseReservedDBInstancesOfferingResult :: Generic PurchaseReservedDBInstancesOfferingResult _
@@ -2998,12 +2997,12 @@ instance encodePurchaseReservedDBInstancesOfferingResult :: Encode PurchaseReser
 
 -- | Constructs PurchaseReservedDBInstancesOfferingResult from required parameters
 newPurchaseReservedDBInstancesOfferingResult :: PurchaseReservedDBInstancesOfferingResult
-newPurchaseReservedDBInstancesOfferingResult  = PurchaseReservedDBInstancesOfferingResult { "ReservedDBInstance": (NullOrUndefined Nothing) }
+newPurchaseReservedDBInstancesOfferingResult  = PurchaseReservedDBInstancesOfferingResult { "ReservedDBInstance": Nothing }
 
 -- | Constructs PurchaseReservedDBInstancesOfferingResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPurchaseReservedDBInstancesOfferingResult' :: ( { "ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance) } -> {"ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance) } ) -> PurchaseReservedDBInstancesOfferingResult
-newPurchaseReservedDBInstancesOfferingResult'  customize = (PurchaseReservedDBInstancesOfferingResult <<< customize) { "ReservedDBInstance": (NullOrUndefined Nothing) }
+newPurchaseReservedDBInstancesOfferingResult' :: ( { "ReservedDBInstance" :: Maybe (ReservedDBInstance) } -> {"ReservedDBInstance" :: Maybe (ReservedDBInstance) } ) -> PurchaseReservedDBInstancesOfferingResult
+newPurchaseReservedDBInstancesOfferingResult'  customize = (PurchaseReservedDBInstancesOfferingResult <<< customize) { "ReservedDBInstance": Nothing }
 
 
 
@@ -3018,7 +3017,7 @@ instance encodeReadReplicaDBInstanceIdentifierList :: Encode ReadReplicaDBInstan
 
 newtype RebootDBInstanceMessage = RebootDBInstanceMessage 
   { "DBInstanceIdentifier" :: (String)
-  , "ForceFailover" :: NullOrUndefined (BooleanOptional)
+  , "ForceFailover" :: Maybe (BooleanOptional)
   }
 derive instance newtypeRebootDBInstanceMessage :: Newtype RebootDBInstanceMessage _
 derive instance repGenericRebootDBInstanceMessage :: Generic RebootDBInstanceMessage _
@@ -3028,17 +3027,17 @@ instance encodeRebootDBInstanceMessage :: Encode RebootDBInstanceMessage where e
 
 -- | Constructs RebootDBInstanceMessage from required parameters
 newRebootDBInstanceMessage :: String -> RebootDBInstanceMessage
-newRebootDBInstanceMessage _DBInstanceIdentifier = RebootDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "ForceFailover": (NullOrUndefined Nothing) }
+newRebootDBInstanceMessage _DBInstanceIdentifier = RebootDBInstanceMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "ForceFailover": Nothing }
 
 -- | Constructs RebootDBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRebootDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "ForceFailover" :: NullOrUndefined (BooleanOptional) } -> {"DBInstanceIdentifier" :: (String) , "ForceFailover" :: NullOrUndefined (BooleanOptional) } ) -> RebootDBInstanceMessage
-newRebootDBInstanceMessage' _DBInstanceIdentifier customize = (RebootDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "ForceFailover": (NullOrUndefined Nothing) }
+newRebootDBInstanceMessage' :: String -> ( { "DBInstanceIdentifier" :: (String) , "ForceFailover" :: Maybe (BooleanOptional) } -> {"DBInstanceIdentifier" :: (String) , "ForceFailover" :: Maybe (BooleanOptional) } ) -> RebootDBInstanceMessage
+newRebootDBInstanceMessage' _DBInstanceIdentifier customize = (RebootDBInstanceMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "ForceFailover": Nothing }
 
 
 
 newtype RebootDBInstanceResult = RebootDBInstanceResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeRebootDBInstanceResult :: Newtype RebootDBInstanceResult _
 derive instance repGenericRebootDBInstanceResult :: Generic RebootDBInstanceResult _
@@ -3048,18 +3047,18 @@ instance encodeRebootDBInstanceResult :: Encode RebootDBInstanceResult where enc
 
 -- | Constructs RebootDBInstanceResult from required parameters
 newRebootDBInstanceResult :: RebootDBInstanceResult
-newRebootDBInstanceResult  = RebootDBInstanceResult { "DBInstance": (NullOrUndefined Nothing) }
+newRebootDBInstanceResult  = RebootDBInstanceResult { "DBInstance": Nothing }
 
 -- | Constructs RebootDBInstanceResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRebootDBInstanceResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> RebootDBInstanceResult
-newRebootDBInstanceResult'  customize = (RebootDBInstanceResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newRebootDBInstanceResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> RebootDBInstanceResult
+newRebootDBInstanceResult'  customize = (RebootDBInstanceResult <<< customize) { "DBInstance": Nothing }
 
 
 
 newtype RecurringCharge = RecurringCharge 
-  { "RecurringChargeAmount" :: NullOrUndefined (Number)
-  , "RecurringChargeFrequency" :: NullOrUndefined (String)
+  { "RecurringChargeAmount" :: Maybe (Number)
+  , "RecurringChargeFrequency" :: Maybe (String)
   }
 derive instance newtypeRecurringCharge :: Newtype RecurringCharge _
 derive instance repGenericRecurringCharge :: Generic RecurringCharge _
@@ -3069,12 +3068,12 @@ instance encodeRecurringCharge :: Encode RecurringCharge where encode = genericE
 
 -- | Constructs RecurringCharge from required parameters
 newRecurringCharge :: RecurringCharge
-newRecurringCharge  = RecurringCharge { "RecurringChargeAmount": (NullOrUndefined Nothing), "RecurringChargeFrequency": (NullOrUndefined Nothing) }
+newRecurringCharge  = RecurringCharge { "RecurringChargeAmount": Nothing, "RecurringChargeFrequency": Nothing }
 
 -- | Constructs RecurringCharge's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecurringCharge' :: ( { "RecurringChargeAmount" :: NullOrUndefined (Number) , "RecurringChargeFrequency" :: NullOrUndefined (String) } -> {"RecurringChargeAmount" :: NullOrUndefined (Number) , "RecurringChargeFrequency" :: NullOrUndefined (String) } ) -> RecurringCharge
-newRecurringCharge'  customize = (RecurringCharge <<< customize) { "RecurringChargeAmount": (NullOrUndefined Nothing), "RecurringChargeFrequency": (NullOrUndefined Nothing) }
+newRecurringCharge' :: ( { "RecurringChargeAmount" :: Maybe (Number) , "RecurringChargeFrequency" :: Maybe (String) } -> {"RecurringChargeAmount" :: Maybe (Number) , "RecurringChargeFrequency" :: Maybe (String) } ) -> RecurringCharge
+newRecurringCharge'  customize = (RecurringCharge <<< customize) { "RecurringChargeAmount": Nothing, "RecurringChargeFrequency": Nothing }
 
 
 
@@ -3109,7 +3108,7 @@ newRemoveSourceIdentifierFromSubscriptionMessage' _SourceIdentifier _Subscriptio
 
 
 newtype RemoveSourceIdentifierFromSubscriptionResult = RemoveSourceIdentifierFromSubscriptionResult 
-  { "EventSubscription" :: NullOrUndefined (EventSubscription)
+  { "EventSubscription" :: Maybe (EventSubscription)
   }
 derive instance newtypeRemoveSourceIdentifierFromSubscriptionResult :: Newtype RemoveSourceIdentifierFromSubscriptionResult _
 derive instance repGenericRemoveSourceIdentifierFromSubscriptionResult :: Generic RemoveSourceIdentifierFromSubscriptionResult _
@@ -3119,12 +3118,12 @@ instance encodeRemoveSourceIdentifierFromSubscriptionResult :: Encode RemoveSour
 
 -- | Constructs RemoveSourceIdentifierFromSubscriptionResult from required parameters
 newRemoveSourceIdentifierFromSubscriptionResult :: RemoveSourceIdentifierFromSubscriptionResult
-newRemoveSourceIdentifierFromSubscriptionResult  = RemoveSourceIdentifierFromSubscriptionResult { "EventSubscription": (NullOrUndefined Nothing) }
+newRemoveSourceIdentifierFromSubscriptionResult  = RemoveSourceIdentifierFromSubscriptionResult { "EventSubscription": Nothing }
 
 -- | Constructs RemoveSourceIdentifierFromSubscriptionResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRemoveSourceIdentifierFromSubscriptionResult' :: ( { "EventSubscription" :: NullOrUndefined (EventSubscription) } -> {"EventSubscription" :: NullOrUndefined (EventSubscription) } ) -> RemoveSourceIdentifierFromSubscriptionResult
-newRemoveSourceIdentifierFromSubscriptionResult'  customize = (RemoveSourceIdentifierFromSubscriptionResult <<< customize) { "EventSubscription": (NullOrUndefined Nothing) }
+newRemoveSourceIdentifierFromSubscriptionResult' :: ( { "EventSubscription" :: Maybe (EventSubscription) } -> {"EventSubscription" :: Maybe (EventSubscription) } ) -> RemoveSourceIdentifierFromSubscriptionResult
+newRemoveSourceIdentifierFromSubscriptionResult'  customize = (RemoveSourceIdentifierFromSubscriptionResult <<< customize) { "EventSubscription": Nothing }
 
 
 
@@ -3150,20 +3149,20 @@ newRemoveTagsFromResourceMessage' _ResourceName _TagKeys customize = (RemoveTags
 
 
 newtype ReservedDBInstance = ReservedDBInstance 
-  { "ReservedDBInstanceId" :: NullOrUndefined (String)
-  , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "StartTime" :: NullOrUndefined (TStamp)
-  , "Duration" :: NullOrUndefined (Int)
-  , "FixedPrice" :: NullOrUndefined (Number)
-  , "UsagePrice" :: NullOrUndefined (Number)
-  , "CurrencyCode" :: NullOrUndefined (String)
-  , "DBInstanceCount" :: NullOrUndefined (Int)
-  , "ProductDescription" :: NullOrUndefined (String)
-  , "OfferingType" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (Boolean)
-  , "State" :: NullOrUndefined (String)
-  , "RecurringCharges" :: NullOrUndefined (RecurringChargeList)
+  { "ReservedDBInstanceId" :: Maybe (String)
+  , "ReservedDBInstancesOfferingId" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "StartTime" :: Maybe (TStamp)
+  , "Duration" :: Maybe (Int)
+  , "FixedPrice" :: Maybe (Number)
+  , "UsagePrice" :: Maybe (Number)
+  , "CurrencyCode" :: Maybe (String)
+  , "DBInstanceCount" :: Maybe (Int)
+  , "ProductDescription" :: Maybe (String)
+  , "OfferingType" :: Maybe (String)
+  , "MultiAZ" :: Maybe (Boolean)
+  , "State" :: Maybe (String)
+  , "RecurringCharges" :: Maybe (RecurringChargeList)
   }
 derive instance newtypeReservedDBInstance :: Newtype ReservedDBInstance _
 derive instance repGenericReservedDBInstance :: Generic ReservedDBInstance _
@@ -3173,12 +3172,12 @@ instance encodeReservedDBInstance :: Encode ReservedDBInstance where encode = ge
 
 -- | Constructs ReservedDBInstance from required parameters
 newReservedDBInstance :: ReservedDBInstance
-newReservedDBInstance  = ReservedDBInstance { "CurrencyCode": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceCount": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "FixedPrice": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "RecurringCharges": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "UsagePrice": (NullOrUndefined Nothing) }
+newReservedDBInstance  = ReservedDBInstance { "CurrencyCode": Nothing, "DBInstanceClass": Nothing, "DBInstanceCount": Nothing, "Duration": Nothing, "FixedPrice": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "RecurringCharges": Nothing, "ReservedDBInstanceId": Nothing, "ReservedDBInstancesOfferingId": Nothing, "StartTime": Nothing, "State": Nothing, "UsagePrice": Nothing }
 
 -- | Constructs ReservedDBInstance's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newReservedDBInstance' :: ( { "ReservedDBInstanceId" :: NullOrUndefined (String) , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "StartTime" :: NullOrUndefined (TStamp) , "Duration" :: NullOrUndefined (Int) , "FixedPrice" :: NullOrUndefined (Number) , "UsagePrice" :: NullOrUndefined (Number) , "CurrencyCode" :: NullOrUndefined (String) , "DBInstanceCount" :: NullOrUndefined (Int) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (Boolean) , "State" :: NullOrUndefined (String) , "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } -> {"ReservedDBInstanceId" :: NullOrUndefined (String) , "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "StartTime" :: NullOrUndefined (TStamp) , "Duration" :: NullOrUndefined (Int) , "FixedPrice" :: NullOrUndefined (Number) , "UsagePrice" :: NullOrUndefined (Number) , "CurrencyCode" :: NullOrUndefined (String) , "DBInstanceCount" :: NullOrUndefined (Int) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (Boolean) , "State" :: NullOrUndefined (String) , "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } ) -> ReservedDBInstance
-newReservedDBInstance'  customize = (ReservedDBInstance <<< customize) { "CurrencyCode": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBInstanceCount": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "FixedPrice": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "RecurringCharges": (NullOrUndefined Nothing), "ReservedDBInstanceId": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "UsagePrice": (NullOrUndefined Nothing) }
+newReservedDBInstance' :: ( { "ReservedDBInstanceId" :: Maybe (String) , "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "StartTime" :: Maybe (TStamp) , "Duration" :: Maybe (Int) , "FixedPrice" :: Maybe (Number) , "UsagePrice" :: Maybe (Number) , "CurrencyCode" :: Maybe (String) , "DBInstanceCount" :: Maybe (Int) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (Boolean) , "State" :: Maybe (String) , "RecurringCharges" :: Maybe (RecurringChargeList) } -> {"ReservedDBInstanceId" :: Maybe (String) , "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "StartTime" :: Maybe (TStamp) , "Duration" :: Maybe (Int) , "FixedPrice" :: Maybe (Number) , "UsagePrice" :: Maybe (Number) , "CurrencyCode" :: Maybe (String) , "DBInstanceCount" :: Maybe (Int) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (Boolean) , "State" :: Maybe (String) , "RecurringCharges" :: Maybe (RecurringChargeList) } ) -> ReservedDBInstance
+newReservedDBInstance'  customize = (ReservedDBInstance <<< customize) { "CurrencyCode": Nothing, "DBInstanceClass": Nothing, "DBInstanceCount": Nothing, "Duration": Nothing, "FixedPrice": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "RecurringCharges": Nothing, "ReservedDBInstanceId": Nothing, "ReservedDBInstancesOfferingId": Nothing, "StartTime": Nothing, "State": Nothing, "UsagePrice": Nothing }
 
 
 
@@ -3202,8 +3201,8 @@ instance encodeReservedDBInstanceList :: Encode ReservedDBInstanceList where enc
 
 
 newtype ReservedDBInstanceMessage = ReservedDBInstanceMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList)
+  { "Marker" :: Maybe (String)
+  , "ReservedDBInstances" :: Maybe (ReservedDBInstanceList)
   }
 derive instance newtypeReservedDBInstanceMessage :: Newtype ReservedDBInstanceMessage _
 derive instance repGenericReservedDBInstanceMessage :: Generic ReservedDBInstanceMessage _
@@ -3213,12 +3212,12 @@ instance encodeReservedDBInstanceMessage :: Encode ReservedDBInstanceMessage whe
 
 -- | Constructs ReservedDBInstanceMessage from required parameters
 newReservedDBInstanceMessage :: ReservedDBInstanceMessage
-newReservedDBInstanceMessage  = ReservedDBInstanceMessage { "Marker": (NullOrUndefined Nothing), "ReservedDBInstances": (NullOrUndefined Nothing) }
+newReservedDBInstanceMessage  = ReservedDBInstanceMessage { "Marker": Nothing, "ReservedDBInstances": Nothing }
 
 -- | Constructs ReservedDBInstanceMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newReservedDBInstanceMessage' :: ( { "Marker" :: NullOrUndefined (String) , "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList) } -> {"Marker" :: NullOrUndefined (String) , "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList) } ) -> ReservedDBInstanceMessage
-newReservedDBInstanceMessage'  customize = (ReservedDBInstanceMessage <<< customize) { "Marker": (NullOrUndefined Nothing), "ReservedDBInstances": (NullOrUndefined Nothing) }
+newReservedDBInstanceMessage' :: ( { "Marker" :: Maybe (String) , "ReservedDBInstances" :: Maybe (ReservedDBInstanceList) } -> {"Marker" :: Maybe (String) , "ReservedDBInstances" :: Maybe (ReservedDBInstanceList) } ) -> ReservedDBInstanceMessage
+newReservedDBInstanceMessage'  customize = (ReservedDBInstanceMessage <<< customize) { "Marker": Nothing, "ReservedDBInstances": Nothing }
 
 
 
@@ -3243,16 +3242,16 @@ instance encodeReservedDBInstanceQuotaExceededFault :: Encode ReservedDBInstance
 
 
 newtype ReservedDBInstancesOffering = ReservedDBInstancesOffering 
-  { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Duration" :: NullOrUndefined (Int)
-  , "FixedPrice" :: NullOrUndefined (Number)
-  , "UsagePrice" :: NullOrUndefined (Number)
-  , "CurrencyCode" :: NullOrUndefined (String)
-  , "ProductDescription" :: NullOrUndefined (String)
-  , "OfferingType" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (Boolean)
-  , "RecurringCharges" :: NullOrUndefined (RecurringChargeList)
+  { "ReservedDBInstancesOfferingId" :: Maybe (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Duration" :: Maybe (Int)
+  , "FixedPrice" :: Maybe (Number)
+  , "UsagePrice" :: Maybe (Number)
+  , "CurrencyCode" :: Maybe (String)
+  , "ProductDescription" :: Maybe (String)
+  , "OfferingType" :: Maybe (String)
+  , "MultiAZ" :: Maybe (Boolean)
+  , "RecurringCharges" :: Maybe (RecurringChargeList)
   }
 derive instance newtypeReservedDBInstancesOffering :: Newtype ReservedDBInstancesOffering _
 derive instance repGenericReservedDBInstancesOffering :: Generic ReservedDBInstancesOffering _
@@ -3262,12 +3261,12 @@ instance encodeReservedDBInstancesOffering :: Encode ReservedDBInstancesOffering
 
 -- | Constructs ReservedDBInstancesOffering from required parameters
 newReservedDBInstancesOffering :: ReservedDBInstancesOffering
-newReservedDBInstancesOffering  = ReservedDBInstancesOffering { "CurrencyCode": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "FixedPrice": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "RecurringCharges": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing), "UsagePrice": (NullOrUndefined Nothing) }
+newReservedDBInstancesOffering  = ReservedDBInstancesOffering { "CurrencyCode": Nothing, "DBInstanceClass": Nothing, "Duration": Nothing, "FixedPrice": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "RecurringCharges": Nothing, "ReservedDBInstancesOfferingId": Nothing, "UsagePrice": Nothing }
 
 -- | Constructs ReservedDBInstancesOffering's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newReservedDBInstancesOffering' :: ( { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (Int) , "FixedPrice" :: NullOrUndefined (Number) , "UsagePrice" :: NullOrUndefined (Number) , "CurrencyCode" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (Boolean) , "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } -> {"ReservedDBInstancesOfferingId" :: NullOrUndefined (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Duration" :: NullOrUndefined (Int) , "FixedPrice" :: NullOrUndefined (Number) , "UsagePrice" :: NullOrUndefined (Number) , "CurrencyCode" :: NullOrUndefined (String) , "ProductDescription" :: NullOrUndefined (String) , "OfferingType" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (Boolean) , "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } ) -> ReservedDBInstancesOffering
-newReservedDBInstancesOffering'  customize = (ReservedDBInstancesOffering <<< customize) { "CurrencyCode": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "Duration": (NullOrUndefined Nothing), "FixedPrice": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OfferingType": (NullOrUndefined Nothing), "ProductDescription": (NullOrUndefined Nothing), "RecurringCharges": (NullOrUndefined Nothing), "ReservedDBInstancesOfferingId": (NullOrUndefined Nothing), "UsagePrice": (NullOrUndefined Nothing) }
+newReservedDBInstancesOffering' :: ( { "ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (Int) , "FixedPrice" :: Maybe (Number) , "UsagePrice" :: Maybe (Number) , "CurrencyCode" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (Boolean) , "RecurringCharges" :: Maybe (RecurringChargeList) } -> {"ReservedDBInstancesOfferingId" :: Maybe (String) , "DBInstanceClass" :: Maybe (String) , "Duration" :: Maybe (Int) , "FixedPrice" :: Maybe (Number) , "UsagePrice" :: Maybe (Number) , "CurrencyCode" :: Maybe (String) , "ProductDescription" :: Maybe (String) , "OfferingType" :: Maybe (String) , "MultiAZ" :: Maybe (Boolean) , "RecurringCharges" :: Maybe (RecurringChargeList) } ) -> ReservedDBInstancesOffering
+newReservedDBInstancesOffering'  customize = (ReservedDBInstancesOffering <<< customize) { "CurrencyCode": Nothing, "DBInstanceClass": Nothing, "Duration": Nothing, "FixedPrice": Nothing, "MultiAZ": Nothing, "OfferingType": Nothing, "ProductDescription": Nothing, "RecurringCharges": Nothing, "ReservedDBInstancesOfferingId": Nothing, "UsagePrice": Nothing }
 
 
 
@@ -3281,8 +3280,8 @@ instance encodeReservedDBInstancesOfferingList :: Encode ReservedDBInstancesOffe
 
 
 newtype ReservedDBInstancesOfferingMessage = ReservedDBInstancesOfferingMessage 
-  { "Marker" :: NullOrUndefined (String)
-  , "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList)
+  { "Marker" :: Maybe (String)
+  , "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList)
   }
 derive instance newtypeReservedDBInstancesOfferingMessage :: Newtype ReservedDBInstancesOfferingMessage _
 derive instance repGenericReservedDBInstancesOfferingMessage :: Generic ReservedDBInstancesOfferingMessage _
@@ -3292,12 +3291,12 @@ instance encodeReservedDBInstancesOfferingMessage :: Encode ReservedDBInstancesO
 
 -- | Constructs ReservedDBInstancesOfferingMessage from required parameters
 newReservedDBInstancesOfferingMessage :: ReservedDBInstancesOfferingMessage
-newReservedDBInstancesOfferingMessage  = ReservedDBInstancesOfferingMessage { "Marker": (NullOrUndefined Nothing), "ReservedDBInstancesOfferings": (NullOrUndefined Nothing) }
+newReservedDBInstancesOfferingMessage  = ReservedDBInstancesOfferingMessage { "Marker": Nothing, "ReservedDBInstancesOfferings": Nothing }
 
 -- | Constructs ReservedDBInstancesOfferingMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newReservedDBInstancesOfferingMessage' :: ( { "Marker" :: NullOrUndefined (String) , "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList) } -> {"Marker" :: NullOrUndefined (String) , "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList) } ) -> ReservedDBInstancesOfferingMessage
-newReservedDBInstancesOfferingMessage'  customize = (ReservedDBInstancesOfferingMessage <<< customize) { "Marker": (NullOrUndefined Nothing), "ReservedDBInstancesOfferings": (NullOrUndefined Nothing) }
+newReservedDBInstancesOfferingMessage' :: ( { "Marker" :: Maybe (String) , "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList) } -> {"Marker" :: Maybe (String) , "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList) } ) -> ReservedDBInstancesOfferingMessage
+newReservedDBInstancesOfferingMessage'  customize = (ReservedDBInstancesOfferingMessage <<< customize) { "Marker": Nothing, "ReservedDBInstancesOfferings": Nothing }
 
 
 
@@ -3313,8 +3312,8 @@ instance encodeReservedDBInstancesOfferingNotFoundFault :: Encode ReservedDBInst
 
 newtype ResetDBParameterGroupMessage = ResetDBParameterGroupMessage 
   { "DBParameterGroupName" :: (String)
-  , "ResetAllParameters" :: NullOrUndefined (Boolean)
-  , "Parameters" :: NullOrUndefined (ParametersList)
+  , "ResetAllParameters" :: Maybe (Boolean)
+  , "Parameters" :: Maybe (ParametersList)
   }
 derive instance newtypeResetDBParameterGroupMessage :: Newtype ResetDBParameterGroupMessage _
 derive instance repGenericResetDBParameterGroupMessage :: Generic ResetDBParameterGroupMessage _
@@ -3324,30 +3323,30 @@ instance encodeResetDBParameterGroupMessage :: Encode ResetDBParameterGroupMessa
 
 -- | Constructs ResetDBParameterGroupMessage from required parameters
 newResetDBParameterGroupMessage :: String -> ResetDBParameterGroupMessage
-newResetDBParameterGroupMessage _DBParameterGroupName = ResetDBParameterGroupMessage { "DBParameterGroupName": _DBParameterGroupName, "Parameters": (NullOrUndefined Nothing), "ResetAllParameters": (NullOrUndefined Nothing) }
+newResetDBParameterGroupMessage _DBParameterGroupName = ResetDBParameterGroupMessage { "DBParameterGroupName": _DBParameterGroupName, "Parameters": Nothing, "ResetAllParameters": Nothing }
 
 -- | Constructs ResetDBParameterGroupMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResetDBParameterGroupMessage' :: String -> ( { "DBParameterGroupName" :: (String) , "ResetAllParameters" :: NullOrUndefined (Boolean) , "Parameters" :: NullOrUndefined (ParametersList) } -> {"DBParameterGroupName" :: (String) , "ResetAllParameters" :: NullOrUndefined (Boolean) , "Parameters" :: NullOrUndefined (ParametersList) } ) -> ResetDBParameterGroupMessage
-newResetDBParameterGroupMessage' _DBParameterGroupName customize = (ResetDBParameterGroupMessage <<< customize) { "DBParameterGroupName": _DBParameterGroupName, "Parameters": (NullOrUndefined Nothing), "ResetAllParameters": (NullOrUndefined Nothing) }
+newResetDBParameterGroupMessage' :: String -> ( { "DBParameterGroupName" :: (String) , "ResetAllParameters" :: Maybe (Boolean) , "Parameters" :: Maybe (ParametersList) } -> {"DBParameterGroupName" :: (String) , "ResetAllParameters" :: Maybe (Boolean) , "Parameters" :: Maybe (ParametersList) } ) -> ResetDBParameterGroupMessage
+newResetDBParameterGroupMessage' _DBParameterGroupName customize = (ResetDBParameterGroupMessage <<< customize) { "DBParameterGroupName": _DBParameterGroupName, "Parameters": Nothing, "ResetAllParameters": Nothing }
 
 
 
 newtype RestoreDBInstanceFromDBSnapshotMessage = RestoreDBInstanceFromDBSnapshotMessage 
   { "DBInstanceIdentifier" :: (String)
   , "DBSnapshotIdentifier" :: (String)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "DBSubnetGroupName" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "DBName" :: NullOrUndefined (String)
-  , "Engine" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupName" :: NullOrUndefined (String)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "AvailabilityZone" :: Maybe (String)
+  , "DBSubnetGroupName" :: Maybe (String)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "PubliclyAccessible" :: Maybe (BooleanOptional)
+  , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional)
+  , "LicenseModel" :: Maybe (String)
+  , "DBName" :: Maybe (String)
+  , "Engine" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupName" :: Maybe (String)
   }
 derive instance newtypeRestoreDBInstanceFromDBSnapshotMessage :: Newtype RestoreDBInstanceFromDBSnapshotMessage _
 derive instance repGenericRestoreDBInstanceFromDBSnapshotMessage :: Generic RestoreDBInstanceFromDBSnapshotMessage _
@@ -3357,17 +3356,17 @@ instance encodeRestoreDBInstanceFromDBSnapshotMessage :: Encode RestoreDBInstanc
 
 -- | Constructs RestoreDBInstanceFromDBSnapshotMessage from required parameters
 newRestoreDBInstanceFromDBSnapshotMessage :: String -> String -> RestoreDBInstanceFromDBSnapshotMessage
-newRestoreDBInstanceFromDBSnapshotMessage _DBInstanceIdentifier _DBSnapshotIdentifier = RestoreDBInstanceFromDBSnapshotMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "DBSnapshotIdentifier": _DBSnapshotIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing) }
+newRestoreDBInstanceFromDBSnapshotMessage _DBInstanceIdentifier _DBSnapshotIdentifier = RestoreDBInstanceFromDBSnapshotMessage { "DBInstanceIdentifier": _DBInstanceIdentifier, "DBSnapshotIdentifier": _DBSnapshotIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "DBName": Nothing, "DBSubnetGroupName": Nothing, "Engine": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing }
 
 -- | Constructs RestoreDBInstanceFromDBSnapshotMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRestoreDBInstanceFromDBSnapshotMessage' :: String -> String -> ( { "DBInstanceIdentifier" :: (String) , "DBSnapshotIdentifier" :: (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) } -> {"DBInstanceIdentifier" :: (String) , "DBSnapshotIdentifier" :: (String) , "DBInstanceClass" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) } ) -> RestoreDBInstanceFromDBSnapshotMessage
-newRestoreDBInstanceFromDBSnapshotMessage' _DBInstanceIdentifier _DBSnapshotIdentifier customize = (RestoreDBInstanceFromDBSnapshotMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "DBSnapshotIdentifier": _DBSnapshotIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing) }
+newRestoreDBInstanceFromDBSnapshotMessage' :: String -> String -> ( { "DBInstanceIdentifier" :: (String) , "DBSnapshotIdentifier" :: (String) , "DBInstanceClass" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "PubliclyAccessible" :: Maybe (BooleanOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "DBName" :: Maybe (String) , "Engine" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) } -> {"DBInstanceIdentifier" :: (String) , "DBSnapshotIdentifier" :: (String) , "DBInstanceClass" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "PubliclyAccessible" :: Maybe (BooleanOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "DBName" :: Maybe (String) , "Engine" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) } ) -> RestoreDBInstanceFromDBSnapshotMessage
+newRestoreDBInstanceFromDBSnapshotMessage' _DBInstanceIdentifier _DBSnapshotIdentifier customize = (RestoreDBInstanceFromDBSnapshotMessage <<< customize) { "DBInstanceIdentifier": _DBInstanceIdentifier, "DBSnapshotIdentifier": _DBSnapshotIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "DBName": Nothing, "DBSubnetGroupName": Nothing, "Engine": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing }
 
 
 
 newtype RestoreDBInstanceFromDBSnapshotResult = RestoreDBInstanceFromDBSnapshotResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeRestoreDBInstanceFromDBSnapshotResult :: Newtype RestoreDBInstanceFromDBSnapshotResult _
 derive instance repGenericRestoreDBInstanceFromDBSnapshotResult :: Generic RestoreDBInstanceFromDBSnapshotResult _
@@ -3377,32 +3376,32 @@ instance encodeRestoreDBInstanceFromDBSnapshotResult :: Encode RestoreDBInstance
 
 -- | Constructs RestoreDBInstanceFromDBSnapshotResult from required parameters
 newRestoreDBInstanceFromDBSnapshotResult :: RestoreDBInstanceFromDBSnapshotResult
-newRestoreDBInstanceFromDBSnapshotResult  = RestoreDBInstanceFromDBSnapshotResult { "DBInstance": (NullOrUndefined Nothing) }
+newRestoreDBInstanceFromDBSnapshotResult  = RestoreDBInstanceFromDBSnapshotResult { "DBInstance": Nothing }
 
 -- | Constructs RestoreDBInstanceFromDBSnapshotResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRestoreDBInstanceFromDBSnapshotResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> RestoreDBInstanceFromDBSnapshotResult
-newRestoreDBInstanceFromDBSnapshotResult'  customize = (RestoreDBInstanceFromDBSnapshotResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newRestoreDBInstanceFromDBSnapshotResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> RestoreDBInstanceFromDBSnapshotResult
+newRestoreDBInstanceFromDBSnapshotResult'  customize = (RestoreDBInstanceFromDBSnapshotResult <<< customize) { "DBInstance": Nothing }
 
 
 
 newtype RestoreDBInstanceToPointInTimeMessage = RestoreDBInstanceToPointInTimeMessage 
   { "SourceDBInstanceIdentifier" :: (String)
   , "TargetDBInstanceIdentifier" :: (String)
-  , "RestoreTime" :: NullOrUndefined (TStamp)
-  , "UseLatestRestorableTime" :: NullOrUndefined (Boolean)
-  , "DBInstanceClass" :: NullOrUndefined (String)
-  , "Port" :: NullOrUndefined (IntegerOptional)
-  , "AvailabilityZone" :: NullOrUndefined (String)
-  , "DBSubnetGroupName" :: NullOrUndefined (String)
-  , "MultiAZ" :: NullOrUndefined (BooleanOptional)
-  , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional)
-  , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional)
-  , "LicenseModel" :: NullOrUndefined (String)
-  , "DBName" :: NullOrUndefined (String)
-  , "Engine" :: NullOrUndefined (String)
-  , "Iops" :: NullOrUndefined (IntegerOptional)
-  , "OptionGroupName" :: NullOrUndefined (String)
+  , "RestoreTime" :: Maybe (TStamp)
+  , "UseLatestRestorableTime" :: Maybe (Boolean)
+  , "DBInstanceClass" :: Maybe (String)
+  , "Port" :: Maybe (IntegerOptional)
+  , "AvailabilityZone" :: Maybe (String)
+  , "DBSubnetGroupName" :: Maybe (String)
+  , "MultiAZ" :: Maybe (BooleanOptional)
+  , "PubliclyAccessible" :: Maybe (BooleanOptional)
+  , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional)
+  , "LicenseModel" :: Maybe (String)
+  , "DBName" :: Maybe (String)
+  , "Engine" :: Maybe (String)
+  , "Iops" :: Maybe (IntegerOptional)
+  , "OptionGroupName" :: Maybe (String)
   }
 derive instance newtypeRestoreDBInstanceToPointInTimeMessage :: Newtype RestoreDBInstanceToPointInTimeMessage _
 derive instance repGenericRestoreDBInstanceToPointInTimeMessage :: Generic RestoreDBInstanceToPointInTimeMessage _
@@ -3412,17 +3411,17 @@ instance encodeRestoreDBInstanceToPointInTimeMessage :: Encode RestoreDBInstance
 
 -- | Constructs RestoreDBInstanceToPointInTimeMessage from required parameters
 newRestoreDBInstanceToPointInTimeMessage :: String -> String -> RestoreDBInstanceToPointInTimeMessage
-newRestoreDBInstanceToPointInTimeMessage _SourceDBInstanceIdentifier _TargetDBInstanceIdentifier = RestoreDBInstanceToPointInTimeMessage { "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "TargetDBInstanceIdentifier": _TargetDBInstanceIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "RestoreTime": (NullOrUndefined Nothing), "UseLatestRestorableTime": (NullOrUndefined Nothing) }
+newRestoreDBInstanceToPointInTimeMessage _SourceDBInstanceIdentifier _TargetDBInstanceIdentifier = RestoreDBInstanceToPointInTimeMessage { "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "TargetDBInstanceIdentifier": _TargetDBInstanceIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "DBName": Nothing, "DBSubnetGroupName": Nothing, "Engine": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing, "RestoreTime": Nothing, "UseLatestRestorableTime": Nothing }
 
 -- | Constructs RestoreDBInstanceToPointInTimeMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRestoreDBInstanceToPointInTimeMessage' :: String -> String -> ( { "SourceDBInstanceIdentifier" :: (String) , "TargetDBInstanceIdentifier" :: (String) , "RestoreTime" :: NullOrUndefined (TStamp) , "UseLatestRestorableTime" :: NullOrUndefined (Boolean) , "DBInstanceClass" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) } -> {"SourceDBInstanceIdentifier" :: (String) , "TargetDBInstanceIdentifier" :: (String) , "RestoreTime" :: NullOrUndefined (TStamp) , "UseLatestRestorableTime" :: NullOrUndefined (Boolean) , "DBInstanceClass" :: NullOrUndefined (String) , "Port" :: NullOrUndefined (IntegerOptional) , "AvailabilityZone" :: NullOrUndefined (String) , "DBSubnetGroupName" :: NullOrUndefined (String) , "MultiAZ" :: NullOrUndefined (BooleanOptional) , "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) , "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional) , "LicenseModel" :: NullOrUndefined (String) , "DBName" :: NullOrUndefined (String) , "Engine" :: NullOrUndefined (String) , "Iops" :: NullOrUndefined (IntegerOptional) , "OptionGroupName" :: NullOrUndefined (String) } ) -> RestoreDBInstanceToPointInTimeMessage
-newRestoreDBInstanceToPointInTimeMessage' _SourceDBInstanceIdentifier _TargetDBInstanceIdentifier customize = (RestoreDBInstanceToPointInTimeMessage <<< customize) { "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "TargetDBInstanceIdentifier": _TargetDBInstanceIdentifier, "AutoMinorVersionUpgrade": (NullOrUndefined Nothing), "AvailabilityZone": (NullOrUndefined Nothing), "DBInstanceClass": (NullOrUndefined Nothing), "DBName": (NullOrUndefined Nothing), "DBSubnetGroupName": (NullOrUndefined Nothing), "Engine": (NullOrUndefined Nothing), "Iops": (NullOrUndefined Nothing), "LicenseModel": (NullOrUndefined Nothing), "MultiAZ": (NullOrUndefined Nothing), "OptionGroupName": (NullOrUndefined Nothing), "Port": (NullOrUndefined Nothing), "PubliclyAccessible": (NullOrUndefined Nothing), "RestoreTime": (NullOrUndefined Nothing), "UseLatestRestorableTime": (NullOrUndefined Nothing) }
+newRestoreDBInstanceToPointInTimeMessage' :: String -> String -> ( { "SourceDBInstanceIdentifier" :: (String) , "TargetDBInstanceIdentifier" :: (String) , "RestoreTime" :: Maybe (TStamp) , "UseLatestRestorableTime" :: Maybe (Boolean) , "DBInstanceClass" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "PubliclyAccessible" :: Maybe (BooleanOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "DBName" :: Maybe (String) , "Engine" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) } -> {"SourceDBInstanceIdentifier" :: (String) , "TargetDBInstanceIdentifier" :: (String) , "RestoreTime" :: Maybe (TStamp) , "UseLatestRestorableTime" :: Maybe (Boolean) , "DBInstanceClass" :: Maybe (String) , "Port" :: Maybe (IntegerOptional) , "AvailabilityZone" :: Maybe (String) , "DBSubnetGroupName" :: Maybe (String) , "MultiAZ" :: Maybe (BooleanOptional) , "PubliclyAccessible" :: Maybe (BooleanOptional) , "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional) , "LicenseModel" :: Maybe (String) , "DBName" :: Maybe (String) , "Engine" :: Maybe (String) , "Iops" :: Maybe (IntegerOptional) , "OptionGroupName" :: Maybe (String) } ) -> RestoreDBInstanceToPointInTimeMessage
+newRestoreDBInstanceToPointInTimeMessage' _SourceDBInstanceIdentifier _TargetDBInstanceIdentifier customize = (RestoreDBInstanceToPointInTimeMessage <<< customize) { "SourceDBInstanceIdentifier": _SourceDBInstanceIdentifier, "TargetDBInstanceIdentifier": _TargetDBInstanceIdentifier, "AutoMinorVersionUpgrade": Nothing, "AvailabilityZone": Nothing, "DBInstanceClass": Nothing, "DBName": Nothing, "DBSubnetGroupName": Nothing, "Engine": Nothing, "Iops": Nothing, "LicenseModel": Nothing, "MultiAZ": Nothing, "OptionGroupName": Nothing, "Port": Nothing, "PubliclyAccessible": Nothing, "RestoreTime": Nothing, "UseLatestRestorableTime": Nothing }
 
 
 
 newtype RestoreDBInstanceToPointInTimeResult = RestoreDBInstanceToPointInTimeResult 
-  { "DBInstance" :: NullOrUndefined (DBInstance)
+  { "DBInstance" :: Maybe (DBInstance)
   }
 derive instance newtypeRestoreDBInstanceToPointInTimeResult :: Newtype RestoreDBInstanceToPointInTimeResult _
 derive instance repGenericRestoreDBInstanceToPointInTimeResult :: Generic RestoreDBInstanceToPointInTimeResult _
@@ -3432,21 +3431,21 @@ instance encodeRestoreDBInstanceToPointInTimeResult :: Encode RestoreDBInstanceT
 
 -- | Constructs RestoreDBInstanceToPointInTimeResult from required parameters
 newRestoreDBInstanceToPointInTimeResult :: RestoreDBInstanceToPointInTimeResult
-newRestoreDBInstanceToPointInTimeResult  = RestoreDBInstanceToPointInTimeResult { "DBInstance": (NullOrUndefined Nothing) }
+newRestoreDBInstanceToPointInTimeResult  = RestoreDBInstanceToPointInTimeResult { "DBInstance": Nothing }
 
 -- | Constructs RestoreDBInstanceToPointInTimeResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRestoreDBInstanceToPointInTimeResult' :: ( { "DBInstance" :: NullOrUndefined (DBInstance) } -> {"DBInstance" :: NullOrUndefined (DBInstance) } ) -> RestoreDBInstanceToPointInTimeResult
-newRestoreDBInstanceToPointInTimeResult'  customize = (RestoreDBInstanceToPointInTimeResult <<< customize) { "DBInstance": (NullOrUndefined Nothing) }
+newRestoreDBInstanceToPointInTimeResult' :: ( { "DBInstance" :: Maybe (DBInstance) } -> {"DBInstance" :: Maybe (DBInstance) } ) -> RestoreDBInstanceToPointInTimeResult
+newRestoreDBInstanceToPointInTimeResult'  customize = (RestoreDBInstanceToPointInTimeResult <<< customize) { "DBInstance": Nothing }
 
 
 
 newtype RevokeDBSecurityGroupIngressMessage = RevokeDBSecurityGroupIngressMessage 
   { "DBSecurityGroupName" :: (String)
-  , "CIDRIP" :: NullOrUndefined (String)
-  , "EC2SecurityGroupName" :: NullOrUndefined (String)
-  , "EC2SecurityGroupId" :: NullOrUndefined (String)
-  , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String)
+  , "CIDRIP" :: Maybe (String)
+  , "EC2SecurityGroupName" :: Maybe (String)
+  , "EC2SecurityGroupId" :: Maybe (String)
+  , "EC2SecurityGroupOwnerId" :: Maybe (String)
   }
 derive instance newtypeRevokeDBSecurityGroupIngressMessage :: Newtype RevokeDBSecurityGroupIngressMessage _
 derive instance repGenericRevokeDBSecurityGroupIngressMessage :: Generic RevokeDBSecurityGroupIngressMessage _
@@ -3456,17 +3455,17 @@ instance encodeRevokeDBSecurityGroupIngressMessage :: Encode RevokeDBSecurityGro
 
 -- | Constructs RevokeDBSecurityGroupIngressMessage from required parameters
 newRevokeDBSecurityGroupIngressMessage :: String -> RevokeDBSecurityGroupIngressMessage
-newRevokeDBSecurityGroupIngressMessage _DBSecurityGroupName = RevokeDBSecurityGroupIngressMessage { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": (NullOrUndefined Nothing), "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing) }
+newRevokeDBSecurityGroupIngressMessage _DBSecurityGroupName = RevokeDBSecurityGroupIngressMessage { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": Nothing, "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing }
 
 -- | Constructs RevokeDBSecurityGroupIngressMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRevokeDBSecurityGroupIngressMessage' :: String -> ( { "DBSecurityGroupName" :: (String) , "CIDRIP" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> {"DBSecurityGroupName" :: (String) , "CIDRIP" :: NullOrUndefined (String) , "EC2SecurityGroupName" :: NullOrUndefined (String) , "EC2SecurityGroupId" :: NullOrUndefined (String) , "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } ) -> RevokeDBSecurityGroupIngressMessage
-newRevokeDBSecurityGroupIngressMessage' _DBSecurityGroupName customize = (RevokeDBSecurityGroupIngressMessage <<< customize) { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": (NullOrUndefined Nothing), "EC2SecurityGroupId": (NullOrUndefined Nothing), "EC2SecurityGroupName": (NullOrUndefined Nothing), "EC2SecurityGroupOwnerId": (NullOrUndefined Nothing) }
+newRevokeDBSecurityGroupIngressMessage' :: String -> ( { "DBSecurityGroupName" :: (String) , "CIDRIP" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } -> {"DBSecurityGroupName" :: (String) , "CIDRIP" :: Maybe (String) , "EC2SecurityGroupName" :: Maybe (String) , "EC2SecurityGroupId" :: Maybe (String) , "EC2SecurityGroupOwnerId" :: Maybe (String) } ) -> RevokeDBSecurityGroupIngressMessage
+newRevokeDBSecurityGroupIngressMessage' _DBSecurityGroupName customize = (RevokeDBSecurityGroupIngressMessage <<< customize) { "DBSecurityGroupName": _DBSecurityGroupName, "CIDRIP": Nothing, "EC2SecurityGroupId": Nothing, "EC2SecurityGroupName": Nothing, "EC2SecurityGroupOwnerId": Nothing }
 
 
 
 newtype RevokeDBSecurityGroupIngressResult = RevokeDBSecurityGroupIngressResult 
-  { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup)
+  { "DBSecurityGroup" :: Maybe (DBSecurityGroup)
   }
 derive instance newtypeRevokeDBSecurityGroupIngressResult :: Newtype RevokeDBSecurityGroupIngressResult _
 derive instance repGenericRevokeDBSecurityGroupIngressResult :: Generic RevokeDBSecurityGroupIngressResult _
@@ -3476,12 +3475,12 @@ instance encodeRevokeDBSecurityGroupIngressResult :: Encode RevokeDBSecurityGrou
 
 -- | Constructs RevokeDBSecurityGroupIngressResult from required parameters
 newRevokeDBSecurityGroupIngressResult :: RevokeDBSecurityGroupIngressResult
-newRevokeDBSecurityGroupIngressResult  = RevokeDBSecurityGroupIngressResult { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newRevokeDBSecurityGroupIngressResult  = RevokeDBSecurityGroupIngressResult { "DBSecurityGroup": Nothing }
 
 -- | Constructs RevokeDBSecurityGroupIngressResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRevokeDBSecurityGroupIngressResult' :: ( { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> {"DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } ) -> RevokeDBSecurityGroupIngressResult
-newRevokeDBSecurityGroupIngressResult'  customize = (RevokeDBSecurityGroupIngressResult <<< customize) { "DBSecurityGroup": (NullOrUndefined Nothing) }
+newRevokeDBSecurityGroupIngressResult' :: ( { "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> {"DBSecurityGroup" :: Maybe (DBSecurityGroup) } ) -> RevokeDBSecurityGroupIngressResult
+newRevokeDBSecurityGroupIngressResult'  customize = (RevokeDBSecurityGroupIngressResult <<< customize) { "DBSecurityGroup": Nothing }
 
 
 
@@ -3564,9 +3563,9 @@ instance encodeStorageQuotaExceededFault :: Encode StorageQuotaExceededFault whe
 
 
 newtype Subnet = Subnet 
-  { "SubnetIdentifier" :: NullOrUndefined (String)
-  , "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone)
-  , "SubnetStatus" :: NullOrUndefined (String)
+  { "SubnetIdentifier" :: Maybe (String)
+  , "SubnetAvailabilityZone" :: Maybe (AvailabilityZone)
+  , "SubnetStatus" :: Maybe (String)
   }
 derive instance newtypeSubnet :: Newtype Subnet _
 derive instance repGenericSubnet :: Generic Subnet _
@@ -3576,12 +3575,12 @@ instance encodeSubnet :: Encode Subnet where encode = genericEncode options
 
 -- | Constructs Subnet from required parameters
 newSubnet :: Subnet
-newSubnet  = Subnet { "SubnetAvailabilityZone": (NullOrUndefined Nothing), "SubnetIdentifier": (NullOrUndefined Nothing), "SubnetStatus": (NullOrUndefined Nothing) }
+newSubnet  = Subnet { "SubnetAvailabilityZone": Nothing, "SubnetIdentifier": Nothing, "SubnetStatus": Nothing }
 
 -- | Constructs Subnet's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSubnet' :: ( { "SubnetIdentifier" :: NullOrUndefined (String) , "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone) , "SubnetStatus" :: NullOrUndefined (String) } -> {"SubnetIdentifier" :: NullOrUndefined (String) , "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone) , "SubnetStatus" :: NullOrUndefined (String) } ) -> Subnet
-newSubnet'  customize = (Subnet <<< customize) { "SubnetAvailabilityZone": (NullOrUndefined Nothing), "SubnetIdentifier": (NullOrUndefined Nothing), "SubnetStatus": (NullOrUndefined Nothing) }
+newSubnet' :: ( { "SubnetIdentifier" :: Maybe (String) , "SubnetAvailabilityZone" :: Maybe (AvailabilityZone) , "SubnetStatus" :: Maybe (String) } -> {"SubnetIdentifier" :: Maybe (String) , "SubnetAvailabilityZone" :: Maybe (AvailabilityZone) , "SubnetStatus" :: Maybe (String) } ) -> Subnet
+newSubnet'  customize = (Subnet <<< customize) { "SubnetAvailabilityZone": Nothing, "SubnetIdentifier": Nothing, "SubnetStatus": Nothing }
 
 
 
@@ -3662,8 +3661,8 @@ instance encodeTStamp :: Encode TStamp where encode = genericEncode options
 
 
 newtype Tag = Tag 
-  { "Key" :: NullOrUndefined (String)
-  , "Value" :: NullOrUndefined (String)
+  { "Key" :: Maybe (String)
+  , "Value" :: Maybe (String)
   }
 derive instance newtypeTag :: Newtype Tag _
 derive instance repGenericTag :: Generic Tag _
@@ -3673,12 +3672,12 @@ instance encodeTag :: Encode Tag where encode = genericEncode options
 
 -- | Constructs Tag from required parameters
 newTag :: Tag
-newTag  = Tag { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag  = Tag { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs Tag's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTag' :: ( { "Key" :: NullOrUndefined (String) , "Value" :: NullOrUndefined (String) } -> {"Key" :: NullOrUndefined (String) , "Value" :: NullOrUndefined (String) } ) -> Tag
-newTag'  customize = (Tag <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag' :: ( { "Key" :: Maybe (String) , "Value" :: Maybe (String) } -> {"Key" :: Maybe (String) , "Value" :: Maybe (String) } ) -> Tag
+newTag'  customize = (Tag <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -3692,7 +3691,7 @@ instance encodeTagList :: Encode TagList where encode = genericEncode options
 
 
 newtype TagListMessage = TagListMessage 
-  { "TagList" :: NullOrUndefined (TagList)
+  { "TagList" :: Maybe (TagList)
   }
 derive instance newtypeTagListMessage :: Newtype TagListMessage _
 derive instance repGenericTagListMessage :: Generic TagListMessage _
@@ -3702,12 +3701,12 @@ instance encodeTagListMessage :: Encode TagListMessage where encode = genericEnc
 
 -- | Constructs TagListMessage from required parameters
 newTagListMessage :: TagListMessage
-newTagListMessage  = TagListMessage { "TagList": (NullOrUndefined Nothing) }
+newTagListMessage  = TagListMessage { "TagList": Nothing }
 
 -- | Constructs TagListMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTagListMessage' :: ( { "TagList" :: NullOrUndefined (TagList) } -> {"TagList" :: NullOrUndefined (TagList) } ) -> TagListMessage
-newTagListMessage'  customize = (TagListMessage <<< customize) { "TagList": (NullOrUndefined Nothing) }
+newTagListMessage' :: ( { "TagList" :: Maybe (TagList) } -> {"TagList" :: Maybe (TagList) } ) -> TagListMessage
+newTagListMessage'  customize = (TagListMessage <<< customize) { "TagList": Nothing }
 
 
 
@@ -3721,8 +3720,8 @@ instance encodeVpcSecurityGroupIdList :: Encode VpcSecurityGroupIdList where enc
 
 
 newtype VpcSecurityGroupMembership = VpcSecurityGroupMembership 
-  { "VpcSecurityGroupId" :: NullOrUndefined (String)
-  , "Status" :: NullOrUndefined (String)
+  { "VpcSecurityGroupId" :: Maybe (String)
+  , "Status" :: Maybe (String)
   }
 derive instance newtypeVpcSecurityGroupMembership :: Newtype VpcSecurityGroupMembership _
 derive instance repGenericVpcSecurityGroupMembership :: Generic VpcSecurityGroupMembership _
@@ -3732,12 +3731,12 @@ instance encodeVpcSecurityGroupMembership :: Encode VpcSecurityGroupMembership w
 
 -- | Constructs VpcSecurityGroupMembership from required parameters
 newVpcSecurityGroupMembership :: VpcSecurityGroupMembership
-newVpcSecurityGroupMembership  = VpcSecurityGroupMembership { "Status": (NullOrUndefined Nothing), "VpcSecurityGroupId": (NullOrUndefined Nothing) }
+newVpcSecurityGroupMembership  = VpcSecurityGroupMembership { "Status": Nothing, "VpcSecurityGroupId": Nothing }
 
 -- | Constructs VpcSecurityGroupMembership's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newVpcSecurityGroupMembership' :: ( { "VpcSecurityGroupId" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } -> {"VpcSecurityGroupId" :: NullOrUndefined (String) , "Status" :: NullOrUndefined (String) } ) -> VpcSecurityGroupMembership
-newVpcSecurityGroupMembership'  customize = (VpcSecurityGroupMembership <<< customize) { "Status": (NullOrUndefined Nothing), "VpcSecurityGroupId": (NullOrUndefined Nothing) }
+newVpcSecurityGroupMembership' :: ( { "VpcSecurityGroupId" :: Maybe (String) , "Status" :: Maybe (String) } -> {"VpcSecurityGroupId" :: Maybe (String) , "Status" :: Maybe (String) } ) -> VpcSecurityGroupMembership
+newVpcSecurityGroupMembership'  customize = (VpcSecurityGroupMembership <<< customize) { "Status": Nothing, "VpcSecurityGroupId": Nothing }
 
 
 

@@ -42,7 +42,7 @@ Constructs AddSourceIdentifierToSubscriptionMessage's fields from required param
 
 ``` purescript
 newtype AddSourceIdentifierToSubscriptionResult
-  = AddSourceIdentifierToSubscriptionResult { "EventSubscription" :: NullOrUndefined (EventSubscription) }
+  = AddSourceIdentifierToSubscriptionResult { "EventSubscription" :: Maybe (EventSubscription) }
 ```
 
 ##### Instances
@@ -65,7 +65,7 @@ Constructs AddSourceIdentifierToSubscriptionResult from required parameters
 #### `newAddSourceIdentifierToSubscriptionResult'`
 
 ``` purescript
-newAddSourceIdentifierToSubscriptionResult' :: ({ "EventSubscription" :: NullOrUndefined (EventSubscription) } -> { "EventSubscription" :: NullOrUndefined (EventSubscription) }) -> AddSourceIdentifierToSubscriptionResult
+newAddSourceIdentifierToSubscriptionResult' :: ({ "EventSubscription" :: Maybe (EventSubscription) } -> { "EventSubscription" :: Maybe (EventSubscription) }) -> AddSourceIdentifierToSubscriptionResult
 ```
 
 Constructs AddSourceIdentifierToSubscriptionResult's fields from required parameters
@@ -176,7 +176,7 @@ Encode AuthorizationQuotaExceededFault
 
 ``` purescript
 newtype AuthorizeDBSecurityGroupIngressMessage
-  = AuthorizeDBSecurityGroupIngressMessage { "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }
+  = AuthorizeDBSecurityGroupIngressMessage { "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -199,7 +199,7 @@ Constructs AuthorizeDBSecurityGroupIngressMessage from required parameters
 #### `newAuthorizeDBSecurityGroupIngressMessage'`
 
 ``` purescript
-newAuthorizeDBSecurityGroupIngressMessage' :: String -> ({ "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> { "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }) -> AuthorizeDBSecurityGroupIngressMessage
+newAuthorizeDBSecurityGroupIngressMessage' :: String -> ({ "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) } -> { "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }) -> AuthorizeDBSecurityGroupIngressMessage
 ```
 
 Constructs AuthorizeDBSecurityGroupIngressMessage's fields from required parameters
@@ -208,7 +208,7 @@ Constructs AuthorizeDBSecurityGroupIngressMessage's fields from required paramet
 
 ``` purescript
 newtype AuthorizeDBSecurityGroupIngressResult
-  = AuthorizeDBSecurityGroupIngressResult { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }
+  = AuthorizeDBSecurityGroupIngressResult { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }
 ```
 
 ##### Instances
@@ -231,7 +231,7 @@ Constructs AuthorizeDBSecurityGroupIngressResult from required parameters
 #### `newAuthorizeDBSecurityGroupIngressResult'`
 
 ``` purescript
-newAuthorizeDBSecurityGroupIngressResult' :: ({ "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }) -> AuthorizeDBSecurityGroupIngressResult
+newAuthorizeDBSecurityGroupIngressResult' :: ({ "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }) -> AuthorizeDBSecurityGroupIngressResult
 ```
 
 Constructs AuthorizeDBSecurityGroupIngressResult's fields from required parameters
@@ -240,7 +240,7 @@ Constructs AuthorizeDBSecurityGroupIngressResult's fields from required paramete
 
 ``` purescript
 newtype AvailabilityZone
-  = AvailabilityZone { "Name" :: NullOrUndefined (String), "ProvisionedIopsCapable" :: NullOrUndefined (Boolean) }
+  = AvailabilityZone { "Name" :: Maybe (String), "ProvisionedIopsCapable" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -263,7 +263,7 @@ Constructs AvailabilityZone from required parameters
 #### `newAvailabilityZone'`
 
 ``` purescript
-newAvailabilityZone' :: ({ "Name" :: NullOrUndefined (String), "ProvisionedIopsCapable" :: NullOrUndefined (Boolean) } -> { "Name" :: NullOrUndefined (String), "ProvisionedIopsCapable" :: NullOrUndefined (Boolean) }) -> AvailabilityZone
+newAvailabilityZone' :: ({ "Name" :: Maybe (String), "ProvisionedIopsCapable" :: Maybe (Boolean) } -> { "Name" :: Maybe (String), "ProvisionedIopsCapable" :: Maybe (Boolean) }) -> AvailabilityZone
 ```
 
 Constructs AvailabilityZone's fields from required parameters
@@ -304,7 +304,7 @@ Encode BooleanOptional
 
 ``` purescript
 newtype CharacterSet
-  = CharacterSet { "CharacterSetName" :: NullOrUndefined (String), "CharacterSetDescription" :: NullOrUndefined (String) }
+  = CharacterSet { "CharacterSetName" :: Maybe (String), "CharacterSetDescription" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -327,7 +327,7 @@ Constructs CharacterSet from required parameters
 #### `newCharacterSet'`
 
 ``` purescript
-newCharacterSet' :: ({ "CharacterSetName" :: NullOrUndefined (String), "CharacterSetDescription" :: NullOrUndefined (String) } -> { "CharacterSetName" :: NullOrUndefined (String), "CharacterSetDescription" :: NullOrUndefined (String) }) -> CharacterSet
+newCharacterSet' :: ({ "CharacterSetName" :: Maybe (String), "CharacterSetDescription" :: Maybe (String) } -> { "CharacterSetName" :: Maybe (String), "CharacterSetDescription" :: Maybe (String) }) -> CharacterSet
 ```
 
 Constructs CharacterSet's fields from required parameters
@@ -368,7 +368,7 @@ Constructs CopyDBSnapshotMessage's fields from required parameters
 
 ``` purescript
 newtype CopyDBSnapshotResult
-  = CopyDBSnapshotResult { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }
+  = CopyDBSnapshotResult { "DBSnapshot" :: Maybe (DBSnapshot) }
 ```
 
 ##### Instances
@@ -391,7 +391,7 @@ Constructs CopyDBSnapshotResult from required parameters
 #### `newCopyDBSnapshotResult'`
 
 ``` purescript
-newCopyDBSnapshotResult' :: ({ "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }) -> CopyDBSnapshotResult
+newCopyDBSnapshotResult' :: ({ "DBSnapshot" :: Maybe (DBSnapshot) } -> { "DBSnapshot" :: Maybe (DBSnapshot) }) -> CopyDBSnapshotResult
 ```
 
 Constructs CopyDBSnapshotResult's fields from required parameters
@@ -400,7 +400,7 @@ Constructs CopyDBSnapshotResult's fields from required parameters
 
 ``` purescript
 newtype CreateDBInstanceMessage
-  = CreateDBInstanceMessage { "DBName" :: NullOrUndefined (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "CharacterSetName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) }
+  = CreateDBInstanceMessage { "DBName" :: Maybe (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "CharacterSetName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -423,7 +423,7 @@ Constructs CreateDBInstanceMessage from required parameters
 #### `newCreateDBInstanceMessage'`
 
 ``` purescript
-newCreateDBInstanceMessage' :: IntegerOptional -> String -> String -> String -> String -> String -> ({ "DBName" :: NullOrUndefined (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "CharacterSetName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } -> { "DBName" :: NullOrUndefined (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "CharacterSetName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) }) -> CreateDBInstanceMessage
+newCreateDBInstanceMessage' :: IntegerOptional -> String -> String -> String -> String -> String -> ({ "DBName" :: Maybe (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "CharacterSetName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) } -> { "DBName" :: Maybe (String), "DBInstanceIdentifier" :: String, "AllocatedStorage" :: IntegerOptional, "DBInstanceClass" :: String, "Engine" :: String, "MasterUsername" :: String, "MasterUserPassword" :: String, "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "CharacterSetName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) }) -> CreateDBInstanceMessage
 ```
 
 Constructs CreateDBInstanceMessage's fields from required parameters
@@ -432,7 +432,7 @@ Constructs CreateDBInstanceMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBInstanceReadReplicaMessage
-  = CreateDBInstanceReadReplicaMessage { "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "AvailabilityZone" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) }
+  = CreateDBInstanceReadReplicaMessage { "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "AvailabilityZone" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -455,7 +455,7 @@ Constructs CreateDBInstanceReadReplicaMessage from required parameters
 #### `newCreateDBInstanceReadReplicaMessage'`
 
 ``` purescript
-newCreateDBInstanceReadReplicaMessage' :: String -> String -> ({ "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "AvailabilityZone" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) } -> { "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "AvailabilityZone" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional) }) -> CreateDBInstanceReadReplicaMessage
+newCreateDBInstanceReadReplicaMessage' :: String -> String -> ({ "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "AvailabilityZone" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) } -> { "DBInstanceIdentifier" :: String, "SourceDBInstanceIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "AvailabilityZone" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "PubliclyAccessible" :: Maybe (BooleanOptional) }) -> CreateDBInstanceReadReplicaMessage
 ```
 
 Constructs CreateDBInstanceReadReplicaMessage's fields from required parameters
@@ -464,7 +464,7 @@ Constructs CreateDBInstanceReadReplicaMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBInstanceReadReplicaResult
-  = CreateDBInstanceReadReplicaResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = CreateDBInstanceReadReplicaResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -487,7 +487,7 @@ Constructs CreateDBInstanceReadReplicaResult from required parameters
 #### `newCreateDBInstanceReadReplicaResult'`
 
 ``` purescript
-newCreateDBInstanceReadReplicaResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> CreateDBInstanceReadReplicaResult
+newCreateDBInstanceReadReplicaResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> CreateDBInstanceReadReplicaResult
 ```
 
 Constructs CreateDBInstanceReadReplicaResult's fields from required parameters
@@ -496,7 +496,7 @@ Constructs CreateDBInstanceReadReplicaResult's fields from required parameters
 
 ``` purescript
 newtype CreateDBInstanceResult
-  = CreateDBInstanceResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = CreateDBInstanceResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -519,7 +519,7 @@ Constructs CreateDBInstanceResult from required parameters
 #### `newCreateDBInstanceResult'`
 
 ``` purescript
-newCreateDBInstanceResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> CreateDBInstanceResult
+newCreateDBInstanceResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> CreateDBInstanceResult
 ```
 
 Constructs CreateDBInstanceResult's fields from required parameters
@@ -560,7 +560,7 @@ Constructs CreateDBParameterGroupMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBParameterGroupResult
-  = CreateDBParameterGroupResult { "DBParameterGroup" :: NullOrUndefined (DBParameterGroup) }
+  = CreateDBParameterGroupResult { "DBParameterGroup" :: Maybe (DBParameterGroup) }
 ```
 
 ##### Instances
@@ -583,7 +583,7 @@ Constructs CreateDBParameterGroupResult from required parameters
 #### `newCreateDBParameterGroupResult'`
 
 ``` purescript
-newCreateDBParameterGroupResult' :: ({ "DBParameterGroup" :: NullOrUndefined (DBParameterGroup) } -> { "DBParameterGroup" :: NullOrUndefined (DBParameterGroup) }) -> CreateDBParameterGroupResult
+newCreateDBParameterGroupResult' :: ({ "DBParameterGroup" :: Maybe (DBParameterGroup) } -> { "DBParameterGroup" :: Maybe (DBParameterGroup) }) -> CreateDBParameterGroupResult
 ```
 
 Constructs CreateDBParameterGroupResult's fields from required parameters
@@ -624,7 +624,7 @@ Constructs CreateDBSecurityGroupMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBSecurityGroupResult
-  = CreateDBSecurityGroupResult { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }
+  = CreateDBSecurityGroupResult { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }
 ```
 
 ##### Instances
@@ -647,7 +647,7 @@ Constructs CreateDBSecurityGroupResult from required parameters
 #### `newCreateDBSecurityGroupResult'`
 
 ``` purescript
-newCreateDBSecurityGroupResult' :: ({ "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }) -> CreateDBSecurityGroupResult
+newCreateDBSecurityGroupResult' :: ({ "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }) -> CreateDBSecurityGroupResult
 ```
 
 Constructs CreateDBSecurityGroupResult's fields from required parameters
@@ -688,7 +688,7 @@ Constructs CreateDBSnapshotMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBSnapshotResult
-  = CreateDBSnapshotResult { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }
+  = CreateDBSnapshotResult { "DBSnapshot" :: Maybe (DBSnapshot) }
 ```
 
 ##### Instances
@@ -711,7 +711,7 @@ Constructs CreateDBSnapshotResult from required parameters
 #### `newCreateDBSnapshotResult'`
 
 ``` purescript
-newCreateDBSnapshotResult' :: ({ "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }) -> CreateDBSnapshotResult
+newCreateDBSnapshotResult' :: ({ "DBSnapshot" :: Maybe (DBSnapshot) } -> { "DBSnapshot" :: Maybe (DBSnapshot) }) -> CreateDBSnapshotResult
 ```
 
 Constructs CreateDBSnapshotResult's fields from required parameters
@@ -752,7 +752,7 @@ Constructs CreateDBSubnetGroupMessage's fields from required parameters
 
 ``` purescript
 newtype CreateDBSubnetGroupResult
-  = CreateDBSubnetGroupResult { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) }
+  = CreateDBSubnetGroupResult { "DBSubnetGroup" :: Maybe (DBSubnetGroup) }
 ```
 
 ##### Instances
@@ -775,7 +775,7 @@ Constructs CreateDBSubnetGroupResult from required parameters
 #### `newCreateDBSubnetGroupResult'`
 
 ``` purescript
-newCreateDBSubnetGroupResult' :: ({ "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } -> { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) }) -> CreateDBSubnetGroupResult
+newCreateDBSubnetGroupResult' :: ({ "DBSubnetGroup" :: Maybe (DBSubnetGroup) } -> { "DBSubnetGroup" :: Maybe (DBSubnetGroup) }) -> CreateDBSubnetGroupResult
 ```
 
 Constructs CreateDBSubnetGroupResult's fields from required parameters
@@ -784,7 +784,7 @@ Constructs CreateDBSubnetGroupResult's fields from required parameters
 
 ``` purescript
 newtype CreateEventSubscriptionMessage
-  = CreateEventSubscriptionMessage { "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "SourceIds" :: NullOrUndefined (SourceIdsList), "Enabled" :: NullOrUndefined (BooleanOptional) }
+  = CreateEventSubscriptionMessage { "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "SourceIds" :: Maybe (SourceIdsList), "Enabled" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -807,7 +807,7 @@ Constructs CreateEventSubscriptionMessage from required parameters
 #### `newCreateEventSubscriptionMessage'`
 
 ``` purescript
-newCreateEventSubscriptionMessage' :: String -> String -> ({ "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "SourceIds" :: NullOrUndefined (SourceIdsList), "Enabled" :: NullOrUndefined (BooleanOptional) } -> { "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "SourceIds" :: NullOrUndefined (SourceIdsList), "Enabled" :: NullOrUndefined (BooleanOptional) }) -> CreateEventSubscriptionMessage
+newCreateEventSubscriptionMessage' :: String -> String -> ({ "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "SourceIds" :: Maybe (SourceIdsList), "Enabled" :: Maybe (BooleanOptional) } -> { "SubscriptionName" :: String, "SnsTopicArn" :: String, "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "SourceIds" :: Maybe (SourceIdsList), "Enabled" :: Maybe (BooleanOptional) }) -> CreateEventSubscriptionMessage
 ```
 
 Constructs CreateEventSubscriptionMessage's fields from required parameters
@@ -816,7 +816,7 @@ Constructs CreateEventSubscriptionMessage's fields from required parameters
 
 ``` purescript
 newtype CreateEventSubscriptionResult
-  = CreateEventSubscriptionResult { "EventSubscription" :: NullOrUndefined (EventSubscription) }
+  = CreateEventSubscriptionResult { "EventSubscription" :: Maybe (EventSubscription) }
 ```
 
 ##### Instances
@@ -839,7 +839,7 @@ Constructs CreateEventSubscriptionResult from required parameters
 #### `newCreateEventSubscriptionResult'`
 
 ``` purescript
-newCreateEventSubscriptionResult' :: ({ "EventSubscription" :: NullOrUndefined (EventSubscription) } -> { "EventSubscription" :: NullOrUndefined (EventSubscription) }) -> CreateEventSubscriptionResult
+newCreateEventSubscriptionResult' :: ({ "EventSubscription" :: Maybe (EventSubscription) } -> { "EventSubscription" :: Maybe (EventSubscription) }) -> CreateEventSubscriptionResult
 ```
 
 Constructs CreateEventSubscriptionResult's fields from required parameters
@@ -880,7 +880,7 @@ Constructs CreateOptionGroupMessage's fields from required parameters
 
 ``` purescript
 newtype CreateOptionGroupResult
-  = CreateOptionGroupResult { "OptionGroup" :: NullOrUndefined (OptionGroup) }
+  = CreateOptionGroupResult { "OptionGroup" :: Maybe (OptionGroup) }
 ```
 
 ##### Instances
@@ -903,7 +903,7 @@ Constructs CreateOptionGroupResult from required parameters
 #### `newCreateOptionGroupResult'`
 
 ``` purescript
-newCreateOptionGroupResult' :: ({ "OptionGroup" :: NullOrUndefined (OptionGroup) } -> { "OptionGroup" :: NullOrUndefined (OptionGroup) }) -> CreateOptionGroupResult
+newCreateOptionGroupResult' :: ({ "OptionGroup" :: Maybe (OptionGroup) } -> { "OptionGroup" :: Maybe (OptionGroup) }) -> CreateOptionGroupResult
 ```
 
 Constructs CreateOptionGroupResult's fields from required parameters
@@ -912,7 +912,7 @@ Constructs CreateOptionGroupResult's fields from required parameters
 
 ``` purescript
 newtype DBEngineVersion
-  = DBEngineVersion { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "DBEngineDescription" :: NullOrUndefined (String), "DBEngineVersionDescription" :: NullOrUndefined (String), "DefaultCharacterSet" :: NullOrUndefined (CharacterSet), "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList) }
+  = DBEngineVersion { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "DBEngineDescription" :: Maybe (String), "DBEngineVersionDescription" :: Maybe (String), "DefaultCharacterSet" :: Maybe (CharacterSet), "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList) }
 ```
 
 ##### Instances
@@ -935,7 +935,7 @@ Constructs DBEngineVersion from required parameters
 #### `newDBEngineVersion'`
 
 ``` purescript
-newDBEngineVersion' :: ({ "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "DBEngineDescription" :: NullOrUndefined (String), "DBEngineVersionDescription" :: NullOrUndefined (String), "DefaultCharacterSet" :: NullOrUndefined (CharacterSet), "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList) } -> { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "DBEngineDescription" :: NullOrUndefined (String), "DBEngineVersionDescription" :: NullOrUndefined (String), "DefaultCharacterSet" :: NullOrUndefined (CharacterSet), "SupportedCharacterSets" :: NullOrUndefined (SupportedCharacterSetsList) }) -> DBEngineVersion
+newDBEngineVersion' :: ({ "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "DBEngineDescription" :: Maybe (String), "DBEngineVersionDescription" :: Maybe (String), "DefaultCharacterSet" :: Maybe (CharacterSet), "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList) } -> { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "DBEngineDescription" :: Maybe (String), "DBEngineVersionDescription" :: Maybe (String), "DefaultCharacterSet" :: Maybe (CharacterSet), "SupportedCharacterSets" :: Maybe (SupportedCharacterSetsList) }) -> DBEngineVersion
 ```
 
 Constructs DBEngineVersion's fields from required parameters
@@ -960,7 +960,7 @@ Encode DBEngineVersionList
 
 ``` purescript
 newtype DBEngineVersionMessage
-  = DBEngineVersionMessage { "Marker" :: NullOrUndefined (String), "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList) }
+  = DBEngineVersionMessage { "Marker" :: Maybe (String), "DBEngineVersions" :: Maybe (DBEngineVersionList) }
 ```
 
 ##### Instances
@@ -983,7 +983,7 @@ Constructs DBEngineVersionMessage from required parameters
 #### `newDBEngineVersionMessage'`
 
 ``` purescript
-newDBEngineVersionMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList) } -> { "Marker" :: NullOrUndefined (String), "DBEngineVersions" :: NullOrUndefined (DBEngineVersionList) }) -> DBEngineVersionMessage
+newDBEngineVersionMessage' :: ({ "Marker" :: Maybe (String), "DBEngineVersions" :: Maybe (DBEngineVersionList) } -> { "Marker" :: Maybe (String), "DBEngineVersions" :: Maybe (DBEngineVersionList) }) -> DBEngineVersionMessage
 ```
 
 Constructs DBEngineVersionMessage's fields from required parameters
@@ -992,7 +992,7 @@ Constructs DBEngineVersionMessage's fields from required parameters
 
 ``` purescript
 newtype DBInstance
-  = DBInstance { "DBInstanceIdentifier" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "DBInstanceStatus" :: NullOrUndefined (String), "MasterUsername" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Endpoint" :: NullOrUndefined (Endpoint), "AllocatedStorage" :: NullOrUndefined (Int), "InstanceCreateTime" :: NullOrUndefined (TStamp), "PreferredBackupWindow" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (Int), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues), "LatestRestorableTime" :: NullOrUndefined (TStamp), "MultiAZ" :: NullOrUndefined (Boolean), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String), "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership), "CharacterSetName" :: NullOrUndefined (String), "SecondaryAvailabilityZone" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (Boolean) }
+  = DBInstance { "DBInstanceIdentifier" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Engine" :: Maybe (String), "DBInstanceStatus" :: Maybe (String), "MasterUsername" :: Maybe (String), "DBName" :: Maybe (String), "Endpoint" :: Maybe (Endpoint), "AllocatedStorage" :: Maybe (Int), "InstanceCreateTime" :: Maybe (TStamp), "PreferredBackupWindow" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (Int), "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList), "DBParameterGroups" :: Maybe (DBParameterGroupStatusList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroup" :: Maybe (DBSubnetGroup), "PreferredMaintenanceWindow" :: Maybe (String), "PendingModifiedValues" :: Maybe (PendingModifiedValues), "LatestRestorableTime" :: Maybe (TStamp), "MultiAZ" :: Maybe (Boolean), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String), "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupMembership" :: Maybe (OptionGroupMembership), "CharacterSetName" :: Maybe (String), "SecondaryAvailabilityZone" :: Maybe (String), "PubliclyAccessible" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -1015,7 +1015,7 @@ Constructs DBInstance from required parameters
 #### `newDBInstance'`
 
 ``` purescript
-newDBInstance' :: ({ "DBInstanceIdentifier" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "DBInstanceStatus" :: NullOrUndefined (String), "MasterUsername" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Endpoint" :: NullOrUndefined (Endpoint), "AllocatedStorage" :: NullOrUndefined (Int), "InstanceCreateTime" :: NullOrUndefined (TStamp), "PreferredBackupWindow" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (Int), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues), "LatestRestorableTime" :: NullOrUndefined (TStamp), "MultiAZ" :: NullOrUndefined (Boolean), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String), "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership), "CharacterSetName" :: NullOrUndefined (String), "SecondaryAvailabilityZone" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (Boolean) } -> { "DBInstanceIdentifier" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "DBInstanceStatus" :: NullOrUndefined (String), "MasterUsername" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Endpoint" :: NullOrUndefined (Endpoint), "AllocatedStorage" :: NullOrUndefined (Int), "InstanceCreateTime" :: NullOrUndefined (TStamp), "PreferredBackupWindow" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (Int), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: NullOrUndefined (VpcSecurityGroupMembershipList), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupStatusList), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "PendingModifiedValues" :: NullOrUndefined (PendingModifiedValues), "LatestRestorableTime" :: NullOrUndefined (TStamp), "MultiAZ" :: NullOrUndefined (Boolean), "EngineVersion" :: NullOrUndefined (String), "AutoMinorVersionUpgrade" :: NullOrUndefined (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: NullOrUndefined (String), "ReadReplicaDBInstanceIdentifiers" :: NullOrUndefined (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupMembership" :: NullOrUndefined (OptionGroupMembership), "CharacterSetName" :: NullOrUndefined (String), "SecondaryAvailabilityZone" :: NullOrUndefined (String), "PubliclyAccessible" :: NullOrUndefined (Boolean) }) -> DBInstance
+newDBInstance' :: ({ "DBInstanceIdentifier" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Engine" :: Maybe (String), "DBInstanceStatus" :: Maybe (String), "MasterUsername" :: Maybe (String), "DBName" :: Maybe (String), "Endpoint" :: Maybe (Endpoint), "AllocatedStorage" :: Maybe (Int), "InstanceCreateTime" :: Maybe (TStamp), "PreferredBackupWindow" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (Int), "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList), "DBParameterGroups" :: Maybe (DBParameterGroupStatusList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroup" :: Maybe (DBSubnetGroup), "PreferredMaintenanceWindow" :: Maybe (String), "PendingModifiedValues" :: Maybe (PendingModifiedValues), "LatestRestorableTime" :: Maybe (TStamp), "MultiAZ" :: Maybe (Boolean), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String), "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupMembership" :: Maybe (OptionGroupMembership), "CharacterSetName" :: Maybe (String), "SecondaryAvailabilityZone" :: Maybe (String), "PubliclyAccessible" :: Maybe (Boolean) } -> { "DBInstanceIdentifier" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Engine" :: Maybe (String), "DBInstanceStatus" :: Maybe (String), "MasterUsername" :: Maybe (String), "DBName" :: Maybe (String), "Endpoint" :: Maybe (Endpoint), "AllocatedStorage" :: Maybe (Int), "InstanceCreateTime" :: Maybe (TStamp), "PreferredBackupWindow" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (Int), "DBSecurityGroups" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroups" :: Maybe (VpcSecurityGroupMembershipList), "DBParameterGroups" :: Maybe (DBParameterGroupStatusList), "AvailabilityZone" :: Maybe (String), "DBSubnetGroup" :: Maybe (DBSubnetGroup), "PreferredMaintenanceWindow" :: Maybe (String), "PendingModifiedValues" :: Maybe (PendingModifiedValues), "LatestRestorableTime" :: Maybe (TStamp), "MultiAZ" :: Maybe (Boolean), "EngineVersion" :: Maybe (String), "AutoMinorVersionUpgrade" :: Maybe (Boolean), "ReadReplicaSourceDBInstanceIdentifier" :: Maybe (String), "ReadReplicaDBInstanceIdentifiers" :: Maybe (ReadReplicaDBInstanceIdentifierList), "LicenseModel" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupMembership" :: Maybe (OptionGroupMembership), "CharacterSetName" :: Maybe (String), "SecondaryAvailabilityZone" :: Maybe (String), "PubliclyAccessible" :: Maybe (Boolean) }) -> DBInstance
 ```
 
 Constructs DBInstance's fields from required parameters
@@ -1058,7 +1058,7 @@ Encode DBInstanceList
 
 ``` purescript
 newtype DBInstanceMessage
-  = DBInstanceMessage { "Marker" :: NullOrUndefined (String), "DBInstances" :: NullOrUndefined (DBInstanceList) }
+  = DBInstanceMessage { "Marker" :: Maybe (String), "DBInstances" :: Maybe (DBInstanceList) }
 ```
 
 ##### Instances
@@ -1081,7 +1081,7 @@ Constructs DBInstanceMessage from required parameters
 #### `newDBInstanceMessage'`
 
 ``` purescript
-newDBInstanceMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBInstances" :: NullOrUndefined (DBInstanceList) } -> { "Marker" :: NullOrUndefined (String), "DBInstances" :: NullOrUndefined (DBInstanceList) }) -> DBInstanceMessage
+newDBInstanceMessage' :: ({ "Marker" :: Maybe (String), "DBInstances" :: Maybe (DBInstanceList) } -> { "Marker" :: Maybe (String), "DBInstances" :: Maybe (DBInstanceList) }) -> DBInstanceMessage
 ```
 
 Constructs DBInstanceMessage's fields from required parameters
@@ -1108,7 +1108,7 @@ Encode DBInstanceNotFoundFault
 
 ``` purescript
 newtype DBParameterGroup
-  = DBParameterGroup { "DBParameterGroupName" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String) }
+  = DBParameterGroup { "DBParameterGroupName" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "Description" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1131,7 +1131,7 @@ Constructs DBParameterGroup from required parameters
 #### `newDBParameterGroup'`
 
 ``` purescript
-newDBParameterGroup' :: ({ "DBParameterGroupName" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String) } -> { "DBParameterGroupName" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String) }) -> DBParameterGroup
+newDBParameterGroup' :: ({ "DBParameterGroupName" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "Description" :: Maybe (String) } -> { "DBParameterGroupName" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "Description" :: Maybe (String) }) -> DBParameterGroup
 ```
 
 Constructs DBParameterGroup's fields from required parameters
@@ -1158,7 +1158,7 @@ Encode DBParameterGroupAlreadyExistsFault
 
 ``` purescript
 newtype DBParameterGroupDetails
-  = DBParameterGroupDetails { "Parameters" :: NullOrUndefined (ParametersList), "Marker" :: NullOrUndefined (String) }
+  = DBParameterGroupDetails { "Parameters" :: Maybe (ParametersList), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1181,7 +1181,7 @@ Constructs DBParameterGroupDetails from required parameters
 #### `newDBParameterGroupDetails'`
 
 ``` purescript
-newDBParameterGroupDetails' :: ({ "Parameters" :: NullOrUndefined (ParametersList), "Marker" :: NullOrUndefined (String) } -> { "Parameters" :: NullOrUndefined (ParametersList), "Marker" :: NullOrUndefined (String) }) -> DBParameterGroupDetails
+newDBParameterGroupDetails' :: ({ "Parameters" :: Maybe (ParametersList), "Marker" :: Maybe (String) } -> { "Parameters" :: Maybe (ParametersList), "Marker" :: Maybe (String) }) -> DBParameterGroupDetails
 ```
 
 Constructs DBParameterGroupDetails's fields from required parameters
@@ -1206,7 +1206,7 @@ Encode DBParameterGroupList
 
 ``` purescript
 newtype DBParameterGroupNameMessage
-  = DBParameterGroupNameMessage { "DBParameterGroupName" :: NullOrUndefined (String) }
+  = DBParameterGroupNameMessage { "DBParameterGroupName" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1229,7 +1229,7 @@ Constructs DBParameterGroupNameMessage from required parameters
 #### `newDBParameterGroupNameMessage'`
 
 ``` purescript
-newDBParameterGroupNameMessage' :: ({ "DBParameterGroupName" :: NullOrUndefined (String) } -> { "DBParameterGroupName" :: NullOrUndefined (String) }) -> DBParameterGroupNameMessage
+newDBParameterGroupNameMessage' :: ({ "DBParameterGroupName" :: Maybe (String) } -> { "DBParameterGroupName" :: Maybe (String) }) -> DBParameterGroupNameMessage
 ```
 
 Constructs DBParameterGroupNameMessage's fields from required parameters
@@ -1274,7 +1274,7 @@ Encode DBParameterGroupQuotaExceededFault
 
 ``` purescript
 newtype DBParameterGroupStatus
-  = DBParameterGroupStatus { "DBParameterGroupName" :: NullOrUndefined (String), "ParameterApplyStatus" :: NullOrUndefined (String) }
+  = DBParameterGroupStatus { "DBParameterGroupName" :: Maybe (String), "ParameterApplyStatus" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1297,7 +1297,7 @@ Constructs DBParameterGroupStatus from required parameters
 #### `newDBParameterGroupStatus'`
 
 ``` purescript
-newDBParameterGroupStatus' :: ({ "DBParameterGroupName" :: NullOrUndefined (String), "ParameterApplyStatus" :: NullOrUndefined (String) } -> { "DBParameterGroupName" :: NullOrUndefined (String), "ParameterApplyStatus" :: NullOrUndefined (String) }) -> DBParameterGroupStatus
+newDBParameterGroupStatus' :: ({ "DBParameterGroupName" :: Maybe (String), "ParameterApplyStatus" :: Maybe (String) } -> { "DBParameterGroupName" :: Maybe (String), "ParameterApplyStatus" :: Maybe (String) }) -> DBParameterGroupStatus
 ```
 
 Constructs DBParameterGroupStatus's fields from required parameters
@@ -1322,7 +1322,7 @@ Encode DBParameterGroupStatusList
 
 ``` purescript
 newtype DBParameterGroupsMessage
-  = DBParameterGroupsMessage { "Marker" :: NullOrUndefined (String), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList) }
+  = DBParameterGroupsMessage { "Marker" :: Maybe (String), "DBParameterGroups" :: Maybe (DBParameterGroupList) }
 ```
 
 ##### Instances
@@ -1345,7 +1345,7 @@ Constructs DBParameterGroupsMessage from required parameters
 #### `newDBParameterGroupsMessage'`
 
 ``` purescript
-newDBParameterGroupsMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList) } -> { "Marker" :: NullOrUndefined (String), "DBParameterGroups" :: NullOrUndefined (DBParameterGroupList) }) -> DBParameterGroupsMessage
+newDBParameterGroupsMessage' :: ({ "Marker" :: Maybe (String), "DBParameterGroups" :: Maybe (DBParameterGroupList) } -> { "Marker" :: Maybe (String), "DBParameterGroups" :: Maybe (DBParameterGroupList) }) -> DBParameterGroupsMessage
 ```
 
 Constructs DBParameterGroupsMessage's fields from required parameters
@@ -1354,7 +1354,7 @@ Constructs DBParameterGroupsMessage's fields from required parameters
 
 ``` purescript
 newtype DBSecurityGroup
-  = DBSecurityGroup { "OwnerId" :: NullOrUndefined (String), "DBSecurityGroupName" :: NullOrUndefined (String), "DBSecurityGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList), "IPRanges" :: NullOrUndefined (IPRangeList) }
+  = DBSecurityGroup { "OwnerId" :: Maybe (String), "DBSecurityGroupName" :: Maybe (String), "DBSecurityGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList), "IPRanges" :: Maybe (IPRangeList) }
 ```
 
 ##### Instances
@@ -1377,7 +1377,7 @@ Constructs DBSecurityGroup from required parameters
 #### `newDBSecurityGroup'`
 
 ``` purescript
-newDBSecurityGroup' :: ({ "OwnerId" :: NullOrUndefined (String), "DBSecurityGroupName" :: NullOrUndefined (String), "DBSecurityGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList), "IPRanges" :: NullOrUndefined (IPRangeList) } -> { "OwnerId" :: NullOrUndefined (String), "DBSecurityGroupName" :: NullOrUndefined (String), "DBSecurityGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "EC2SecurityGroups" :: NullOrUndefined (EC2SecurityGroupList), "IPRanges" :: NullOrUndefined (IPRangeList) }) -> DBSecurityGroup
+newDBSecurityGroup' :: ({ "OwnerId" :: Maybe (String), "DBSecurityGroupName" :: Maybe (String), "DBSecurityGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList), "IPRanges" :: Maybe (IPRangeList) } -> { "OwnerId" :: Maybe (String), "DBSecurityGroupName" :: Maybe (String), "DBSecurityGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "EC2SecurityGroups" :: Maybe (EC2SecurityGroupList), "IPRanges" :: Maybe (IPRangeList) }) -> DBSecurityGroup
 ```
 
 Constructs DBSecurityGroup's fields from required parameters
@@ -1404,7 +1404,7 @@ Encode DBSecurityGroupAlreadyExistsFault
 
 ``` purescript
 newtype DBSecurityGroupMembership
-  = DBSecurityGroupMembership { "DBSecurityGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }
+  = DBSecurityGroupMembership { "DBSecurityGroupName" :: Maybe (String), "Status" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1427,7 +1427,7 @@ Constructs DBSecurityGroupMembership from required parameters
 #### `newDBSecurityGroupMembership'`
 
 ``` purescript
-newDBSecurityGroupMembership' :: ({ "DBSecurityGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) } -> { "DBSecurityGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }) -> DBSecurityGroupMembership
+newDBSecurityGroupMembership' :: ({ "DBSecurityGroupName" :: Maybe (String), "Status" :: Maybe (String) } -> { "DBSecurityGroupName" :: Maybe (String), "Status" :: Maybe (String) }) -> DBSecurityGroupMembership
 ```
 
 Constructs DBSecurityGroupMembership's fields from required parameters
@@ -1452,7 +1452,7 @@ Encode DBSecurityGroupMembershipList
 
 ``` purescript
 newtype DBSecurityGroupMessage
-  = DBSecurityGroupMessage { "Marker" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups) }
+  = DBSecurityGroupMessage { "Marker" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroups) }
 ```
 
 ##### Instances
@@ -1475,7 +1475,7 @@ Constructs DBSecurityGroupMessage from required parameters
 #### `newDBSecurityGroupMessage'`
 
 ``` purescript
-newDBSecurityGroupMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups) } -> { "Marker" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroups) }) -> DBSecurityGroupMessage
+newDBSecurityGroupMessage' :: ({ "Marker" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroups) } -> { "Marker" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroups) }) -> DBSecurityGroupMessage
 ```
 
 Constructs DBSecurityGroupMessage's fields from required parameters
@@ -1570,7 +1570,7 @@ Encode DBSecurityGroups
 
 ``` purescript
 newtype DBSnapshot
-  = DBSnapshot { "DBSnapshotIdentifier" :: NullOrUndefined (String), "DBInstanceIdentifier" :: NullOrUndefined (String), "SnapshotCreateTime" :: NullOrUndefined (TStamp), "Engine" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (Int), "Status" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int), "AvailabilityZone" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "InstanceCreateTime" :: NullOrUndefined (TStamp), "MasterUsername" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional) }
+  = DBSnapshot { "DBSnapshotIdentifier" :: Maybe (String), "DBInstanceIdentifier" :: Maybe (String), "SnapshotCreateTime" :: Maybe (TStamp), "Engine" :: Maybe (String), "AllocatedStorage" :: Maybe (Int), "Status" :: Maybe (String), "Port" :: Maybe (Int), "AvailabilityZone" :: Maybe (String), "VpcId" :: Maybe (String), "InstanceCreateTime" :: Maybe (TStamp), "MasterUsername" :: Maybe (String), "EngineVersion" :: Maybe (String), "LicenseModel" :: Maybe (String), "SnapshotType" :: Maybe (String), "Iops" :: Maybe (IntegerOptional) }
 ```
 
 ##### Instances
@@ -1593,7 +1593,7 @@ Constructs DBSnapshot from required parameters
 #### `newDBSnapshot'`
 
 ``` purescript
-newDBSnapshot' :: ({ "DBSnapshotIdentifier" :: NullOrUndefined (String), "DBInstanceIdentifier" :: NullOrUndefined (String), "SnapshotCreateTime" :: NullOrUndefined (TStamp), "Engine" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (Int), "Status" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int), "AvailabilityZone" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "InstanceCreateTime" :: NullOrUndefined (TStamp), "MasterUsername" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional) } -> { "DBSnapshotIdentifier" :: NullOrUndefined (String), "DBInstanceIdentifier" :: NullOrUndefined (String), "SnapshotCreateTime" :: NullOrUndefined (TStamp), "Engine" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (Int), "Status" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int), "AvailabilityZone" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "InstanceCreateTime" :: NullOrUndefined (TStamp), "MasterUsername" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional) }) -> DBSnapshot
+newDBSnapshot' :: ({ "DBSnapshotIdentifier" :: Maybe (String), "DBInstanceIdentifier" :: Maybe (String), "SnapshotCreateTime" :: Maybe (TStamp), "Engine" :: Maybe (String), "AllocatedStorage" :: Maybe (Int), "Status" :: Maybe (String), "Port" :: Maybe (Int), "AvailabilityZone" :: Maybe (String), "VpcId" :: Maybe (String), "InstanceCreateTime" :: Maybe (TStamp), "MasterUsername" :: Maybe (String), "EngineVersion" :: Maybe (String), "LicenseModel" :: Maybe (String), "SnapshotType" :: Maybe (String), "Iops" :: Maybe (IntegerOptional) } -> { "DBSnapshotIdentifier" :: Maybe (String), "DBInstanceIdentifier" :: Maybe (String), "SnapshotCreateTime" :: Maybe (TStamp), "Engine" :: Maybe (String), "AllocatedStorage" :: Maybe (Int), "Status" :: Maybe (String), "Port" :: Maybe (Int), "AvailabilityZone" :: Maybe (String), "VpcId" :: Maybe (String), "InstanceCreateTime" :: Maybe (TStamp), "MasterUsername" :: Maybe (String), "EngineVersion" :: Maybe (String), "LicenseModel" :: Maybe (String), "SnapshotType" :: Maybe (String), "Iops" :: Maybe (IntegerOptional) }) -> DBSnapshot
 ```
 
 Constructs DBSnapshot's fields from required parameters
@@ -1636,7 +1636,7 @@ Encode DBSnapshotList
 
 ``` purescript
 newtype DBSnapshotMessage
-  = DBSnapshotMessage { "Marker" :: NullOrUndefined (String), "DBSnapshots" :: NullOrUndefined (DBSnapshotList) }
+  = DBSnapshotMessage { "Marker" :: Maybe (String), "DBSnapshots" :: Maybe (DBSnapshotList) }
 ```
 
 ##### Instances
@@ -1659,7 +1659,7 @@ Constructs DBSnapshotMessage from required parameters
 #### `newDBSnapshotMessage'`
 
 ``` purescript
-newDBSnapshotMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBSnapshots" :: NullOrUndefined (DBSnapshotList) } -> { "Marker" :: NullOrUndefined (String), "DBSnapshots" :: NullOrUndefined (DBSnapshotList) }) -> DBSnapshotMessage
+newDBSnapshotMessage' :: ({ "Marker" :: Maybe (String), "DBSnapshots" :: Maybe (DBSnapshotList) } -> { "Marker" :: Maybe (String), "DBSnapshots" :: Maybe (DBSnapshotList) }) -> DBSnapshotMessage
 ```
 
 Constructs DBSnapshotMessage's fields from required parameters
@@ -1686,7 +1686,7 @@ Encode DBSnapshotNotFoundFault
 
 ``` purescript
 newtype DBSubnetGroup
-  = DBSubnetGroup { "DBSubnetGroupName" :: NullOrUndefined (String), "DBSubnetGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "SubnetGroupStatus" :: NullOrUndefined (String), "Subnets" :: NullOrUndefined (SubnetList) }
+  = DBSubnetGroup { "DBSubnetGroupName" :: Maybe (String), "DBSubnetGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "SubnetGroupStatus" :: Maybe (String), "Subnets" :: Maybe (SubnetList) }
 ```
 
 ##### Instances
@@ -1709,7 +1709,7 @@ Constructs DBSubnetGroup from required parameters
 #### `newDBSubnetGroup'`
 
 ``` purescript
-newDBSubnetGroup' :: ({ "DBSubnetGroupName" :: NullOrUndefined (String), "DBSubnetGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "SubnetGroupStatus" :: NullOrUndefined (String), "Subnets" :: NullOrUndefined (SubnetList) } -> { "DBSubnetGroupName" :: NullOrUndefined (String), "DBSubnetGroupDescription" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String), "SubnetGroupStatus" :: NullOrUndefined (String), "Subnets" :: NullOrUndefined (SubnetList) }) -> DBSubnetGroup
+newDBSubnetGroup' :: ({ "DBSubnetGroupName" :: Maybe (String), "DBSubnetGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "SubnetGroupStatus" :: Maybe (String), "Subnets" :: Maybe (SubnetList) } -> { "DBSubnetGroupName" :: Maybe (String), "DBSubnetGroupDescription" :: Maybe (String), "VpcId" :: Maybe (String), "SubnetGroupStatus" :: Maybe (String), "Subnets" :: Maybe (SubnetList) }) -> DBSubnetGroup
 ```
 
 Constructs DBSubnetGroup's fields from required parameters
@@ -1754,7 +1754,7 @@ Encode DBSubnetGroupDoesNotCoverEnoughAZs
 
 ``` purescript
 newtype DBSubnetGroupMessage
-  = DBSubnetGroupMessage { "Marker" :: NullOrUndefined (String), "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups) }
+  = DBSubnetGroupMessage { "Marker" :: Maybe (String), "DBSubnetGroups" :: Maybe (DBSubnetGroups) }
 ```
 
 ##### Instances
@@ -1777,7 +1777,7 @@ Constructs DBSubnetGroupMessage from required parameters
 #### `newDBSubnetGroupMessage'`
 
 ``` purescript
-newDBSubnetGroupMessage' :: ({ "Marker" :: NullOrUndefined (String), "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups) } -> { "Marker" :: NullOrUndefined (String), "DBSubnetGroups" :: NullOrUndefined (DBSubnetGroups) }) -> DBSubnetGroupMessage
+newDBSubnetGroupMessage' :: ({ "Marker" :: Maybe (String), "DBSubnetGroups" :: Maybe (DBSubnetGroups) } -> { "Marker" :: Maybe (String), "DBSubnetGroups" :: Maybe (DBSubnetGroups) }) -> DBSubnetGroupMessage
 ```
 
 Constructs DBSubnetGroupMessage's fields from required parameters
@@ -1874,7 +1874,7 @@ Encode DBUpgradeDependencyFailureFault
 
 ``` purescript
 newtype DeleteDBInstanceMessage
-  = DeleteDBInstanceMessage { "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: NullOrUndefined (Boolean), "FinalDBSnapshotIdentifier" :: NullOrUndefined (String) }
+  = DeleteDBInstanceMessage { "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: Maybe (Boolean), "FinalDBSnapshotIdentifier" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1897,7 +1897,7 @@ Constructs DeleteDBInstanceMessage from required parameters
 #### `newDeleteDBInstanceMessage'`
 
 ``` purescript
-newDeleteDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: NullOrUndefined (Boolean), "FinalDBSnapshotIdentifier" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: NullOrUndefined (Boolean), "FinalDBSnapshotIdentifier" :: NullOrUndefined (String) }) -> DeleteDBInstanceMessage
+newDeleteDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: Maybe (Boolean), "FinalDBSnapshotIdentifier" :: Maybe (String) } -> { "DBInstanceIdentifier" :: String, "SkipFinalSnapshot" :: Maybe (Boolean), "FinalDBSnapshotIdentifier" :: Maybe (String) }) -> DeleteDBInstanceMessage
 ```
 
 Constructs DeleteDBInstanceMessage's fields from required parameters
@@ -1906,7 +1906,7 @@ Constructs DeleteDBInstanceMessage's fields from required parameters
 
 ``` purescript
 newtype DeleteDBInstanceResult
-  = DeleteDBInstanceResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = DeleteDBInstanceResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -1929,7 +1929,7 @@ Constructs DeleteDBInstanceResult from required parameters
 #### `newDeleteDBInstanceResult'`
 
 ``` purescript
-newDeleteDBInstanceResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> DeleteDBInstanceResult
+newDeleteDBInstanceResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> DeleteDBInstanceResult
 ```
 
 Constructs DeleteDBInstanceResult's fields from required parameters
@@ -2034,7 +2034,7 @@ Constructs DeleteDBSnapshotMessage's fields from required parameters
 
 ``` purescript
 newtype DeleteDBSnapshotResult
-  = DeleteDBSnapshotResult { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }
+  = DeleteDBSnapshotResult { "DBSnapshot" :: Maybe (DBSnapshot) }
 ```
 
 ##### Instances
@@ -2057,7 +2057,7 @@ Constructs DeleteDBSnapshotResult from required parameters
 #### `newDeleteDBSnapshotResult'`
 
 ``` purescript
-newDeleteDBSnapshotResult' :: ({ "DBSnapshot" :: NullOrUndefined (DBSnapshot) } -> { "DBSnapshot" :: NullOrUndefined (DBSnapshot) }) -> DeleteDBSnapshotResult
+newDeleteDBSnapshotResult' :: ({ "DBSnapshot" :: Maybe (DBSnapshot) } -> { "DBSnapshot" :: Maybe (DBSnapshot) }) -> DeleteDBSnapshotResult
 ```
 
 Constructs DeleteDBSnapshotResult's fields from required parameters
@@ -2130,7 +2130,7 @@ Constructs DeleteEventSubscriptionMessage's fields from required parameters
 
 ``` purescript
 newtype DeleteEventSubscriptionResult
-  = DeleteEventSubscriptionResult { "EventSubscription" :: NullOrUndefined (EventSubscription) }
+  = DeleteEventSubscriptionResult { "EventSubscription" :: Maybe (EventSubscription) }
 ```
 
 ##### Instances
@@ -2153,7 +2153,7 @@ Constructs DeleteEventSubscriptionResult from required parameters
 #### `newDeleteEventSubscriptionResult'`
 
 ``` purescript
-newDeleteEventSubscriptionResult' :: ({ "EventSubscription" :: NullOrUndefined (EventSubscription) } -> { "EventSubscription" :: NullOrUndefined (EventSubscription) }) -> DeleteEventSubscriptionResult
+newDeleteEventSubscriptionResult' :: ({ "EventSubscription" :: Maybe (EventSubscription) } -> { "EventSubscription" :: Maybe (EventSubscription) }) -> DeleteEventSubscriptionResult
 ```
 
 Constructs DeleteEventSubscriptionResult's fields from required parameters
@@ -2194,7 +2194,7 @@ Constructs DeleteOptionGroupMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBEngineVersionsMessage
-  = DescribeDBEngineVersionsMessage { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String), "DefaultOnly" :: NullOrUndefined (Boolean), "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional) }
+  = DescribeDBEngineVersionsMessage { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String), "DefaultOnly" :: Maybe (Boolean), "ListSupportedCharacterSets" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -2217,7 +2217,7 @@ Constructs DescribeDBEngineVersionsMessage from required parameters
 #### `newDescribeDBEngineVersionsMessage'`
 
 ``` purescript
-newDescribeDBEngineVersionsMessage' :: ({ "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String), "DefaultOnly" :: NullOrUndefined (Boolean), "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional) } -> { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBParameterGroupFamily" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String), "DefaultOnly" :: NullOrUndefined (Boolean), "ListSupportedCharacterSets" :: NullOrUndefined (BooleanOptional) }) -> DescribeDBEngineVersionsMessage
+newDescribeDBEngineVersionsMessage' :: ({ "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String), "DefaultOnly" :: Maybe (Boolean), "ListSupportedCharacterSets" :: Maybe (BooleanOptional) } -> { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBParameterGroupFamily" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String), "DefaultOnly" :: Maybe (Boolean), "ListSupportedCharacterSets" :: Maybe (BooleanOptional) }) -> DescribeDBEngineVersionsMessage
 ```
 
 Constructs DescribeDBEngineVersionsMessage's fields from required parameters
@@ -2226,7 +2226,7 @@ Constructs DescribeDBEngineVersionsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBInstancesMessage
-  = DescribeDBInstancesMessage { "DBInstanceIdentifier" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBInstancesMessage { "DBInstanceIdentifier" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2249,7 +2249,7 @@ Constructs DescribeDBInstancesMessage from required parameters
 #### `newDescribeDBInstancesMessage'`
 
 ``` purescript
-newDescribeDBInstancesMessage' :: ({ "DBInstanceIdentifier" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBInstancesMessage
+newDescribeDBInstancesMessage' :: ({ "DBInstanceIdentifier" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBInstanceIdentifier" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBInstancesMessage
 ```
 
 Constructs DescribeDBInstancesMessage's fields from required parameters
@@ -2258,7 +2258,7 @@ Constructs DescribeDBInstancesMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBParameterGroupsMessage
-  = DescribeDBParameterGroupsMessage { "DBParameterGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBParameterGroupsMessage { "DBParameterGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2281,7 +2281,7 @@ Constructs DescribeDBParameterGroupsMessage from required parameters
 #### `newDescribeDBParameterGroupsMessage'`
 
 ``` purescript
-newDescribeDBParameterGroupsMessage' :: ({ "DBParameterGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBParameterGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBParameterGroupsMessage
+newDescribeDBParameterGroupsMessage' :: ({ "DBParameterGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBParameterGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBParameterGroupsMessage
 ```
 
 Constructs DescribeDBParameterGroupsMessage's fields from required parameters
@@ -2290,7 +2290,7 @@ Constructs DescribeDBParameterGroupsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBParametersMessage
-  = DescribeDBParametersMessage { "DBParameterGroupName" :: String, "Source" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBParametersMessage { "DBParameterGroupName" :: String, "Source" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2313,7 +2313,7 @@ Constructs DescribeDBParametersMessage from required parameters
 #### `newDescribeDBParametersMessage'`
 
 ``` purescript
-newDescribeDBParametersMessage' :: String -> ({ "DBParameterGroupName" :: String, "Source" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBParameterGroupName" :: String, "Source" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBParametersMessage
+newDescribeDBParametersMessage' :: String -> ({ "DBParameterGroupName" :: String, "Source" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBParameterGroupName" :: String, "Source" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBParametersMessage
 ```
 
 Constructs DescribeDBParametersMessage's fields from required parameters
@@ -2322,7 +2322,7 @@ Constructs DescribeDBParametersMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBSecurityGroupsMessage
-  = DescribeDBSecurityGroupsMessage { "DBSecurityGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBSecurityGroupsMessage { "DBSecurityGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2345,7 +2345,7 @@ Constructs DescribeDBSecurityGroupsMessage from required parameters
 #### `newDescribeDBSecurityGroupsMessage'`
 
 ``` purescript
-newDescribeDBSecurityGroupsMessage' :: ({ "DBSecurityGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBSecurityGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBSecurityGroupsMessage
+newDescribeDBSecurityGroupsMessage' :: ({ "DBSecurityGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBSecurityGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBSecurityGroupsMessage
 ```
 
 Constructs DescribeDBSecurityGroupsMessage's fields from required parameters
@@ -2354,7 +2354,7 @@ Constructs DescribeDBSecurityGroupsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBSnapshotsMessage
-  = DescribeDBSnapshotsMessage { "DBInstanceIdentifier" :: NullOrUndefined (String), "DBSnapshotIdentifier" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBSnapshotsMessage { "DBInstanceIdentifier" :: Maybe (String), "DBSnapshotIdentifier" :: Maybe (String), "SnapshotType" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2377,7 +2377,7 @@ Constructs DescribeDBSnapshotsMessage from required parameters
 #### `newDescribeDBSnapshotsMessage'`
 
 ``` purescript
-newDescribeDBSnapshotsMessage' :: ({ "DBInstanceIdentifier" :: NullOrUndefined (String), "DBSnapshotIdentifier" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: NullOrUndefined (String), "DBSnapshotIdentifier" :: NullOrUndefined (String), "SnapshotType" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBSnapshotsMessage
+newDescribeDBSnapshotsMessage' :: ({ "DBInstanceIdentifier" :: Maybe (String), "DBSnapshotIdentifier" :: Maybe (String), "SnapshotType" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBInstanceIdentifier" :: Maybe (String), "DBSnapshotIdentifier" :: Maybe (String), "SnapshotType" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBSnapshotsMessage
 ```
 
 Constructs DescribeDBSnapshotsMessage's fields from required parameters
@@ -2386,7 +2386,7 @@ Constructs DescribeDBSnapshotsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeDBSubnetGroupsMessage
-  = DescribeDBSubnetGroupsMessage { "DBSubnetGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeDBSubnetGroupsMessage { "DBSubnetGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2409,7 +2409,7 @@ Constructs DescribeDBSubnetGroupsMessage from required parameters
 #### `newDescribeDBSubnetGroupsMessage'`
 
 ``` purescript
-newDescribeDBSubnetGroupsMessage' :: ({ "DBSubnetGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBSubnetGroupName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeDBSubnetGroupsMessage
+newDescribeDBSubnetGroupsMessage' :: ({ "DBSubnetGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBSubnetGroupName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeDBSubnetGroupsMessage
 ```
 
 Constructs DescribeDBSubnetGroupsMessage's fields from required parameters
@@ -2418,7 +2418,7 @@ Constructs DescribeDBSubnetGroupsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeEngineDefaultParametersMessage
-  = DescribeEngineDefaultParametersMessage { "DBParameterGroupFamily" :: String, "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeEngineDefaultParametersMessage { "DBParameterGroupFamily" :: String, "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2441,7 +2441,7 @@ Constructs DescribeEngineDefaultParametersMessage from required parameters
 #### `newDescribeEngineDefaultParametersMessage'`
 
 ``` purescript
-newDescribeEngineDefaultParametersMessage' :: String -> ({ "DBParameterGroupFamily" :: String, "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "DBParameterGroupFamily" :: String, "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeEngineDefaultParametersMessage
+newDescribeEngineDefaultParametersMessage' :: String -> ({ "DBParameterGroupFamily" :: String, "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "DBParameterGroupFamily" :: String, "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeEngineDefaultParametersMessage
 ```
 
 Constructs DescribeEngineDefaultParametersMessage's fields from required parameters
@@ -2450,7 +2450,7 @@ Constructs DescribeEngineDefaultParametersMessage's fields from required paramet
 
 ``` purescript
 newtype DescribeEngineDefaultParametersResult
-  = DescribeEngineDefaultParametersResult { "EngineDefaults" :: NullOrUndefined (EngineDefaults) }
+  = DescribeEngineDefaultParametersResult { "EngineDefaults" :: Maybe (EngineDefaults) }
 ```
 
 ##### Instances
@@ -2473,7 +2473,7 @@ Constructs DescribeEngineDefaultParametersResult from required parameters
 #### `newDescribeEngineDefaultParametersResult'`
 
 ``` purescript
-newDescribeEngineDefaultParametersResult' :: ({ "EngineDefaults" :: NullOrUndefined (EngineDefaults) } -> { "EngineDefaults" :: NullOrUndefined (EngineDefaults) }) -> DescribeEngineDefaultParametersResult
+newDescribeEngineDefaultParametersResult' :: ({ "EngineDefaults" :: Maybe (EngineDefaults) } -> { "EngineDefaults" :: Maybe (EngineDefaults) }) -> DescribeEngineDefaultParametersResult
 ```
 
 Constructs DescribeEngineDefaultParametersResult's fields from required parameters
@@ -2482,7 +2482,7 @@ Constructs DescribeEngineDefaultParametersResult's fields from required paramete
 
 ``` purescript
 newtype DescribeEventCategoriesMessage
-  = DescribeEventCategoriesMessage { "SourceType" :: NullOrUndefined (String) }
+  = DescribeEventCategoriesMessage { "SourceType" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2505,7 +2505,7 @@ Constructs DescribeEventCategoriesMessage from required parameters
 #### `newDescribeEventCategoriesMessage'`
 
 ``` purescript
-newDescribeEventCategoriesMessage' :: ({ "SourceType" :: NullOrUndefined (String) } -> { "SourceType" :: NullOrUndefined (String) }) -> DescribeEventCategoriesMessage
+newDescribeEventCategoriesMessage' :: ({ "SourceType" :: Maybe (String) } -> { "SourceType" :: Maybe (String) }) -> DescribeEventCategoriesMessage
 ```
 
 Constructs DescribeEventCategoriesMessage's fields from required parameters
@@ -2514,7 +2514,7 @@ Constructs DescribeEventCategoriesMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeEventSubscriptionsMessage
-  = DescribeEventSubscriptionsMessage { "SubscriptionName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeEventSubscriptionsMessage { "SubscriptionName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2537,7 +2537,7 @@ Constructs DescribeEventSubscriptionsMessage from required parameters
 #### `newDescribeEventSubscriptionsMessage'`
 
 ``` purescript
-newDescribeEventSubscriptionsMessage' :: ({ "SubscriptionName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "SubscriptionName" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeEventSubscriptionsMessage
+newDescribeEventSubscriptionsMessage' :: ({ "SubscriptionName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "SubscriptionName" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeEventSubscriptionsMessage
 ```
 
 Constructs DescribeEventSubscriptionsMessage's fields from required parameters
@@ -2546,7 +2546,7 @@ Constructs DescribeEventSubscriptionsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeEventsMessage
-  = DescribeEventsMessage { "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "StartTime" :: NullOrUndefined (TStamp), "EndTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (IntegerOptional), "EventCategories" :: NullOrUndefined (EventCategoriesList), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeEventsMessage { "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "StartTime" :: Maybe (TStamp), "EndTime" :: Maybe (TStamp), "Duration" :: Maybe (IntegerOptional), "EventCategories" :: Maybe (EventCategoriesList), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2569,7 +2569,7 @@ Constructs DescribeEventsMessage from required parameters
 #### `newDescribeEventsMessage'`
 
 ``` purescript
-newDescribeEventsMessage' :: ({ "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "StartTime" :: NullOrUndefined (TStamp), "EndTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (IntegerOptional), "EventCategories" :: NullOrUndefined (EventCategoriesList), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "StartTime" :: NullOrUndefined (TStamp), "EndTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (IntegerOptional), "EventCategories" :: NullOrUndefined (EventCategoriesList), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeEventsMessage
+newDescribeEventsMessage' :: ({ "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "StartTime" :: Maybe (TStamp), "EndTime" :: Maybe (TStamp), "Duration" :: Maybe (IntegerOptional), "EventCategories" :: Maybe (EventCategoriesList), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "StartTime" :: Maybe (TStamp), "EndTime" :: Maybe (TStamp), "Duration" :: Maybe (IntegerOptional), "EventCategories" :: Maybe (EventCategoriesList), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeEventsMessage
 ```
 
 Constructs DescribeEventsMessage's fields from required parameters
@@ -2578,7 +2578,7 @@ Constructs DescribeEventsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeOptionGroupOptionsMessage
-  = DescribeOptionGroupOptionsMessage { "EngineName" :: String, "MajorEngineVersion" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeOptionGroupOptionsMessage { "EngineName" :: String, "MajorEngineVersion" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2601,7 +2601,7 @@ Constructs DescribeOptionGroupOptionsMessage from required parameters
 #### `newDescribeOptionGroupOptionsMessage'`
 
 ``` purescript
-newDescribeOptionGroupOptionsMessage' :: String -> ({ "EngineName" :: String, "MajorEngineVersion" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "EngineName" :: String, "MajorEngineVersion" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeOptionGroupOptionsMessage
+newDescribeOptionGroupOptionsMessage' :: String -> ({ "EngineName" :: String, "MajorEngineVersion" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "EngineName" :: String, "MajorEngineVersion" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeOptionGroupOptionsMessage
 ```
 
 Constructs DescribeOptionGroupOptionsMessage's fields from required parameters
@@ -2610,7 +2610,7 @@ Constructs DescribeOptionGroupOptionsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeOptionGroupsMessage
-  = DescribeOptionGroupsMessage { "OptionGroupName" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String) }
+  = DescribeOptionGroupsMessage { "OptionGroupName" :: Maybe (String), "Marker" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2633,7 +2633,7 @@ Constructs DescribeOptionGroupsMessage from required parameters
 #### `newDescribeOptionGroupsMessage'`
 
 ``` purescript
-newDescribeOptionGroupsMessage' :: ({ "OptionGroupName" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String) } -> { "OptionGroupName" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "MaxRecords" :: NullOrUndefined (IntegerOptional), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String) }) -> DescribeOptionGroupsMessage
+newDescribeOptionGroupsMessage' :: ({ "OptionGroupName" :: Maybe (String), "Marker" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String) } -> { "OptionGroupName" :: Maybe (String), "Marker" :: Maybe (String), "MaxRecords" :: Maybe (IntegerOptional), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String) }) -> DescribeOptionGroupsMessage
 ```
 
 Constructs DescribeOptionGroupsMessage's fields from required parameters
@@ -2642,7 +2642,7 @@ Constructs DescribeOptionGroupsMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeOrderableDBInstanceOptionsMessage
-  = DescribeOrderableDBInstanceOptionsMessage { "Engine" :: String, "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "Vpc" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeOrderableDBInstanceOptionsMessage { "Engine" :: String, "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "Vpc" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2665,7 +2665,7 @@ Constructs DescribeOrderableDBInstanceOptionsMessage from required parameters
 #### `newDescribeOrderableDBInstanceOptionsMessage'`
 
 ``` purescript
-newDescribeOrderableDBInstanceOptionsMessage' :: String -> ({ "Engine" :: String, "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "Vpc" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "Engine" :: String, "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "Vpc" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeOrderableDBInstanceOptionsMessage
+newDescribeOrderableDBInstanceOptionsMessage' :: String -> ({ "Engine" :: String, "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "Vpc" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "Engine" :: String, "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "Vpc" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeOrderableDBInstanceOptionsMessage
 ```
 
 Constructs DescribeOrderableDBInstanceOptionsMessage's fields from required parameters
@@ -2674,7 +2674,7 @@ Constructs DescribeOrderableDBInstanceOptionsMessage's fields from required para
 
 ``` purescript
 newtype DescribeReservedDBInstancesMessage
-  = DescribeReservedDBInstancesMessage { "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeReservedDBInstancesMessage { "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2697,7 +2697,7 @@ Constructs DescribeReservedDBInstancesMessage from required parameters
 #### `newDescribeReservedDBInstancesMessage'`
 
 ``` purescript
-newDescribeReservedDBInstancesMessage' :: ({ "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeReservedDBInstancesMessage
+newDescribeReservedDBInstancesMessage' :: ({ "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeReservedDBInstancesMessage
 ```
 
 Constructs DescribeReservedDBInstancesMessage's fields from required parameters
@@ -2706,7 +2706,7 @@ Constructs DescribeReservedDBInstancesMessage's fields from required parameters
 
 ``` purescript
 newtype DescribeReservedDBInstancesOfferingsMessage
-  = DescribeReservedDBInstancesOfferingsMessage { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }
+  = DescribeReservedDBInstancesOfferingsMessage { "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2729,7 +2729,7 @@ Constructs DescribeReservedDBInstancesOfferingsMessage from required parameters
 #### `newDescribeReservedDBInstancesOfferingsMessage'`
 
 ``` purescript
-newDescribeReservedDBInstancesOfferingsMessage' :: ({ "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) } -> { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "MaxRecords" :: NullOrUndefined (IntegerOptional), "Marker" :: NullOrUndefined (String) }) -> DescribeReservedDBInstancesOfferingsMessage
+newDescribeReservedDBInstancesOfferingsMessage' :: ({ "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) } -> { "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "MaxRecords" :: Maybe (IntegerOptional), "Marker" :: Maybe (String) }) -> DescribeReservedDBInstancesOfferingsMessage
 ```
 
 Constructs DescribeReservedDBInstancesOfferingsMessage's fields from required parameters
@@ -2738,7 +2738,7 @@ Constructs DescribeReservedDBInstancesOfferingsMessage's fields from required pa
 
 ``` purescript
 newtype EC2SecurityGroup
-  = EC2SecurityGroup { "Status" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }
+  = EC2SecurityGroup { "Status" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2761,7 +2761,7 @@ Constructs EC2SecurityGroup from required parameters
 #### `newEC2SecurityGroup'`
 
 ``` purescript
-newEC2SecurityGroup' :: ({ "Status" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> { "Status" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }) -> EC2SecurityGroup
+newEC2SecurityGroup' :: ({ "Status" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) } -> { "Status" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }) -> EC2SecurityGroup
 ```
 
 Constructs EC2SecurityGroup's fields from required parameters
@@ -2786,7 +2786,7 @@ Encode EC2SecurityGroupList
 
 ``` purescript
 newtype Endpoint
-  = Endpoint { "Address" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) }
+  = Endpoint { "Address" :: Maybe (String), "Port" :: Maybe (Int) }
 ```
 
 ##### Instances
@@ -2809,7 +2809,7 @@ Constructs Endpoint from required parameters
 #### `newEndpoint'`
 
 ``` purescript
-newEndpoint' :: ({ "Address" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) } -> { "Address" :: NullOrUndefined (String), "Port" :: NullOrUndefined (Int) }) -> Endpoint
+newEndpoint' :: ({ "Address" :: Maybe (String), "Port" :: Maybe (Int) } -> { "Address" :: Maybe (String), "Port" :: Maybe (Int) }) -> Endpoint
 ```
 
 Constructs Endpoint's fields from required parameters
@@ -2818,7 +2818,7 @@ Constructs Endpoint's fields from required parameters
 
 ``` purescript
 newtype EngineDefaults
-  = EngineDefaults { "DBParameterGroupFamily" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "Parameters" :: NullOrUndefined (ParametersList) }
+  = EngineDefaults { "DBParameterGroupFamily" :: Maybe (String), "Marker" :: Maybe (String), "Parameters" :: Maybe (ParametersList) }
 ```
 
 ##### Instances
@@ -2841,7 +2841,7 @@ Constructs EngineDefaults from required parameters
 #### `newEngineDefaults'`
 
 ``` purescript
-newEngineDefaults' :: ({ "DBParameterGroupFamily" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "Parameters" :: NullOrUndefined (ParametersList) } -> { "DBParameterGroupFamily" :: NullOrUndefined (String), "Marker" :: NullOrUndefined (String), "Parameters" :: NullOrUndefined (ParametersList) }) -> EngineDefaults
+newEngineDefaults' :: ({ "DBParameterGroupFamily" :: Maybe (String), "Marker" :: Maybe (String), "Parameters" :: Maybe (ParametersList) } -> { "DBParameterGroupFamily" :: Maybe (String), "Marker" :: Maybe (String), "Parameters" :: Maybe (ParametersList) }) -> EngineDefaults
 ```
 
 Constructs EngineDefaults's fields from required parameters
@@ -2850,7 +2850,7 @@ Constructs EngineDefaults's fields from required parameters
 
 ``` purescript
 newtype Event
-  = Event { "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "Message" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Date" :: NullOrUndefined (TStamp) }
+  = Event { "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "Message" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Date" :: Maybe (TStamp) }
 ```
 
 ##### Instances
@@ -2873,7 +2873,7 @@ Constructs Event from required parameters
 #### `newEvent'`
 
 ``` purescript
-newEvent' :: ({ "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "Message" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Date" :: NullOrUndefined (TStamp) } -> { "SourceIdentifier" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (SourceType), "Message" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Date" :: NullOrUndefined (TStamp) }) -> Event
+newEvent' :: ({ "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "Message" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Date" :: Maybe (TStamp) } -> { "SourceIdentifier" :: Maybe (String), "SourceType" :: Maybe (SourceType), "Message" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Date" :: Maybe (TStamp) }) -> Event
 ```
 
 Constructs Event's fields from required parameters
@@ -2898,7 +2898,7 @@ Encode EventCategoriesList
 
 ``` purescript
 newtype EventCategoriesMap
-  = EventCategoriesMap { "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList) }
+  = EventCategoriesMap { "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList) }
 ```
 
 ##### Instances
@@ -2921,7 +2921,7 @@ Constructs EventCategoriesMap from required parameters
 #### `newEventCategoriesMap'`
 
 ``` purescript
-newEventCategoriesMap' :: ({ "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList) } -> { "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList) }) -> EventCategoriesMap
+newEventCategoriesMap' :: ({ "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList) } -> { "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList) }) -> EventCategoriesMap
 ```
 
 Constructs EventCategoriesMap's fields from required parameters
@@ -2946,7 +2946,7 @@ Encode EventCategoriesMapList
 
 ``` purescript
 newtype EventCategoriesMessage
-  = EventCategoriesMessage { "EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList) }
+  = EventCategoriesMessage { "EventCategoriesMapList" :: Maybe (EventCategoriesMapList) }
 ```
 
 ##### Instances
@@ -2969,7 +2969,7 @@ Constructs EventCategoriesMessage from required parameters
 #### `newEventCategoriesMessage'`
 
 ``` purescript
-newEventCategoriesMessage' :: ({ "EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList) } -> { "EventCategoriesMapList" :: NullOrUndefined (EventCategoriesMapList) }) -> EventCategoriesMessage
+newEventCategoriesMessage' :: ({ "EventCategoriesMapList" :: Maybe (EventCategoriesMapList) } -> { "EventCategoriesMapList" :: Maybe (EventCategoriesMapList) }) -> EventCategoriesMessage
 ```
 
 Constructs EventCategoriesMessage's fields from required parameters
@@ -2994,7 +2994,7 @@ Encode EventList
 
 ``` purescript
 newtype EventSubscription
-  = EventSubscription { "Id" :: NullOrUndefined (String), "CustomerAwsId" :: NullOrUndefined (String), "CustSubscriptionId" :: NullOrUndefined (String), "SnsTopicArn" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String), "SubscriptionCreationTime" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "SourceIdsList" :: NullOrUndefined (SourceIdsList), "EventCategoriesList" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (Boolean) }
+  = EventSubscription { "Id" :: Maybe (String), "CustomerAwsId" :: Maybe (String), "CustSubscriptionId" :: Maybe (String), "SnsTopicArn" :: Maybe (String), "Status" :: Maybe (String), "SubscriptionCreationTime" :: Maybe (String), "SourceType" :: Maybe (String), "SourceIdsList" :: Maybe (SourceIdsList), "EventCategoriesList" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -3017,7 +3017,7 @@ Constructs EventSubscription from required parameters
 #### `newEventSubscription'`
 
 ``` purescript
-newEventSubscription' :: ({ "Id" :: NullOrUndefined (String), "CustomerAwsId" :: NullOrUndefined (String), "CustSubscriptionId" :: NullOrUndefined (String), "SnsTopicArn" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String), "SubscriptionCreationTime" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "SourceIdsList" :: NullOrUndefined (SourceIdsList), "EventCategoriesList" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (Boolean) } -> { "Id" :: NullOrUndefined (String), "CustomerAwsId" :: NullOrUndefined (String), "CustSubscriptionId" :: NullOrUndefined (String), "SnsTopicArn" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String), "SubscriptionCreationTime" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "SourceIdsList" :: NullOrUndefined (SourceIdsList), "EventCategoriesList" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (Boolean) }) -> EventSubscription
+newEventSubscription' :: ({ "Id" :: Maybe (String), "CustomerAwsId" :: Maybe (String), "CustSubscriptionId" :: Maybe (String), "SnsTopicArn" :: Maybe (String), "Status" :: Maybe (String), "SubscriptionCreationTime" :: Maybe (String), "SourceType" :: Maybe (String), "SourceIdsList" :: Maybe (SourceIdsList), "EventCategoriesList" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (Boolean) } -> { "Id" :: Maybe (String), "CustomerAwsId" :: Maybe (String), "CustSubscriptionId" :: Maybe (String), "SnsTopicArn" :: Maybe (String), "Status" :: Maybe (String), "SubscriptionCreationTime" :: Maybe (String), "SourceType" :: Maybe (String), "SourceIdsList" :: Maybe (SourceIdsList), "EventCategoriesList" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (Boolean) }) -> EventSubscription
 ```
 
 Constructs EventSubscription's fields from required parameters
@@ -3060,7 +3060,7 @@ Encode EventSubscriptionsList
 
 ``` purescript
 newtype EventSubscriptionsMessage
-  = EventSubscriptionsMessage { "Marker" :: NullOrUndefined (String), "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList) }
+  = EventSubscriptionsMessage { "Marker" :: Maybe (String), "EventSubscriptionsList" :: Maybe (EventSubscriptionsList) }
 ```
 
 ##### Instances
@@ -3083,7 +3083,7 @@ Constructs EventSubscriptionsMessage from required parameters
 #### `newEventSubscriptionsMessage'`
 
 ``` purescript
-newEventSubscriptionsMessage' :: ({ "Marker" :: NullOrUndefined (String), "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList) } -> { "Marker" :: NullOrUndefined (String), "EventSubscriptionsList" :: NullOrUndefined (EventSubscriptionsList) }) -> EventSubscriptionsMessage
+newEventSubscriptionsMessage' :: ({ "Marker" :: Maybe (String), "EventSubscriptionsList" :: Maybe (EventSubscriptionsList) } -> { "Marker" :: Maybe (String), "EventSubscriptionsList" :: Maybe (EventSubscriptionsList) }) -> EventSubscriptionsMessage
 ```
 
 Constructs EventSubscriptionsMessage's fields from required parameters
@@ -3092,7 +3092,7 @@ Constructs EventSubscriptionsMessage's fields from required parameters
 
 ``` purescript
 newtype EventsMessage
-  = EventsMessage { "Marker" :: NullOrUndefined (String), "Events" :: NullOrUndefined (EventList) }
+  = EventsMessage { "Marker" :: Maybe (String), "Events" :: Maybe (EventList) }
 ```
 
 ##### Instances
@@ -3115,7 +3115,7 @@ Constructs EventsMessage from required parameters
 #### `newEventsMessage'`
 
 ``` purescript
-newEventsMessage' :: ({ "Marker" :: NullOrUndefined (String), "Events" :: NullOrUndefined (EventList) } -> { "Marker" :: NullOrUndefined (String), "Events" :: NullOrUndefined (EventList) }) -> EventsMessage
+newEventsMessage' :: ({ "Marker" :: Maybe (String), "Events" :: Maybe (EventList) } -> { "Marker" :: Maybe (String), "Events" :: Maybe (EventList) }) -> EventsMessage
 ```
 
 Constructs EventsMessage's fields from required parameters
@@ -3124,7 +3124,7 @@ Constructs EventsMessage's fields from required parameters
 
 ``` purescript
 newtype IPRange
-  = IPRange { "Status" :: NullOrUndefined (String), "CIDRIP" :: NullOrUndefined (String) }
+  = IPRange { "Status" :: Maybe (String), "CIDRIP" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3147,7 +3147,7 @@ Constructs IPRange from required parameters
 #### `newIPRange'`
 
 ``` purescript
-newIPRange' :: ({ "Status" :: NullOrUndefined (String), "CIDRIP" :: NullOrUndefined (String) } -> { "Status" :: NullOrUndefined (String), "CIDRIP" :: NullOrUndefined (String) }) -> IPRange
+newIPRange' :: ({ "Status" :: Maybe (String), "CIDRIP" :: Maybe (String) } -> { "Status" :: Maybe (String), "CIDRIP" :: Maybe (String) }) -> IPRange
 ```
 
 Constructs IPRange's fields from required parameters
@@ -3470,7 +3470,7 @@ Constructs ListTagsForResourceMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyDBInstanceMessage
-  = ModifyDBInstanceMessage { "DBInstanceIdentifier" :: String, "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "DBInstanceClass" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "ApplyImmediately" :: NullOrUndefined (Boolean), "MasterUserPassword" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "NewDBInstanceIdentifier" :: NullOrUndefined (String) }
+  = ModifyDBInstanceMessage { "DBInstanceIdentifier" :: String, "AllocatedStorage" :: Maybe (IntegerOptional), "DBInstanceClass" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "ApplyImmediately" :: Maybe (Boolean), "MasterUserPassword" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AllowMajorVersionUpgrade" :: Maybe (Boolean), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "NewDBInstanceIdentifier" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3493,7 +3493,7 @@ Constructs ModifyDBInstanceMessage from required parameters
 #### `newModifyDBInstanceMessage'`
 
 ``` purescript
-newModifyDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "DBInstanceClass" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "ApplyImmediately" :: NullOrUndefined (Boolean), "MasterUserPassword" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "NewDBInstanceIdentifier" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: String, "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "DBInstanceClass" :: NullOrUndefined (String), "DBSecurityGroups" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: NullOrUndefined (VpcSecurityGroupIdList), "ApplyImmediately" :: NullOrUndefined (Boolean), "MasterUserPassword" :: NullOrUndefined (String), "DBParameterGroupName" :: NullOrUndefined (String), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String), "PreferredMaintenanceWindow" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "AllowMajorVersionUpgrade" :: NullOrUndefined (Boolean), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String), "NewDBInstanceIdentifier" :: NullOrUndefined (String) }) -> ModifyDBInstanceMessage
+newModifyDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "AllocatedStorage" :: Maybe (IntegerOptional), "DBInstanceClass" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "ApplyImmediately" :: Maybe (Boolean), "MasterUserPassword" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AllowMajorVersionUpgrade" :: Maybe (Boolean), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "NewDBInstanceIdentifier" :: Maybe (String) } -> { "DBInstanceIdentifier" :: String, "AllocatedStorage" :: Maybe (IntegerOptional), "DBInstanceClass" :: Maybe (String), "DBSecurityGroups" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupIds" :: Maybe (VpcSecurityGroupIdList), "ApplyImmediately" :: Maybe (Boolean), "MasterUserPassword" :: Maybe (String), "DBParameterGroupName" :: Maybe (String), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String), "PreferredMaintenanceWindow" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "AllowMajorVersionUpgrade" :: Maybe (Boolean), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String), "NewDBInstanceIdentifier" :: Maybe (String) }) -> ModifyDBInstanceMessage
 ```
 
 Constructs ModifyDBInstanceMessage's fields from required parameters
@@ -3502,7 +3502,7 @@ Constructs ModifyDBInstanceMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyDBInstanceResult
-  = ModifyDBInstanceResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = ModifyDBInstanceResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -3525,7 +3525,7 @@ Constructs ModifyDBInstanceResult from required parameters
 #### `newModifyDBInstanceResult'`
 
 ``` purescript
-newModifyDBInstanceResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> ModifyDBInstanceResult
+newModifyDBInstanceResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> ModifyDBInstanceResult
 ```
 
 Constructs ModifyDBInstanceResult's fields from required parameters
@@ -3566,7 +3566,7 @@ Constructs ModifyDBParameterGroupMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyDBSubnetGroupMessage
-  = ModifyDBSubnetGroupMessage { "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: NullOrUndefined (String), "SubnetIds" :: SubnetIdentifierList }
+  = ModifyDBSubnetGroupMessage { "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: Maybe (String), "SubnetIds" :: SubnetIdentifierList }
 ```
 
 ##### Instances
@@ -3589,7 +3589,7 @@ Constructs ModifyDBSubnetGroupMessage from required parameters
 #### `newModifyDBSubnetGroupMessage'`
 
 ``` purescript
-newModifyDBSubnetGroupMessage' :: String -> SubnetIdentifierList -> ({ "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: NullOrUndefined (String), "SubnetIds" :: SubnetIdentifierList } -> { "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: NullOrUndefined (String), "SubnetIds" :: SubnetIdentifierList }) -> ModifyDBSubnetGroupMessage
+newModifyDBSubnetGroupMessage' :: String -> SubnetIdentifierList -> ({ "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: Maybe (String), "SubnetIds" :: SubnetIdentifierList } -> { "DBSubnetGroupName" :: String, "DBSubnetGroupDescription" :: Maybe (String), "SubnetIds" :: SubnetIdentifierList }) -> ModifyDBSubnetGroupMessage
 ```
 
 Constructs ModifyDBSubnetGroupMessage's fields from required parameters
@@ -3598,7 +3598,7 @@ Constructs ModifyDBSubnetGroupMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyDBSubnetGroupResult
-  = ModifyDBSubnetGroupResult { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) }
+  = ModifyDBSubnetGroupResult { "DBSubnetGroup" :: Maybe (DBSubnetGroup) }
 ```
 
 ##### Instances
@@ -3621,7 +3621,7 @@ Constructs ModifyDBSubnetGroupResult from required parameters
 #### `newModifyDBSubnetGroupResult'`
 
 ``` purescript
-newModifyDBSubnetGroupResult' :: ({ "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) } -> { "DBSubnetGroup" :: NullOrUndefined (DBSubnetGroup) }) -> ModifyDBSubnetGroupResult
+newModifyDBSubnetGroupResult' :: ({ "DBSubnetGroup" :: Maybe (DBSubnetGroup) } -> { "DBSubnetGroup" :: Maybe (DBSubnetGroup) }) -> ModifyDBSubnetGroupResult
 ```
 
 Constructs ModifyDBSubnetGroupResult's fields from required parameters
@@ -3630,7 +3630,7 @@ Constructs ModifyDBSubnetGroupResult's fields from required parameters
 
 ``` purescript
 newtype ModifyEventSubscriptionMessage
-  = ModifyEventSubscriptionMessage { "SubscriptionName" :: String, "SnsTopicArn" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (BooleanOptional) }
+  = ModifyEventSubscriptionMessage { "SubscriptionName" :: String, "SnsTopicArn" :: Maybe (String), "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -3653,7 +3653,7 @@ Constructs ModifyEventSubscriptionMessage from required parameters
 #### `newModifyEventSubscriptionMessage'`
 
 ``` purescript
-newModifyEventSubscriptionMessage' :: String -> ({ "SubscriptionName" :: String, "SnsTopicArn" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (BooleanOptional) } -> { "SubscriptionName" :: String, "SnsTopicArn" :: NullOrUndefined (String), "SourceType" :: NullOrUndefined (String), "EventCategories" :: NullOrUndefined (EventCategoriesList), "Enabled" :: NullOrUndefined (BooleanOptional) }) -> ModifyEventSubscriptionMessage
+newModifyEventSubscriptionMessage' :: String -> ({ "SubscriptionName" :: String, "SnsTopicArn" :: Maybe (String), "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (BooleanOptional) } -> { "SubscriptionName" :: String, "SnsTopicArn" :: Maybe (String), "SourceType" :: Maybe (String), "EventCategories" :: Maybe (EventCategoriesList), "Enabled" :: Maybe (BooleanOptional) }) -> ModifyEventSubscriptionMessage
 ```
 
 Constructs ModifyEventSubscriptionMessage's fields from required parameters
@@ -3662,7 +3662,7 @@ Constructs ModifyEventSubscriptionMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyEventSubscriptionResult
-  = ModifyEventSubscriptionResult { "EventSubscription" :: NullOrUndefined (EventSubscription) }
+  = ModifyEventSubscriptionResult { "EventSubscription" :: Maybe (EventSubscription) }
 ```
 
 ##### Instances
@@ -3685,7 +3685,7 @@ Constructs ModifyEventSubscriptionResult from required parameters
 #### `newModifyEventSubscriptionResult'`
 
 ``` purescript
-newModifyEventSubscriptionResult' :: ({ "EventSubscription" :: NullOrUndefined (EventSubscription) } -> { "EventSubscription" :: NullOrUndefined (EventSubscription) }) -> ModifyEventSubscriptionResult
+newModifyEventSubscriptionResult' :: ({ "EventSubscription" :: Maybe (EventSubscription) } -> { "EventSubscription" :: Maybe (EventSubscription) }) -> ModifyEventSubscriptionResult
 ```
 
 Constructs ModifyEventSubscriptionResult's fields from required parameters
@@ -3694,7 +3694,7 @@ Constructs ModifyEventSubscriptionResult's fields from required parameters
 
 ``` purescript
 newtype ModifyOptionGroupMessage
-  = ModifyOptionGroupMessage { "OptionGroupName" :: String, "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList), "OptionsToRemove" :: NullOrUndefined (OptionNamesList), "ApplyImmediately" :: NullOrUndefined (Boolean) }
+  = ModifyOptionGroupMessage { "OptionGroupName" :: String, "OptionsToInclude" :: Maybe (OptionConfigurationList), "OptionsToRemove" :: Maybe (OptionNamesList), "ApplyImmediately" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -3717,7 +3717,7 @@ Constructs ModifyOptionGroupMessage from required parameters
 #### `newModifyOptionGroupMessage'`
 
 ``` purescript
-newModifyOptionGroupMessage' :: String -> ({ "OptionGroupName" :: String, "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList), "OptionsToRemove" :: NullOrUndefined (OptionNamesList), "ApplyImmediately" :: NullOrUndefined (Boolean) } -> { "OptionGroupName" :: String, "OptionsToInclude" :: NullOrUndefined (OptionConfigurationList), "OptionsToRemove" :: NullOrUndefined (OptionNamesList), "ApplyImmediately" :: NullOrUndefined (Boolean) }) -> ModifyOptionGroupMessage
+newModifyOptionGroupMessage' :: String -> ({ "OptionGroupName" :: String, "OptionsToInclude" :: Maybe (OptionConfigurationList), "OptionsToRemove" :: Maybe (OptionNamesList), "ApplyImmediately" :: Maybe (Boolean) } -> { "OptionGroupName" :: String, "OptionsToInclude" :: Maybe (OptionConfigurationList), "OptionsToRemove" :: Maybe (OptionNamesList), "ApplyImmediately" :: Maybe (Boolean) }) -> ModifyOptionGroupMessage
 ```
 
 Constructs ModifyOptionGroupMessage's fields from required parameters
@@ -3726,7 +3726,7 @@ Constructs ModifyOptionGroupMessage's fields from required parameters
 
 ``` purescript
 newtype ModifyOptionGroupResult
-  = ModifyOptionGroupResult { "OptionGroup" :: NullOrUndefined (OptionGroup) }
+  = ModifyOptionGroupResult { "OptionGroup" :: Maybe (OptionGroup) }
 ```
 
 ##### Instances
@@ -3749,7 +3749,7 @@ Constructs ModifyOptionGroupResult from required parameters
 #### `newModifyOptionGroupResult'`
 
 ``` purescript
-newModifyOptionGroupResult' :: ({ "OptionGroup" :: NullOrUndefined (OptionGroup) } -> { "OptionGroup" :: NullOrUndefined (OptionGroup) }) -> ModifyOptionGroupResult
+newModifyOptionGroupResult' :: ({ "OptionGroup" :: Maybe (OptionGroup) } -> { "OptionGroup" :: Maybe (OptionGroup) }) -> ModifyOptionGroupResult
 ```
 
 Constructs ModifyOptionGroupResult's fields from required parameters
@@ -3758,7 +3758,7 @@ Constructs ModifyOptionGroupResult's fields from required parameters
 
 ``` purescript
 newtype Option
-  = Option { "OptionName" :: NullOrUndefined (String), "OptionDescription" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList) }
+  = Option { "OptionName" :: Maybe (String), "OptionDescription" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList) }
 ```
 
 ##### Instances
@@ -3781,7 +3781,7 @@ Constructs Option from required parameters
 #### `newOption'`
 
 ``` purescript
-newOption' :: ({ "OptionName" :: NullOrUndefined (String), "OptionDescription" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList) } -> { "OptionName" :: NullOrUndefined (String), "OptionDescription" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupMembershipList) }) -> Option
+newOption' :: ({ "OptionName" :: Maybe (String), "OptionDescription" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList) } -> { "OptionName" :: Maybe (String), "OptionDescription" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupMembershipList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupMembershipList) }) -> Option
 ```
 
 Constructs Option's fields from required parameters
@@ -3790,7 +3790,7 @@ Constructs Option's fields from required parameters
 
 ``` purescript
 newtype OptionConfiguration
-  = OptionConfiguration { "OptionName" :: String, "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList) }
+  = OptionConfiguration { "OptionName" :: String, "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList) }
 ```
 
 ##### Instances
@@ -3813,7 +3813,7 @@ Constructs OptionConfiguration from required parameters
 #### `newOptionConfiguration'`
 
 ``` purescript
-newOptionConfiguration' :: String -> ({ "OptionName" :: String, "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList) } -> { "OptionName" :: String, "Port" :: NullOrUndefined (IntegerOptional), "DBSecurityGroupMemberships" :: NullOrUndefined (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: NullOrUndefined (VpcSecurityGroupIdList) }) -> OptionConfiguration
+newOptionConfiguration' :: String -> ({ "OptionName" :: String, "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList) } -> { "OptionName" :: String, "Port" :: Maybe (IntegerOptional), "DBSecurityGroupMemberships" :: Maybe (DBSecurityGroupNameList), "VpcSecurityGroupMemberships" :: Maybe (VpcSecurityGroupIdList) }) -> OptionConfiguration
 ```
 
 Constructs OptionConfiguration's fields from required parameters
@@ -3838,7 +3838,7 @@ Encode OptionConfigurationList
 
 ``` purescript
 newtype OptionGroup
-  = OptionGroup { "OptionGroupName" :: NullOrUndefined (String), "OptionGroupDescription" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "Options" :: NullOrUndefined (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean), "VpcId" :: NullOrUndefined (String) }
+  = OptionGroup { "OptionGroupName" :: Maybe (String), "OptionGroupDescription" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "Options" :: Maybe (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean), "VpcId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3861,7 +3861,7 @@ Constructs OptionGroup from required parameters
 #### `newOptionGroup'`
 
 ``` purescript
-newOptionGroup' :: ({ "OptionGroupName" :: NullOrUndefined (String), "OptionGroupDescription" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "Options" :: NullOrUndefined (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean), "VpcId" :: NullOrUndefined (String) } -> { "OptionGroupName" :: NullOrUndefined (String), "OptionGroupDescription" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "Options" :: NullOrUndefined (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: NullOrUndefined (Boolean), "VpcId" :: NullOrUndefined (String) }) -> OptionGroup
+newOptionGroup' :: ({ "OptionGroupName" :: Maybe (String), "OptionGroupDescription" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "Options" :: Maybe (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean), "VpcId" :: Maybe (String) } -> { "OptionGroupName" :: Maybe (String), "OptionGroupDescription" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "Options" :: Maybe (OptionsList), "AllowsVpcAndNonVpcInstanceMemberships" :: Maybe (Boolean), "VpcId" :: Maybe (String) }) -> OptionGroup
 ```
 
 Constructs OptionGroup's fields from required parameters
@@ -3888,7 +3888,7 @@ Encode OptionGroupAlreadyExistsFault
 
 ``` purescript
 newtype OptionGroupMembership
-  = OptionGroupMembership { "OptionGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }
+  = OptionGroupMembership { "OptionGroupName" :: Maybe (String), "Status" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3911,7 +3911,7 @@ Constructs OptionGroupMembership from required parameters
 #### `newOptionGroupMembership'`
 
 ``` purescript
-newOptionGroupMembership' :: ({ "OptionGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) } -> { "OptionGroupName" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }) -> OptionGroupMembership
+newOptionGroupMembership' :: ({ "OptionGroupName" :: Maybe (String), "Status" :: Maybe (String) } -> { "OptionGroupName" :: Maybe (String), "Status" :: Maybe (String) }) -> OptionGroupMembership
 ```
 
 Constructs OptionGroupMembership's fields from required parameters
@@ -3938,7 +3938,7 @@ Encode OptionGroupNotFoundFault
 
 ``` purescript
 newtype OptionGroupOption
-  = OptionGroupOption { "Name" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String), "PortRequired" :: NullOrUndefined (Boolean), "DefaultPort" :: NullOrUndefined (IntegerOptional), "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn) }
+  = OptionGroupOption { "Name" :: Maybe (String), "Description" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "MinimumRequiredMinorEngineVersion" :: Maybe (String), "PortRequired" :: Maybe (Boolean), "DefaultPort" :: Maybe (IntegerOptional), "OptionsDependedOn" :: Maybe (OptionsDependedOn) }
 ```
 
 ##### Instances
@@ -3961,7 +3961,7 @@ Constructs OptionGroupOption from required parameters
 #### `newOptionGroupOption'`
 
 ``` purescript
-newOptionGroupOption' :: ({ "Name" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String), "PortRequired" :: NullOrUndefined (Boolean), "DefaultPort" :: NullOrUndefined (IntegerOptional), "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn) } -> { "Name" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "EngineName" :: NullOrUndefined (String), "MajorEngineVersion" :: NullOrUndefined (String), "MinimumRequiredMinorEngineVersion" :: NullOrUndefined (String), "PortRequired" :: NullOrUndefined (Boolean), "DefaultPort" :: NullOrUndefined (IntegerOptional), "OptionsDependedOn" :: NullOrUndefined (OptionsDependedOn) }) -> OptionGroupOption
+newOptionGroupOption' :: ({ "Name" :: Maybe (String), "Description" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "MinimumRequiredMinorEngineVersion" :: Maybe (String), "PortRequired" :: Maybe (Boolean), "DefaultPort" :: Maybe (IntegerOptional), "OptionsDependedOn" :: Maybe (OptionsDependedOn) } -> { "Name" :: Maybe (String), "Description" :: Maybe (String), "EngineName" :: Maybe (String), "MajorEngineVersion" :: Maybe (String), "MinimumRequiredMinorEngineVersion" :: Maybe (String), "PortRequired" :: Maybe (Boolean), "DefaultPort" :: Maybe (IntegerOptional), "OptionsDependedOn" :: Maybe (OptionsDependedOn) }) -> OptionGroupOption
 ```
 
 Constructs OptionGroupOption's fields from required parameters
@@ -3986,7 +3986,7 @@ Encode OptionGroupOptionsList
 
 ``` purescript
 newtype OptionGroupOptionsMessage
-  = OptionGroupOptionsMessage { "OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList), "Marker" :: NullOrUndefined (String) }
+  = OptionGroupOptionsMessage { "OptionGroupOptions" :: Maybe (OptionGroupOptionsList), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4009,7 +4009,7 @@ Constructs OptionGroupOptionsMessage from required parameters
 #### `newOptionGroupOptionsMessage'`
 
 ``` purescript
-newOptionGroupOptionsMessage' :: ({ "OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList), "Marker" :: NullOrUndefined (String) } -> { "OptionGroupOptions" :: NullOrUndefined (OptionGroupOptionsList), "Marker" :: NullOrUndefined (String) }) -> OptionGroupOptionsMessage
+newOptionGroupOptionsMessage' :: ({ "OptionGroupOptions" :: Maybe (OptionGroupOptionsList), "Marker" :: Maybe (String) } -> { "OptionGroupOptions" :: Maybe (OptionGroupOptionsList), "Marker" :: Maybe (String) }) -> OptionGroupOptionsMessage
 ```
 
 Constructs OptionGroupOptionsMessage's fields from required parameters
@@ -4036,7 +4036,7 @@ Encode OptionGroupQuotaExceededFault
 
 ``` purescript
 newtype OptionGroups
-  = OptionGroups { "OptionGroupsList" :: NullOrUndefined (OptionGroupsList), "Marker" :: NullOrUndefined (String) }
+  = OptionGroups { "OptionGroupsList" :: Maybe (OptionGroupsList), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4059,7 +4059,7 @@ Constructs OptionGroups from required parameters
 #### `newOptionGroups'`
 
 ``` purescript
-newOptionGroups' :: ({ "OptionGroupsList" :: NullOrUndefined (OptionGroupsList), "Marker" :: NullOrUndefined (String) } -> { "OptionGroupsList" :: NullOrUndefined (OptionGroupsList), "Marker" :: NullOrUndefined (String) }) -> OptionGroups
+newOptionGroups' :: ({ "OptionGroupsList" :: Maybe (OptionGroupsList), "Marker" :: Maybe (String) } -> { "OptionGroupsList" :: Maybe (OptionGroupsList), "Marker" :: Maybe (String) }) -> OptionGroups
 ```
 
 Constructs OptionGroups's fields from required parameters
@@ -4132,7 +4132,7 @@ Encode OptionsList
 
 ``` purescript
 newtype OrderableDBInstanceOption
-  = OrderableDBInstanceOption { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList), "MultiAZCapable" :: NullOrUndefined (Boolean), "ReadReplicaCapable" :: NullOrUndefined (Boolean), "Vpc" :: NullOrUndefined (Boolean) }
+  = OrderableDBInstanceOption { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "AvailabilityZones" :: Maybe (AvailabilityZoneList), "MultiAZCapable" :: Maybe (Boolean), "ReadReplicaCapable" :: Maybe (Boolean), "Vpc" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -4155,7 +4155,7 @@ Constructs OrderableDBInstanceOption from required parameters
 #### `newOrderableDBInstanceOption'`
 
 ``` purescript
-newOrderableDBInstanceOption' :: ({ "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList), "MultiAZCapable" :: NullOrUndefined (Boolean), "ReadReplicaCapable" :: NullOrUndefined (Boolean), "Vpc" :: NullOrUndefined (Boolean) } -> { "Engine" :: NullOrUndefined (String), "EngineVersion" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "LicenseModel" :: NullOrUndefined (String), "AvailabilityZones" :: NullOrUndefined (AvailabilityZoneList), "MultiAZCapable" :: NullOrUndefined (Boolean), "ReadReplicaCapable" :: NullOrUndefined (Boolean), "Vpc" :: NullOrUndefined (Boolean) }) -> OrderableDBInstanceOption
+newOrderableDBInstanceOption' :: ({ "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "AvailabilityZones" :: Maybe (AvailabilityZoneList), "MultiAZCapable" :: Maybe (Boolean), "ReadReplicaCapable" :: Maybe (Boolean), "Vpc" :: Maybe (Boolean) } -> { "Engine" :: Maybe (String), "EngineVersion" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "LicenseModel" :: Maybe (String), "AvailabilityZones" :: Maybe (AvailabilityZoneList), "MultiAZCapable" :: Maybe (Boolean), "ReadReplicaCapable" :: Maybe (Boolean), "Vpc" :: Maybe (Boolean) }) -> OrderableDBInstanceOption
 ```
 
 Constructs OrderableDBInstanceOption's fields from required parameters
@@ -4180,7 +4180,7 @@ Encode OrderableDBInstanceOptionsList
 
 ``` purescript
 newtype OrderableDBInstanceOptionsMessage
-  = OrderableDBInstanceOptionsMessage { "OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList), "Marker" :: NullOrUndefined (String) }
+  = OrderableDBInstanceOptionsMessage { "OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList), "Marker" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4203,7 +4203,7 @@ Constructs OrderableDBInstanceOptionsMessage from required parameters
 #### `newOrderableDBInstanceOptionsMessage'`
 
 ``` purescript
-newOrderableDBInstanceOptionsMessage' :: ({ "OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList), "Marker" :: NullOrUndefined (String) } -> { "OrderableDBInstanceOptions" :: NullOrUndefined (OrderableDBInstanceOptionsList), "Marker" :: NullOrUndefined (String) }) -> OrderableDBInstanceOptionsMessage
+newOrderableDBInstanceOptionsMessage' :: ({ "OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList), "Marker" :: Maybe (String) } -> { "OrderableDBInstanceOptions" :: Maybe (OrderableDBInstanceOptionsList), "Marker" :: Maybe (String) }) -> OrderableDBInstanceOptionsMessage
 ```
 
 Constructs OrderableDBInstanceOptionsMessage's fields from required parameters
@@ -4212,7 +4212,7 @@ Constructs OrderableDBInstanceOptionsMessage's fields from required parameters
 
 ``` purescript
 newtype Parameter
-  = Parameter { "ParameterName" :: NullOrUndefined (String), "ParameterValue" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "ApplyType" :: NullOrUndefined (String), "DataType" :: NullOrUndefined (String), "AllowedValues" :: NullOrUndefined (String), "IsModifiable" :: NullOrUndefined (Boolean), "MinimumEngineVersion" :: NullOrUndefined (String), "ApplyMethod" :: NullOrUndefined (ApplyMethod) }
+  = Parameter { "ParameterName" :: Maybe (String), "ParameterValue" :: Maybe (String), "Description" :: Maybe (String), "Source" :: Maybe (String), "ApplyType" :: Maybe (String), "DataType" :: Maybe (String), "AllowedValues" :: Maybe (String), "IsModifiable" :: Maybe (Boolean), "MinimumEngineVersion" :: Maybe (String), "ApplyMethod" :: Maybe (ApplyMethod) }
 ```
 
 ##### Instances
@@ -4235,7 +4235,7 @@ Constructs Parameter from required parameters
 #### `newParameter'`
 
 ``` purescript
-newParameter' :: ({ "ParameterName" :: NullOrUndefined (String), "ParameterValue" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "ApplyType" :: NullOrUndefined (String), "DataType" :: NullOrUndefined (String), "AllowedValues" :: NullOrUndefined (String), "IsModifiable" :: NullOrUndefined (Boolean), "MinimumEngineVersion" :: NullOrUndefined (String), "ApplyMethod" :: NullOrUndefined (ApplyMethod) } -> { "ParameterName" :: NullOrUndefined (String), "ParameterValue" :: NullOrUndefined (String), "Description" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "ApplyType" :: NullOrUndefined (String), "DataType" :: NullOrUndefined (String), "AllowedValues" :: NullOrUndefined (String), "IsModifiable" :: NullOrUndefined (Boolean), "MinimumEngineVersion" :: NullOrUndefined (String), "ApplyMethod" :: NullOrUndefined (ApplyMethod) }) -> Parameter
+newParameter' :: ({ "ParameterName" :: Maybe (String), "ParameterValue" :: Maybe (String), "Description" :: Maybe (String), "Source" :: Maybe (String), "ApplyType" :: Maybe (String), "DataType" :: Maybe (String), "AllowedValues" :: Maybe (String), "IsModifiable" :: Maybe (Boolean), "MinimumEngineVersion" :: Maybe (String), "ApplyMethod" :: Maybe (ApplyMethod) } -> { "ParameterName" :: Maybe (String), "ParameterValue" :: Maybe (String), "Description" :: Maybe (String), "Source" :: Maybe (String), "ApplyType" :: Maybe (String), "DataType" :: Maybe (String), "AllowedValues" :: Maybe (String), "IsModifiable" :: Maybe (Boolean), "MinimumEngineVersion" :: Maybe (String), "ApplyMethod" :: Maybe (ApplyMethod) }) -> Parameter
 ```
 
 Constructs Parameter's fields from required parameters
@@ -4260,7 +4260,7 @@ Encode ParametersList
 
 ``` purescript
 newtype PendingModifiedValues
-  = PendingModifiedValues { "DBInstanceClass" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "MasterUserPassword" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "DBInstanceIdentifier" :: NullOrUndefined (String) }
+  = PendingModifiedValues { "DBInstanceClass" :: Maybe (String), "AllocatedStorage" :: Maybe (IntegerOptional), "MasterUserPassword" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "DBInstanceIdentifier" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4283,7 +4283,7 @@ Constructs PendingModifiedValues from required parameters
 #### `newPendingModifiedValues'`
 
 ``` purescript
-newPendingModifiedValues' :: ({ "DBInstanceClass" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "MasterUserPassword" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "DBInstanceIdentifier" :: NullOrUndefined (String) } -> { "DBInstanceClass" :: NullOrUndefined (String), "AllocatedStorage" :: NullOrUndefined (IntegerOptional), "MasterUserPassword" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "MultiAZ" :: NullOrUndefined (BooleanOptional), "EngineVersion" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "DBInstanceIdentifier" :: NullOrUndefined (String) }) -> PendingModifiedValues
+newPendingModifiedValues' :: ({ "DBInstanceClass" :: Maybe (String), "AllocatedStorage" :: Maybe (IntegerOptional), "MasterUserPassword" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "DBInstanceIdentifier" :: Maybe (String) } -> { "DBInstanceClass" :: Maybe (String), "AllocatedStorage" :: Maybe (IntegerOptional), "MasterUserPassword" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "BackupRetentionPeriod" :: Maybe (IntegerOptional), "MultiAZ" :: Maybe (BooleanOptional), "EngineVersion" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "DBInstanceIdentifier" :: Maybe (String) }) -> PendingModifiedValues
 ```
 
 Constructs PendingModifiedValues's fields from required parameters
@@ -4310,7 +4310,7 @@ Encode PointInTimeRestoreNotEnabledFault
 
 ``` purescript
 newtype PromoteReadReplicaMessage
-  = PromoteReadReplicaMessage { "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String) }
+  = PromoteReadReplicaMessage { "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4333,7 +4333,7 @@ Constructs PromoteReadReplicaMessage from required parameters
 #### `newPromoteReadReplicaMessage'`
 
 ``` purescript
-newPromoteReadReplicaMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: NullOrUndefined (IntegerOptional), "PreferredBackupWindow" :: NullOrUndefined (String) }) -> PromoteReadReplicaMessage
+newPromoteReadReplicaMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String) } -> { "DBInstanceIdentifier" :: String, "BackupRetentionPeriod" :: Maybe (IntegerOptional), "PreferredBackupWindow" :: Maybe (String) }) -> PromoteReadReplicaMessage
 ```
 
 Constructs PromoteReadReplicaMessage's fields from required parameters
@@ -4342,7 +4342,7 @@ Constructs PromoteReadReplicaMessage's fields from required parameters
 
 ``` purescript
 newtype PromoteReadReplicaResult
-  = PromoteReadReplicaResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = PromoteReadReplicaResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -4365,7 +4365,7 @@ Constructs PromoteReadReplicaResult from required parameters
 #### `newPromoteReadReplicaResult'`
 
 ``` purescript
-newPromoteReadReplicaResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> PromoteReadReplicaResult
+newPromoteReadReplicaResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> PromoteReadReplicaResult
 ```
 
 Constructs PromoteReadReplicaResult's fields from required parameters
@@ -4392,7 +4392,7 @@ Encode ProvisionedIopsNotAvailableInAZFault
 
 ``` purescript
 newtype PurchaseReservedDBInstancesOfferingMessage
-  = PurchaseReservedDBInstancesOfferingMessage { "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (IntegerOptional) }
+  = PurchaseReservedDBInstancesOfferingMessage { "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: Maybe (String), "DBInstanceCount" :: Maybe (IntegerOptional) }
 ```
 
 ##### Instances
@@ -4415,7 +4415,7 @@ Constructs PurchaseReservedDBInstancesOfferingMessage from required parameters
 #### `newPurchaseReservedDBInstancesOfferingMessage'`
 
 ``` purescript
-newPurchaseReservedDBInstancesOfferingMessage' :: String -> ({ "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (IntegerOptional) } -> { "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (IntegerOptional) }) -> PurchaseReservedDBInstancesOfferingMessage
+newPurchaseReservedDBInstancesOfferingMessage' :: String -> ({ "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: Maybe (String), "DBInstanceCount" :: Maybe (IntegerOptional) } -> { "ReservedDBInstancesOfferingId" :: String, "ReservedDBInstanceId" :: Maybe (String), "DBInstanceCount" :: Maybe (IntegerOptional) }) -> PurchaseReservedDBInstancesOfferingMessage
 ```
 
 Constructs PurchaseReservedDBInstancesOfferingMessage's fields from required parameters
@@ -4424,7 +4424,7 @@ Constructs PurchaseReservedDBInstancesOfferingMessage's fields from required par
 
 ``` purescript
 newtype PurchaseReservedDBInstancesOfferingResult
-  = PurchaseReservedDBInstancesOfferingResult { "ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance) }
+  = PurchaseReservedDBInstancesOfferingResult { "ReservedDBInstance" :: Maybe (ReservedDBInstance) }
 ```
 
 ##### Instances
@@ -4447,7 +4447,7 @@ Constructs PurchaseReservedDBInstancesOfferingResult from required parameters
 #### `newPurchaseReservedDBInstancesOfferingResult'`
 
 ``` purescript
-newPurchaseReservedDBInstancesOfferingResult' :: ({ "ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance) } -> { "ReservedDBInstance" :: NullOrUndefined (ReservedDBInstance) }) -> PurchaseReservedDBInstancesOfferingResult
+newPurchaseReservedDBInstancesOfferingResult' :: ({ "ReservedDBInstance" :: Maybe (ReservedDBInstance) } -> { "ReservedDBInstance" :: Maybe (ReservedDBInstance) }) -> PurchaseReservedDBInstancesOfferingResult
 ```
 
 Constructs PurchaseReservedDBInstancesOfferingResult's fields from required parameters
@@ -4472,7 +4472,7 @@ Encode ReadReplicaDBInstanceIdentifierList
 
 ``` purescript
 newtype RebootDBInstanceMessage
-  = RebootDBInstanceMessage { "DBInstanceIdentifier" :: String, "ForceFailover" :: NullOrUndefined (BooleanOptional) }
+  = RebootDBInstanceMessage { "DBInstanceIdentifier" :: String, "ForceFailover" :: Maybe (BooleanOptional) }
 ```
 
 ##### Instances
@@ -4495,7 +4495,7 @@ Constructs RebootDBInstanceMessage from required parameters
 #### `newRebootDBInstanceMessage'`
 
 ``` purescript
-newRebootDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "ForceFailover" :: NullOrUndefined (BooleanOptional) } -> { "DBInstanceIdentifier" :: String, "ForceFailover" :: NullOrUndefined (BooleanOptional) }) -> RebootDBInstanceMessage
+newRebootDBInstanceMessage' :: String -> ({ "DBInstanceIdentifier" :: String, "ForceFailover" :: Maybe (BooleanOptional) } -> { "DBInstanceIdentifier" :: String, "ForceFailover" :: Maybe (BooleanOptional) }) -> RebootDBInstanceMessage
 ```
 
 Constructs RebootDBInstanceMessage's fields from required parameters
@@ -4504,7 +4504,7 @@ Constructs RebootDBInstanceMessage's fields from required parameters
 
 ``` purescript
 newtype RebootDBInstanceResult
-  = RebootDBInstanceResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = RebootDBInstanceResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -4527,7 +4527,7 @@ Constructs RebootDBInstanceResult from required parameters
 #### `newRebootDBInstanceResult'`
 
 ``` purescript
-newRebootDBInstanceResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> RebootDBInstanceResult
+newRebootDBInstanceResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> RebootDBInstanceResult
 ```
 
 Constructs RebootDBInstanceResult's fields from required parameters
@@ -4536,7 +4536,7 @@ Constructs RebootDBInstanceResult's fields from required parameters
 
 ``` purescript
 newtype RecurringCharge
-  = RecurringCharge { "RecurringChargeAmount" :: NullOrUndefined (Number), "RecurringChargeFrequency" :: NullOrUndefined (String) }
+  = RecurringCharge { "RecurringChargeAmount" :: Maybe (Number), "RecurringChargeFrequency" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4559,7 +4559,7 @@ Constructs RecurringCharge from required parameters
 #### `newRecurringCharge'`
 
 ``` purescript
-newRecurringCharge' :: ({ "RecurringChargeAmount" :: NullOrUndefined (Number), "RecurringChargeFrequency" :: NullOrUndefined (String) } -> { "RecurringChargeAmount" :: NullOrUndefined (Number), "RecurringChargeFrequency" :: NullOrUndefined (String) }) -> RecurringCharge
+newRecurringCharge' :: ({ "RecurringChargeAmount" :: Maybe (Number), "RecurringChargeFrequency" :: Maybe (String) } -> { "RecurringChargeAmount" :: Maybe (Number), "RecurringChargeFrequency" :: Maybe (String) }) -> RecurringCharge
 ```
 
 Constructs RecurringCharge's fields from required parameters
@@ -4616,7 +4616,7 @@ Constructs RemoveSourceIdentifierFromSubscriptionMessage's fields from required 
 
 ``` purescript
 newtype RemoveSourceIdentifierFromSubscriptionResult
-  = RemoveSourceIdentifierFromSubscriptionResult { "EventSubscription" :: NullOrUndefined (EventSubscription) }
+  = RemoveSourceIdentifierFromSubscriptionResult { "EventSubscription" :: Maybe (EventSubscription) }
 ```
 
 ##### Instances
@@ -4639,7 +4639,7 @@ Constructs RemoveSourceIdentifierFromSubscriptionResult from required parameters
 #### `newRemoveSourceIdentifierFromSubscriptionResult'`
 
 ``` purescript
-newRemoveSourceIdentifierFromSubscriptionResult' :: ({ "EventSubscription" :: NullOrUndefined (EventSubscription) } -> { "EventSubscription" :: NullOrUndefined (EventSubscription) }) -> RemoveSourceIdentifierFromSubscriptionResult
+newRemoveSourceIdentifierFromSubscriptionResult' :: ({ "EventSubscription" :: Maybe (EventSubscription) } -> { "EventSubscription" :: Maybe (EventSubscription) }) -> RemoveSourceIdentifierFromSubscriptionResult
 ```
 
 Constructs RemoveSourceIdentifierFromSubscriptionResult's fields from required parameters
@@ -4680,7 +4680,7 @@ Constructs RemoveTagsFromResourceMessage's fields from required parameters
 
 ``` purescript
 newtype ReservedDBInstance
-  = ReservedDBInstance { "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "StartTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (Int), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "State" :: NullOrUndefined (String), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) }
+  = ReservedDBInstance { "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "StartTime" :: Maybe (TStamp), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "DBInstanceCount" :: Maybe (Int), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "State" :: Maybe (String), "RecurringCharges" :: Maybe (RecurringChargeList) }
 ```
 
 ##### Instances
@@ -4703,7 +4703,7 @@ Constructs ReservedDBInstance from required parameters
 #### `newReservedDBInstance'`
 
 ``` purescript
-newReservedDBInstance' :: ({ "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "StartTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (Int), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "State" :: NullOrUndefined (String), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } -> { "ReservedDBInstanceId" :: NullOrUndefined (String), "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "StartTime" :: NullOrUndefined (TStamp), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "DBInstanceCount" :: NullOrUndefined (Int), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "State" :: NullOrUndefined (String), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) }) -> ReservedDBInstance
+newReservedDBInstance' :: ({ "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "StartTime" :: Maybe (TStamp), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "DBInstanceCount" :: Maybe (Int), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "State" :: Maybe (String), "RecurringCharges" :: Maybe (RecurringChargeList) } -> { "ReservedDBInstanceId" :: Maybe (String), "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "StartTime" :: Maybe (TStamp), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "DBInstanceCount" :: Maybe (Int), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "State" :: Maybe (String), "RecurringCharges" :: Maybe (RecurringChargeList) }) -> ReservedDBInstance
 ```
 
 Constructs ReservedDBInstance's fields from required parameters
@@ -4746,7 +4746,7 @@ Encode ReservedDBInstanceList
 
 ``` purescript
 newtype ReservedDBInstanceMessage
-  = ReservedDBInstanceMessage { "Marker" :: NullOrUndefined (String), "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList) }
+  = ReservedDBInstanceMessage { "Marker" :: Maybe (String), "ReservedDBInstances" :: Maybe (ReservedDBInstanceList) }
 ```
 
 ##### Instances
@@ -4769,7 +4769,7 @@ Constructs ReservedDBInstanceMessage from required parameters
 #### `newReservedDBInstanceMessage'`
 
 ``` purescript
-newReservedDBInstanceMessage' :: ({ "Marker" :: NullOrUndefined (String), "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList) } -> { "Marker" :: NullOrUndefined (String), "ReservedDBInstances" :: NullOrUndefined (ReservedDBInstanceList) }) -> ReservedDBInstanceMessage
+newReservedDBInstanceMessage' :: ({ "Marker" :: Maybe (String), "ReservedDBInstances" :: Maybe (ReservedDBInstanceList) } -> { "Marker" :: Maybe (String), "ReservedDBInstances" :: Maybe (ReservedDBInstanceList) }) -> ReservedDBInstanceMessage
 ```
 
 Constructs ReservedDBInstanceMessage's fields from required parameters
@@ -4814,7 +4814,7 @@ Encode ReservedDBInstanceQuotaExceededFault
 
 ``` purescript
 newtype ReservedDBInstancesOffering
-  = ReservedDBInstancesOffering { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) }
+  = ReservedDBInstancesOffering { "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "RecurringCharges" :: Maybe (RecurringChargeList) }
 ```
 
 ##### Instances
@@ -4837,7 +4837,7 @@ Constructs ReservedDBInstancesOffering from required parameters
 #### `newReservedDBInstancesOffering'`
 
 ``` purescript
-newReservedDBInstancesOffering' :: ({ "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) } -> { "ReservedDBInstancesOfferingId" :: NullOrUndefined (String), "DBInstanceClass" :: NullOrUndefined (String), "Duration" :: NullOrUndefined (Int), "FixedPrice" :: NullOrUndefined (Number), "UsagePrice" :: NullOrUndefined (Number), "CurrencyCode" :: NullOrUndefined (String), "ProductDescription" :: NullOrUndefined (String), "OfferingType" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (Boolean), "RecurringCharges" :: NullOrUndefined (RecurringChargeList) }) -> ReservedDBInstancesOffering
+newReservedDBInstancesOffering' :: ({ "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "RecurringCharges" :: Maybe (RecurringChargeList) } -> { "ReservedDBInstancesOfferingId" :: Maybe (String), "DBInstanceClass" :: Maybe (String), "Duration" :: Maybe (Int), "FixedPrice" :: Maybe (Number), "UsagePrice" :: Maybe (Number), "CurrencyCode" :: Maybe (String), "ProductDescription" :: Maybe (String), "OfferingType" :: Maybe (String), "MultiAZ" :: Maybe (Boolean), "RecurringCharges" :: Maybe (RecurringChargeList) }) -> ReservedDBInstancesOffering
 ```
 
 Constructs ReservedDBInstancesOffering's fields from required parameters
@@ -4862,7 +4862,7 @@ Encode ReservedDBInstancesOfferingList
 
 ``` purescript
 newtype ReservedDBInstancesOfferingMessage
-  = ReservedDBInstancesOfferingMessage { "Marker" :: NullOrUndefined (String), "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList) }
+  = ReservedDBInstancesOfferingMessage { "Marker" :: Maybe (String), "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList) }
 ```
 
 ##### Instances
@@ -4885,7 +4885,7 @@ Constructs ReservedDBInstancesOfferingMessage from required parameters
 #### `newReservedDBInstancesOfferingMessage'`
 
 ``` purescript
-newReservedDBInstancesOfferingMessage' :: ({ "Marker" :: NullOrUndefined (String), "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList) } -> { "Marker" :: NullOrUndefined (String), "ReservedDBInstancesOfferings" :: NullOrUndefined (ReservedDBInstancesOfferingList) }) -> ReservedDBInstancesOfferingMessage
+newReservedDBInstancesOfferingMessage' :: ({ "Marker" :: Maybe (String), "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList) } -> { "Marker" :: Maybe (String), "ReservedDBInstancesOfferings" :: Maybe (ReservedDBInstancesOfferingList) }) -> ReservedDBInstancesOfferingMessage
 ```
 
 Constructs ReservedDBInstancesOfferingMessage's fields from required parameters
@@ -4912,7 +4912,7 @@ Encode ReservedDBInstancesOfferingNotFoundFault
 
 ``` purescript
 newtype ResetDBParameterGroupMessage
-  = ResetDBParameterGroupMessage { "DBParameterGroupName" :: String, "ResetAllParameters" :: NullOrUndefined (Boolean), "Parameters" :: NullOrUndefined (ParametersList) }
+  = ResetDBParameterGroupMessage { "DBParameterGroupName" :: String, "ResetAllParameters" :: Maybe (Boolean), "Parameters" :: Maybe (ParametersList) }
 ```
 
 ##### Instances
@@ -4935,7 +4935,7 @@ Constructs ResetDBParameterGroupMessage from required parameters
 #### `newResetDBParameterGroupMessage'`
 
 ``` purescript
-newResetDBParameterGroupMessage' :: String -> ({ "DBParameterGroupName" :: String, "ResetAllParameters" :: NullOrUndefined (Boolean), "Parameters" :: NullOrUndefined (ParametersList) } -> { "DBParameterGroupName" :: String, "ResetAllParameters" :: NullOrUndefined (Boolean), "Parameters" :: NullOrUndefined (ParametersList) }) -> ResetDBParameterGroupMessage
+newResetDBParameterGroupMessage' :: String -> ({ "DBParameterGroupName" :: String, "ResetAllParameters" :: Maybe (Boolean), "Parameters" :: Maybe (ParametersList) } -> { "DBParameterGroupName" :: String, "ResetAllParameters" :: Maybe (Boolean), "Parameters" :: Maybe (ParametersList) }) -> ResetDBParameterGroupMessage
 ```
 
 Constructs ResetDBParameterGroupMessage's fields from required parameters
@@ -4944,7 +4944,7 @@ Constructs ResetDBParameterGroupMessage's fields from required parameters
 
 ``` purescript
 newtype RestoreDBInstanceFromDBSnapshotMessage
-  = RestoreDBInstanceFromDBSnapshotMessage { "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) }
+  = RestoreDBInstanceFromDBSnapshotMessage { "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4967,7 +4967,7 @@ Constructs RestoreDBInstanceFromDBSnapshotMessage from required parameters
 #### `newRestoreDBInstanceFromDBSnapshotMessage'`
 
 ``` purescript
-newRestoreDBInstanceFromDBSnapshotMessage' :: String -> String -> ({ "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) } -> { "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) }) -> RestoreDBInstanceFromDBSnapshotMessage
+newRestoreDBInstanceFromDBSnapshotMessage' :: String -> String -> ({ "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) } -> { "DBInstanceIdentifier" :: String, "DBSnapshotIdentifier" :: String, "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) }) -> RestoreDBInstanceFromDBSnapshotMessage
 ```
 
 Constructs RestoreDBInstanceFromDBSnapshotMessage's fields from required parameters
@@ -4976,7 +4976,7 @@ Constructs RestoreDBInstanceFromDBSnapshotMessage's fields from required paramet
 
 ``` purescript
 newtype RestoreDBInstanceFromDBSnapshotResult
-  = RestoreDBInstanceFromDBSnapshotResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = RestoreDBInstanceFromDBSnapshotResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -4999,7 +4999,7 @@ Constructs RestoreDBInstanceFromDBSnapshotResult from required parameters
 #### `newRestoreDBInstanceFromDBSnapshotResult'`
 
 ``` purescript
-newRestoreDBInstanceFromDBSnapshotResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> RestoreDBInstanceFromDBSnapshotResult
+newRestoreDBInstanceFromDBSnapshotResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> RestoreDBInstanceFromDBSnapshotResult
 ```
 
 Constructs RestoreDBInstanceFromDBSnapshotResult's fields from required parameters
@@ -5008,7 +5008,7 @@ Constructs RestoreDBInstanceFromDBSnapshotResult's fields from required paramete
 
 ``` purescript
 newtype RestoreDBInstanceToPointInTimeMessage
-  = RestoreDBInstanceToPointInTimeMessage { "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: NullOrUndefined (TStamp), "UseLatestRestorableTime" :: NullOrUndefined (Boolean), "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) }
+  = RestoreDBInstanceToPointInTimeMessage { "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: Maybe (TStamp), "UseLatestRestorableTime" :: Maybe (Boolean), "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5031,7 +5031,7 @@ Constructs RestoreDBInstanceToPointInTimeMessage from required parameters
 #### `newRestoreDBInstanceToPointInTimeMessage'`
 
 ``` purescript
-newRestoreDBInstanceToPointInTimeMessage' :: String -> String -> ({ "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: NullOrUndefined (TStamp), "UseLatestRestorableTime" :: NullOrUndefined (Boolean), "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) } -> { "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: NullOrUndefined (TStamp), "UseLatestRestorableTime" :: NullOrUndefined (Boolean), "DBInstanceClass" :: NullOrUndefined (String), "Port" :: NullOrUndefined (IntegerOptional), "AvailabilityZone" :: NullOrUndefined (String), "DBSubnetGroupName" :: NullOrUndefined (String), "MultiAZ" :: NullOrUndefined (BooleanOptional), "PubliclyAccessible" :: NullOrUndefined (BooleanOptional), "AutoMinorVersionUpgrade" :: NullOrUndefined (BooleanOptional), "LicenseModel" :: NullOrUndefined (String), "DBName" :: NullOrUndefined (String), "Engine" :: NullOrUndefined (String), "Iops" :: NullOrUndefined (IntegerOptional), "OptionGroupName" :: NullOrUndefined (String) }) -> RestoreDBInstanceToPointInTimeMessage
+newRestoreDBInstanceToPointInTimeMessage' :: String -> String -> ({ "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: Maybe (TStamp), "UseLatestRestorableTime" :: Maybe (Boolean), "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) } -> { "SourceDBInstanceIdentifier" :: String, "TargetDBInstanceIdentifier" :: String, "RestoreTime" :: Maybe (TStamp), "UseLatestRestorableTime" :: Maybe (Boolean), "DBInstanceClass" :: Maybe (String), "Port" :: Maybe (IntegerOptional), "AvailabilityZone" :: Maybe (String), "DBSubnetGroupName" :: Maybe (String), "MultiAZ" :: Maybe (BooleanOptional), "PubliclyAccessible" :: Maybe (BooleanOptional), "AutoMinorVersionUpgrade" :: Maybe (BooleanOptional), "LicenseModel" :: Maybe (String), "DBName" :: Maybe (String), "Engine" :: Maybe (String), "Iops" :: Maybe (IntegerOptional), "OptionGroupName" :: Maybe (String) }) -> RestoreDBInstanceToPointInTimeMessage
 ```
 
 Constructs RestoreDBInstanceToPointInTimeMessage's fields from required parameters
@@ -5040,7 +5040,7 @@ Constructs RestoreDBInstanceToPointInTimeMessage's fields from required paramete
 
 ``` purescript
 newtype RestoreDBInstanceToPointInTimeResult
-  = RestoreDBInstanceToPointInTimeResult { "DBInstance" :: NullOrUndefined (DBInstance) }
+  = RestoreDBInstanceToPointInTimeResult { "DBInstance" :: Maybe (DBInstance) }
 ```
 
 ##### Instances
@@ -5063,7 +5063,7 @@ Constructs RestoreDBInstanceToPointInTimeResult from required parameters
 #### `newRestoreDBInstanceToPointInTimeResult'`
 
 ``` purescript
-newRestoreDBInstanceToPointInTimeResult' :: ({ "DBInstance" :: NullOrUndefined (DBInstance) } -> { "DBInstance" :: NullOrUndefined (DBInstance) }) -> RestoreDBInstanceToPointInTimeResult
+newRestoreDBInstanceToPointInTimeResult' :: ({ "DBInstance" :: Maybe (DBInstance) } -> { "DBInstance" :: Maybe (DBInstance) }) -> RestoreDBInstanceToPointInTimeResult
 ```
 
 Constructs RestoreDBInstanceToPointInTimeResult's fields from required parameters
@@ -5072,7 +5072,7 @@ Constructs RestoreDBInstanceToPointInTimeResult's fields from required parameter
 
 ``` purescript
 newtype RevokeDBSecurityGroupIngressMessage
-  = RevokeDBSecurityGroupIngressMessage { "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }
+  = RevokeDBSecurityGroupIngressMessage { "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5095,7 +5095,7 @@ Constructs RevokeDBSecurityGroupIngressMessage from required parameters
 #### `newRevokeDBSecurityGroupIngressMessage'`
 
 ``` purescript
-newRevokeDBSecurityGroupIngressMessage' :: String -> ({ "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) } -> { "DBSecurityGroupName" :: String, "CIDRIP" :: NullOrUndefined (String), "EC2SecurityGroupName" :: NullOrUndefined (String), "EC2SecurityGroupId" :: NullOrUndefined (String), "EC2SecurityGroupOwnerId" :: NullOrUndefined (String) }) -> RevokeDBSecurityGroupIngressMessage
+newRevokeDBSecurityGroupIngressMessage' :: String -> ({ "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) } -> { "DBSecurityGroupName" :: String, "CIDRIP" :: Maybe (String), "EC2SecurityGroupName" :: Maybe (String), "EC2SecurityGroupId" :: Maybe (String), "EC2SecurityGroupOwnerId" :: Maybe (String) }) -> RevokeDBSecurityGroupIngressMessage
 ```
 
 Constructs RevokeDBSecurityGroupIngressMessage's fields from required parameters
@@ -5104,7 +5104,7 @@ Constructs RevokeDBSecurityGroupIngressMessage's fields from required parameters
 
 ``` purescript
 newtype RevokeDBSecurityGroupIngressResult
-  = RevokeDBSecurityGroupIngressResult { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }
+  = RevokeDBSecurityGroupIngressResult { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }
 ```
 
 ##### Instances
@@ -5127,7 +5127,7 @@ Constructs RevokeDBSecurityGroupIngressResult from required parameters
 #### `newRevokeDBSecurityGroupIngressResult'`
 
 ``` purescript
-newRevokeDBSecurityGroupIngressResult' :: ({ "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) } -> { "DBSecurityGroup" :: NullOrUndefined (DBSecurityGroup) }) -> RevokeDBSecurityGroupIngressResult
+newRevokeDBSecurityGroupIngressResult' :: ({ "DBSecurityGroup" :: Maybe (DBSecurityGroup) } -> { "DBSecurityGroup" :: Maybe (DBSecurityGroup) }) -> RevokeDBSecurityGroupIngressResult
 ```
 
 Constructs RevokeDBSecurityGroupIngressResult's fields from required parameters
@@ -5276,7 +5276,7 @@ Encode StorageQuotaExceededFault
 
 ``` purescript
 newtype Subnet
-  = Subnet { "SubnetIdentifier" :: NullOrUndefined (String), "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone), "SubnetStatus" :: NullOrUndefined (String) }
+  = Subnet { "SubnetIdentifier" :: Maybe (String), "SubnetAvailabilityZone" :: Maybe (AvailabilityZone), "SubnetStatus" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5299,7 +5299,7 @@ Constructs Subnet from required parameters
 #### `newSubnet'`
 
 ``` purescript
-newSubnet' :: ({ "SubnetIdentifier" :: NullOrUndefined (String), "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone), "SubnetStatus" :: NullOrUndefined (String) } -> { "SubnetIdentifier" :: NullOrUndefined (String), "SubnetAvailabilityZone" :: NullOrUndefined (AvailabilityZone), "SubnetStatus" :: NullOrUndefined (String) }) -> Subnet
+newSubnet' :: ({ "SubnetIdentifier" :: Maybe (String), "SubnetAvailabilityZone" :: Maybe (AvailabilityZone), "SubnetStatus" :: Maybe (String) } -> { "SubnetIdentifier" :: Maybe (String), "SubnetAvailabilityZone" :: Maybe (AvailabilityZone), "SubnetStatus" :: Maybe (String) }) -> Subnet
 ```
 
 Constructs Subnet's fields from required parameters
@@ -5444,7 +5444,7 @@ Encode TStamp
 
 ``` purescript
 newtype Tag
-  = Tag { "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) }
+  = Tag { "Key" :: Maybe (String), "Value" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5467,7 +5467,7 @@ Constructs Tag from required parameters
 #### `newTag'`
 
 ``` purescript
-newTag' :: ({ "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) } -> { "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) }) -> Tag
+newTag' :: ({ "Key" :: Maybe (String), "Value" :: Maybe (String) } -> { "Key" :: Maybe (String), "Value" :: Maybe (String) }) -> Tag
 ```
 
 Constructs Tag's fields from required parameters
@@ -5492,7 +5492,7 @@ Encode TagList
 
 ``` purescript
 newtype TagListMessage
-  = TagListMessage { "TagList" :: NullOrUndefined (TagList) }
+  = TagListMessage { "TagList" :: Maybe (TagList) }
 ```
 
 ##### Instances
@@ -5515,7 +5515,7 @@ Constructs TagListMessage from required parameters
 #### `newTagListMessage'`
 
 ``` purescript
-newTagListMessage' :: ({ "TagList" :: NullOrUndefined (TagList) } -> { "TagList" :: NullOrUndefined (TagList) }) -> TagListMessage
+newTagListMessage' :: ({ "TagList" :: Maybe (TagList) } -> { "TagList" :: Maybe (TagList) }) -> TagListMessage
 ```
 
 Constructs TagListMessage's fields from required parameters
@@ -5540,7 +5540,7 @@ Encode VpcSecurityGroupIdList
 
 ``` purescript
 newtype VpcSecurityGroupMembership
-  = VpcSecurityGroupMembership { "VpcSecurityGroupId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }
+  = VpcSecurityGroupMembership { "VpcSecurityGroupId" :: Maybe (String), "Status" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5563,7 +5563,7 @@ Constructs VpcSecurityGroupMembership from required parameters
 #### `newVpcSecurityGroupMembership'`
 
 ``` purescript
-newVpcSecurityGroupMembership' :: ({ "VpcSecurityGroupId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) } -> { "VpcSecurityGroupId" :: NullOrUndefined (String), "Status" :: NullOrUndefined (String) }) -> VpcSecurityGroupMembership
+newVpcSecurityGroupMembership' :: ({ "VpcSecurityGroupId" :: Maybe (String), "Status" :: Maybe (String) } -> { "VpcSecurityGroupId" :: Maybe (String), "Status" :: Maybe (String) }) -> VpcSecurityGroupMembership
 ```
 
 Constructs VpcSecurityGroupMembership's fields from required parameters

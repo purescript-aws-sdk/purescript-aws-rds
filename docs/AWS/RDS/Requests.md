@@ -9,7 +9,7 @@ addSourceIdentifierToSubscription :: forall eff. Service -> AddSourceIdentifierT
 #### `addTagsToResource`
 
 ``` purescript
-addTagsToResource :: forall eff. Service -> AddTagsToResourceMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+addTagsToResource :: forall eff. Service -> AddTagsToResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `authorizeDBSecurityGroupIngress`
@@ -81,13 +81,13 @@ deleteDBInstance :: forall eff. Service -> DeleteDBInstanceMessage -> Aff (excep
 #### `deleteDBParameterGroup`
 
 ``` purescript
-deleteDBParameterGroup :: forall eff. Service -> DeleteDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteDBParameterGroup :: forall eff. Service -> DeleteDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `deleteDBSecurityGroup`
 
 ``` purescript
-deleteDBSecurityGroup :: forall eff. Service -> DeleteDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteDBSecurityGroup :: forall eff. Service -> DeleteDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `deleteDBSnapshot`
@@ -99,7 +99,7 @@ deleteDBSnapshot :: forall eff. Service -> DeleteDBSnapshotMessage -> Aff (excep
 #### `deleteDBSubnetGroup`
 
 ``` purescript
-deleteDBSubnetGroup :: forall eff. Service -> DeleteDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteDBSubnetGroup :: forall eff. Service -> DeleteDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `deleteEventSubscription`
@@ -111,7 +111,7 @@ deleteEventSubscription :: forall eff. Service -> DeleteEventSubscriptionMessage
 #### `deleteOptionGroup`
 
 ``` purescript
-deleteOptionGroup :: forall eff. Service -> DeleteOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteOptionGroup :: forall eff. Service -> DeleteOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `describeDBEngineVersions`
@@ -273,7 +273,7 @@ removeSourceIdentifierFromSubscription :: forall eff. Service -> RemoveSourceIde
 #### `removeTagsFromResource`
 
 ``` purescript
-removeTagsFromResource :: forall eff. Service -> RemoveTagsFromResourceMessage -> Aff (exception :: EXCEPTION | eff) NoOutput
+removeTagsFromResource :: forall eff. Service -> RemoveTagsFromResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 #### `resetDBParameterGroup`

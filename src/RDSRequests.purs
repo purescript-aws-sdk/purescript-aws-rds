@@ -17,7 +17,7 @@ addSourceIdentifierToSubscription (RDS.Service serviceImpl) = AWS.request servic
     method = AWS.MethodName "addSourceIdentifierToSubscription"
 
 
-addTagsToResource :: forall eff. RDS.Service -> RDSTypes.AddTagsToResourceMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+addTagsToResource :: forall eff. RDS.Service -> RDSTypes.AddTagsToResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 addTagsToResource (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "addTagsToResource"
 
@@ -77,12 +77,12 @@ deleteDBInstance (RDS.Service serviceImpl) = AWS.request serviceImpl method  whe
     method = AWS.MethodName "deleteDBInstance"
 
 
-deleteDBParameterGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteDBParameterGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBParameterGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteDBParameterGroup (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteDBParameterGroup"
 
 
-deleteDBSecurityGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteDBSecurityGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBSecurityGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteDBSecurityGroup (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteDBSecurityGroup"
 
@@ -92,7 +92,7 @@ deleteDBSnapshot (RDS.Service serviceImpl) = AWS.request serviceImpl method  whe
     method = AWS.MethodName "deleteDBSnapshot"
 
 
-deleteDBSubnetGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteDBSubnetGroup :: forall eff. RDS.Service -> RDSTypes.DeleteDBSubnetGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteDBSubnetGroup (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteDBSubnetGroup"
 
@@ -102,7 +102,7 @@ deleteEventSubscription (RDS.Service serviceImpl) = AWS.request serviceImpl meth
     method = AWS.MethodName "deleteEventSubscription"
 
 
-deleteOptionGroup :: forall eff. RDS.Service -> RDSTypes.DeleteOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteOptionGroup :: forall eff. RDS.Service -> RDSTypes.DeleteOptionGroupMessage -> Aff (exception :: EXCEPTION | eff) Unit
 deleteOptionGroup (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteOptionGroup"
 
@@ -237,7 +237,7 @@ removeSourceIdentifierFromSubscription (RDS.Service serviceImpl) = AWS.request s
     method = AWS.MethodName "removeSourceIdentifierFromSubscription"
 
 
-removeTagsFromResource :: forall eff. RDS.Service -> RDSTypes.RemoveTagsFromResourceMessage -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+removeTagsFromResource :: forall eff. RDS.Service -> RDSTypes.RemoveTagsFromResourceMessage -> Aff (exception :: EXCEPTION | eff) Unit
 removeTagsFromResource (RDS.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "removeTagsFromResource"
 
